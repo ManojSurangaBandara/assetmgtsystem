@@ -1,0 +1,30 @@
+<?php
+$assetscenter = $Building['assetscenter'];
+$assetunit = $Building['assetunit'];
+$province = $Building['province'];
+$district = $Building['district'];
+$dsDivision = $Building['dsDivision'];
+$gsDivision = $Building['gsDivision'];
+$landName = $Building['landname'];
+$ownerName = $Building['ownerName'];
+$category = $Building['buildingCategory'];
+$assetsno = $Building['assetsno'];
+$buildingType = $Building['buildingType'];
+$rentAndRate = $Building['rentAndRate'];
+$ownership = $Building['ownership'];
+$natureOwnership = $Building['natureOwnership'];
+$regOwnerName = $Building['regOwnerName'];
+$classificationno = $Building['classificationno'];
+$identificationno = $Building['identificationno'];
+$buildingno = $Building['buildingno'];
+$planno = $Building['planno'];
+$plandate = $Building['plandate'];
+$areaMeasure = $Building['areaMeasure'];
+$area = $Building['area'];
+$feets = $Building['feets'];
+$constructionCost = $Building['constructionCost'];
+$additionsValue = $Building['additionsValue'];
+$alterationValue = $Building['alterationValue'];
+$acquisitiondate = $Building['acquisitiondate'];
+$remarks = $Building['remarks'];
+?>

@@ -1,0 +1,144 @@
+<?php
+include 'header1.php';
+?>
+
+<script>
+/* 	$(function(){
+		$('table').tablesorter({
+			widgets        : ['zebra', 'stickyHeaders', "filter", 'cssStickyHeaders'],
+			usNumberFormat : false,
+			sortReset      : true,
+			sortRestart    : true
+		});
+	}); */
+	</script>
+<div id="page">
+
+    <div class="section table_section">
+        <form action="." method="post" id="record_status">
+            <input type="hidden" name="action" value="lifetime_list"/>
+            <table width="1009" border="0">
+                <tr>
+                    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                    <td>
+                        <b><?php echo $tList[0][$lang]?></b>
+                    </td>
+                    <td>
+                        <select name="assetscenter" onChange="getAssetsUnitByCenter('index.php?action=findAssetsUnitsByCenter&center=' + this.value)">
+                            <option value=""></option>
+                            <?php foreach ($assetsCenters as $center) { ?>
+                                <option value="<?php echo $center->getName(); ?>" <?php if ($assetscenter == $center->getName()) echo "selected = 'selected'"; ?>>
+                                    <?php echo $center->getName(); ?>
+                                </option>
+                            <?php } ?>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                    </td>
+                    <td>
+                        <b><?php echo $tList[1][$lang]?></b>
+                    </td>
+                    <td>   
+                        <div id="Unitdiv">
+                            <select name="assetunit" onChange="getPresentUnitByUnit('index.php?action=findPresentUnitByUnit&unit=' + this.value)">
+                                <option value=""></option>
+                                <?php foreach ($assetunits as $unit) { ?>
+                                    <option value="<?php echo $unit->getName(); ?>" <?php if ($assetunit == $unit->getName()) echo "selected = 'selected'"; ?>>
+                                        <?php echo $unit->getName(); ?>
+                                    </option>
+                                <?php } ?>
+                            </select>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td> </td>
+                    <td> </td>
+                    <td>  
+                        <input type="submit" value="Search" /> 
+                    </td>
+                </tr>
+            </table>
+        </form>
+        <div class="title_wrapper">
+            <h2>Plant & Machinery Lifetime Details List</h2>
+            <span class="title_wrapper_left"></span>
+            <span class="title_wrapper_right"></span>
+        </div>
+        <div class="section_content">
+            <div class="sct">
+                <div class="sct_left">
+                    <div class="sct_right">
+                        <div class="sct_left">
+                            <div class="sct_right">
+                                <fieldset>
+
+                                    <div class="table_wrapper_inner">
+                                        <table id="myTable" class="tablesorter" cellpadding="1" cellspacing="0" width="100%" border="1" BORDERCOLOR=skyblue style="font-size:12px;">
+                                            <thead>
+											<tr>
+                                            <th>&nbsp;</th>
+											<th>Main Category</th>
+											<th>Item Category</th>
+											<th>Item Description</th>
+											<th>Catalog Number</th>
+											<th>DOP</th>
+											<th>Min Lifetime</th>
+											<th>Max Lifetime</th>
+											<th>Min Lifetime Date</th>
+											<th>Max Lifetime Date</th>											
+                                            </tr>
+											</thead>
+											<tbody> 
+                                            <?php $i = 1; ?>
+                                            <?php foreach ($items as $exp) { 
+											$lifetime = CatalogueDB::getLifetime_details($exp['catalogueno']); 
+											$date = strtotime($exp['purchasedDate']);
+											$minlifetime = "+".(int)$lifetime['minlifetime']." year";
+											$maxlifetime = "+".(int)$lifetime['maxlifetime']." year";
+											$minlifetimedate = date('Y-m-d',strtotime($minlifetime,$date));
+											$maxlifetimedate = date('Y-m-d',strtotime($maxlifetime,$date));
+											$today = date("Y-m-d");
+											$trcolour = "";
+											if (($today - $maxlifetimedate) > $lifetime['maxlifetime']) {
+												$trcolour = "#A8E5FF";
+											} elseif (($today - $minlifetimedate) > $lifetime['minlifetime']) {
+												$trcolour = "#3BC0F9";
+											}	
+											?>
+                                                <tr style="background-color:<?php echo $trcolour; ?>">
+                                                    <td><nobr><?php echo $i; ?></nobr></td>
+													<td><nobr><?php echo $exp['mainCategory']; ?></td>
+                                                    <td><nobr><?php echo $exp['itemCategory']; ?></nobr></td>
+                                                    <td><nobr><?php echo $exp['itemDescription']; ?></nobr></td>
+													<td><nobr><?php echo $exp['catalogueno']; ?></nobr></td>
+													<td><nobr><?php echo $exp['purchasedDate']; ?></nobr></td>
+													<td style="text-align: right;"><nobr><?php echo $lifetime['minlifetime']; ?></nobr></td>
+													<td style="text-align: right;"><nobr><?php echo $lifetime['maxlifetime']; ?></nobr></td>
+													<td><nobr><?php echo $minlifetimedate; ?></nobr></td>
+													<td><nobr><?php echo $maxlifetimedate; ?></nobr></td>													
+                                                </tr>
+                                                <?php $i++; ?>
+                                            <?php } ?> 
+                                            </tbody></table>
+                                    </div>
+
+                                </fieldset>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <span class="scb"><span class="scb_left"></span><span class="scb_right"></span></span>						
+        </div>
+    </div>
+
+</div>
+<?php
+//include('sidebar.php');
+include '../view/footer.php';
+?>

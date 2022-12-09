@@ -1,0 +1,35 @@
+add_plant_mac_transfer_detail
+<tr>
+                                                        <td width="30%"><label>Present Location :</label></td>
+                                                        <td width="70%">
+                                                            
+                                                            <select name="presentLocation">
+                                                                    <?php foreach ($presentLocations as $unit) { ?>
+                                                                <?php print_r($unit->getName());?>
+                                                                        <option value="<?php echo $unit->getName(); ?>" <?php if ($presentLocation == $unit->getName()) 
+                                                                            echo "selected = 'selected'"; ?>>
+                                                                            <?php echo $unit->getName(); ?>
+                                                                        </option>
+                                                                    <?php } ?>
+                                                                </select>
+                                                            <?php echo $fields->getField('presentLocation')->getHTML(); ?><br /></td>                                                        
+                                                    </tr>
+
+add_transfer_details
+
+<tr>
+                                                        <td width="30%"><label>Present Location :</label></td>
+                                                        <td width="70%">
+                                                            <select name="presentLocation">
+                                                                    <?php foreach ($presentLocations as $unit) { ?>
+                                                                        <option value="<?php echo $unit->getName(); ?>" <?php if ($presentLocation == $unit->getName()) echo "selected = 'selected'"; ?>>
+                                                                            <?php echo $unit->getName(); ?>
+                                                                        </option>
+                                                                    <?php } ?>
+                                                                </select>
+                                                            <?php echo $fields->getField('presentLocation')->getHTML(); ?><br /></td>
+                                                        </td>
+                                                    </tr>
+													
+													
+

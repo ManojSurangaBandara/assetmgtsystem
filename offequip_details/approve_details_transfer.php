@@ -1,0 +1,277 @@
+<?php
+include 'header1.php';
+?>
+<div id="page">
+    <div class="inner">
+        <div class="section">
+            <div class="title_wrapper">
+                <h2><?php echo $identificationno; ?></h2>
+                <span class="title_wrapper_left"></span>
+                <span class="title_wrapper_right"></span>
+            </div>
+            <div class="section_content">
+                <div class="sct">
+                    <div class="sct_left">
+                        <div class="sct_right">
+                            <div class="sct_left">
+                                <div class="sct_right">
+                                    <ul class="system_messages">
+                                        <?php
+                                        switch ($error) {
+                                            case '0':
+                                                ?>
+                                                <li class="blue"><span class="ico"></span><strong class="system_title">press "Approve Office Equipment Details" Button</strong></li>
+                                                <?php
+                                                break;
+                                            case '1':
+                                                ?>
+                                                <li class="green"><span class="ico"></span><strong class="system_title">Data Successfully Saved.</strong></li>
+                                                <?php
+                                                break;
+                                            case '2':
+                                                ?>
+                                                <li class="red"><span class="ico"></span><strong class="system_title">Data Error. Please Check Data !</strong></li>
+                                                <?php
+                                                break;
+                                            case '3':
+                                                ?>
+                                                <li class="yellow"><span class="ico"></span><strong class="system_title">Details Already Entered !</strong></li>
+                                                <?php
+                                                break;
+                                            case '5':
+                                                ?>
+                                                <li class="red"><span class="ico"></span><strong class="system_title">Error when Database Writing !</strong></li>
+                                                <?php
+                                                break;
+                                            case '6':
+                                                ?>
+                                                <li class="green"><span class="ico"></span><strong class="system_title">Data Deleted</strong></li>
+                                        <?php } ?>
+                                    </ul>
+                                    <form name="frm_land_add" method="post" id="frm_land_add" action="index.php" class="search_form general_form"> 
+                                        <input type="hidden" name="action" value="approve_transfer_Save" />
+                                        <input type="hidden" name="id" value="<?php echo $id; ?>" />
+                                        <table width="100%" border="0">
+                                            <td colspan="3">
+                                                <table width="100%" border="0" class="listing form">
+                                                    <tr>
+                                                        <td width="30%"><label><?php echo $tList[0][$lang]?></label></td>
+
+                                                        <td width="70%">
+                                                            <input type="text" class="text" name="assetscenter"  id="assetscenter" value="<?php echo $assetscenter; ?>" style="width:200px; background-color:white; color: black" disabled/>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td width="30%"><label><?php echo $tList[1][$lang]?></label></td>
+                                                        <td width="70%">
+                                                            <input type="text" class="text" name="assetunit"  id="assetunit" value="<?php echo $assetunit; ?>" style="width:200px; background-color:white; color: black" disabled/>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td width="30%"><label><?php echo $tList[2][$lang]?></label></td>
+
+                                                        <td width="70%">
+                                                            <input type="text" class="text" name="mainCategory"  id="mainCategory" value="<?php echo $itemCategory; ?>" style="width:200px; background-color:white; color: black" disabled/>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td width="30%"><label><?php echo $tList[3][$lang]?></label></td>
+                                                        <td width="70%">
+                                                            <input type="text" class="text" name="itemCategory"  id="itemCategory" value="<?php echo $mainCategory; ?>" style="width:200px; background-color:white; color: black" disabled/>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td width="30%"><label><?php echo $tList[4][$lang]?></label></td>
+                                                        <td  width="70%">
+                                                            <input type="text" class="text" name="itemDescription"  id="itemDescription" value="<?php echo $itemDescription; ?>" style="width:300px; background-color:white; color: black" disabled/>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td width="30%"><label><?php echo $tList[5][$lang]?></label></td>
+                                                        <td width="70%">
+                                                            <input type="text" class="text" name="catalogueno"  id="catalogueno" value="<?php echo $catalogueno; ?>" style="width:200px; background-color:white; color: black" disabled/>
+                                                        </td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td width="30%"><label><?php echo $tList[6][$lang]?></label></td>
+                                                        <td width="70%">
+                                                            <input type="text" class="text" name="assetsno"  id="assetsno" value="<?php echo $assetsno; ?>" style="width:50px; background-color:white; color: black" disabled/>
+                                                            <input type="text" class="text" name="newAssestno"  id="newAssestno" value="<?php echo $newAssestno; ?>" style="width:100px; background-color:white; color: black" disabled/>  
+                                                            </div>  
+                                                        </td>
+
+                                                    </tr>
+                                                    <tr>
+                                                        <td width="30%"><label><?php echo $tList[18][$lang]?></label></td>
+                                                        <td width="70%">
+                                                            <input type="text" class="text" name="identificationno"  id="identificationno" value="<?php echo $identificationno; ?>" style="width:300px; background-color:white; color: black" disabled/>
+															
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td width="30%"><label><?php echo $tList[7][$lang]?></label></td>
+                                                        <td width="70%">
+                                                            <input type="text" class="text" name="ledgerno"  id="ledgerno" value="<?php echo $ledgerno; ?>" style="width:300px; background-color:white; color: black" disabled/>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td width="30%"><label><?php echo $tList[8][$lang]?></label></td>
+                                                        <td width="70%">
+                                                            <input type="text" class="text" name="ledgerFoliono"  id="ledgerFoliono" value="<?php echo $ledgerFoliono; ?>" style="width:300px; background-color:white; color: black" disabled/>
+                                                        </td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td width="30%"><label><?php echo $tList[9][$lang]?></label></td>
+                                                        <td width="70%">
+                                                            <input type="text" class="text" name="eqptSriNo"  id="eqptSriNo" value="<?php echo $eqptSriNo; ?>" style="width:300px; background-color:white; color: black" disabled/>
+                                                        </td>
+                                                    </tr>
+                                                    
+                                                    <tr>
+                                                        <td width="30%"><label><?php echo $tList[10][$lang]?></label></td>
+                                                        <td width="70%">
+                                                            <input type="text" class="text" name="purchasedDate"  id="purchasedDate" value="<?php echo $purchasedDate; ?>" style="width:300px; background-color:white; color: black" disabled/>
+                                                        </td>
+                                                    </tr>
+                                                    
+                                                    <tr>
+                                                        <td width="30%"><label><?php echo $tList[11][$lang]?></label></td>
+                                                        <td width="70%">
+                                                            <input type="text" class="text" name="quantity"  id="quantity" value="<?php echo $quantity; ?>" style="width:300px; background-color:white; color: black" disabled/>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td width="30%"><label><?php echo $tList[12][$lang]?></label></td>
+                                                        <td width="70%">
+                                                            <input type="text" class="text" name="capacity"  id="capacity" value="<?php echo $capacity; ?>" style="width:300px; background-color:white; color: black" disabled/>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td width="30%"><label><?php echo $tList[13][$lang]?></label></td>
+                                                        <td width="70%">
+                                                            <input type="text" class="text" name="unitValue"  id="unitValue" value="<?php echo $unitValue; ?>" style="width:300px; background-color:white; color: black" disabled/>
+                                                        </td>
+                                                    </tr>
+                                                    <!-- <tr>
+                                                        <td width="30%"><label>Total Cost :</label></td>
+                                                        <td width="70%">
+                                                            <input type="text" class="text" name="totalCost"  id="totalCost" value="<?php echo $totalCost; ?>" style="width:300px; background-color:white; color: black" disabled/>
+                                                        </td>
+                                                    </tr> -->
+                                                    <tr>
+                                                        <td width="30%"><label><?php echo $tList[15][$lang]?></label></td>
+                                                        <td width="70%">
+                                                            <input type="text" class="text" name="receivedDate"  id="receivedDate" value="<?php echo $receivedDate; ?>" style="width:300px; background-color:white; color: black" disabled/>
+                                                        </td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td width="30%"><label><?php echo $tList[17][$lang]?></label></td>
+                                                        <td width="70%">
+                                                            <input type="text" class="text" name="Remarks"  id="Remarks" value="<?php echo $Remarks; ?>" style="width:300px; background-color:white; color: black" disabled/>
+                                                        </td>
+                                                    </tr>
+													<tr>
+                                                        <td width="30%"><label>Received From - Center :</label></td>
+
+                                                        <td width="70%">
+														   <input type="text" class="text" name="assetscenterFrom"  id="assetscenterFrom" value="<?php echo $OfficeEqu['transferReceivecenter']; ?>" style="width:200px" readonly/> 
+                                            
+															</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td width="30%"><label>Received From - Unit :</label></td>
+                                                        <td width="70%">
+																<input type="text" class="text" name="assetunitFrom"  id="assetunitFrom" value="<?php echo $OfficeEqu['transferReceiveunit']; ?>" style="width:200px" readonly/>
+                                                    </tr>
+																									<tr>
+                                                        <td width="30%"><label>Old Identification no. :</label></td>
+
+                                                        <td width="70%">
+														   <input type="text" class="text" name="identificationnofrom"  id="identificationnofrom" value="<?php echo $OfficeEqu['transferReceiveidentificationno']; ?>" style="width:300px" readonly/> 
+                                            
+															</td>
+                                                    </tr>
+													
+                                                    <tr>
+                                                        <td><label> </label></td>
+                                                        <td>
+                                                            <div class="buttons">
+                                                                <ul>
+                                                                    <li><span class="button send_form_btn"><span><span>Approve Office Equipment Details</span></span><input name="" type="submit"/></span> </li>
+                                                                </ul>       
+                                                            </div>
+
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                            </tr>
+                                        </table>
+                                    <!--
+									</form>
+                                                                        <form name="frm_land_add2" method="post" id="frm_land_add2" action="index.php" class="search_form general_form"> 
+                                        <input type="hidden" name="action" value="notApproveSave" />
+                                        <input type="hidden" name="id" value="<?php echo $id; ?>" />
+                                        <table width="100%" border="0">
+                                            <td colspan="3">
+                                                <table width="100%" border="0" class="listing form">
+                                                    <tr>
+                                                        <td width="30%"><label><?php echo $tList[19][$lang]?></label></td>
+
+                                                        <td width="70%">
+                                                            <input type="text" class="text" name="notapprivedReason"  id="notapprivedReason" value="<?php echo $notapprivedReason; ?>" style="width:400px;" />
+                                                        </td>
+                                                    </tr>
+                                                   
+                                                    <tr>
+                                                        <td><label> </label></td>
+                                                        <td>
+                                                            <div class="buttons">
+                                                                <ul>
+                                                                    <li><span class="button send_form_btn"><span><span>Not Approve Details</span></span><input name="" type="submit"/></span> </li>
+                                                                </ul>       
+                                                            </div>
+
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                            </tr>
+                                        </table>
+                                    </form>
+                                    -->
+                                    <div id="Itmdiv">
+                                        <div class="table_wrapper">
+                                            <div class="table_wrapper_inner">
+                                              
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<?php
+include('sidebar.php');
+include '../view/footer.php';
+?>
+
+
+
+
+
+
+
+
+
+

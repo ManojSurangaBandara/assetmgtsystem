@@ -1,0 +1,50 @@
+@charset "utf-8";
+/* CSS Document */
+
+.sidebarmenu{
+margin:0px 0;
+padding:0;
+}
+.sidebarmenu a.menuitem{background:url(images/sidebar_menu_top.gif) no-repeat center top;
+display: block;position: relative;
+}
+
+.sidebarmenu a.menuitem:hover{background:url(images/sidebar_menu_top_a.gif) no-repeat center top;}
+.sidebarmenu a.menuitem_green:hover{background:url(images/green_bt_a.gif) no-repeat center top;}
+.sidebarmenu a.menuitem_red:hover{background:url(images/red_bt_a.gif) no-repeat center top;}
+
+.sidebarmenu a.menuitem:visited, .sidebarmenu .menuitem:active{
+
+}
+.sidebarmenu a.menuitem .statusicon{
+position: absolute;
+top:11px;
+right:7px;
+border: none;
+}
+
+.sidebarmenu div.submenu{
+background: white;
+}
+.sidebarmenu div.submenu ul{ 
+list-style-type: none;
+margin: 0;
+padding: 0 0 5px 0;
+}
+.sidebarmenu div.submenu ul li{
+border-bottom: 1px dotted #bfd1d9;
+}
+.sidebarmenu div.submenu ul li a{
+display: block;
+
+text-decoration: none;
+padding:5px 0;
+padding-left: 10px;
+}
+.sidebarmenu div.submenu ul li a:hover{
+background: #e2f0ff;
+
+}
+
+
+

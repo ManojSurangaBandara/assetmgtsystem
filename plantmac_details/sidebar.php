@@ -1,0 +1,693 @@
+<div id="sidebar">
+    <div class="inner">
+        <p>&nbsp;</p>
+        <div class="section">
+            <div class="section">
+                <div class="title_wrapper">
+                    <?php
+                    switch ($slidebartype) {
+                        case 1:
+                            ?>
+                            <h2><?php echo (isset($transfer) && $transfer == 1 ? $slideBar[0][$lang] : $slideBar[1][$lang])?></h2>
+                            <span class="title_wrapper_left"></span>
+                            <span class="title_wrapper_right"></span>
+                            <?php
+                            break;
+                        case 2:
+                            ?>
+                            <h2><?php echo $slideBar[2][$lang]?></h2>
+                            <span class="title_wrapper_left"></span>
+                            <span class="title_wrapper_right"></span>
+                            <?php
+                            break;
+                        case 3:
+                            ?>
+                            <h2><?php echo $slideBar[3][$lang]?></h2>
+                            <span class="title_wrapper_left"></span>
+                            <span class="title_wrapper_right"></span>
+                            <?php
+                            break;
+						case 4:
+                            ?>
+                            <h2><?php echo $slideBar[3][$lang]?></h2>
+                            <span class="title_wrapper_left"></span>
+                            <span class="title_wrapper_right"></span>
+                            <?php
+                            break;
+						case 5:
+                            ?>
+                            <h2><?php echo $slideBar[3][$lang]?></h2>
+                            <span class="title_wrapper_left"></span>
+                            <span class="title_wrapper_right"></span>
+                            <?php
+                            break;
+                        case 8:
+                            ?>
+                            <h2><?php echo $slideBar[4][$lang]?></h2>
+                            <span class="title_wrapper_left"></span>
+                            <span class="title_wrapper_right"></span>
+                            <?php
+                            break;
+                        case 11:
+                            ?>
+                            <h2><?php echo $slideBar[5][$lang]?></h2>
+                            <span class="title_wrapper_left"></span>
+                            <span class="title_wrapper_right"></span>
+                            <?php
+                            break;
+                        case 12:
+                            ?>
+                            <h2><?php echo $slideBar[3][$lang]?></h2>
+                            <span class="title_wrapper_left"></span>
+                            <span class="title_wrapper_right"></span>
+                            <?php
+                            break;
+                        case 13:
+                            ?>
+                            <h2><?php echo $slideBar[6][$lang]?></h2>
+                            <span class="title_wrapper_left"></span>
+                            <span class="title_wrapper_right"></span>
+                            <?php
+                            break;
+                        case 14:
+                            ?>
+                            <h2><?php echo (isset($transfer) && $transfer == 1 ? $slideBar[7][$lang] : $slideBar[8][$lang])?></h2>
+                            <span class="title_wrapper_left"></span>
+                            <span class="title_wrapper_right"></span>
+                            <?php
+                            break;
+                        case 21:
+                            ?>
+                            <h2><?php echo (isset($transfer) && $transfer == 1 ? $slideBar[9][$lang] : $slideBar[10][$lang])?></h2>
+                            <span class="title_wrapper_left"></span>
+                            <span class="title_wrapper_right"></span>
+                            <?php
+                            break;
+                        case 22:
+                            ?>
+                            <h2><?php echo (isset($transfer) && $transfer == 1 ? $slideBar[11][$lang] : $slideBar[12][$lang])?></h2>
+                            <span class="title_wrapper_left"></span>
+                            <span class="title_wrapper_right"></span>
+                            <?php
+                            break;
+                        case 23:
+                            ?>
+                            <h2><?php echo $slideBar[13][$lang]?></h2>
+                            <span class="title_wrapper_left"></span>
+                            <span class="title_wrapper_right"></span>
+                            <?php
+                            break;
+						case 25:
+                            ?>
+                            <h2><?php echo $slideBar[14][$lang]?></h2>
+                            <span class="title_wrapper_left"></span>
+                            <span class="title_wrapper_right"></span>
+                            <?php
+                            break;
+						case 30:
+                            ?>
+                            <h2>Summary List</h2>
+                            <span class="title_wrapper_left"></span>
+                            <span class="title_wrapper_right"></span>
+                            <?php
+                            break;
+						case 31:
+                            ?>
+                            <h2><?php echo $slideBar[3][$lang]?></h2>
+                            <span class="title_wrapper_left"></span>
+                            <span class="title_wrapper_right"></span>
+                            <?php
+                            break;
+						case 32:
+                            ?>
+                            <h2>Lost and Damaged</h2>
+                            <span class="title_wrapper_left"></span>
+                            <span class="title_wrapper_right"></span>
+                            <?php
+                            break;
+						case 33:
+						case 34:
+                            ?>
+                            <h2>Sri Lanka Army Units</h2>
+                            <span class="title_wrapper_left"></span>
+                            <span class="title_wrapper_right"></span>
+                            <?php
+                            break;
+						case 35:
+                            ?>
+                            <h2>Display/Training Items</h2>
+                            <span class="title_wrapper_left"></span>
+                            <span class="title_wrapper_right"></span>
+                            <?php
+                            break;
+                        default:
+                            ?>
+                            <h2><?php echo $slideBar[15][$lang]?></h2>
+                            <span class="title_wrapper_left"></span>
+                            <span class="title_wrapper_right"></span>
+                            <?php
+                            break;
+                    }
+                    ?>
+                </div>
+                <div class="section_content">
+                    <div class="sct">
+                        <div class="sct_left">
+                            <div class="sct_right">
+                                <div class="sct_left">
+                                    <div class="sct_right">
+                                        <ul class="sidebar_menu" id="sidebar1">
+                                            <?php
+                                            switch ($slidebartype) {
+                                                case 1:
+                                                    if ($_SESSION['SESS_LEVEL'] == 1) {
+                                                        if (isset($transfer) && $transfer == 1) {
+														?> 
+														<li><a href="?index.php&action=Select_Items_For_Disposal&transfer=1"><?php echo $slideBar[18][$lang]?></a></li>
+                                                        <li><a href="?index.php&action=Selected_Items_For_Disposal&transfer=1"><?php echo $slideBar[19][$lang]?></a></li>
+														<li><a href="?index.php&action=Confirm_Items_For_Disposal&transfer=1"><?php echo $slideBar[20][$lang]?></a></li>
+														<li><a href="?index.php&action=Disband_List">Disband List</a></li>
+														<li><a href="?index.php&action=transfer_selet_quick">Select Transfer - Quick</a></li>
+														<?php
+														} else {
+														?>
+                                                        <li><a href="?index.php&action=Select_Items_For_Disposal"><?php echo $slideBar[21][$lang]?></a></li>
+                                                        <li><a href="?index.php&action=Select_Items_For_Disposal_quick">Select Items For Disposal - Quick</a></li>
+														<li><a href="?index.php&action=add_disposal_details_quick">Add Disposal Details - Quick</a></li>
+														<li><a href="?index.php&action=Selected_Items_For_Disposal"><?php echo $slideBar[22][$lang]?></a></li>
+														<li><a href="?index.php&action=Selected_List_For_Disposal">Selected List For Disposal</a></li>
+                                                        <li><a href="?index.php&action=Confirm_Items_For_Disposal"><?php echo $slideBar[23][$lang]?></a></li>
+														<li><a href="?index.php&action=confirm_items_for_disposal_quick">Confirm Items for Disposal - Quick</a></li>
+														<li><a href="?index.php&action=Confirmed_Items_For_Disposal">Confirmed Items For Disposal</a></li>
+														<li><a href="?index.php&action=Confirmed_List_For_Disposal">Confirmed List For Disposal</a></li>  														
+                                                        <li><a href="?index.php&action=approve_Items_For_Disposal"><?php echo $slideBar[24][$lang]?></a></li>
+                                                        <li><a href="?index.php&action=Approve_Items_For_Disposal_List"><?php echo $slideBar[25][$lang]?></a></li>
+														<li><a href="?index.php&action=approve_Items_For_Disposal_catlog">Approve Disposal- Item Wise </a></li>
+                                                        <li><a href="?index.php&action=Disposal_List"><?php echo $slideBar[26][$lang]?></a></li>
+                                                        <li><a href="?index.php&action=Disposal_Inquiry"><?php echo $slideBar[27][$lang]?></a></li>
+														<li><a href="index.php?action=disposal_inquiry_tree" class="sm4">Disposal Inquiry Tree - Tree</a></li>
+														<li><a href="index.php?action=Disposal_List_summary_tree_2" class="sm4">Disposal-Summary List - Tree</a></li>
+														<li><a href="?index.php&action=disposal_yearsummary_List">Year Summary List</a></li>
+														<li><a href="?index.php&action=select_items_for_send_ordinance">Send Items to Ordnance</a></li>
+														<li><a href="?index.php&action=ordinance_stock_list">Ordnance Stock List</a></li>
+														<li><a href="?index.php&action=undo_Disposal">Undo Disposal</a></li>
+                                                        <?php }
+													} elseif ($_SESSION['SESS_LEVEL'] == 3) {
+                                                        ?>
+                                                        <li><a href="?index.php&action=approve_Items_For_Disposal"><?php echo $slideBar[24][$lang]?></a></li>
+                                                        <li><a href="?index.php&action=Approve_Items_For_Disposal_List"><?php echo $slideBar[25][$lang]?></a></li> 
+														<li><a href="?index.php&action=approve_Items_For_Disposal_catlog">Approve Disposal- Item Wise </a></li>
+                                                        <li><a href="?index.php&action=Disposal_List"><?php echo $slideBar[26][$lang]?></a></li>
+                                                        <li><a href="?index.php&action=List_Inquiry&disposal=1"><?php echo $slideBar[27][$lang]?></a></li>
+														<li><a href="?index.php&action=ordinance_stock_list">Ordnance Stock List</a></li>
+                                                        <?php	
+                                                    } elseif ($_SESSION['SESS_LEVEL'] == 5 || $_SESSION['SESS_LEVEL'] == 4) {
+                                                        ?>
+                                                        <li><a href="?index.php&action=Select_Items_For_Disposal"><?php echo $slideBar[21][$lang]?></a></li>
+														<li><a href="?index.php&action=Select_Items_For_Disposal_quick">Select Items For Disposal - Quick</a></li>
+                                                        <li><a href="?index.php&action=add_disposal_details_quick">Add Disposal Details - Quick</a></li>
+														<li><a href="?index.php&action=Selected_Items_For_Disposal"><?php echo $slideBar[22][$lang]?></a></li>
+														<li><a href="?index.php&action=Selected_List_For_Disposal">Selected List For Disposal</a></li>
+                                                        <li><a href="?index.php&action=Confirm_Items_For_Disposal"><?php echo $slideBar[23][$lang]?></a></li>
+														<li><a href="?index.php&action=confirm_items_for_disposal_quick">Confirm Items for Disposal - Quick</a></li>
+														<li><a href="?index.php&action=Confirmed_Items_For_Disposal">Confirmed Items for Disposal</a></li>
+														<li><a href="?index.php&action=Confirmed_List_For_Disposal">Confirmed List For Disposal</a></li>  														
+                                                        <li><a href="?index.php&action=approve_Items_For_Disposal"><?php echo $slideBar[24][$lang]?></a></li>
+                                                        <li><a href="?index.php&action=Approve_Items_For_Disposal_List"><?php echo $slideBar[25][$lang]?></a></li>
+														<li><a href="?index.php&action=approve_Items_For_Disposal_catlog">Approve Disposal- Item Wise </a></li>
+                                                        <li><a href="?index.php&action=Disposal_Inquiry"><?php echo $slideBar[27][$lang]?></a></li>
+														<li><a href="?index.php&action=Disposal_List"><?php echo $slideBar[26][$lang]?></a></li>
+                                                        <li><a href="?index.php&action=List_Inquiry&disposal=1"><?php echo $slideBar[27][$lang]?></a></li>
+														<li><a href="index.php?action=Disposal_List_summary_tree_2" class="sm4">Disposal-Summary List - Tree</a></li>
+														<li><a href="?index.php&action=disposal_yearsummary_List">Year Summary List</a></li>
+														<li><a href="?index.php&action=select_items_for_send_ordinance">Send Items to Ordnance</a></li>
+														<li><a href="?index.php&action=ordinance_stock_list">Ordnance Stock List</a></li>
+														<li><a href="?index.php&action=undo_Disposal">Undo Disposal</a></li>
+                                                        <?php
+                                                    } elseif ($_SESSION['SESS_LEVEL'] == 6) {
+                                       
+														?>
+                                                        <li hidden><a href="?index.php&action=Select_Items_For_Disposal"><?php echo $slideBar[21][$lang]?></a></li>
+                                                        <li><a href="?index.php&action=Select_Items_For_Disposal_quick">Select Items For Disposal</a></li>
+														<li><a href="?index.php&action=add_disposal_details_quick">Add Disposal Details</a></li>
+														<li><a href="?index.php&action=Selected_Items_For_Disposal"><?php echo $slideBar[22][$lang]?></a></li>
+														<li><a href="?index.php&action=Selected_List_For_Disposal">Selected List For Disposal</a></li>
+                                                        <li hidden><a href="?index.php&action=Confirm_Items_For_Disposal"><?php echo $slideBar[23][$lang]?></a></li>
+														<li><a href="?index.php&action=confirm_items_for_disposal_quick">Confirm Items for Disposal</a></li>														
+														<li hidden><a href="?index.php&action=Confirmed_Items_For_Disposal">Confirmed Items for Disposal</a></li>
+														<li><a href="?index.php&action=Confirmed_List_For_Disposal">Confirmed List For Disposal</a></li> 
+                                                        <li><a href="?index.php&action=Disposal_List"><?php echo $slideBar[26][$lang]?></a></li>
+                                                        <li><a href="?index.php&action=List_Inquiry&disposal=1"><?php echo $slideBar[27][$lang]?></a></li>
+														<li hidden><a href="?index.php&action=select_items_for_send_ordinance">Send Items to Ordinance</a></li>
+                                                        <?php
+                                                    } elseif ($_SESSION['SESS_LEVEL'] == 7) {
+                                                        if ($transfer && $transfer == 1) {
+														?> 
+                                                        <li><a href="?index.php&action=Select_Items_For_Disposal&transfer=1"><?php echo $slideBar[18][$lang]?></a></li>
+														<li><a href="?index.php&action=Selected_Items_For_Disposal&transfer=1"><?php echo $slideBar[19][$lang]?></a></li>
+														<li><a href="?index.php&action=Confirm_Items_For_Disposal&transfer=1"><?php echo $slideBar[20][$lang]?></a></li>
+														<?php
+														} else {
+														?>
+														<li hidden><a href="?index.php&action=Select_Items_For_Disposal"><?php echo $slideBar[21][$lang]?></a></li>
+                                                        <li><a href="?index.php&action=Select_Items_For_Disposal_quick">Select Items For Disposal</a></li>
+														<li><a href="?index.php&action=add_disposal_details_quick">Add Disposal Details</a></li>
+														<li hidden><a href="?index.php&action=Selected_Items_For_Disposal"><?php echo $slideBar[22][$lang]?></a></li>
+														<li hidden><a href="?index.php&action=Selected_List_For_Disposal">Selected List For Disposal</a></li>
+                                                        <li hidden><a href="?index.php&action=Confirm_Items_For_Disposal"><?php echo $slideBar[23][$lang]?></a></li>
+														<li><a href="?index.php&action=confirm_items_for_disposal_quick">Confirm Items for Disposal</a></li>														
+														<li hidden><a href="?index.php&action=Confirmed_Items_For_Disposal">Confirmed Items for Disposal</a></li>
+														<li hidden><a href="?index.php&action=Confirmed_List_For_Disposal">Confirmed List For Disposal</a></li> 														
+                                                        <li><a href="?index.php&action=Disposal_List"><?php echo $slideBar[26][$lang]?></a></li>
+														<li><a href="?index.php&action=Disposal_Inquiry"><?php echo $slideBar[27][$lang]?></a></li>
+                                                        <li hidden><a href="?index.php&action=List_Inquiry&disposal=1"><?php echo $slideBar[27][$lang]?></a></li>
+														<li hidden><a href="?index.php&action=select_items_for_send_ordinance">Send Items to Ordinance</a></li>
+                                                        <?php }
+                                                    } elseif ($_SESSION['SESS_LEVEL'] == 8) {
+                                                        if ($transfer && $transfer == 1) {
+														?> 
+														<li><a href="?index.php&action=Select_Items_For_Disposal&transfer=1"><?php echo $slideBar[18][$lang]?></a></li>
+                                                        <li><a href="?index.php&action=Selected_Items_For_Disposal&transfer=1"><?php echo $slideBar[19][$lang]?></a></li>
+														<?php
+														} else {
+														?>
+                                                        <li><a href="?index.php&action=Select_Items_For_Disposal"><?php echo $slideBar[21][$lang]?></a></li>
+														<li><a href="?index.php&action=Select_Items_For_Disposal_quick">Select Items For Disposal - Quick</a></li>
+                                                        <li><a href="?index.php&action=add_disposal_details_quick">Add Disposal Details - Quick</a></li>
+														<li><a href="?index.php&action=Selected_Items_For_Disposal"><?php echo $slideBar[22][$lang]?></a></li>
+														<li><a href="?index.php&action=Selected_List_For_Disposal">Selected List For Disposal</a></li>
+														<li><a href="?index.php&action=confirm_items_for_disposal_quick">Confirmed Items for Disposal</a></li>
+														<li><a href="?index.php&action=Confirmed_List_For_Disposal">Confirmed List For Disposal</a></li> 														
+                                                        <li><a href="?index.php&action=Disposal_List"><?php echo $slideBar[26][$lang]?></a></li>
+                                                        <li><a href="?index.php&action=List_Inquiry&disposal=1"><?php echo $slideBar[27][$lang]?></a></li>
+														<li><a href="?index.php&action=select_items_for_send_ordinance">Send Items to Ordinance</a></li>
+                                                        <?php }
+                                                    }
+                                                    break;
+                                                case 2:
+                                                case 3: //For Update Records
+                                                    if (empty($Items)) {
+                                                        ?>
+                                                        <img src="<?php echo $logo; ?>" alt="A description of the picture" width="230" height="230" /> 
+                                                    <?php
+                                                    } else {
+                                                        foreach ($Items as $Item) :
+                                                        ?>
+                                                        <li><a href="?index.php&action=update_Details&identificationno=<?php echo $Item[0]; ?>&groupId=<?php echo $Item[1]; ?>" title="<?php echo $Item[0]; ?>"><?php echo $Item[0]; ?> </a></li>            
+                                                    <?php endforeach; ?>
+                                                    <a href="?index.php&action=PendingApproveList">
+														<button>Print Pending Approve List</button>
+													</a>
+													<?php
+                                                    }
+                                                    break;
+												case 4: //For Update Records
+                                                    if (empty($Items)) {
+                                                        ?>
+                                                        <img src="<?php echo $logo; ?>" alt="A description of the picture" width="230" height="230" /> 
+                                                    <?php
+                                                    } else {
+                                                        foreach ($Items as $Item) :
+                                                        ?>
+                                                        <li><a href="?index.php&action=upload_plan&identificationno=<?php echo $Item[0]; ?>&groupId=<?php echo $Item[1]; ?>" title="<?php echo $Item[0]; ?>"><?php echo $Item[0]; ?> </a></li>            
+                                                    <?php endforeach; ?>
+                                                    <?php
+                                                    }
+                                                    break;
+                                                    case 8: //For Inquiry Records
+                                                    if (empty($items)) {
+                                                        ?>
+                                                        <img src="<?php echo $logo; ?>" alt="A description of the picture" width="230" height="230" /> 
+                                                        <?php
+                                                    } else {
+                                                        foreach ($items as $Item) :
+                                                            ?>
+                                                            <li><a href="?index.php&action=Inquiry_List_Details&assetunit=<?php echo $assetunit; ?>&searchby=<?php echo $searchby; ?>&search=<?php echo $search; ?>&identificationno=<?php echo $Item['identificationno']; ?>&inputField1=<?php echo $inputField1; ?>&inputField2=<?php echo $inputField2; ?>" title="<?php echo $Item['identificationno']; ?>"><?php echo $Item['identificationno']; ?> </a></li>            
+                                                        <?php endforeach; ?>
+                                                        <?php
+                                                    }
+                                                    break;
+                                                case 11:
+                                                    ?>
+                                                    <li><a href="?index.php&action=Approved"><?php echo $slideBar[6][$lang]?></a></li> 
+                                                    <li><a href="?index.php&action=Tobe_Approve"><?php echo $slideBar[3][$lang]?></a></li>
+                                                    <?php
+                                                    break;
+                                                case 12:
+                                                    foreach ($Items as $Item) :
+                                                        ?>
+                                                        <li><a href="?index.php&action=toBeApproveList&identificationno=<?php echo $Item[0]; ?>" title="<?php echo $Item[0]; ?>"><?php echo $Item[0]; ?> </a></li>            
+                                                    <?php endforeach; ?>
+                                                    <a href="?index.php&action=PendingApproveList">
+														<button>Print Pending Approve List</button>
+													</a>
+													<?php  if ($_SESSION['SESS_LEVEL'] == 1) { ?>
+													</br>
+													<a href="?index.php&action=Tobe_Approve&listdelete=1" onclick="return confirm('Are you sure? You Wat Delete All Pending Approve List ?')">
+														<button>Delete All Pending List</button>
+													</a>
+													<?php } ?>
+													<?php
+                                                    break;
+                                                case 13:
+                                                    foreach ($Items as $Item) :
+                                                        ?>
+                                                        <li><a href="?index.php&action=ApprovedList&identificationno=<?php echo $Item['identificationno']; ?>" title="<?php echo $Item['identificationno']; ?>"><?php echo $Item['identificationno']; ?> </a></li>
+                                                    <?php endforeach; ?>
+                                                    <?php
+                                                    break;
+                                                case 14: // selected list for Disposal
+                                                    foreach ($Items as $Item) :
+													if ($transfer && $transfer == 1) {  
+                                                        ?>
+                                                        <li><a href="?index.php&action=Selected_Items_For_Disposal&transfer=1&id=<?php echo $Item['id']; ?>" title="<?php echo $Item['identificationno']; ?>"><?php echo $Item['identificationno']; ?> </a></li>
+                                                    <?php  } else {
+													?>
+														<li><a href="?index.php&action=Selected_Items_For_Disposal&id=<?php echo $Item['id']; ?>" title="<?php echo $Item['identificationno']; ?>"><?php echo $Item['identificationno']; ?> </a></li>
+													<?php }	
+										
+													endforeach; ?>
+                                                    <?php
+                                                    break;   
+                                                case 21:
+                                                    foreach ($Items as $Item) :
+                                                     if ($transfer && $transfer == 1) {   
+														?>
+                                                        <li><a href="?index.php&action=search_Disposal&transfer=1&id=<?php echo $Item['id']; ?>" title="<?php echo $Item['searchKey']; ?>"><?php echo $Item['searchKey']; ?></a></li>            
+                                                    <?php } else {
+													?>
+                                                        <li><a href="?index.php&action=search_Disposal&id=<?php echo $Item['id']; ?>" title="<?php echo $Item['searchKey']; ?>"><?php echo $Item['searchKey']; ?></a></li>            
+                                                    <?php }													
+													endforeach; ?>
+                                                    <?php
+                                                    break;
+                                                case 22:
+                                                    foreach ($Items as $Item) :
+													 if ($transfer && $transfer == 1) {
+                                                        ?>
+                                                        <li><a href="?index.php&action=confirm_Disposal&transfer=1&id=<?php echo $Item['id']; ?>" title="<?php echo $Item['identificationno']; ?>"><?php echo $Item['identificationno']; ?></a></li>            
+                                                    <?php } else {
+													?>
+													<li><a href="?index.php&action=confirm_Disposal&id=<?php echo $Item['id']; ?>" title="<?php echo $Item['identificationno']; ?>" <?php echo ($Item['confirmDisposal'] == 1) ? "style='color:Violet'" : "";?>><?php echo $Item['identificationno']; ?></a></li>
+													<?php }
+													endforeach; ?>
+                                                    <?php
+                                                    break;
+                                                case 23:
+                                                    foreach ($Items as $Item) :
+                                                        ?>
+                                                        <li><a href="?index.php&action=approve_Disposal&id=<?php echo $Item['id']; ?>&assetscenter=<?php echo $assetscenter; ?>&assetunit=<?php echo $assetunit; ?>" title="<?php echo $Item['identificationno']; ?>"><?php echo $Item['identificationno']; ?></a></li>            
+                                                    <?php endforeach; ?>
+                                                    <?php
+                                                    break;
+                                                case 24:
+                                                    foreach ($Items as $Item) :
+                                                        ?>
+                                                        <li><a href="?index.php&action=DisposalList&identificationno=<?php echo $Item['identificationno']; ?>" title="<?php echo $Item['identificationno']; ?>"><?php echo $Item['identificationno']; ?></a></li>            
+                                                    <?php endforeach; ?>
+                                                    <?php
+                                                    break;
+												case 25:
+                                                    foreach ($Items as $Item) :
+                                                        ?>
+														<li><a href="?index.php&action=ModificationList&id=<?php echo $Item['id']; ?>" title="<?php echo $Item['identificationno']; ?>"><?php echo $Item['identificationno']; ?></a></li>
+                                                    <?php endforeach; ?>
+                                                    <?php
+                                                    break;
+												case 26:
+												case 27:
+                                                        ?>
+														    
+                                                    <?php
+                                                    break;
+												case 30:
+														?> 
+														<li><a href="?index.php&action=List_summary">Group By Catalogue Number</a></li>
+                                                        <li><a href="?index.php&action=List_summary2">Group By Item Category</a></li>
+														<li><a href="?index.php&action=List_summary3">Group By Main Category</a></li>
+														<li <?php if ($_SESSION['SESS_LEVEL'] > 5){ echo 'hidden' ;}?>><a href="?index.php&action=List_summary4_1">Group By Catalogue Number (Ignore Units)</a></li>
+														<li <?php if ($_SESSION['SESS_LEVEL'] > 5){ echo 'hidden' ;}?>><a href="?index.php&action=List_summary5_1">Group By Item Category (Ignore Units)</a></li>
+														<li <?php if ($_SESSION['SESS_LEVEL'] <> 1){ echo 'hidden' ;}?>><a href="?index.php&action=List_summary4">Group By Catalogue Number (Ignore Units, All Items)</a></li>
+														<li <?php if ($_SESSION['SESS_LEVEL'] <> 1){ echo 'hidden' ;}?>><a href="?index.php&action=List_summary5">Group By Item Category (Ignore Units, All Items)</a></li>
+														<li <?php if ($_SESSION['SESS_LEVEL'] <> 1){ echo 'hidden' ;}?>><a href="?index.php&action=List_summary6">Group By Item Category to Date(Ignore Units, All Items)</a></li>
+														 <?php                                                     
+                                                    break;
+												 case 31:
+                                                    foreach ($Items as $Item) :
+                                                        ?>
+                                                        <li><a href="?index.php&action=check_notconfirm_details&identificationno=<?php echo $Item[0]; ?>" title="<?php echo $Item[0]; ?>"><?php echo $Item[0]; ?> </a></li>            
+                                                    <?php endforeach; ?>
+                                                    <a href="?index.php&action=PendingApproveList">
+														<button>Print Pending Approve List</button>
+													</a>
+													<?php
+                                                    break;
+											case 32:
+                                                    if ($_SESSION['SESS_LEVEL'] == 1) {
+														?> 
+                                                        <li><a href="?index.php&action=Select_Items_For_loss">Select Lost & Damaged Items</a></li>
+                                                        <li><a href="?index.php&action=Selected_Items_For_loss">Selected List Lost & Damaged</a></li>
+                                                        <li><a href="?index.php&action=Confirm_Items_For_loss">Confirm Selected Lost & Damaged</a></li> 
+                                                        <li><a href="?index.php&action=approve_Items_For_loss">Approve Comfirmed Lost & Damaged</a></li>
+                                                        <li><a href="?index.php&action=loss_List">Lost & Damaged List</a></li>
+                                                        <li><a href="?index.php&action=loss_List_Inquiry">Lost & Damaged Inquiry</a></li>
+														<li><a href="index.php?action=lost_List_summary_tree_2" class="sm4">Lost-Summary List - Tree</a></li>
+                                                        <?php 
+													} elseif ($_SESSION['SESS_LEVEL'] == 3) {
+                                                        ?>
+                                                        <li><a href="?index.php&action=approve_Items_For_loss">Approve Comfirmed Lost & Damaged</a></li>
+                                                        <li><a href="?index.php&action=loss_List">Lost & Damaged List</a></li>
+                                                        <li><a href="?index.php&action=loss_List_Inquiry">Lost & Damaged Inquiry</a></li>
+                                                        <?php	
+                                                    } elseif ($_SESSION['SESS_LEVEL'] == 5 || $_SESSION['SESS_LEVEL'] == 4) {
+                                                        ?>
+                                                        <li><a href="?index.php&action=approve_Items_For_loss">Approve Comfirmed Lost & Damaged</a></li>
+                                                        <li><a href="?index.php&action=loss_List">Lost & Damaged List</a></li>
+                                                        <li><a href="?index.php&action=loss_List_Inquiry">Lost & Damaged Inquiry</a></li>
+														<li><a href="index.php?action=lost_List_summary_tree_2" class="sm4">Lost-Summary List - Tree</a></li>
+                                                        <?php
+                                                    } elseif ($_SESSION['SESS_LEVEL'] == 6) {
+                                       
+														?>
+                                                        <li><a href="?index.php&action=Select_Items_For_loss">Select Lost & Damaged Items</a></li>
+                                                        <li><a href="?index.php&action=Selected_Items_For_loss">Selected List Lost & Damaged</a></li>
+                                                         <li><a href="?index.php&action=Confirm_Items_For_loss">Confirm Selected Lost & Damaged</a></li> 
+                                                        <li><a href="?index.php&action=loss_List">Lost & Damaged List</a></li>
+                                                        <li><a href="?index.php&action=loss_List_Inquiry">Lost & Damaged Inquiry</a></li>
+                                                        <?php
+                                                    } elseif ($_SESSION['SESS_LEVEL'] == 7) {
+														?> 
+														<li><a href="?index.php&action=Select_Items_For_loss">Select Lost & Damaged Items</a></li>                                                        
+                                                        <li><a href="?index.php&action=Selected_Items_For_loss">Selected List Lost & Damaged</a></li>
+                                                        <li><a href="?index.php&action=Confirm_Items_For_loss">Confirm Selected Lost & Damaged</a></li>
+                                                       <li><a href="?index.php&action=loss_List">Lost & Damaged List</a></li>
+                                                        <li><a href="?index.php&action=loss_List_Inquiry">Lost & Damaged Inquiry</a></li>
+                                                        <?php 
+                                                    } elseif ($_SESSION['SESS_LEVEL'] == 8) {
+														?>
+                                                        <li><a href="?index.php&action=Select_Items_For_loss">Select Lost & Damaged Items</a></li>
+														<li><a href="?index.php&action=Selected_Items_For_loss">Selected List Lost & Damaged</a></li>
+                                                        <li><a href="?index.php&action=loss_List">Lost & Damaged List</a></li>
+                                                        <li><a href="?index.php&action=loss_List_Inquiry">Lost & Damaged Inquiry</a></li>
+                                                        <?php 
+                                                    }
+                                                    break;
+													case 33: 
+                                                        foreach ($items as $exp) :
+                                                        ?>
+                                                        <li><a href="index.php?action=Receive_Condemned_Goods&id=1&unit=<?php echo $exp['unitName']; ?>" title="<?php echo $exp['unitName']; ?>"><?php echo $exp['unitName']; ?></a></li>
+                                                    <?php endforeach;
+                                                    break;
+													case 34: 
+                                                        foreach ($items as $exp) :
+                                                        ?>
+                                                        <li><a href="index.php?action=ordinance_received_details&id=1&unit=<?php echo $exp['unitName']; ?>" title="<?php echo $exp['unitName']; ?>"><?php echo $exp['unitName']; ?></a></li>
+                                                    <?php endforeach;
+                                                    break;
+													case 35:
+                                                    if ($_SESSION['SESS_LEVEL'] == 1) {
+														?> 
+                                                        <li><a href="?index.php&action=Select_Items_For_displayitem">Select Display/Training Items</a></li>
+                                                        <li><a href="?index.php&action=Selected_Items_For_displayitem">Selected List Display/Training Items</a></li>
+                                                        <li><a href="?index.php&action=Confirm_Items_For_displayitem">Confirm Selected Display/Training Items</a></li> 
+                                                        <li><a href="?index.php&action=approve_Items_For_displayitem">Approve Comfirmed Display/Training Items</a></li>
+                                                        <li><a href="?index.php&action=displayitem_List">Display/Training Items List</a></li>
+                                                        <?php 
+													} elseif ($_SESSION['SESS_LEVEL'] == 3) {
+                                                        ?>
+                                                        <li><a href="?index.php&action=approve_Items_For_displayitem">Approve Comfirmed Display/Training Items</a></li>
+                                                        <li><a href="?index.php&action=displayitem_List">Display/Training Items List</a></li>
+                                                        <?php	
+                                                    } elseif ($_SESSION['SESS_LEVEL'] == 5 || $_SESSION['SESS_LEVEL'] == 4) {
+                                                        ?>
+                                                        <li><a href="?index.php&action=approve_Items_For_displayitem">Approve Comfirmed Display/Training Items</a></li>
+                                                        <li><a href="?index.php&action=displayitem_List">Display/Training Items List</a></li>
+                                                        <?php
+                                                    } elseif ($_SESSION['SESS_LEVEL'] == 6) {
+                                       
+														?>
+                                                        <li><a href="?index.php&action=Select_Items_For_displayitem">Select Display/Training Items</a></li>
+                                                        <li><a href="?index.php&action=Selected_Items_For_displayitem">Selected List Display/Training Items</a></li>
+                                                        <li><a href="?index.php&action=Confirm_Items_For_displayitem">Confirm Selected Display/Training Items</a></li> 
+                                                        <li><a href="?index.php&action=displayitem_List">Display/Training Items List</a></li>
+                                                        <?php
+                                                    } elseif ($_SESSION['SESS_LEVEL'] == 7) {
+														?>  
+                                                        <li><a href="?index.php&action=Select_Items_For_displayitem">Select Display/Training Items</a></li>
+                                                        <li><a href="?index.php&action=Selected_Items_For_displayitem">Selected List Display/Training Items</a></li>
+                                                        <li><a href="?index.php&action=Confirm_Items_For_displayitem">Confirm Selected Display/Training Items</a></li> 
+                                                        <li><a href="?index.php&action=displayitem_List">Display/Training Items List</a></li>
+                                                        <?php 
+                                                    } elseif ($_SESSION['SESS_LEVEL'] == 8) {
+														?>
+                                                        <li><a href="?index.php&action=Select_Items_For_displayitem">Select Display/Training Items</a></li>
+                                                        <li><a href="?index.php&action=Selected_Items_For_displayitem">Selected List Display/Training Items</a></li>
+                                                        <li><a href="?index.php&action=Confirm_Items_For_displayitem">Confirm Selected Display/Training Items</a></li> 
+                                                        <li><a href="?index.php&action=displayitem_List">Display/Training Items List</a></li>
+                                                        <?php 
+                                                    }
+                                                    break;
+                                                default:
+                                                    ?>
+                                                    <img src="<?php echo $logo; ?>" alt="A description of the picture" width="230" height="230" /> 
+                                            <?php } ?> 
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+															 <?php
+					if ($slidebartype == 26) {
+					    ?> 	
+    <div class="easyui-panel" style="padding:5px">
+        <ul id="tt" class="easyui-tree">
+            <li>
+                <span>Sri Lanka Army</span>
+                <ul>
+                    <?php 
+					$tem = "";
+					$tem2 = "";
+					foreach ($items as $exp) { 
+					 if ($exp['protocollevel1'] == 25) {
+					 if ($tem <> $exp['protocoltext2']) { ?>	
+					<li data-options="state:'closed'">                        
+						<span><?php echo $exp['protocoltext2']; ?></span>
+						<ul>
+                            <li><?php echo $exp['unitName']; ?></li>
+                        </ul>
+                       <?php 
+					   $tem = $exp['protocoltext2'];
+					   } else {
+						?>
+						<ul>
+                            <li><?php echo $exp['unitName']; ?></li>
+                        </ul>   
+						<?php   
+					   } 
+					 } else {
+					 if ($tem <> $exp['protocoltext1']) { ?>	
+					<li data-options="state:'closed'">                        
+						<span><?php echo $exp['protocoltext1']; ?></span>
+						<ul>
+                            <li><?php echo $exp['unitName']; ?></li>
+                        </ul>
+                       <?php 
+					   $tem = $exp['protocoltext1'];
+					   } else {
+						?>
+						<ul>
+                            <li><?php echo $exp['unitName']; ?></li>
+                        </ul>   
+						<?php   
+					   } 
+					} }?>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+							
+				<?php		
+					}
+					?>
+					<?php
+					if ($slidebartype == 27) {
+					    ?> 	
+    <div class="easyui-panel" style="padding:5px">
+        <ul id="tt2" class="easyui-tree">
+            <li>
+                <span>Plant & Machinery</span>
+                <ul>
+                    <?php 
+					$i=0;
+					$j = 0;
+					$tem = "";
+					$tem2 = "";
+					foreach ($items as $exp) { 
+					 if ($tem <> $exp['mainCategory']) { 
+					 if ($j<>0){
+						 $j++;
+						?> 
+						</li>
+						</ul>						
+					 <?php }
+					  $j++;
+					 ?>	
+					<li id="<?php echo 'z'.$j.$i ; ?>" data-options="state:'closed'">                        
+						<span><?php echo $exp['mainCategory']; ?></span>
+						<?php 
+					   $tem = $exp['mainCategory'];
+					   $i=0;
+					   } 
+						if ($tem2 <> $exp['itemCategory']) { 
+						if ($i<>0) { ?>
+							</li>
+							</ul>
+						 <?php
+						}
+						?>
+						<ul>
+                            <li id="<?php echo 'y'.$j.$i ; ?>" data-options="state:'closed'"><span><?php echo $exp['itemCategory']; ?></span>
+                        
+                       <?php 
+					   $tem2 = $exp['itemCategory'];
+					   } ?>
+						<ul>
+                            <li id="<?php echo 'x'.$j.$i ; ?>"><?php echo $exp['itemDescription']; ?></li>
+                        </ul>   
+						<?php   
+					   $i++;
+					} ?>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+							
+				<?php		
+					}
+					?>
+                    <span class="scb"><span class="scb_left"></span><span class="scb_right"></span></span>
+                </div>
+            </div>
+        </div>
+        <?php
+        switch ($slidebartype) {
+            case 12:
+            case 3:
+			case 31:
+                include 'sidebar_sub.php';
+				include 'sidebar_sub_2.php';
+                break;
+			case 5:	
+                include 'sidebar_sub.php';
+                break;        
+		}
+        ?>    
+        <?php include '../view/quick_info.php'; ?>
+		<P>
+
+	</P>
+    </div>
+</div>
