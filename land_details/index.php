@@ -1113,7 +1113,8 @@ switch ($action) {
 		$Items = LandDB::getFullDetails();
         $Items_Sub = LandDB::getLandsApproveRejected();
 		$row = LandDB::getpicById($id);
-		$picpath = $row['picpath'];
+        $picpath = isset($row['picpath']) ? $row['picpath'] : "";
+
        include('upload_plan.php');
         break;
 	case 'upload':
