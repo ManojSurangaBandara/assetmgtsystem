@@ -123,6 +123,8 @@ $notapprivedReason = "";
 $counterId = 0;
 $acquisitionInstitute = "";
 $previousownership = "";
+$valCost = "";
+$refValue = "";
 
 $assetsCenters = AssetsCenterDB::getAssetsCenters();
 $assetunits = AssetsUnitDB::getAssetsUnitsByCenter($assetscenter, 1);
