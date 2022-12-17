@@ -92,9 +92,9 @@
 															$t_area = $t_area + $exp['area'];														  
 														  ?>
                                                 <?php } 
-												$tt_perch = $t_perch % 40;
+												$tt_perch = intval($t_perch) % 40;
 												$t_rood = $t_rood + ($t_perch - $tt_perch) / 40;
-												$tt_rood = $t_rood % 4;
+												$tt_rood = intval($t_rood) % 4;
 												$t_acre = $t_acre + ($t_rood - $tt_rood) / 4;
 												?> 
 												</tbody>
