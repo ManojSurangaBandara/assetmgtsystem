@@ -82,7 +82,7 @@ class allocation_detailsDB {
         $query = "select * from allocation_details where assetunit = '$assetunit' and catalogueno = '$catalogueno'";
         $result = $db->query($query);
         $row = $result->fetch();
-        return $row['quantity'];
+        return $row['quantity'] ?? 0;
     }
 	public static function getDetailsByUnitCatalogueno_all($assetunit, $catalogueno) {
         $db = Database::getDB();

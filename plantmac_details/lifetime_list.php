@@ -102,9 +102,9 @@ include 'header1.php';
 											$maxlifetimedate = date('Y-m-d',strtotime($maxlifetime,$date));
 											$today = date("Y-m-d");
 											$trcolour = "";
-											if (($today - $maxlifetimedate) > $lifetime['maxlifetime']) {
+											if ((strtotime($today) - strtotime($maxlifetimedate)) > $lifetime['maxlifetime']) {
 												$trcolour = "#A8E5FF";
-											} elseif (($today - $minlifetimedate) > $lifetime['minlifetime']) {
+											} elseif ((strtotime($today) - strtotime($minlifetimedate)) > $lifetime['minlifetime']) {
 												$trcolour = "#3BC0F9";
 											}	
 											?>
