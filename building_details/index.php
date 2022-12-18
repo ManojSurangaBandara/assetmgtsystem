@@ -161,6 +161,7 @@ switch ($action) {
         $Items = BuildingDB::getBuildingNotApproved();
         $Items_Sub = BuildingDB::getBuildingApproveRejected();
 		$Items_Sub_2 = BuildingDB::getItemsNotTransfered($assetunit);
+        $refValue = "";
         include('add_building_details.php');
         break;
     case 'Add_Building_Details_ajax':

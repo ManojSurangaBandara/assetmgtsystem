@@ -179,6 +179,7 @@ switch ($action) {
         $Items_Sub = VehicleDB::getItemsApproveRejected();
 		$Items_Sub_2 = VehicleDB::getItemsNotTransfered($assetunit);
         $institutes = InstituteDB::getFullDetails();
+        $capRprCost = "";
         include('add_details.php');
         break;
     case 'findAssetsUnitsByCenter':
