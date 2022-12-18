@@ -21,6 +21,7 @@ require('../model/board_report_db.php');
 require('../model/board_report_observations_db.php');
 require('../model/board_report_summary_db.php');
 require('../model/allocation_details_db.php');
+require('../model/plantmac_repair_details_db.php');
 $page = 3;
 $type = 2;
 $memPlace = $place = $_SESSION['SESS_PLACE'];
