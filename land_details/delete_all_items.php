@@ -139,7 +139,7 @@
                                                     <td><nobr><?php echo $exp['deedno']; ?></nobr></td>
                                                     <td><nobr><?php echo $exp['landname']; ?></nobr></td>
                                                     <td align="right"><nobr><?php echo number_format((float)$exp['area'], 2, '.', ','); ?></nobr></td>
-													<td align="right"><nobr><?php echo $exp['acre']."A, ".$exp['rood']."R, ".number_format($exp['parch'], 2, '.', ',')."P "; ?></nobr></td>
+													<td align="right"><nobr><?php echo $exp['acre']."A, ".$exp['rood']."R, ".number_format((float)$exp['parch'], 2, '.', ',')."P "; ?></nobr></td>
                                                     <td><nobr><?php echo $exp['acquisitiondate']; ?></nobr></td>
                                                     <td align="right"><nobr><?php echo number_format((float)$exp['estimatedValue'], 2, '.', ','); ?></nobr></td>
                                                 </tr>

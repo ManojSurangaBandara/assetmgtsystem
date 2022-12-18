@@ -79,7 +79,7 @@
 														<td><nobr><?php echo $exp['planno']; ?></nobr></td>																											
                                                         <td><nobr><?php echo $exp['deedno']; ?></nobr></td>
                                                         <td align="right"><nobr><?php echo number_format((float)$exp['area'], 2, '.', ','); ?></nobr></td>
-														<td align="right"><nobr><?php echo $exp['acre']."A, ".$exp['rood']."R, ".number_format($exp['parch'], 2, '.', ',')."P "; ?></nobr></td>
+														<td align="right"><nobr><?php echo $exp['acre']."A, ".$exp['rood']."R, ".number_format((float)$exp['parch'], 2, '.', ',')."P "; ?></nobr></td>
                                                         <td align="right"><nobr><?php echo $exp['acquisitiondate']; ?></nobr></td>
                                                         <td align="right"><nobr><?php echo number_format((float)$exp['estimatedValue'], 2, '.', ','); ?></nobr></td>
                                                      <td align="right"><nobr><?php echo $exp['refValue']; ?></nobr></td>
@@ -115,7 +115,7 @@
 												<td></td>
 												<td></td>
 												<td align="right"><?php echo number_format((float)$t_area, 2, '.', ','); ?></td>
-												<td align="right"><nobr><?php echo number_format((float)$t_acre, 0, '.', ',')."A, ".$tt_rood."R, ".number_format($tt_perch, 2, '.', ',')."P "; ?></nobr></td>												
+												<td align="right"><nobr><?php echo number_format((float)$t_acre, 0, '.', ',')."A, ".$tt_rood."R, ".number_format((float)$tt_perch, 2, '.', ',')."P "; ?></nobr></td>												
 												  <td></td>
 												  <td align="right"><?php echo number_format((float)$totvalue, 2, '.', ','); ?></td>
 												</tr>
