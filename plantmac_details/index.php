@@ -537,43 +537,43 @@ switch ($action) {
         }
 
         $PlantMac = PlantMacDB::getDetailsById($id);
-        $assetscenter = $PlantMac['assetscenter'];
-        $assetunit = $PlantMac['assetunit'];
-        $mainCategory = $PlantMac['mainCategory'];
-        $itemCategory = $PlantMac['itemCategory'];
-        $itemDescription = $PlantMac['itemDescription'];
-        $assetsno = $PlantMac['assetsno'];
-        $newAssestno = $PlantMac['newAssestno'];
-        $catalogueno = $PlantMac['catalogueno'];
-        $identificationno = $PlantMac['identificationno'];
-        $ledgerno = $PlantMac['ledgerno'];
-        $ledgerFoliono = $PlantMac['ledgerFoliono'];
-        $eqptSriNo = $PlantMac['eqptSriNo'];
-        $purchasedDate = $PlantMac['purchasedDate'];
-        $quantity = $PlantMac['quantity'];
-        $capacity = $PlantMac['capacity'];
-        $unitValue = $PlantMac['unitValue'];
-        $totalCost = $PlantMac['totalCost'];
-        $receivedDate = $PlantMac['receivedDate'];
-		$fundtype = $PlantMac['fundtype'];
-        $Remarks = $PlantMac['Remarks'];
-        $presentLocation = $PlantMac['presentLocation'];
-        $acquisitionInstitute = $PlantMac['acquisitionInstitute'];
-		$natureOwnership = $PlantMac['natureOwnership'];
+        $assetscenter = $PlantMac['assetscenter'] ?? "";
+        $assetunit = $PlantMac['assetunit'] ?? "";
+        $mainCategory = $PlantMac['mainCategory'] ?? "";
+        $itemCategory = $PlantMac['itemCategory'] ?? "";
+        $itemDescription = $PlantMac['itemDescription'] ?? "";
+        $assetsno = $PlantMac['assetsno'] ?? "";
+        $newAssestno = $PlantMac['newAssestno'] ?? "";
+        $catalogueno = $PlantMac['catalogueno'] ?? "";
+        $identificationno = $PlantMac['identificationno'] ?? "";
+        $ledgerno = $PlantMac['ledgerno'] ?? "";
+        $ledgerFoliono = $PlantMac['ledgerFoliono'] ?? "";
+        $eqptSriNo = $PlantMac['eqptSriNo'] ?? "";
+        $purchasedDate = $PlantMac['purchasedDate'] ?? "";
+        $quantity = $PlantMac['quantity'] ?? "";
+        $capacity = $PlantMac['capacity'] ?? "";
+        $unitValue = $PlantMac['unitValue'] ?? "";
+        $totalCost = $PlantMac['totalCost'] ?? "";
+        $receivedDate = $PlantMac['receivedDate'] ?? "";
+		$fundtype = $PlantMac['fundtype'] ?? "";
+        $Remarks = $PlantMac['Remarks'] ?? "";
+        $presentLocation = $PlantMac['presentLocation'] ?? "";
+        $acquisitionInstitute = $PlantMac['acquisitionInstitute'] ?? "";
+		$natureOwnership = $PlantMac['natureOwnership'] ?? "";
         if ($transfer == 1) {
-            $transferSelect = $PlantMac['transferSelect'];
-            $transferToCenter = $PlantMac['transferToCenter'];
-            $transferToUnit = $PlantMac['transferToUnit'];
-            $transferToDate = $PlantMac['transferToDate'];
-            $transferToDetails = $PlantMac['transferToDetails'];
+            $transferSelect = $PlantMac['transferSelect'] ?? "";
+            $transferToCenter = $PlantMac['transferToCenter'] ?? "";
+            $transferToUnit = $PlantMac['transferToUnit'] ?? "";
+            $transferToDate = $PlantMac['transferToDate'] ?? "";
+            $transferToDetails = $PlantMac['transferToDetails'] ?? "";
             $assetsCenters = AssetsCenterDB::getAssetsCentersAll();
             $assetunits = AssetsUnitDB::getAssetsUnitsByCenterAll($transferToCenter);
         } else {
-            $selectDisposal = $PlantMac['selectDisposal'];
-            $disposedDate = $PlantMac['disposedDate'];
-            $disposedReason = $PlantMac['disposedReason'];
-			$condemnation = $PlantMac['condemnation'];
-			$destruction = $PlantMac['destruction'];
+            $selectDisposal = $PlantMac['selectDisposal'] ?? "";
+            $disposedDate = $PlantMac['disposedDate'] ?? "";
+            $disposedReason = $PlantMac['disposedReason'] ?? "";
+			$condemnation = $PlantMac['condemnation'] ?? "";
+			$destruction = $PlantMac['destruction'] ?? "";
         }
 
         //include('startpage.php');
@@ -712,7 +712,7 @@ switch ($action) {
             }
         }
         // 
-		$catalogueno = $_COOKIE['catalogueno'];
+		$catalogueno = $_COOKIE['catalogueno'] ?? "";
         $searchby = $_COOKIE['searchby'];
         $search = $_COOKIE['search'];
         $PlantMac = PlantMacDB::getDetailsById($id);
