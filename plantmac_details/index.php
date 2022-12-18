@@ -1358,7 +1358,7 @@ switch ($action) {
         $idList = array();
         $id = array();
 		$row = PlantMacDB::getpicById($identificationno);
-		$picpath = $row['picpath'];
+		 $picpath = !isset($row['picpath']) ? "" : $row['picpath'];
         $Items = PlantMacDB::getItemsNotApproved();
         $Items_Sub = PlantMacDB::getItemsApproveRejected();
 		$Items_Sub_2 = PlantMacDB::getItemsNotApprovedTransfer();
@@ -1437,7 +1437,7 @@ switch ($action) {
         $identificationno = $_GET['identificationno'];
         $slidebartype = 0;
 		$row = PlantMacDB::getpicById($identificationno);
-		$picpath = $row['picpath'];
+		 $picpath = !isset($row['picpath']) ? "" : $row['picpath'];
         //$Items = PlantMacDB::getItemsApproved();
         $PlantMac = PlantMacDB::getDetailsByIdentificationno($identificationno);
         $assetscenter = $PlantMac['assetscenter'];
@@ -2043,7 +2043,7 @@ switch ($action) {
 		$Items = PlantMacDB::getItemsNotApproved();
         $Items_Sub = PlantMacDB::getItemsApproveRejected();
 		$row = PlantMacDB::getpicById($identificationno);
-		$picpath = $row['picpath'];
+		 $picpath = !isset($row['picpath']) ? "" : $row['picpath'];
         include('upload_plan.php');
         break;
 	case 'upload':
@@ -2096,7 +2096,7 @@ switch ($action) {
 		$Items = PlantMacDB::getItemsNotApproved();
         $Items_Sub = PlantMacDB::getItemsApproveRejected();
 		$row = PlantMacDB::getpicById($identificationno);
-		$picpath = $row['picpath'];
+		 $picpath = !isset($row['picpath']) ? "" : $row['picpath'];
         include('upload_plan.php');
         break;			
     case 'List_columnlist':
@@ -2636,7 +2636,7 @@ switch ($action) {
 			} else if ($id == 10) {	
 				$identificationno = $_GET['identificationno'];
 				$row = PlantMacDB::getpicById($identificationno);
-				$picpath = $row['picpath'];
+				 $picpath = !isset($row['picpath']) ? "" : $row['picpath'];
 				//$Items = PlantMacDB::getItemsApproved();
 				$PlantMac = PlantMacDB::getDetailsByIdentificationno($identificationno);
 				$assetscenter = $PlantMac['assetscenter'];
@@ -2839,7 +2839,7 @@ switch ($action) {
         $idList = array();
         $id = array();
 		$row = PlantMacDB::getpicById($identificationno);
-		$picpath = $row['picpath'];
+		 $picpath = !isset($row['picpath']) ? "" : $row['picpath'];
         $Items = PlantMacDB::getItemsNotApproved();
         $Items_Sub = PlantMacDB::getItemsApproveRejected();
 		$Items_Sub_2 = PlantMacDB::getItemsNotApprovedTransfer();
@@ -2952,7 +2952,7 @@ switch ($action) {
 			} else if ($id == 3) {	
 				$identificationno = $_GET['identificationno'];
 				$row = PlantMacDB::getpicById($identificationno);
-				$picpath = $row['picpath'];
+				 $picpath = !isset($row['picpath']) ? "" : $row['picpath'];
 				$PlantMac = PlantMacDB::getDetailsByIdentificationno($identificationno);
 				$assetscenter = $PlantMac['assetscenter'];
 				$assetunit = $PlantMac['assetunit'];
@@ -3120,7 +3120,7 @@ switch ($action) {
         $identificationno = $_GET['identificationno'];
         $slidebartype = 0;
 		$row = PlantMacDB::getpicById($identificationno);
-		$picpath = $row['picpath'];
+		 $picpath = !isset($row['picpath']) ? "" : $row['picpath'];
         //$Items = PlantMacDB::getItemsApproved();
         $PlantMac = PlantMacDB::getDetailsByIdentificationno($identificationno);
         $assetscenter = $PlantMac['assetscenter'];
@@ -3161,7 +3161,7 @@ switch ($action) {
         $identificationno = $_GET['identificationno'];
         $slidebartype = 0;
 		$row = PlantMacDB::getpicById($identificationno);
-		$picpath = $row['picpath'];
+		 $picpath = !isset($row['picpath']) ? "" : $row['picpath'];
         //$Items = PlantMacDB::getItemsApproved();
         $PlantMac = PlantMacDB::getDetailsByIdentificationno($identificationno);
         $assetscenter = $PlantMac['assetscenter'];
@@ -3560,7 +3560,7 @@ switch ($action) {
 			} else if ($id == 3) {	
 				$identificationno = $_GET['identificationno'];
 				$row = PlantMacDB::getpicById($identificationno);
-				$picpath = $row['picpath'];
+				 $picpath = !isset($row['picpath']) ? "" : $row['picpath'];
 				$PlantMac = PlantMacDB::getDetailsByIdentificationno($identificationno);
 				$assetscenter = $PlantMac['assetscenter'];
 				$assetunit = $PlantMac['assetunit'];
@@ -3633,7 +3633,7 @@ switch ($action) {
 			} else if ($id == 3) {	
 				$identificationno = $_GET['identificationno'];
 				$row = PlantMacDB::getpicById($identificationno);
-				$picpath = $row['picpath'];
+				 $picpath = !isset($row['picpath']) ? "" : $row['picpath'];
 				$PlantMac = PlantMacDB::getDetailsByIdentificationno($identificationno);
 				$assetscenter = $PlantMac['assetscenter'];
 				$assetunit = $PlantMac['assetunit'];

@@ -616,7 +616,7 @@ switch ($action) {
 		$condemnation = $Vehicle['condemnation'];
 		$destruction = $Vehicle['destruction'];
 		$row = VehicleDB::getpicById($identificationno);
-		$picpath = $row['picpath'];
+		 $picpath = !isset($row['picpath']) ? "" : $row['picpath'];
         $assetsCenters = AssetsCenterDB::getAssetsCenters();
         $assetunits = AssetsUnitDB::getAssetsUnitsByCenter($assetscenter, 1);
         $slidebartype = 1;
@@ -1202,7 +1202,7 @@ switch ($action) {
 		$Items = VehicleDB::getItemsApproved();
         $Items_Sub = VehicleDB::getItemsApproveRejected();
 		$row = VehicleDB::getpicById($id);
-		$picpath = $row['picpath'];
+		 $picpath = !isset($row['picpath']) ? "" : $row['picpath'];
        include('upload_plan.php');
         break;
 	case 'upload':
@@ -1252,7 +1252,7 @@ switch ($action) {
 		$Items = VehicleDB::getItemsApproved();
         $Items_Sub = VehicleDB::getItemsApproveRejected();
 		$row = VehicleDB::getpicById($id);
-		$picpath = $row['picpath'];
+		 $picpath = !isset($row['picpath']) ? "" : $row['picpath'];
         include('upload_plan.php');
         break;
     case 'List_columnlist':
@@ -1996,7 +1996,7 @@ switch ($action) {
 		$lossedDate = $Vehicle['lossedDate'];
 		$lossedReason = $Vehicle['lossedReason'];
 		$row = VehicleDB::getpicById($identificationno);
-		$picpath = $row['picpath'];
+		 $picpath = !isset($row['picpath']) ? "" : $row['picpath'];
         include('add_loss_details.php');
         break;	
     case 'save_loss_details':
@@ -2015,7 +2015,7 @@ switch ($action) {
 		$lossedDate = $Vehicle['lossedDate'];
 		$lossedReason = $Vehicle['lossedReason'];
 		$row = VehicleDB::getpicById($identificationno);
-		$picpath = $row['picpath'];
+		 $picpath = !isset($row['picpath']) ? "" : $row['picpath'];
 		$lossedDate = $Vehicle['lossedDate'];
 		$lossedReason = $Vehicle['lossedReason'];
         include('display_loss_details.php');
@@ -2433,7 +2433,7 @@ switch ($action) {
 		$displayvehicleedDate = $Vehicle['displayvehicleedDate'];
 		$displayvehicleedReason = $Vehicle['displayvehicleedReason'];
 		$row = VehicleDB::getpicById($identificationno);
-		$picpath = $row['picpath'];
+		 $picpath = !isset($row['picpath']) ? "" : $row['picpath'];
         include('add_displayvehicle_details.php');
         break;	
     case 'save_displayvehicle_details':
@@ -2452,7 +2452,7 @@ switch ($action) {
 		$displayvehicleedDate = $Vehicle['displayvehicleedDate'];
 		$displayvehicleedReason = $Vehicle['displayvehicleedReason'];
 		$row = VehicleDB::getpicById($identificationno);
-		$picpath = $row['picpath'];
+		 $picpath = !isset($row['picpath']) ? "" : $row['picpath'];
 		$displayvehicleedDate = $Vehicle['displayvehicleedDate'];
 		$displayvehicleedReason = $Vehicle['displayvehicleedReason'];
         include('display_displayvehicle_details.php');

@@ -888,7 +888,7 @@ if (isset($_POST['ExpToPdf']) && $_POST['ExpToPdf'] == '1') {
 		$Items = BuildingDB::getBuildingNotApproved();
         $Items_Sub = BuildingDB::getBuildingApproveRejected();
 		$row = BuildingDB::getpicById($id);
-		$picpath = $row['picpath'];
+		$picpath = !isset($row['picpath']) ? "" : $row['picpath'];
         include('upload_plan.php');
         break;
 	case 'upload':
@@ -937,7 +937,7 @@ if (isset($_POST['ExpToPdf']) && $_POST['ExpToPdf'] == '1') {
 		$Items = BuildingDB::getBuildingNotApproved();
         $Items_Sub = BuildingDB::getBuildingApproveRejected();
 		$row = BuildingDB::getpicById($id);
-		$picpath = $row['picpath'];
+		 $picpath = !isset($row['picpath']) ? "" : $row['picpath'];
         include('upload_plan.php');
         break;
     case 'List_columnlist':

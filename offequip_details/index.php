@@ -1167,7 +1167,7 @@ switch ($action) {
     case 'toBeApproveList':
         $identificationno = $_GET['identificationno'];
         $row = OfficeEquDB::getpicById($identificationno);
-		$picpath = $row['picpath'];
+		 $picpath = !isset($row['picpath']) ? "" : $row['picpath'];
 		$slidebartype = 12;
         $idList = array();
         $id = array();
@@ -1247,7 +1247,7 @@ switch ($action) {
         $identificationno = $_GET['identificationno'];
         $slidebartype = 0;
 		$row = OfficeEquDB::getpicById($identificationno);
-		$picpath = $row['picpath'];
+		 $picpath = !isset($row['picpath']) ? "" : $row['picpath'];
         //$Items = OfficeEquDB::getItemsApproved();
         $OfficeEqu = OfficeEquDB::getDetailsByIdentificationno($identificationno);
         $assetscenter = $OfficeEqu['assetscenter'];
@@ -2113,7 +2113,7 @@ switch ($action) {
         $Items_Sub = OfficeEquDB::getItemsApproveRejected();
 		$Items_Sub_2 = OfficeEquDB::getItemsNotTransfered($assetunit);
 		$row = OfficeEquDB::getpicById($identificationno);
-		$picpath = $row['picpath'];
+		 $picpath = !isset($row['picpath']) ? "" : $row['picpath'];
         include('upload_plan.php');
         break;
 	case 'upload':
@@ -2166,7 +2166,7 @@ switch ($action) {
 		$Items = OfficeEquDB::getItemsNotApproved();
         $Items_Sub = OfficeEquDB::getItemsApproveRejected();
 		$row = OfficeEquDB::getpicById($identificationno);
-		$picpath = $row['picpath'];
+		 $picpath = !isset($row['picpath']) ? "" : $row['picpath'];
         include('upload_plan.php');
         break;
     case 'List_columnlist':
@@ -2706,7 +2706,7 @@ switch ($action) {
 			} else if ($id == 10) {	
 				$identificationno = $_GET['identificationno'];
 				$row = OfficeEquDB::getpicById($identificationno);
-				$picpath = $row['picpath'];
+				 $picpath = !isset($row['picpath']) ? "" : $row['picpath'];
 				//$Items = OfficeEquDB::getItemsApproved();
 				$PlantMac = OfficeEquDB::getDetailsByIdentificationno($identificationno);
 				$assetscenter = $PlantMac['assetscenter'];
@@ -2919,7 +2919,7 @@ switch ($action) {
         $idList = array();
         $id = array();
 		$row = OfficeEquDB::getpicById($identificationno);
-		$picpath = $row['picpath'];
+		 $picpath = !isset($row['picpath']) ? "" : $row['picpath'];
         $Items = OfficeEquDB::getItemsNotApproved();
         $Items_Sub = OfficeEquDB::getItemsApproveRejected();
 		$Items_Sub_2 = OfficeEquDB::getItemsNotApprovedTransfer();
@@ -3033,7 +3033,7 @@ switch ($action) {
 			} else if ($id == 3) {	
 				$identificationno = $_GET['identificationno'];
 				$row = OfficeEquDB::getpicById($identificationno);
-				$picpath = $row['picpath'];
+				 $picpath = !isset($row['picpath']) ? "" : $row['picpath'];
 				$PlantMac = OfficeEquDB::getDetailsByIdentificationno($identificationno);
 				$assetscenter = $PlantMac['assetscenter'];
 				$assetunit = $PlantMac['assetunit'];
@@ -3201,7 +3201,7 @@ switch ($action) {
         $identificationno = $_GET['identificationno'];
         $slidebartype = 0;
 		$row = OfficeEquDB::getpicById($identificationno);
-		$picpath = $row['picpath'];
+		 $picpath = !isset($row['picpath']) ? "" : $row['picpath'];
         //$Items = OfficeEquDB::getItemsApproved();
         $PlantMac = OfficeEquDB::getDetailsByIdentificationno($identificationno);
         $assetscenter = $PlantMac['assetscenter'];
@@ -3242,7 +3242,7 @@ switch ($action) {
         $identificationno = $_GET['identificationno'];
         $slidebartype = 0;
 		$row = OfficeEquDB::getpicById($identificationno);
-		$picpath = $row['picpath'];
+		 $picpath = !isset($row['picpath']) ? "" : $row['picpath'];
         //$Items = OfficeEquDB::getItemsApproved();
         $PlantMac = OfficeEquDB::getDetailsByIdentificationno($identificationno);
         $assetscenter = $PlantMac['assetscenter'];
@@ -3620,7 +3620,7 @@ switch ($action) {
 			} else if ($id == 3) {	
 				$identificationno = $_GET['identificationno'];
 				$row = OfficeEquDB::getpicById($identificationno);
-				$picpath = $row['picpath'];
+				 $picpath = !isset($row['picpath']) ? "" : $row['picpath'];
 				$PlantMac = OfficeEquDB::getDetailsByIdentificationno($identificationno);
 				$assetscenter = $PlantMac['assetscenter'];
 				$assetunit = $PlantMac['assetunit'];

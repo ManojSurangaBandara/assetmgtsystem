@@ -1162,7 +1162,7 @@ switch ($action) {
 		$Items = LandDB::getLandsNotApproved();
         $Items_Sub = LandDB::getLandsApproveRejected();
 		$row = LandDB::getpicById($id);
-		$picpath = $row['picpath'];
+		 $picpath = !isset($row['picpath']) ? "" : $row['picpath'];
         include('upload_plan.php');
         break;
     case 'List_columnlist_easyui':	
