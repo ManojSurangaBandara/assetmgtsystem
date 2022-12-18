@@ -105,8 +105,8 @@ $totaddvalue = 0;?>
 <td><nobr><a href="index.php?action=List_summary_list&id=1&categoryName=<?php echo $exp['buildingCategory']; ?>&assetscenter=<?php echo $assetscenter; ?>&assetunit=<?php echo $assetunit; ?>&inputField1=<?php echo $inputField1; ?>&inputField2=<?php echo $inputField2; ?>"><?php echo $exp['buildingCategory']; ?></nobr></td>
 <td><nobr><?php echo $exp['classificationno']; ?></nobr></td>	
 <td align="right"><nobr><?php echo $exp['cnt']; ?></nobr></td>
-<td style="text-align:right"><nobr><?php echo number_format($exp['tot'], 2, '.', ','); ?></nobr></td>
-<td style="text-align:right"><nobr><?php echo number_format($exp['addtot'], 2, '.', ','); ?></nobr></td>
+<td style="text-align:right"><nobr><?php echo number_format((float)$exp['tot'], 2, '.', ','); ?></nobr></td>
+<td style="text-align:right"><nobr><?php echo number_format((float)$exp['addtot'], 2, '.', ','); ?></nobr></td>
 </tr> 
  <?php $i++; 
  $totqty = $totqty + $exp['cnt']; 
@@ -121,9 +121,9 @@ $totaddvalue = 0;?>
 	<td></td>
 	<td>Total</td>
 	<td></td>
-	<td align="right"><?php echo number_format($totqty, 0, '.', ','); ?></td>	
-	  <td align="right"><?php echo number_format($totvalue, 2, '.', ','); ?></td>
-          <td align="right"><?php echo number_format($totaddvalue, 2, '.', ','); ?></td>
+	<td align="right"><?php echo number_format((float)$totqty, 0, '.', ','); ?></td>	
+	  <td align="right"><?php echo number_format((float)$totvalue, 2, '.', ','); ?></td>
+          <td align="right"><?php echo number_format((float)$totaddvalue, 2, '.', ','); ?></td>
 	</tr>
   </tfoot> 
 </table>

@@ -95,7 +95,7 @@ echo "<a href='index.php?action=Paging_List&page1=$total_pages'  class='paging'>
 												<td></td>
 												<td></td>
 												<td></td>
-												<td align="right"><?php echo number_format($totvalue, 2, '.', ','); ?></td>
+												<td align="right"><?php echo number_format((float)$totvalue, 2, '.', ','); ?></td>
 												<td></td>
 												<td></td>
 												<td></td>

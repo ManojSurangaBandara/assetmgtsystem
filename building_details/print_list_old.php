@@ -74,13 +74,13 @@ require('../fpdf17/fpdf.php');
                         $this->Cell($w[4], 6, $row['landname'], 'LR', 0, 'L', $fill);
                         $this->Cell($w[5], 6, $row['district'], 'LR', 0, 'L', $fill);
                         $this->Cell($w[6], 6, $row['dsDivision'], 'LR', 0, 'L', $fill);
-                        $this->Cell($w[7], 6, number_format($row['area'], 2), 'LR', 0, 'R', $fill);
-                        $this->Cell($w[8], 6, number_format($row['constructionCost'], 2), 'LR', 0, 'R', $fill);
-                        $this->Cell($w[9], 6, number_format($row['alterationValue'], 2), 'LR', 0, 'R', $fill);
+                        $this->Cell($w[7], 6, number_format((float)$row['area'], 2), 'LR', 0, 'R', $fill);
+                        $this->Cell($w[8], 6, number_format((float)$row['constructionCost'], 2), 'LR', 0, 'R', $fill);
+                        $this->Cell($w[9], 6, number_format((float)$row['alterationValue'], 2), 'LR', 0, 'R', $fill);
                         $this->Cell($w[10], 6, $row['acquisitiondate'], 'LR', 0, 'C', $fill);
                         $this->Cell($w[11], 6, $row['ownerName'], 'LR', 0, 'L', $fill);
-                        //  $this->Cell($w[2], 6, number_format($row[2]), 'LR', 0, 'R', $fill);
-                        //  $this->Cell($w[3], 6, number_format($row[3]), 'LR', 0, 'R', $fill);
+                        //  $this->Cell($w[2], 6, number_format((float)$row[2]), 'LR', 0, 'R', $fill);
+                        //  $this->Cell($w[3], 6, number_format((float)$row[3]), 'LR', 0, 'R', $fill);
                         $this->Ln();
                         $fill = !$fill;
                     }

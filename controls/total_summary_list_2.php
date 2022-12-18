@@ -53,38 +53,38 @@ $(document).ready(function() {
                                                         <td>1</td>                                                        
                                                         <td>Land</td>
 														<td align="right"><?php echo $ld[0]; ?></td>
-														<td align="right"><?php echo number_format($ld[1], 2, '.', ','); ?></td>
+														<td align="right"><?php echo number_format((float)$ld[1], 2, '.', ','); ?></td>
 													</tr>
 													<tr>
 														<td>2</td>
 														<td>Building</td>
 														<td align="right"><?php echo $bd[0]; ?></td>
-														<td align="right"><?php echo number_format($bd[1], 2, '.', ','); ?></td>
+														<td align="right"><?php echo number_format((float)$bd[1], 2, '.', ','); ?></td>
 													</tr>
 													<tr>
 														<td>3</td>
 														<td>Plant & Machinery</td>
 														<td align="right"><?php echo $pm[0]; ?></td>
-														<td align="right"><?php echo number_format($pm[1], 2, '.', ','); ?></td>
+														<td align="right"><?php echo number_format((float)$pm[1], 2, '.', ','); ?></td>
 													</tr>
 													<tr>
 														<td>4</td>
 														<td>Office Equipments</td>													
 														<td align="right"><?php echo $oe[0]; ?></td>
-														<td align="right"><?php echo number_format($oe[1], 2, '.', ','); ?></td>
+														<td align="right"><?php echo number_format((float)$oe[1], 2, '.', ','); ?></td>
 													</tr>
 													<tr>
 														<td>5</td>
 														<td>Vehicles</td>													
 														<td align="right"><?php echo $ve[0]; ?></td>
-														<td align="right"><?php echo number_format($ve[1], 2, '.', ','); ?></td>														
+														<td align="right"><?php echo number_format((float)$ve[1], 2, '.', ','); ?></td>														
                                                     </tr>
                                                 </tbody>
 												<tr>
 														<td></td>                                                        
                                                         <td>Total</td>	
 														<td align="right"><?php echo $ld[0]+$bd[0]+$pm[0]+$oe[0]+$ve[0]; ?></td>
-														<td align="right"><?php echo number_format($ld[1]+$bd[1]+$pm[1]+$oe[1]+$ve[1], 2, '.', ','); ?></td>
+														<td align="right"><?php echo number_format((float)$ld[1]+$bd[1]+$pm[1]+$oe[1]+$ve[1], 2, '.', ','); ?></td>
 												</tr>		
 												</table>
                                         </div>

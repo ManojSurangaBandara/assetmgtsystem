@@ -57,8 +57,8 @@ $totvalue = 0;?>
 <td><nobr><a href="index.php?action=board_report_summary_view_details&id=<?php echo $exp['id'];?>&cyear=<?php echo $_GET['cyear'];?>&assetunit=<?php echo $_GET['assetunit'];?>"><?php echo $exp['itemDescription']; ?></a></nobr></td>
 <td><nobr><?php echo $exp['assetsno']; ?></nobr></td>
 <td><nobr><?php echo $exp['catalogueno']; ?></nobr></td>
-<td align="right"><nobr><?php echo number_format($exp['quantity'], 0, '.', ','); ?></nobr></td>
-<td style="text-align:right"><nobr><?php echo number_format($exp['totalcost'], 2, '.', ','); ?></nobr></td>	
+<td align="right"><nobr><?php echo number_format((float)$exp['quantity'], 0, '.', ','); ?></nobr></td>
+<td style="text-align:right"><nobr><?php echo number_format((float)$exp['totalcost'], 2, '.', ','); ?></nobr></td>	
 </tr> 
  <?php $i++; 
  $totqty = $totqty + $exp['quantity']; 
@@ -74,8 +74,8 @@ $totvalue = 0;?>
 	<td></td>
 	<td></td>
 	<td></td>
-	<td align="right"><?php echo number_format($totqty, 0, '.', ','); ?></td>	
-	  <td align="right"><?php echo number_format($totvalue, 2, '.', ','); ?></td>
+	<td align="right"><?php echo number_format((float)$totqty, 0, '.', ','); ?></td>	
+	  <td align="right"><?php echo number_format((float)$totvalue, 2, '.', ','); ?></td>
 	</tr>
   </tfoot> 
 </table>

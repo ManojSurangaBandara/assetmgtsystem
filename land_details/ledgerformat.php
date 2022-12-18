@@ -74,9 +74,9 @@ $(document).ready(function() {
                                                         <td><nobr><?php echo $exp['register']; ?></nobr></td>
 														<td><nobr><?php echo $exp['planno']; ?></nobr></td>
 														<td><nobr><?php echo $exp['landname']; ?></nobr></td>
-                                                        <td align="right"><nobr><?php echo number_format($exp['area'], 2, '.', ','); ?></nobr></td>
+                                                        <td align="right"><nobr><?php echo number_format((float)$exp['area'], 2, '.', ','); ?></nobr></td>
 														<td align="right"><nobr><?php echo $exp['acre']."A, ".$exp['rood']."R, ".number_format($exp['parch'], 2, '.', ',')."P "; ?></nobr></td>
-                                                        <td align="right"><nobr><?php echo number_format($exp['estimatedValue'], 2, '.', ','); ?></nobr></td>
+                                                        <td align="right"><nobr><?php echo number_format((float)$exp['estimatedValue'], 2, '.', ','); ?></nobr></td>
                                                     </tr>
                                                     <?php $i++; 
 													      $totvalue = $totvalue + $exp['estimatedValue']; ?>

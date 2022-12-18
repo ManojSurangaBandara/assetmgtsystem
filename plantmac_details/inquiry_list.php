@@ -198,7 +198,7 @@ $(document).ready(function() {
                                                                 <td><nobr><?php echo ($disposal == 1 ? $exp['disposedDate'] : $exp['ledgerFoliono']); ?></nobr></td>
                                                                 <td><nobr><?php echo $exp['purchasedDate']; ?></nobr></td>
                                                                 <td><nobr><?php echo $exp['receivedDate']; ?></nobr></td>
-                                                                <td align="right"><nobr><?php echo number_format($exp['unitValue'], 2, '.', ','); ?></nobr></td>
+                                                                <td align="right"><nobr><?php echo number_format((float)$exp['unitValue'], 2, '.', ','); ?></nobr></td>
                                                             </tr>
                                                             <?php $i++; 
 															$totvalue = $totvalue + $exp['unitValue'];?>
@@ -216,7 +216,7 @@ $(document).ready(function() {
 												<td></td>
 												<td></td>
 												<td></td>												
-												  <td align="right"><?php echo number_format($totvalue, 2, '.', ','); ?></td>
+												  <td align="right"><?php echo number_format((float)$totvalue, 2, '.', ','); ?></td>
 												</tr>
 											  </tfoot></table>
                                                         </div>

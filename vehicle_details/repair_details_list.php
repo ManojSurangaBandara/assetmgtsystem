@@ -44,13 +44,13 @@
 																<td><nobr><?php echo $exp['modelName']; ?></nobr></td>
 																<td><nobr><?php echo $exp['engineno']; ?></nobr></td>
                                                                 <td><nobr><?php echo $exp['chessisno']; ?></nobr></td>
-																 <td  align="right"><nobr><?php echo number_format($exp['unitValue'], 2, '.', ','); ?></nobr></td>																
+																 <td  align="right"><nobr><?php echo number_format((float)$exp['unitValue'], 2, '.', ','); ?></nobr></td>																
 																<?php 
 																$sum = vehicle_repair_detailsDB::getTotal_vehicleid($exp['id']);
 																$tsum = $sum + $exp['unitValue'];
 																?>
-																<td  align="right"><nobr><?php echo number_format($sum, 2, '.', ','); ?></nobr></td>
-																<td  align="right"><nobr><?php echo number_format($tsum, 2, '.', ','); ?></nobr></td>
+																<td  align="right"><nobr><?php echo number_format((float)$sum, 2, '.', ','); ?></nobr></td>
+																<td  align="right"><nobr><?php echo number_format((float)$tsum, 2, '.', ','); ?></nobr></td>
 															</tr>
                                                             <?php $i++; ?>
                                                         <?php } ?> 

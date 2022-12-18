@@ -83,10 +83,10 @@ class PDF extends FPDF {
             $this->Cell($w[6], 6, $row['eqptSriNo'], 'LR', 0, 'L', $fill);       
             $this->Cell($w[7], 6, $row['purchasedDate'], 'LR', 0, 'C', $fill);
             $this->Cell($w[8], 6, $row['receivedDate'], 'LR', 0, 'C', $fill);
-            //$this->Cell($w[10], 6, number_format($row['quantity'], 2), 'LR', 0, 'R', $fill);
-            $this->Cell($w[9], 6, number_format($row['unitValue'], 2), 'LR', 0, 'R', $fill);
-            //$this->Cell($w[12], 6, number_format($row['totalCost'], 2), 'LR', 0, 'R', $fill);
-			$this->Cell($w[10], 6, number_format($row['quantity'], 2), 'LR', 0, 'R', $fill);
+            //$this->Cell($w[10], 6, number_format((float)$row['quantity'], 2), 'LR', 0, 'R', $fill);
+            $this->Cell($w[9], 6, number_format((float)$row['unitValue'], 2), 'LR', 0, 'R', $fill);
+            //$this->Cell($w[12], 6, number_format((float)$row['totalCost'], 2), 'LR', 0, 'R', $fill);
+			$this->Cell($w[10], 6, number_format((float)$row['quantity'], 2), 'LR', 0, 'R', $fill);
             $this->Ln();
             $fill = !$fill;
         }

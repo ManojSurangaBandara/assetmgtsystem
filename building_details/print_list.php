@@ -79,8 +79,8 @@ class PDF extends FPDF {
                         $this->Cell($w[5], 6, substr($row['dsDivision'],0,16), 'LR', 0, 'L', $fill);
 						$this->Cell($w[6], 6, substr($row['gsDivision'],0,16), 'LR', 0, 'L', $fill);
 						$this->Cell($w[7], 6, $row['rentAndRate'], 'LR', 0, 'R', $fill);
-                        $this->Cell($w[8], 6, number_format($row['area'], 2), 'LR', 0, 'R', $fill);
-                        $this->Cell($w[9], 6, number_format($row['constructionCost'], 2), 'LR', 0, 'R', $fill);
+                        $this->Cell($w[8], 6, number_format((float)$row['area'], 2), 'LR', 0, 'R', $fill);
+                        $this->Cell($w[9], 6, number_format((float)$row['constructionCost'], 2), 'LR', 0, 'R', $fill);
                         $this->Cell($w[10], 6,number_format($row['alterationValue'], 2), 'LR', 0, 'R', $fill);
                         $this->Cell($w[11], 6, substr($row['acquisitiondate'],0,4), 'LR', 0, 'C', $fill);
                         $this->Ln();

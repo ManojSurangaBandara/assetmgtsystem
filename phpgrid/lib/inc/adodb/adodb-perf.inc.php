@@ -53,7 +53,7 @@ function adodb_getmem()
 // avoids localization problems where , is used instead of .
 function adodb_round($n,$prec)
 {
-	return number_format($n, $prec, '.', '');
+	return number_format((float)$n, $prec, '.', '');
 }
 
 /* return microtime value as a float */

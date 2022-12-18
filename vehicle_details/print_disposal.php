@@ -80,7 +80,7 @@ class PDF_DES extends FPDF {
 			$this->Cell($w[8], 6, substr($row['condemnation'],0,21), 'LR', 0, 'L', $fill);
             $this->Cell($w[9], 6, $row['disposedDate'], 'LR', 0, 'C', $fill);
             $this->Cell($w[10], 6, $row['receivedDate'], 'LR', 0, 'C', $fill);
-            $this->Cell($w[11], 6, number_format($row['unitValue'], 2), 'LR', 0, 'R', $fill);
+            $this->Cell($w[11], 6, number_format((float)$row['unitValue'], 2), 'LR', 0, 'R', $fill);
             $this->Ln();
             $fill = !$fill;
         }

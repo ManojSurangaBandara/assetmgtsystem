@@ -73,9 +73,9 @@ $(document).ready(function() {
 														<td><nobr><?php echo $exp['gsDivision']; ?></nobr></td>	
 														<td><nobr><?php echo $exp['identificationno']; ?></nobr></td>
 														<td><nobr><?php echo $exp['planno']; ?></nobr></td>
-                                                        <td align="right"><nobr><?php echo number_format($exp['area'], 2, '.', ','); ?></nobr></td>
-														<td align="right"><nobr><?php echo number_format($exp['feets'], 2, '.', ','); ?></nobr></td>
-                                                        <td align="right"><nobr><?php echo number_format($exp['constructionCost'], 2, '.', ','); ?></nobr></td>
+                                                        <td align="right"><nobr><?php echo number_format((float)$exp['area'], 2, '.', ','); ?></nobr></td>
+														<td align="right"><nobr><?php echo number_format((float)$exp['feets'], 2, '.', ','); ?></nobr></td>
+                                                        <td align="right"><nobr><?php echo number_format((float)$exp['constructionCost'], 2, '.', ','); ?></nobr></td>
 														<td align="right"><nobr><?php echo date('Y', strtotime($exp['acquisitiondate'])); ?></nobr></td>
                                                     </tr>
                                                     <?php $i++;?>

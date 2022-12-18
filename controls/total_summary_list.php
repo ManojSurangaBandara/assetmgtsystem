@@ -67,12 +67,12 @@ $(document).ready(function() {
                                                         <td><?php echo $i; ?></td>                                                        
                                                         <td><?php echo $exp[0]; ?></td>
                                                         <td><?php echo $exp[1]; ?></td>	
-														<td align="right"><?php echo number_format($exp[2], 2, '.', ','); ?></td>
-														<td align="right"><?php echo number_format($exp[3], 2, '.', ','); ?></td>
-														<td align="right"><?php echo number_format($exp[4], 2, '.', ','); ?></td>
-														<td align="right"><?php echo number_format($exp[5], 2, '.', ','); ?></td>
-														<td align="right"><?php echo number_format($exp[6], 2, '.', ','); ?></td>
-														<td align="right"><?php echo number_format($exp[7], 2, '.', ','); ?></td>														
+														<td align="right"><?php echo number_format((float)$exp[2], 2, '.', ','); ?></td>
+														<td align="right"><?php echo number_format((float)$exp[3], 2, '.', ','); ?></td>
+														<td align="right"><?php echo number_format((float)$exp[4], 2, '.', ','); ?></td>
+														<td align="right"><?php echo number_format((float)$exp[5], 2, '.', ','); ?></td>
+														<td align="right"><?php echo number_format((float)$exp[6], 2, '.', ','); ?></td>
+														<td align="right"><?php echo number_format((float)$exp[7], 2, '.', ','); ?></td>														
                                                     </tr>
                                                     <?php $i++; 
 													$tot2 = $tot2 + $exp[2];
@@ -89,12 +89,12 @@ $(document).ready(function() {
 														<td></td>                                                        
                                                         <td></td>
                                                         <td>Total</td>	
-														<td align="right"><?php echo number_format($tot2, 2, '.', ','); ?></td>
-														<td align="right"><?php echo number_format($tot3, 2, '.', ','); ?></td>
-														<td align="right"><?php echo number_format($tot4, 2, '.', ','); ?></td>
-														<td align="right"><?php echo number_format($tot5, 2, '.', ','); ?></td>
-														<td align="right"><?php echo number_format($tot6, 2, '.', ','); ?></td>
-														<td align="right"><?php echo number_format($tot7, 2, '.', ','); ?></td>
+														<td align="right"><?php echo number_format((float)$tot2, 2, '.', ','); ?></td>
+														<td align="right"><?php echo number_format((float)$tot3, 2, '.', ','); ?></td>
+														<td align="right"><?php echo number_format((float)$tot4, 2, '.', ','); ?></td>
+														<td align="right"><?php echo number_format((float)$tot5, 2, '.', ','); ?></td>
+														<td align="right"><?php echo number_format((float)$tot6, 2, '.', ','); ?></td>
+														<td align="right"><?php echo number_format((float)$tot7, 2, '.', ','); ?></td>
 												</tr>
 											  </tfoot>
 												</table>

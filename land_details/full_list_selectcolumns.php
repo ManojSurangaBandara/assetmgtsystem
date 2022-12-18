@@ -299,8 +299,8 @@
                                                         <td><?php echo $exp['deeddate']; ?></td>
 														<td><?php echo $exp['landNature']; ?></td>
                                                         <td><?php echo $exp['areaMeasure']; ?></td>
-                                                        <td align="right"><?php echo number_format($exp['area'], 2, '.', ','); ?></td>
-                                                        <td align="right"><?php echo number_format($exp['estimatedValue'], 2, '.', ','); ?></td>
+                                                        <td align="right"><?php echo number_format((float)$exp['area'], 2, '.', ','); ?></td>
+                                                        <td align="right"><?php echo number_format((float)$exp['estimatedValue'], 2, '.', ','); ?></td>
                                                         <td><?php echo $exp['previousownership']; ?></td>
                                                         <td><?php echo $exp['acquisitiondate']; ?></td>
                                                         <td><?php echo $exp['remarks']; ?></td>

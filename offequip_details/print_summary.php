@@ -75,8 +75,8 @@ class PDF_S extends FPDF {
             $this->Cell($w[1], 6, $row['itemCategory'], 'LR', 0, 'L', $fill);
             $this->Cell($w[2], 6, $row['itemDescription'], 'LR', 0, 'L', $fill);
             $this->Cell($w[3], 6, $row['catalogueno'], 'LR', 0, 'C', $fill);
-			$this->Cell($w[4], 6, number_format($row['quantity'], 0), 'LR', 0, 'R', $fill);
-            $this->Cell($w[5], 6, number_format($row['totalcost'], 2), 'LR', 0, 'R', $fill);
+			$this->Cell($w[4], 6, number_format((float)$row['quantity'], 0), 'LR', 0, 'R', $fill);
+            $this->Cell($w[5], 6, number_format((float)$row['totalcost'], 2), 'LR', 0, 'R', $fill);
             $this->Ln();
             $fill = !$fill;
         }

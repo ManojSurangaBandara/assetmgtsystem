@@ -84,7 +84,7 @@ include '../view/header1.php';
 															<td><?php echo $exp['armyno']; ?></td>
 															<td><?php echo $exp['itemDescription'];?></td>
 															<td><?php echo $exp['estimatevalue']; ?></td>
-															<td><?php echo number_format($exp['tendervalue'], 2,".",","); ?></td>
+															<td><?php echo number_format((float)$exp['tendervalue'], 2,".",","); ?></td>
 															<td><?php echo $exp['buyername']; ?></td>
 														</tr>
 														<?php $i++; ?>

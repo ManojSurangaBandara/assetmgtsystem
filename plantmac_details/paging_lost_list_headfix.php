@@ -83,7 +83,7 @@ echo "<a href='index.php?action=loss_List&page1=$total_pages'  class='paging'>La
 												<td></td>												
 												<td></td>
 												<td></td>
-												<td align="right"><?php echo number_format($totvalue, 2, '.', ','); ?></td>												
+												<td align="right"><?php echo number_format((float)$totvalue, 2, '.', ','); ?></td>												
 												</tr>
 											  </tfoot>
 											  </table>

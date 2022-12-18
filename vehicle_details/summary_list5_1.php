@@ -43,7 +43,7 @@ $totvalue = 0;?>
 <td><nobr><?php echo $exp['mainCategory']; ?></nobr></td>	
 <td><nobr><?php echo $exp['itemCategory']; ?></nobr></td>
 <td align="right"><nobr><?php echo $exp['cnt']; ?></nobr></td>
-<td style="text-align:right"><nobr><?php echo number_format($exp['tot'], 2, '.', ','); ?></nobr></td>	
+<td style="text-align:right"><nobr><?php echo number_format((float)$exp['tot'], 2, '.', ','); ?></nobr></td>	
 </tr> 
  <?php $i++; 
  $totqty = $totqty + $exp['cnt']; 
@@ -55,8 +55,8 @@ $totvalue = 0;?>
 	<td></td>
 	<td>Total</td>
 	<td></td>
-	<td align="right"><?php echo number_format($totqty, 0, '.', ','); ?></td>	
-	  <td align="right"><?php echo number_format($totvalue, 2, '.', ','); ?></td>
+	<td align="right"><?php echo number_format((float)$totqty, 0, '.', ','); ?></td>	
+	  <td align="right"><?php echo number_format((float)$totvalue, 2, '.', ','); ?></td>
 	</tr>
   </tfoot> 
 </table>

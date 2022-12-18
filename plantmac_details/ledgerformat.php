@@ -79,7 +79,7 @@ $(document).ready(function() {
 														<td><nobr><?php echo $exp['eqptSriNo']; ?></nobr></td>
 														<td><nobr><?php echo $exp['purchasedDate']; ?></nobr></td>
 														<td><nobr><?php echo $exp['capacity']; ?></nobr></td>
-														<td  align="right"><nobr><?php echo number_format($exp['unitValue'], 2, '.', ','); ?></nobr>                                                      
+														<td  align="right"><nobr><?php echo number_format((float)$exp['unitValue'], 2, '.', ','); ?></nobr>                                                      
                                                     </tr>
                                                     <?php $i++;?>
                                                 <?php } ?> 

@@ -161,10 +161,10 @@
                                                     <td><nobr><?php echo $exp['district']; ?></nobr></td>
                                                     <td><nobr><?php echo $exp['dsDivision']; ?></nobr></td>
 													<td><nobr><?php echo $exp['acquisitiondate']; ?></nobr></td>
-                                                    <td align="right"><nobr><?php echo number_format($exp['area'], 3, '.', ','); ?></nobr></td>
-													<td align="right"><nobr><?php echo number_format($exp['feets'], 2, '.', ','); ?></nobr></td>
-                                                    <td align="right"><nobr><?php echo number_format($exp['constructionCost'], 2, '.', ','); ?></nobr></td>
-													<td align="right"><nobr><?php echo number_format($exp['alterationValue'], 2, '.', ','); ?></nobr></td>
+                                                    <td align="right"><nobr><?php echo number_format((float)$exp['area'], 3, '.', ','); ?></nobr></td>
+													<td align="right"><nobr><?php echo number_format((float)$exp['feets'], 2, '.', ','); ?></nobr></td>
+                                                    <td align="right"><nobr><?php echo number_format((float)$exp['constructionCost'], 2, '.', ','); ?></nobr></td>
+													<td align="right"><nobr><?php echo number_format((float)$exp['alterationValue'], 2, '.', ','); ?></nobr></td>
                                                 </tr>
                                                 <?php $i++; 
 												$totvalue = $totvalue + $exp['constructionCost'];
@@ -183,8 +183,8 @@
 												<td></td>
 												<td></td>
 												<td></td>												
-												  <td align="right"><?php echo number_format($totvalue, 2, '.', ','); ?></td>
-												  <td align="right"><?php echo number_format($valvalue, 2, '.', ','); ?></td>
+												  <td align="right"><?php echo number_format((float)$totvalue, 2, '.', ','); ?></td>
+												  <td align="right"><?php echo number_format((float)$valvalue, 2, '.', ','); ?></td>
 												</tr>
 											  </tfoot></table>
                                     </div>

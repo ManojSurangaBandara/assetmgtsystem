@@ -54,7 +54,7 @@ include 'header5.php';
                                                                 <td><nobr><?php echo $c->_get('vmodel'); ?></nobr></td>
                                                                 <td><nobr><?php echo $c->_get('engineno'); ?></nobr></td>
 																<td><nobr><?php echo $c->_get('chaisseeno'); ?></nobr></td>
-																<td align="right"><nobr><?php echo number_format($c->_get('amount'), 2, '.', ','); ?></nobr></td>
+																<td align="right"><nobr><?php echo number_format((float)$c->_get('amount'), 2, '.', ','); ?></nobr></td>
                                                                 <td><nobr><?php echo $c->_get('bname'); ?></nobr></td>
 																<td><nobr><?php echo $c->_get('baddress'); ?></nobr></td>
                                                                 <td><nobr><?php echo $c->_get('bidno'); ?></nobr></td>                                                                

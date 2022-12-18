@@ -70,7 +70,7 @@ include 'header5.php';
 												<td></td>
 												<td></td>
 												<td></td>
-												<td align="right"><?php echo number_format($totvalue, 2, '.', ','); ?></td>												
+												<td align="right"><?php echo number_format((float)$totvalue, 2, '.', ','); ?></td>												
 												</tr>
 											  </tfoot>
 														

@@ -101,7 +101,7 @@ return false
 																<td><nobr><?php echo $exp['civilno']; ?></nobr></td>
                                                                 <td><nobr><?php echo $exp['purchasedDate']; ?></nobr></td>
                                                                 <td><nobr><?php echo $exp['receivedDate']; ?></nobr></td>
-                                                                <td  align="right"><nobr><?php echo number_format($exp['unitValue'], 2, '.', ','); ?></nobr></td>
+                                                                <td  align="right"><nobr><?php echo number_format((float)$exp['unitValue'], 2, '.', ','); ?></nobr></td>
 																<td><nobr><?php echo $exp['cigas_assetno']; ?></nobr></td>
 																<td><nobr><?php echo $exp['cigas_idno']; ?></nobr></td>
 															</tr>
@@ -128,7 +128,7 @@ return false
 												   <td></td>
 												   <td></td>
 												    <td></td>
-												  <td align="right"><?php echo number_format($totvalue, 2, '.', ','); ?></td>
+												  <td align="right"><?php echo number_format((float)$totvalue, 2, '.', ','); ?></td>
 												   <td></td>
 												    <td></td>
 												</tr>

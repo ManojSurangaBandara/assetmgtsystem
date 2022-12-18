@@ -115,7 +115,7 @@ $(document).ready(function() {
 													<td><nobr><?php echo $exp['itemtype']; ?></nobr></td>
 													<td><nobr><?php echo $exp['catalogueno']; ?></nobr></td>
 													<td><nobr><?php echo $exp['itemDescription']; ?></nobr></td>
-													<td align="right"><nobr><?php echo number_format($exp['quantity'], 0, '.', ','); ?></nobr></td>
+													<td align="right"><nobr><?php echo number_format((float)$exp['quantity'], 0, '.', ','); ?></nobr></td>
 												</tr> 
 												 <?php $i++; 
 												 $totqty = $totqty + $exp['quantity']; 
