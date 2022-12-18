@@ -1712,7 +1712,7 @@ switch ($action) {
 		$title = array("Upload - Valuation Report","Upload - Valuation Report","Upload - Valuation Report");
 		$Items = LandDB::getFullDetails();
 		$row = LandDB::getvreportById($id);
-		$vreport_path = $row['vreport'];
+		$vreport_path = isset($row['vreport']) ? $row['vreport'] : "";
         include('upload_vreport.php');
         break;
     case 'board_report_ob_view':

@@ -1346,7 +1346,7 @@ if (isset($_POST['ExpToPdf']) && $_POST['ExpToPdf'] == '1') {
 		$title = array("Upload - Valuation Report","Upload - Valuation Report","Upload - Valuation Report");
 		$Items = BuildingDB::getFullDetails();
 		$row = BuildingDB::getvreportById($id);
-		$vreport_path = $row['vreport'];
+		$vreport_path = isset($row['vreport']) ? $row['vreport'] : "";
         include('upload_vreport.php');
         break;
 	case 'upload_vreport_save':
@@ -1395,7 +1395,7 @@ if (isset($_POST['ExpToPdf']) && $_POST['ExpToPdf'] == '1') {
 		$title = array("Upload - Valuation Report","Upload - Valuation Report","Upload - Valuation Report");
 		$Items = BuildingDB::getFullDetails();
 		$row = BuildingDB::getvreportById($id);
-		$vreport_path = $row['vreport'];
+		$vreport_path = isset($row['vreport']) ? $row['vreport'] : "";
         include('upload_vreport.php');
         break;
     case 'board_report_ob_view':

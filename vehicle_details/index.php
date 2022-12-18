@@ -2728,7 +2728,7 @@ switch ($action) {
 		$title = array("Upload - Valuation Report","Upload - Valuation Report","Upload - Valuation Report");
 		$Items = VehicleDB::getFullDetails();
 		$row = VehicleDB::getvreportById($id);
-		$vreport_path = $row['vreport'];
+		$vreport_path = isset($row['vreport']) ? $row['vreport'] : "";
         include('upload_vreport.php');
         break;
 	case 'upload_vreport_save':
@@ -2777,7 +2777,7 @@ switch ($action) {
 		$title = array("Upload - Valuation Report","Upload - Valuation Report","Upload - Valuation Report");
 		$Items = VehicleDB::getFullDetails();
 		$row = VehicleDB::getvreportById($id);
-		$vreport_path = $row['vreport'];
+		$vreport_path = isset($row['vreport']) ? $row['vreport'] : "";
         include('upload_vreport.php');
         break;
     case 'board_report_ob_view':
