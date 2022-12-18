@@ -63,7 +63,7 @@ class ClassificationListDB {
 		$sql = "SELECT sorttype FROM itemcategory WHERE itemCategory = '$itemCategory'";
         $result = $db->query($sql);
         $row = $result->fetch();
-        $count = $row['sorttype'];
+        $count = $row['sorttype'] ?? 0;
 		//////////
 		if ($count == 1) {
 		$query = "SELECT DISTINCT itemDescription FROM classificationlist where type = '$type' and itemCategory = '$itemCategory' and mainCategory = '$mainCategory' order by catalogueno";
@@ -126,7 +126,7 @@ class ClassificationListDB {
         $query = "SELECT assetsno, newAssestno, make, modle FROM classificationlist where type = '$type' and catalogueno = '$catalogueno'";
         $statement = $db->query($query);
         $row = $statement->fetch();
-        $assetsno = new AssetsCenter2($row['assetsno'], $row['newAssestno'], $row['make'], $row['modle']);
+        $assetsno = new AssetsCenter2($row['assetsno'] ?? "", $row['newAssestno'] ?? "", $row['make'] ?? "", $row['modle'] ?? "");
         return $assetsno;
     }
 
