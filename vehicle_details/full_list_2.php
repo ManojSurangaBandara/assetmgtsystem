@@ -96,7 +96,7 @@
                                                                 echo number_format((float)$exp['CapRepairCost'], 2, '.', ','); ?></nobr></td>
                                                             </tr>
                                                             <?php $i++; 
-															$totvalue = $totvalue + ($exp['unitValue'] + $exp['CapRepairCost']); ?>
+															$totvalue = $totvalue + ((float)$exp['unitValue'] + (float)$exp['CapRepairCost']); ?>
                                                         <?php } ?> 
                                                         </tbody>
 														<tfoot>
