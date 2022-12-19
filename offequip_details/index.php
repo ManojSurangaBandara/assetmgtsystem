@@ -1715,7 +1715,10 @@ switch ($action) {
         $itemDescriptions = ClassificationListDB::getDescriptionByCategory($mainCategory, $itemCategory, $type);
         $cataloguenos = ClassificationListDB::getCatalogueByDescription($mainCategory, $itemCategory, $itemDescription, $type);
         $assetsnos = ClassificationListDB::getAssetsnoByCatalogueno($catalogueno, $type);
-		$Items = OfficeEquDB::getDisposalItems($catalogueno, $searchby, $search);
+        $Items = array();
+        if ($_POST) {
+		    $Items = OfficeEquDB::getDisposalItems($catalogueno, $searchby, $search);
+        }
         setcookie('catalogueno', $catalogueno);
         setcookie('searchby', $searchby);
         setcookie('search', $search);
