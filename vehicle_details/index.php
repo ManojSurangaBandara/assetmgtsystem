@@ -405,13 +405,13 @@ switch ($action) {
         $Vehicle = VehicleDB::getDetailsById($id);
 
         include('dbtovariable.php');
-        $id = $Vehicle['id'];
+        $id = $Vehicle['id'] ?? "";
 
-        $selectDisposal = $Vehicle['selectDisposal'];
-        $disposedDate = $Vehicle['disposedDate'];
-        $disposedReason = $Vehicle['disposedReason'];
-		$condemnation = $Vehicle['condemnation'];
-		$destruction = $Vehicle['destruction'];
+        $selectDisposal = $Vehicle['selectDisposal'] ?? "";
+        $disposedDate = $Vehicle['disposedDate'] ?? "";
+        $disposedReason = $Vehicle['disposedReason'] ?? "";
+		$condemnation = $Vehicle['condemnation'] ?? "";
+		$destruction = $Vehicle['destruction'] ?? "";
 
         //include('startpage.php');
         include('add_disposal.php');
