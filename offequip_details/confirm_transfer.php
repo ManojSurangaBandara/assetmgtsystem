@@ -165,7 +165,7 @@ include 'header1.php';
                                                                 <tr>
                                                         <td width="30%"><label>Confirm for Transfer</label></td>
                                                         <td width="70%">
-                                                            <input name="confirmTransfer" type="checkbox" value="1" <?php if($OfficeEqu['transferToConfirm']==1) echo "checked=checked"; ?> > Select / Deselect
+                                                            <input name="confirmTransfer" type="checkbox" value="1" <?php if(($OfficeEqu['transferToConfirm'] ?? 0)==1) echo "checked=checked"; ?> > Select / Deselect
                                                         </td>
                                                     </tr>
                                                     
