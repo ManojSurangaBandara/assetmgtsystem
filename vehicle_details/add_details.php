@@ -490,7 +490,7 @@ function validate(evt) {
                                                        
                                                     <tr>
                                                         <td width="30%"><label><?php echo $tList[33][$lang]?></label></td>
-                                                        <td width="70%"><input type="text" class="text" name="CapRepairCost"  id="CapRepairCost" value="<?php echo $capRprCost; ?>" style="width:200px; text-transform: uppercase;"/> 
+                                                        <td width="70%"><input type="text" class="text" name="CapRepairCost"  id="CapRepairCost" value="<?php echo ($capRprCost ?? ""); ?>" style="width:200px; text-transform: uppercase;"/> 
                                                            
                                                     </tr>
                                                     

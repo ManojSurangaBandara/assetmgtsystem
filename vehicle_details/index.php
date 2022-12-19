@@ -189,22 +189,22 @@ switch ($action) {
         include('../view/findassetsunitsbycenter.php');
         break;
     case 'findCategoryByMainCategory':
-        $mainCategory = $_GET['mainCategory'];
+        $mainCategory = $_GET['mainCategory'] ?? "";
         $itemCategory = "";
         $itemCategorys = ClassificationListDB::getItemCategoryByMainCategory($mainCategory, $type);
         include('../view/findcategorybymaincategory.php');
         break;
     case 'findDescriptionByCategory':
-        $mainCategory = $_GET['mainCategory'];
-        $itemCategory = $_GET['itemCategory'];
+        $mainCategory = $_GET['mainCategory'] ?? "";
+        $itemCategory = $_GET['itemCategory'] ?? "";
         $itemDescription = "";
         $itemDescriptions = ClassificationListDB::getDescriptionByCategory($mainCategory, $itemCategory, $type);
         include('../view/finddescriptionbycategory.php');
         break;
     case 'findCataloguenoByDescription':
-        $mainCategory = $_GET['mainCategory'];
-        $itemCategory = $_GET['itemCategory'];
-        $itemDescription = $_GET['itemDescription'];
+        $mainCategory = $_GET['mainCategory'] ?? "";
+        $itemCategory = $_GET['itemCategory'] ?? "";
+        $itemDescription = $_GET['itemDescription'] ?? "";
         $catalogueno = "";
         $cataloguenos = ClassificationListDB::getCatalogueByDescription($mainCategory, $itemCategory, $itemDescription, $type);
         include('../view/findcataloguenobydescription.php');
@@ -1125,7 +1125,10 @@ switch ($action) {
         setcookie('searchby', $searchby);
         setcookie('search', $search);
 		
-		$Items = VehicleDB::getDisposalItems($catalogueno, $searchby, $search);
+        $Items = array();
+        if ($_POST) {
+		    $Items = VehicleDB::getDisposalItems($catalogueno, $searchby, $search);
+        }
         $slidebartype = 25;
 		
         include('select_modification.php');
