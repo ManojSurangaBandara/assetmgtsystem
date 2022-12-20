@@ -2834,42 +2834,37 @@ switch ($action) {
         include('allocation_list.php');
         break;
     case 'inquiry_summary_list':
-        if (isset($_POST['assetscenter'])) {
-            $assetscenter = $_POST['assetscenter'];
-        } 
-        if (isset($_POST['assetunit'])) {
-            $assetunit = $_POST['assetunit'];
-        } 
-        if (isset($_POST['searchby'])) {
-            $searchby = $_POST['searchby'];
-        } 
-        if (isset($_POST['search'])) {
-            $search = $_POST['search'];
-        } 
-        if (isset($_POST['inputField1'])) {
-            $inputField1 = $_POST['inputField1'];
-        } 
-        if (isset($_POST['inputField2'])) {
-            $inputField2 = $_POST['inputField2'];
-        } 
+        $assetscenter = $_POST['assetscenter'] ?? "";
+        $assetunit = $_POST['assetunit'] ?? "";
+        $searchby = $_POST['searchby'] ?? "";
+        $search = $_POST['search'] ?? "";
+        $inputField1 = $_POST['inputField1'] ?? "";
+        $inputField2 = $_POST['inputField2'] ?? "";
+        if(isset($_POST['searchby'])) {
+            include('coldefine.php');
+            $searchText = VehicleDB::getSearchText($column);
+        }
 
-        include('coldefine.php');
-        $searchText = VehicleDB::getSearchText($column);
+        $items = array();
         $assetsCenters = AssetsCenterDB::getAssetsCenters();
         $assetunits = AssetsUnitDB::getAssetsUnitsByCenter($assetscenter, 2);
-		$checkAllowType = VehicleDB::getIsAllocation($assetscenter, $assetunit);
-        if ($disposal == 1) {
-            $items = VehicleDB::getInqDisposalDetails($assetscenter, $assetunit, $column, $search, $inputField1, $inputField2, $checkAllowType, $allocation);
-        } else {
-         	if ($search <> "") {
-				$items = VehicleDB::getInqDetailsOnly($assetscenter, $assetunit, $column, $search, $inputField1, $inputField2, $checkAllowType, $allocation);
-			} else {
-				$items = VehicleDB::getInqDetails($assetscenter, $assetunit, $column, $search, $inputField1, $inputField2, $checkAllowType, $allocation);
-			}  
-		   // $items = VehicleDB::getInqDetails($assetscenter, $assetunit, $column, $search, $inputField1, $inputField2, $checkAllowType, $allocation);
+        $checkAllowType = VehicleDB::getIsAllocation($assetscenter, $assetunit);
+         
+        if ( isset($_POST['searchby'])){
+            if ($disposal == 1) {
+                $items = VehicleDB::getInqDisposalDetails($assetscenter, $assetunit, $column, $search, $inputField1, $inputField2, $checkAllowType, $allocation);
+            } else {
+                if ($search <> "") {
+                    $items = VehicleDB::getInqDetailsOnly($assetscenter, $assetunit, $column, $search, $inputField1, $inputField2, $checkAllowType, $allocation);
+                } else {
+                    $items = VehicleDB::getInqDetails($assetscenter, $assetunit, $column, $search, $inputField1, $inputField2, $checkAllowType, $allocation);
+                }  
+            // $items = VehicleDB::getInqDetails($assetscenter, $assetunit, $column, $search, $inputField1, $inputField2, $checkAllowType, $allocation);
+            }
         }
+        
 				
-				if (isset($_POST['ExpToExcel']) && $_POST['ExpToExcel'] == '1') {
+		if (isset($_POST['ExpToExcel']) && $_POST['ExpToExcel'] == '1') {
            $assetunits = AssetsUnitDB::getAllDetailsUnit($assetunit);
             $boardMemberName1 = $assetunits['boardMemberName1'];
             $boardMemberRank1 = $assetunits['boardMemberRank1'];
