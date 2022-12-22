@@ -90,8 +90,8 @@ $(".text, .date").change(function() {
 								<button type="submit" class="btn btn-info" name="print" id="print"><span class="glyphicon glyphicon-print" aria-hidden="true"></span>View Details</button>
 							<?php } ?>
 					</form></td>
-					<td><input type='text' class="date" id="received_date_<?php echo $exp['id']; ?>" name="received_date_<?php echo $exp['id']; ?>" value="<?php echo (strtotime($exp['received_date'])) ? $exp['received_date'] : ""; ?>" style="width:90px;"/></td>
-					<td><input type='text' class="date" id="approved_date_<?php echo $exp['id']; ?>" name="approved_date_<?php echo $exp['id']; ?>" value="<?php echo (strtotime($exp['approved_date'])) ? $exp['approved_date'] : ""; ?>" style="width:90px;"/></td>
+					<td><input type='text' class="date" id="received_date_<?php echo $exp['id']; ?>" name="received_date_<?php echo $exp['id']; ?>" value="<?php echo (strtotime($exp['received_date'] ?? "")) ? $exp['received_date'] : ""; ?>" style="width:90px;"/></td>
+					<td><input type='text' class="date" id="approved_date_<?php echo $exp['id']; ?>" name="approved_date_<?php echo $exp['id']; ?>" value="<?php echo (strtotime($exp['approved_date']?? "")) ? $exp['approved_date'] : ""; ?>" style="width:90px;"/></td>
 					<td><input class = "savebttn" id = "<?php echo $exp['id']; ?>" name="submit" type="submit" value="Save" style="color: white; background-color: #008CBA;" hidden/></td>
 				</tr>
 				<?php $i++; ?>

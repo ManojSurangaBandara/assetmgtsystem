@@ -74,7 +74,7 @@ class MembersDB {
         $query = "SELECT * FROM members where place = '$place'";
         $statement = $db->query($query);
         $row = $statement->fetch();
-        return $row['user_email'];
+        return $row['user_email'] ?? "";
     }
 	public static function update_user_email($unit, $user_email) {       
 		$db = Database::getDB();
@@ -134,5 +134,26 @@ class MembersDB {
         }
         return $result;
     }	
+
+    // public static function addUser($assetscenter, $assetunit, $macaddress, $loginname, $password, $status) {
+    //     $db = Database::getDB();
+    //     $query = "INSERT INTO logindetails
+    //       (assetscenter, assetunit, macaddress, loginname, password, sysDate, result)
+    //       VALUES
+    //       ('$assetscenter', '$assetunit', '$macaddress', '$loginname', '$password', now(), '$status')";
+    //     $count = $db->exec($query);
+    //     return $count;
+        
+    //     try {
+    //         $statement = $db->prepare($query);
+    //         $statement->execute();
+    //         $result = $statement->fetchAll();
+    //         $statement->closeCursor();
+    //         return $result;
+    //     } catch (PDOException $e) {
+    //         $error_message = $e->getMessage();
+    //         display_db_error($error_message);
+    //     }
+    // }
 }
 ?>

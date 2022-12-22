@@ -381,7 +381,7 @@ switch ($action) {
 		break;
     case 'add_opening_balance':
 		$exp = bos_openingbalance_report_recevingDB::getDetailsByAssetunit($assetunit);
-		if (strtotime($exp['received_date'])) {
+		if (strtotime($exp['received_date'] ?? "")) {
 			$items = bos_openingbalanceDB::getDescriptionList_unit($assetunit);
 			include 'opening_balance_list.php';
 		} else {
@@ -574,7 +574,7 @@ case 'compare_fa_system':
 	break;
 case 'edit_opening_balance':
 	$exp = bos_openingbalance_report_recevingDB::getDetailsByAssetunit($assetunit);
-	if (strtotime($exp['received_date'])) {
+	if (strtotime($exp['received_date'] ?? "")) {
 		$items = bos_openingbalanceDB::getDescriptionList_unit($assetunit);
 		include 'opening_balance_list.php';
 	} else {
@@ -598,7 +598,7 @@ case 'add_opening_balance_2':
 	$main_category_2 = "";
 	$sub_category_2 = "";
 	$description_2 = "";
-	if (strtotime($exp['received_date'])) {
+	if (strtotime($exp['received_date'] ?? "")) {
 		$items = bos_openingbalanceDB::getDescriptionList_unit($assetunit);
 		include 'opening_balance_list.php';
 	} else {

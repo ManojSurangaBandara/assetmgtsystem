@@ -177,14 +177,68 @@ include 'header1.php';
                                         <input type="hidden" name="action" value="Add_surveyyear_schedule_record" />
                                         <input type="hidden" name="id" id="id" value="0" />
                                         <div><label for="code" class="label">Year :</label><input type="text" class="text" name="year"  id="year" value="<?php echo $survayyear;?>" style="width:75px"/ readonly></div>
-                                        <div><label for="name" class="label">Verfication Board - Appoint :</label><input type="text" name="ver_brd_app" id="ver_brd_app" value="<?php echo $ver_brd_app = ($exp['ver_brd_app'] == '0000-00-00') ? '' : $exp['ver_brd_app'];?>" class="date" style="width:75px"></div>
-                                        <div><label for="name" class="label">Verfication Board - Receive :</label><input type="text" name="ver_brd_rec" id="ver_brd_rec" value="<?php echo $ver_brd_rec = ($exp['ver_brd_rec'] == '0000-00-00') ? '' : $exp['ver_brd_rec'];?>" class="date" style="width:75px"></div>
-                                        <div><label for="name" class="label">Verfication Board - Approve :</label><input type="text" name="ver_brd_approved" id="ver_brd_approved" value="<?php echo $ver_brd_approved = ($exp['ver_brd_approved'] == '0000-00-00') ? '' : $exp['ver_brd_approved'];?>" class="date" style="width:75px"></div>
-                                        <div><label for="name" class="label">Condemnation Board - Appoint :</label><input type="text" name="con_brd_app" id="con_brd_app" value="<?php echo $con_brd_app = ($exp['con_brd_app'] == '0000-00-00') ? '' : $exp['con_brd_app'];?>" class="date" style="width:75px"></div>
-                                        <div><label for="name" class="label">Condemnation Board - Receive :</label><input type="text" name="con_brd_rec" id="con_brd_rec" value="<?php echo $con_brd_rec = ($exp['con_brd_rec'] == '0000-00-00') ? '' : $exp['con_brd_rec'];?>" class="date" style="width:75px"></div>
-                                        <div><label for="name" class="label">Condemnation Board - Approve :</label><input type="text" name="con_brd_approved" id="con_brd_approved" value="<?php echo $con_brd_approved = ($exp['con_brd_approved'] == '0000-00-00') ? '' : $exp['con_brd_approved'];?>" class="date" style="width:75px"></div>
-                                        <div><label for="name" class="label">Destruction Board - Appoint :</label><input type="text" name="des_brd_app" id="des_brd_app" value="<?php echo $des_brd_app = ($exp['des_brd_app'] == '0000-00-00') ? '' : $exp['des_brd_app'];?>" class="date" style="width:75px"></div>
-                                        <div><label for="name" class="label">Destruction Board - Receive :</label><input type="text" name="des_brd_rec" id="des_brd_rec" value="<?php echo $des_brd_rec = ($exp['des_brd_rec'] == '0000-00-00') ? '' : $exp['des_brd_rec'];?>" class="date" style="width:75px"></div>
+                                        
+                                        <?php
+                                        if (isset($exp['ver_brd_app'])) {
+                                            $ver_brd_app = ($exp['ver_brd_app'] == '0000-00-00') ? '' : $exp['ver_brd_app'];
+                                        }else{
+                                            $ver_brd_app = '';
+                                        }
+                                        if (isset($exp['ver_brd_rec'])) {
+                                            $ver_brd_rec = ($exp['ver_brd_rec'] == '0000-00-00') ? '' : $exp['ver_brd_rec'];
+                                        }else{
+                                            $ver_brd_rec = '';
+                                        }
+                                        if (isset($exp['ver_brd_approved'])) {
+                                            $ver_brd_approved = ($exp['ver_brd_approved'] == '0000-00-00') ? '' : $exp['ver_brd_approved'];
+                                        }else{
+                                            $ver_brd_approved = '';
+                                        }
+                                        if (isset($exp['con_brd_app'])) {
+                                            $con_brd_app = ($exp['con_brd_app'] == '0000-00-00') ? '' : $exp['con_brd_app'];
+                                        }else{
+                                            $con_brd_app = '';
+                                        }
+                                        if (isset($exp['con_brd_rec'])) {
+                                            $con_brd_rec = ($exp['con_brd_rec'] == '0000-00-00') ? '' : $exp['con_brd_rec'];
+                                        }else{
+                                            $con_brd_rec = '';
+                                        }
+                                        if (isset($exp['con_brd_approved'])) {
+                                            $con_brd_approved = ($exp['con_brd_approved'] == '0000-00-00') ? '' : $exp['con_brd_approved'];
+                                        }else{
+                                            $con_brd_approved = '';
+                                        }
+                                        if (isset($exp['des_brd_app'])) {
+                                            $des_brd_app = ($exp['des_brd_app'] == '0000-00-00') ? '' : $exp['des_brd_app'];
+                                        }else{
+                                            $des_brd_app = '';
+                                        }
+                                        if (isset($exp['des_brd_rec'])) {
+                                            $des_brd_rec = ($exp['des_brd_rec'] == '0000-00-00') ? '' : $exp['des_brd_rec'];
+                                        }else{
+                                            $des_brd_rec = '';
+                                        }
+                                        
+                                        
+                                        // $ver_brd_app = (($exp['ver_brd_app'] ?? "") == '0000-00-00') ? '' : $exp['ver_brd_app'];
+                                        // $ver_brd_rec = (($exp['ver_brd_rec'] ?? "") == '0000-00-00') ? '' : $exp['ver_brd_rec'];
+                                        // $ver_brd_approved = (($exp['ver_brd_approved'] ?? "") == '0000-00-00') ? '' : $exp['ver_brd_approved'];
+                                        // $con_brd_app = (($exp['con_brd_app'] ?? "") == '0000-00-00') ? '' : $exp['con_brd_app'];
+                                        // $con_brd_rec = (($exp['con_brd_rec'] ?? "") == '0000-00-00') ? '' : $exp['con_brd_rec'];
+                                        // $con_brd_approved = (($exp['con_brd_approved'] ?? "") == '0000-00-00') ? '' : $exp['con_brd_approved'];
+                                        // $des_brd_app = (($exp['des_brd_app'] ?? "") == '0000-00-00') ? '' : $exp['des_brd_app'];
+                                        // $des_brd_rec = (($exp['des_brd_rec'] ?? "") == '0000-00-00') ? '' : $exp['des_brd_rec'];
+                                        ?>
+
+                                        <div><label for="name" class="label">Verfication Board - Appoint :</label><input type="text" name="ver_brd_app" id="ver_brd_app" value="<?php echo $ver_brd_app?>" class="date" style="width:75px"></div>
+                                        <div><label for="name" class="label">Verfication Board - Receive :</label><input type="text" name="ver_brd_rec" id="ver_brd_rec" value="<?php echo $ver_brd_rec?>" class="date" style="width:75px"></div>
+                                        <div><label for="name" class="label">Verfication Board - Approve :</label><input type="text" name="ver_brd_approved" id="ver_brd_approved" value="<?php echo $ver_brd_approved?>" class="date" style="width:75px"></div>
+                                        <div><label for="name" class="label">Condemnation Board - Appoint :</label><input type="text" name="con_brd_app" id="con_brd_app" value="<?php echo $con_brd_app?>" class="date" style="width:75px"></div>
+                                        <div><label for="name" class="label">Condemnation Board - Receive :</label><input type="text" name="con_brd_rec" id="con_brd_rec" value="<?php echo $con_brd_rec?>" class="date" style="width:75px"></div>
+                                        <div><label for="name" class="label">Condemnation Board - Approve :</label><input type="text" name="con_brd_approved" id="con_brd_approved" value="<?php echo $con_brd_approved?>" class="date" style="width:75px"></div>
+                                        <div><label for="name" class="label">Destruction Board - Appoint :</label><input type="text" name="des_brd_app" id="des_brd_app" value="<?php echo $des_brd_app?>" class="date" style="width:75px"></div>
+                                        <div><label for="name" class="label">Destruction Board - Receive :</label><input type="text" name="des_brd_rec" id="des_brd_rec" value="<?php echo $des_brd_rec?>" class="date" style="width:75px"></div>
 										<div><input type="submit" name="submit" id="submit" value="Add Details"></div>
                                         <div><input type="submit" name="submit" id="update" value="Delete Details"></div>										
                                     </form>                                

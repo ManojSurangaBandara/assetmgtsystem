@@ -2423,6 +2423,7 @@ switch ($action) {
         include('coldefine.php');
         $assetsCenters = AssetsCenterDB::getAssetsCenters();
         $assetunits = AssetsUnitDB::getAssetsUnitsByCenter($assetscenter, 2);
+        $column = $column ?? "";
         $items = VehicleDB::displayvehicle_Inquiry($assetscenter, $assetunit, $column, $search, $inputField1, $inputField2);
 		include('displayvehicle_list_inquiry.php');
         break;

@@ -20,9 +20,56 @@ function get_users() {
     }
 }
 
+function getUserByLogin($login) {
+    global $db;
+    $query = "SELECT * FROM members WHERE login='$login'";
+    
+    try {
+        $statement = $db->prepare($query);
+        $statement->execute();
+        $result = $statement->fetchAll();
+        $statement->closeCursor();
+        return $result;
+    } catch (PDOException $e) {
+        $error_message = $e->getMessage();
+        display_db_error($error_message);
+    }
+}
+
+function addUser($firstname, $lastname, $assetscenter, $login, $passwd, $assetunit, $level, $sorderwithcenter, $date){
+    global $db;
+    $query = "INSERT INTO members(firstname, lastname, centreName, login, passwd, place, level, sorderwithcenter, pw_update) 
+            VALUES	('$firstname','$lastname','$assetscenter','$login','" . md5($passwd) . "','$assetunit','$level','$sorderwithcenter','$date')";
+    
+    try {
+        $statement = $db->prepare($query);
+        $result = $statement->execute();
+        $statement->closeCursor();
+        return $result;
+    } catch (PDOException $e) {
+        $error_message = $e->getMessage();
+        display_db_error($error_message);
+    }
+}
+
 function get_users_selected($assetscenter, $assetunit) {
     global $db;
     $query = "SELECT * FROM members where centreName = '$assetscenter' and place = '$assetunit' order by level, login";
+    try {
+        $statement = $db->prepare($query);
+        $statement->execute();
+        $result = $statement->fetchAll();
+        $statement->closeCursor();
+        return $result;
+    } catch (PDOException $e) {
+        $error_message = $e->getMessage();
+        display_db_error($error_message);
+    }
+}
+
+function get_users_selected_by_login($login, $assetscenter, $assetunit){
+    global $db;
+    $query = "SELECT * FROM members WHERE login='$login' and centreName='$assetscenter' and place='$assetunit'";
     try {
         $statement = $db->prepare($query);
         $statement->execute();
@@ -54,6 +101,21 @@ function updateConfirm() {
         $currentYear = ConstantsDB::getCurrentYear();
 		$result = array(substr($currentYear, 0, 2) < substr($currentYear, -2),"abc");
 		return $result;
+}
+
+function resetPassword($passwd, $date, $login, $assetscenter, $assetunit){
+    global $db;
+    $query = "UPDATE members SET passwd = '" . md5($passwd)."', pw_update = '".$date."', fail_attempts = 0 WHERE login='$login' and centreName='$assetscenter' and place='$assetunit'";
+    try {
+        $statement = $db->prepare($query);
+        $result = $statement->execute();
+        $statement->closeCursor();
+        return $result;
+    } catch (PDOException $e) {
+        $error_message = $e->getMessage();
+        display_db_error($error_message);
+        return false;
+    }
 }
 
 

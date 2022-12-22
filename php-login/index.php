@@ -201,67 +201,47 @@ switch ($action) {
 		$errmsg_arr = array();
         $errflag = false;
 
-        //Function to sanitize values received from the form. Prevents SQL injection
-        function clean($str) {
-            $str = @trim($str);
-            if (get_magic_quotes_gpc()) {
-                $str = stripslashes($str);
-            }
-            return mysql_real_escape_string($str);
-        }
-
-        $assetscenter = "";
-        $assetunit = "";
-        $firstname = "";
-        $lastname = "";
-        //$centreName = "";
-        $place = "";
-        $login = "";
-        $passwd = "";
-        $cpassword = "";
-        $level = "";
-        //Sanitize the POST values
-        $firstname = clean($_POST['firstname']);
-        $lastname = clean($_POST['lastname']);
-        $assetscenter = clean($_POST['assetscenter']);
-        $assetunit = clean($_POST['assetunit']);
-        $login = clean($_POST['login']);
-        $passwd = clean($_POST['passwd']);
+        $firstname = $_POST['firstname'];
+        $lastname = $_POST['lastname'];
+        $assetscenter = $_POST['assetscenter'];
+        $assetunit = $_POST['assetunit'];
+        $login = $_POST['login'];
+        $passwd = $_POST['passwd'];
         $cpassword = $_POST['cpassword'];
-        $level = clean($_POST['level']);
+        $level = $_POST['level'];
 
-				if (isset($_POST['search'])) {
-		$exps = get_users_selected($assetscenter, $assetunit);
+		if (isset($_POST['search'])) {
+		    $exps = get_users_selected($assetscenter, $assetunit);
 		} else {
-        $validate->text('firstname', $firstname);
-        //$validate->text('lastname', $lastname);
-        $validate->text('assetscenter', $assetscenter);
-        //$validate->text('assetunit', $assetunit);
-        $validate->text('login', $login);
-        $validate->text('passwd', $passwd);
-        $validate->text('cpassword', $cpassword);
-        $validate->UserLevelCheck('level', $level);
-        $validate->equailsCheck('cpassword', $cpassword, $passwd);
+            $validate->text('firstname', $firstname);
+            //$validate->text('lastname', $lastname);
+            $validate->text('assetscenter', $assetscenter);
+            //$validate->text('assetunit', $assetunit);
+            $validate->text('login', $login);
+            $validate->text('passwd', $passwd);
+            $validate->text('cpassword', $cpassword);
+            $validate->UserLevelCheck('level', $level);
+            $validate->equailsCheck('cpassword', $cpassword, $passwd);
 
-        $slidebartype = 3;
-        if ($fields->hasErrors()) {
-            $error = 2;
-        } else {
-            if ($login != '') {
-                $qry = "SELECT * FROM members WHERE login='$login'";
-                $result = mysql_query($qry);
-                if ($result) {
-                    if (mysql_num_rows($result) > 0) {
+            $slidebartype = 3;
+            if ($fields->hasErrors()) {
+                $error = 2;
+            } else {
+                if ($login != '') {
+
+                    $result = array();
+                    $result = getUserByLogin($login);
+
+                    if (count($result) > 0) {
                         $error = 3;
                     } else {
-					$sorderwithcenter = AssetsUnitDB::getsorderwithcenter($assetunit);
-					$date = date('Y-m-d H:i:s');
-                        $qry = "INSERT INTO members(firstname, lastname, centreName, login, passwd, place, level, sorderwithcenter, pw_update) 
-				VALUES	('$firstname','$lastname','$assetscenter','$login','" . md5($passwd) . "','$assetunit','$level','$sorderwithcenter','$date')";
-                        $result = @mysql_query($qry);
-                        if ($result) {
+                        $sorderwithcenter = AssetsUnitDB::getsorderwithcenter($assetunit);
+                        $date = date('Y-m-d H:i:s');
+                        
+                        $user_added = addUser($firstname, $lastname, $assetscenter, $login, $passwd, $assetunit, $level, $sorderwithcenter, $date);
+                        if ($user_added) {
                             //$assetscenter = "";
-                           // $assetunit = "";
+                            // $assetunit = "";
                             $firstname = "";
                             $lastname = "";
                             $centreName = "";
@@ -271,14 +251,13 @@ switch ($action) {
                             $cpassword = "";
                             $level = "";
                             $error = 1;
-							$exps = get_users_selected($assetscenter, $assetunit);
+                            $exps = get_users_selected($assetscenter, $assetunit);
                         } else {
                             $error = 5;
                         }
                     }
                 }
             }
-        }
 		}
 		$assetunits = AssetsUnitDB::getAssetsUnitsByCenter($assetscenter, 1);
         include('register-form.php');
@@ -306,44 +285,45 @@ switch ($action) {
         $validate->text('login', $login);
         $error = 0;
         $slidebartype = 3;
+
         if ($fields->hasErrors()) {
             $error = 2;
         } else {
+
             if ($login != '') {
-                $qry = "SELECT * FROM members WHERE login='$login' and centreName='$assetscenter' and place='$assetunit'";
-                $result = mysql_query($qry);
-                if ($result) {
-                    if (mysql_num_rows($result) == 1) {
-                        $member = mysql_fetch_assoc($result);
-                        $level = $member['level'];
-                        if ($level == 8) {
-                            $passwd = '123';
-                        } elseif ($level == 7 || $level == 17) {
-                            $passwd = '1234';
-                        } elseif ($level == 6) {
-                            $passwd = '12345';
-                        } else {
-                            $passwd = '123456';
-                        }
-                        $date = date('Y-m-d H:i:s');
-						$qry = "UPDATE members SET passwd = '" . md5($passwd)."', pw_update = '".$date."', fail_attempts = 0 WHERE login='$login' and centreName='$assetscenter' and place='$assetunit'";
-                        $result = @mysql_query($qry);
-                        if ($result) {
-                            $saveCount = user_account_change_historyDB::addRecord($assetunit, $login, "Reset Password", md5($passwd), $_SESSION['SESS_LOGIN']);
-							$error = 1;
-                            $assetscenter = "";
-                            $assetunit = "";
-                            $login = "";
-							
-                        } else {
-                            $error = 5;
-                        }
+                $result = array();
+                $result = get_users_selected_by_login($login, $assetscenter, $assetunit);
+                
+                if (count($result) == 1) {      
+                    $member = $result[0];
+                    $level = $member['level'];
+                    if ($level == 8) {
+                        $passwd = '123';
+                    } elseif ($level == 7 || $level == 17) {
+                        $passwd = '1234';
+                    } elseif ($level == 6) {
+                        $passwd = '12345';
                     } else {
-                        $error = 3;
+                        $passwd = '123456';
+                    }
+                    $date = date('Y-m-d H:i:s');
+                    $result = array();
+                    $result = resetPassword($passwd, $date, $login, $assetscenter, $assetunit);
+
+                    if ($result) {
+                        $saveCount = user_account_change_historyDB::addRecord($assetunit, $login, "Reset Password", md5($passwd), $_SESSION['SESS_LOGIN']);
+                        $error = 1;
+                        $assetscenter = "";
+                        $assetunit = "";
+                        $login = "";
+                        
+                    } else {
+                        $error = 5;
                     }
                 } else {
                     $error = 3;
                 }
+                
             } else {
                 $error = 6;
             }
