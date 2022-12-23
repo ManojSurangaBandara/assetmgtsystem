@@ -1,33 +1,36 @@
-By downloading, installing, copying, or otherwise using the SOFTWARE - You agree to be bound by the terms of this LICENSE.
+phpGrid END USER LICENSE AGREEMENT (EULA)
 
-LIMITATIONS
------------
+THIS IS A LEGAL AGREEMENT BETWEEN YOU, THE END USER, AND phpGrid. IF YOU DO NOT AGREE TO THE TERMS OF THIS AGREEMENT, DO NOT DOWNLOAD OR USE THIS SOFTWARE.
 
-(a) SOFTWARE cannot be embedded in any website with businesses of Loan, Insurance, Interest Based Businesses, Dating, Pornographic, Erotic & Adult Content, Music, Musical Instruments & Related Products, Alcoholic beverages and Related Products. No support will be provided for such businesses.
+PHPGRID SOFTWARE LICENSE AGREEMENT
 
-(b) Sell, lease, assign, transfer, sublicense, disseminate, translate, duplicate, reproduce or copy the Software (or permit any of the foregoing) or any information pertaining thereto to any other party except as permitted in this Agreement.
+COPYRIGHT
+The software is not open source or freeware. The phpGrid software is protected by the copyright laws of United States and by international treaty provisions. You may not distribute the software or any parts of it.
 
-(c) Use or distribute the Software or part of software as part of a commercial packaged Software product, framework, component, library or plug-in. Enterprise license is required for such usage.
+LICENSE
+The software is licensed for exclusive and non-transferable use. A licensed copy of the software may be used for an unlimited amount of time without any monthly fees. For each installed instance of the software, a separate license is required unless the multi-user licenses bundle deal has been purchased, thus the a simple copy of the software can be installed up to multiple different machines depending on the license type.
 
-(d) Disassemble, decompile, decode or otherwise reverse translate or engineer, or attempt in any manner to reconstruct or discover any source code or underlying algorithms of Software, if provided in object code form only.
+SOFTWARE MODIFICATIONS
+Although phpGrid does not have restriction on modifying the software by the end user, due to the nature of scripting programming language, the source code of phpGrid is easily exposed to the end user, thereafter, phpGrid does NOT provide support of any sort if users have modified the source code of the software in any way.
 
-(e) You may not distribute the source code, or any modification, enhancement, derivative work and/or extension thereto, in source code form.
+WARRANTY DISCLAIMER AND LIMITATION OF LIABILITY
+It is our intention to provide the best software to the users but there is no software is error free. The software and the other accompanying files, or the special editions of the software, are provided “AS IS” BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND. In no event shall phpGrid be liable for any damages whatsoever (including, without limitation, lost profits, business interruption or lost information) resulting from the use of or inability to use the software.
 
-MISCELLANEOUS
--------------
+REFUND POLICY
+We provide a free version of our software for your convenience to evaluate our products. During your evaluation period, our support staff is available to assist in installation and configuration via email. We strongly recommend that all users download, install, and test the free versions prior to making a purchase.
 
-(a) Neither the name of PHP Grid Control nor the name of it contributor (Abu Ghufran) may be used to endorse or promote products derived from this software without specific prior written permission.
+If you purchase one of our products, after your credit card or check is approved, an email with phpGrid full version download instruction will be sent to you. You have 30 days for a full refund starting from the date of purchase if you are not satisfied. After 30 days,  there will be no refunds given.
 
-(b) We may use buyer name & company details in the list of recent buyers section of website, unless requested to remove.
+Please send any questions regarding our refund policy to support@phpgrid.com.
 
-(c) LICENSE can change without USER confirmation.
+GENERAL
+phpGrid respects your privacy. We do NOT sell, share or rent any customer information to others. When you supply information about you for a specific purpose, the information will be used for that purpose only. We NEVER share your information with any other third-party companies.
 
-TERMINATION
------------
+Failure to comply with this license agreement will result in immediate termination of your license without refund. You will also be held responsible for any loss in business caused to phpGrid. This license will be governed by and construed in accordance with the laws of United States.
 
-This LICENSE will automatically terminate if Customer fails to comply with any of the terms and conditions hereof. In such event, Customer must destroy all copies of the APPLICATION.
+ABOUT SELECT2
+Select2 is distributed under Apache License, Version 2.0.
 
-THIS SOFTWARE IS PROVIDED BY Abu Ghufran ''AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL Abu Ghufran BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-
-Copyright (c) 2010-2014, PHP Grid Control
-All rights reserved.
+Team phpGrid.
+http://www.phpgrid.com
+e-mail: support@phpgrid.com

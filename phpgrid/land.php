@@ -8,7 +8,11 @@ include '../view/header4.php';
 
 <div id="page">
 
-		<?php echo $out?> 
+<?php
+
+    $dg -> display();
+
+?> 
 
 </div>
 <?php
