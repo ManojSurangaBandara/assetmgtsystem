@@ -135,6 +135,23 @@ class MembersDB {
         return $result;
     }	
 
+    public static function changePassword($newpw, $date, $login, $pw) {
+        $db = Database::getDB();
+		// $query = "SELECT * FROM members where place = '$place' and level = '$level'";
+        $query = "UPDATE members SET passwd = '" . md5($newpw) . "', pw_update = '" . $date . "' WHERE login='" . $login . "' AND passwd='" . md5($pw) . "'";
+        try {
+            $statement = $db->prepare($query);
+            $result = $statement->execute();
+            $statement->closeCursor();
+            return $result;
+        } catch (PDOException $e) {
+            $error_message = $e->getMessage();
+            // display_db_error($error_message);
+            return false;
+        }
+        
+    }
+
     // public static function addUser($assetscenter, $assetunit, $macaddress, $loginname, $password, $status) {
     //     $db = Database::getDB();
     //     $query = "INSERT INTO logindetails

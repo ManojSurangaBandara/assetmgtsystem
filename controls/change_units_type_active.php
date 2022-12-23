@@ -76,8 +76,8 @@ return false
 					<td><?php echo $exp['centreName']; ?></td>
 					<td><?php echo $exp['unitName']; ?></td>
 					<td><?php echo $exp['centreID']; ?></td>
-					<td><input class = "sname" type="number" name="unittype_<?php echo $exp['SN']; ?>" id="unittype_<?php echo $exp['SN']; ?>" value="<?php echo $exp['unit_type']; ?>" maxlength="1" size="1" min="0" max="1" size="40" style="font-family: courier;font-size:14px;"></td>
-					<td><input class = "sname" type="number" name="active_<?php echo $exp['SN']; ?>" id="active_<?php echo $exp['SN']; ?>" value="<?php echo $exp['Active']; ?>" maxlength="1" size="1"  min="0" max="1" style="font-family: courier;font-size:14px;"></td>
+					<td><input class = "sname" type="number" name="unittype_<?php echo $exp['SN']; ?>" id="unittype_<?php echo $exp['SN']; ?>" value="<?php echo $exp['unit_type']; ?>" maxlength="1" size="5" min="0" max="1" size="40" style="font-family: courier;font-size:14px;"></td>
+					<td><input class = "sname" type="number" name="active_<?php echo $exp['SN']; ?>" id="active_<?php echo $exp['SN']; ?>" value="<?php echo $exp['Active']; ?>" maxlength="1" size="5"  min="0" max="1" style="font-family: courier;font-size:14px;"></td>
 					<td><input class = "savebttn" id = "<?php echo $exp['SN']; ?>" name="submit" type="submit" value="Save" hidden/></td>
 					</td>
 				</tr>

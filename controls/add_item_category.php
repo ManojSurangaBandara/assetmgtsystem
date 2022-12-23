@@ -140,6 +140,7 @@
 														</tr>
 														<?php $i = 1; ?>
 														<?php foreach($exps as $exp) { 
+
 															$row = CatalogueDB::getcatlognewAssestnoByitemCategory($exp['mainCategory'], $exp['itemCategory']);														
 														?>																
 														
@@ -154,8 +155,8 @@
 															 elseif ($exp['type'] == 3) { echo 'VEHICLES';} ?></td>
 															<td><?php echo $exp['mainCategory']; ?></td>
 															<td><?php echo $exp['itemCategory']; ?></td>
-															<td><?php echo $row[0]; ?></td>
-															<td><?php echo $row[1]; ?></td>
+															<td><?php echo ($row[0] ?? ""); ?></td>
+															<td><?php echo ($row[1] ?? ""); ?></td>
 															<td><form action="." method="post">
 															<input type="hidden" name="action" value="Delete_Item_Category" />
 															<input type="hidden" name="id" value="<?php echo $exp['id']; ?>"/>

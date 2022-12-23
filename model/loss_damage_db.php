@@ -107,7 +107,7 @@ class loss_damageDB {
         $query = "select fileno from loss_damage where id = '$id'";
         $result = $db->query($query);
         $row = $result->fetch();
-        return $row['fileno'];
+        return $row['fileno'] ?? "";
     }
 	public static function getboardletterByFileno($fileno) {
         $db = Database::getDB();

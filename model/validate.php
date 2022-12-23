@@ -271,34 +271,44 @@ class Validate {
         if ($field->hasError()) {
             return;
         }
-	$qry="SELECT * FROM members WHERE login='".$_SESSION['SESS_LOGIN']."' AND passwd='".md5($_POST['currentPassword'])."'";
-	$result=mysql_query($qry);
-	
-	//Check whether the query was successful or not
-	if($result) {
-		if(mysql_num_rows($result) != 1) {
-			$field->setErrorMessage('Current Password incorrect.');
-		return;
-		}
-        // Call the pattern method to validate a date
-        //  $pattern = '/^(0?[1-9]|1[0-2])\/(0?[1-9]|[12][[:digit:]]|3[01])\/[[:digit:]]{4}$/';
-       // $pattern = '/^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])$/';
-       // $message = 'Invalid date format.';
-       // $this->pattern($name, $value, $pattern, $message, $required);
+        $qry="SELECT * FROM members WHERE login='".$_SESSION['SESS_LOGIN']."' AND passwd='".md5($_POST['currentPassword'])."'";
+        // $result=mysql_query($qry);
+        $db = Database::getDB();
+        $result = array();
+        try{
+            $statement = $db->prepare($qry);
+            $statement->execute();
+            $result = $statement->fetchAll();
+            $statement->closeCursor();
+        }catch(PDOException $e){
 
-      //  if (!$this->ValidateDate($value, 'Y-m-d')) {
-     //       $field->setErrorMessage('Must be a valid Date');
-     //       return;
-     //   }
-     //   $birthdate = new \DateTime($value);
-     //   $now = new \DateTime();
-     //   if ($value != $newPassword) {
-     //       $field->setErrorMessage('Confirm Password not same with new Password.');
-     //       return;
-     //   }
-        // $field->clearErrorMessage();
+        }
+	
+        //Check whether the query was successful or not
+        if($result) {
+            if(count($result) != 1) {
+                $field->setErrorMessage('Current Password incorrect.');
+            return;
+            }
+            // Call the pattern method to validate a date
+            //  $pattern = '/^(0?[1-9]|1[0-2])\/(0?[1-9]|[12][[:digit:]]|3[01])\/[[:digit:]]{4}$/';
+        // $pattern = '/^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])$/';
+        // $message = 'Invalid date format.';
+        // $this->pattern($name, $value, $pattern, $message, $required);
+
+        //  if (!$this->ValidateDate($value, 'Y-m-d')) {
+        //       $field->setErrorMessage('Must be a valid Date');
+        //       return;
+        //   }
+        //   $birthdate = new \DateTime($value);
+        //   $now = new \DateTime();
+        //   if ($value != $newPassword) {
+        //       $field->setErrorMessage('Confirm Password not same with new Password.');
+        //       return;
+        //   }
+            // $field->clearErrorMessage();
+        }
     }
-}
    public function UserLevelCheck($name, $value, $required = true) {
         $field = $this->fields->getField($name);
 

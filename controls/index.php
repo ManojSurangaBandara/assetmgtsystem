@@ -90,10 +90,23 @@ if (isset($_POST['action'])) {
 }
 
 $sql = "SELECT displaytype FROM members WHERE member_id = $memId";
-$result = $db->query($sql);
-while ($row = mysql_fetch_array($result)) {
-	$displaytype = $row["displaytype"];
+// $result = $db->query($sql);
+$result = array();
+try {
+		$statement = $db->prepare($sql);
+		$statement->execute();
+		$result = $statement->fetchAll();
+		$statement->closeCursor();
+} catch (PDOException $e) {
+	$error_message = $e->getMessage();
+	display_db_error($error_message);
 }
+$displaytype = "";
+
+if(count($result) == 1) {
+	$displaytype = $result[0]['displaytype'];
+}
+
 $assetscenter = $_SESSION['SESS_CENTRE'];
 $assetunit = $_SESSION['SESS_PLACE'];
 $Qinfo = QuickInfoDB::getActivatedDetails();
@@ -225,7 +238,7 @@ switch ($action) {
 							$newAssestno = $_POST['newAssestno'];
 							$assetsno = $_POST['assetsno'];
 							$catalogueno = $_POST['catalogueno'];
-							$add = $_POST['add'];
+							$add = $_POST['add'] ?? '';
 
 							$validate->text('classification', $classification);
 							$validate->text('mainCategory', $mainCategory);
@@ -1203,7 +1216,7 @@ case 'Add_Item_Category':
 	$itemCategory = "";
 	$maincategorys = CatalogueDB::getMainCategoryByClassification("");
 	$exps = CatalogueDB::getItemCategory();
-	include('add_item_category.php');
+	include('add_item_category.php');	
 	break;
 case 'Delete_Item_Category':
 	$slidebartype = 2;
@@ -1256,8 +1269,10 @@ case 'Change_Password':
 		$Count = user_account_change_historyDB::getHasRecord($_SESSION['SESS_LOGIN'], $newPassword);
 		if ($Count == 0) {
 			$date = date('Y-m-d H:i:s');
-			$qry = "UPDATE members SET passwd = '" . md5($_POST['newPassword']) . "', pw_update = '" . $date . "' WHERE login='" . $_SESSION['SESS_LOGIN'] . "' AND passwd='" . md5($_POST['currentPassword']) . "'";
-			$result = @mysql_query($qry);
+			// $qry = "UPDATE members SET passwd = '" . md5($_POST['newPassword']) . "', pw_update = '" . $date . "' WHERE login='" . $_SESSION['SESS_LOGIN'] . "' AND passwd='" . md5($_POST['currentPassword']) . "'";
+			
+			$result = MembersDB::changePassword($_POST['newPassword'], $date, $_SESSION['SESS_LOGIN'], $_POST['currentPassword']);
+			// $result = @mysql_query($qry);
 			if ($result) {
 				$error = 1;
 				$deactive = 0;
@@ -2795,6 +2810,7 @@ case 'cigas_officeequdetails_generate':
 case 'cigas_vehicledetails_generate':
 	$slidebartype = 8;
 	$error = 0;
+echo "/////////////////////";
 	$exps = CatalogueDB::getCatalogue_cigas();
 	foreach ($exps as $exp) {
 		$count = VehicleDB::update_cigas_1($exp['catalogueno'], $exp['cigas_assetno'], $exp['newAssestno']);

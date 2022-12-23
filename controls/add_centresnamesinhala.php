@@ -79,7 +79,7 @@ input[type="text"] {
 						<input type="hidden" name="id" id="id" value="<?php echo $exp['id']; ?>"/>
 						<td><input type="text" name="centreNameSinhala_<?php echo $exp['id']; ?>" id="centreNameSinhala_<?php echo $exp['id']; ?>" value="<?php echo $exp['centreNameSinhala']; ?>"></td>
 						<td><input type="text" name="centreNameSinhalaFull_<?php echo $exp['id']; ?>" id="centreNameSinhalaFull_<?php echo $exp['id']; ?>" value="<?php echo $exp['centreNameSinhalaFull']; ?>"></td>
-						<td><input type="text" name="centreNameEnglishFull_<?php echo $exp['id']; ?>" id="centreNameEnglishFull_<?php echo $exp['id']; ?>" value="<?php echo $exp['centreNameEnglishFull']; ?>"></td>
+						<td><input type="text" name="centreNameEnglishFull_<?php echo $exp['id']; ?>" id="centreNameEnglishFull_<?php echo $exp['id']; ?>" value="<?php echo ($exp['centreNameEnglishFull'] ?? ""); ?>"></td>
 						<td><input class = "savebttn" id = "<?php echo $exp['id']; ?>" name="submit" type="submit" value="Save"/></td>
 					</form>
 				</tr>

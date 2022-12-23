@@ -65,7 +65,8 @@ class CatalogueDB {
         $db = Database::getDB();
 			$query = "SELECT mainCategory FROM maincategory WHERE type = $classification order by mainCategory";
        // $query = "SELECT DISTINCT mainCategory FROM classificationlist WHERE type = $classification";
-        $result = $db->query($query);
+        // $result = $db->query($query);
+        $result = array();
         try {
             $statement = $db->prepare($query);
             $statement->execute();
@@ -73,7 +74,7 @@ class CatalogueDB {
             $statement->closeCursor();
         } catch (PDOException $e) {
             $error_message = $e->getMessage();
-            display_db_error($error_message);
+            // display_db_error($error_message);
         }
         return $result;
     }
@@ -135,6 +136,7 @@ class CatalogueDB {
         $db = Database::getDB();
         $query = "SELECT * FROM classificationlist WHERE ". $column ." LIKE '%$search%' order by catalogueno";
         //$query = "SELECT * FROM classificationlist WHERE itemCategory LIKE '%$search%'";
+        $result = array();
         try {
             $statement = $db->prepare($query);
             $statement->execute();
@@ -142,7 +144,7 @@ class CatalogueDB {
             $statement->closeCursor();
         } catch (PDOException $e) {
             $error_message = $e->getMessage();
-            display_db_error($error_message);
+            // display_db_error($error_message);
         }
         return $result;
     }
