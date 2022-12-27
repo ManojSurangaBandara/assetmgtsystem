@@ -10,8 +10,8 @@
   <button class="dropbtn">Handle Building Details</button>
   <div class="dropdown-content">
 		<a href="index.php?action=Add_Building_Details"><?php echo $subMenu[1][$lang]?></a>
-		<a href="index.php?action=upload_plan">Upload Land Plan</a>
-		<a href="index.php?action=Select_Items_For_Modifications">Land Details Modification</a>
+		<a href="index.php?action=upload_plan">Upload Building Plan</a>
+		<a href="index.php?action=Select_Items_For_Modifications">Building Details Modification</a>
 		<a href="index.php?action=delete_not_confirm">Delete Data-Not Confirm</a>
 		<a href="index.php?action=delete_all_items" style="color:red">Delete Items(Use Carefully)</a>
 		<a href="index.php?action=mofifydata_grid">Modify Details</a>
@@ -41,8 +41,8 @@
   <button class="dropbtn">Summary Details</button>
   <div class="dropdown-content">
 		<a href="index.php?action=List_summary">Summary List</a>
-		<a href="?index.php&action=List_summary">Group By Land Category</a>
-		<a href="?index.php&action=List_summary6">Group By Land Category to Date (Ignore Units)</a></li> 
+		<a href="?index.php&action=List_summary">Group By Building Category</a>
+		<a href="?index.php&action=List_summary6">Group By Building Category to Date (Ignore Units)</a></li> 
   </div>
 </div>
 <div class="dropdown">
