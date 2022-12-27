@@ -78,7 +78,7 @@ class tender_vehicledetails{
 		
 			$sth->execute();	
 			$rows = $sth->fetchAll(PDO::FETCH_ASSOC);
-			$list="";
+			$list=array();
 			$i=0;							
 				foreach($rows as $key=>$row){					
 					self::$instance = new tender_vehicledetails($row['id'],$row['year'],$row['year_half'],$row['ordinance'],$row['type'],$row['date1'],$row['date2'],$row['lotno'],$row['vehicleno'],$row['vmodel'],$row['engineno'],$row['chaisseeno'],$row['amount'],$row['bname'],$row['baddress'],$row['bidno']);					

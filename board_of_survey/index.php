@@ -15,6 +15,7 @@ require('../model/members_db.php');
 require('../model/bos_openingbalance_report_receving_db.php');
 require('../model/user_account_change_history_db.php');
 require('../model/board_report_summary_db.php');
+require('../model/users_db.php');
 
 require_once('../model/fields.php');
 require_once('../model/validate.php');
@@ -512,35 +513,37 @@ case 'reset_password':
 		$error = 2;
 	} else {
 		if ($login != '') {
-			$qry = "SELECT * FROM members WHERE login='$login' and centreName='$assetscenter' and place='$assetunit'";
-			$result = mysql_query($qry);
-			if ($result) {
-				if (mysql_num_rows($result) == 1) {
-					$member = mysql_fetch_assoc($result);
-					$level = $member['level'];
-					if ($level == 17) {
-						$passwd = '1234';
-						$date = date('Y-m-d H:i:s');
-						$qry = "UPDATE members SET passwd = '" . md5($passwd)."', pw_update = '".$date."', fail_attempts = 0, deactive = 0 WHERE login='$login' and centreName='$assetscenter' and place='$assetunit'";
-						$result = @mysql_query($qry);
-						if ($result) {
-							$saveCount = user_account_change_historyDB::addRecord($assetunit, $login, "Reset Password", md5($passwd), $_SESSION['SESS_LOGIN']);
-							$error = 1;
-							$assetscenter = "";
-							$assetunit = "";
-							$login = "";
-							
-						} else {
-							$error = 5;
-						}
+			$result = array();
+            $result = get_users_selected_by_login($login, $assetscenter, $assetunit);
+			// $qry = "SELECT * FROM members WHERE login='$login' and centreName='$assetscenter' and place='$assetunit'";
+			// $result = mysql_query($qry);
+			if (count($result) == 1) {
+				// $member = mysql_fetch_assoc($result);
+				$member = $result[0];
+				$level = $member['level'];
+				if ($level == 17) {
+					$passwd = '1234';
+					$date = date('Y-m-d H:i:s');
+					// $qry = "UPDATE members SET passwd = '" . md5($passwd)."', pw_update = '".$date."', fail_attempts = 0, deactive = 0 WHERE login='$login' and centreName='$assetscenter' and place='$assetunit'";
+					// $result = @mysql_query($qry);
+					$result = array();
+                    $result = resetPassword($passwd, $date, $login, $assetscenter, $assetunit);
+					if ($result) {
+						$saveCount = user_account_change_historyDB::addRecord($assetunit, $login, "Reset Password", md5($passwd), $_SESSION['SESS_LOGIN']);
+						$error = 1;
+						$assetscenter = "";
+						$assetunit = "";
+						$login = "";
+						
+					} else {
+						$error = 5;
 					}
-					
-				} else {
-					$error = 3;
 				}
+				
 			} else {
 				$error = 3;
 			}
+			
 		} else {
 			$error = 6;
 		}
