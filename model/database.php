@@ -20,10 +20,17 @@
   }
   mysql_select_db("assetmgtsystem") or die(mysql_error()); */
 
-$dsn = 'mysql:host=localhost;dbname=assetmgtsystem;charset=UTF8';
-$username = 'root';
-$password = '';
-$dbhost = 'localhost';
+/////////////////  LOCALHOST   ///////////////////////
+// $dsn = 'mysql:host=localhost;dbname=assetmgtsystem;charset=UTF8';
+// $username = 'root';
+// $password = '';
+// $dbhost = 'localhost';
+
+/////////////////   SERVER   ///////////////////////
+$dsn = 'mysql:host=172.16.60.29;dbname=assetmgtsystem;charset=UTF8';
+$username = 'assetmgtsystem';
+$password = 'Asset@#567';
+$dbhost = '172.16.60.29';
 
 // try {
 //     $db = new PDO('mysql:host=localhost;dbname=assetmgtsystem', $username, $password);
@@ -60,9 +67,16 @@ class Database {
       private static $password = 'asset#$789';
      */
 
-    private static $dsn = 'mysql:host=localhost;dbname=assetmgtsystem';
-    private static $username = 'root';
-    private static $password = '';
+    /////////////////  LOCALHOST   ///////////////////////
+    // private static $dsn = 'mysql:host=localhost;dbname=assetmgtsystem';
+    // private static $username = 'root';
+    // private static $password = '';
+    // private static $db;
+
+    /////////////////  SERVER   ///////////////////////
+    private static $dsn = 'mysql:host=172.16.60.29;dbname=assetmgtsystem';
+    private static $username = 'assetmgtsystem';
+    private static $password = 'Asset@#567';
     private static $db;
 
     private function __construct() {
