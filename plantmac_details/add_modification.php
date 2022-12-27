@@ -1,11 +1,6 @@
 <?php
-include '../view/header1.php';
+include 'header1.php';
 ?>
-
-
-<div id="sec_menu">
-    <?php include("sub_menu.tpl"); ?>
-</div>
 <div id="page">
     <div class="inner">
         <div class="section">

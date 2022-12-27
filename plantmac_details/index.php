@@ -1949,7 +1949,7 @@ switch ($action) {
 		$itemCategory = (isset($_COOKIE['itemCategory']) ? $_COOKIE['itemCategory'] : "");
 		$itemDescription = (isset($_COOKIE['itemDescription']) ? $_COOKIE['itemDescription'] : "");
 		$catalogueno = (isset($_COOKIE['catalogueno']) ? $_COOKIE['catalogueno'] : "");
-		$searchby = $_COOKIE['searchby'];
+		$searchby = $_COOKIE['searchby'] ?? "";
         $search = $_COOKIE['search'];
 		$Items = PlantMacDB::getAllowModicationItems($assetscenter, $assetunit, $mainCategory, $itemCategory, $itemDescription, $catalogueno, $searchby, $search);
         $PlantMac = PlantMacDB::getDetailsById($id);
