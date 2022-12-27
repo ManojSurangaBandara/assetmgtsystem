@@ -25,25 +25,25 @@ $username = 'root';
 $password = '';
 $dbhost = 'localhost';
 
-try {
-    $db = new PDO('mysql:host=localhost;dbname=assetmgtsystem', $username, $password);
-//    foreach($dbh->query('SELECT * from members') as $row) {
-//        print_r($row);
-//    }
-    $db = null;
-} catch (PDOException $e) {
-    print "Error!: " . $e->getMessage() . "<br/>";
-    die();
-}
+// try {
+//     $db = new PDO('mysql:host=localhost;dbname=assetmgtsystem', $username, $password);
+// //    foreach($dbh->query('SELECT * from members') as $row) {
+// //        print_r($row);
+// //    }
+//     $db = null;
+// } catch (PDOException $e) {
+//     print "Error!: " . $e->getMessage() . "<br/>";
+//     die();
+// }
 
-$dbuser = $username;
-$dbpass = $password;
+// $dbuser = $username;
+// $dbpass = $password;
 
-$conn = mysqli_connect($dbhost, $dbuser, $dbpass);
-if (!$conn) {
-    die('Could not connect: ' . mysqli_error());
-}
-mysqli_select_db($conn, "assetmgtsystem") or die(mysqli_error());
+// $conn = mysqli_connect($dbhost, $dbuser, $dbpass);
+// if (!$conn) {
+//     die('Could not connect: ' . mysqli_error());
+// }
+// mysqli_select_db($conn, "assetmgtsystem") or die(mysqli_error());
 
 try {
     $db = new PDO($dsn, $username, $password);
