@@ -726,7 +726,7 @@ if (isset($_POST['ExpToPdf']) && $_POST['ExpToPdf'] == '1') {
         $slidebartype = 8;
         $items = BuildingDB::getInqDetails($assetscenter, $assetunit, $column, $search, $inputField1, $inputField2);
         $Building = BuildingDB::getDetailsByIdentificationno($identificationno);
-        include('DbToVariable.php');
+        include('dbtovariable.php');
         $id = $Building['id'];
         include('approved_details.php');
         break;
