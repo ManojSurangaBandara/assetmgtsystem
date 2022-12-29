@@ -35,13 +35,25 @@
 	<?php
 	foreach($unitsarray as $item) {
 		$value = allocation_detailsDB::getDetailsByUnitCatalogueno_all($item, $exp['catalogueno']); 
-		$bal = $value['quantity'] - $value['act_quantity'];
+		if (isset($value['quantity']) && isset($value['act_quantity'])) {
+			$bal = $value['quantity'] - $value['act_quantity'];
+		
+		
 		?>																
 		<td style="text-align: right;"><?php echo $value['quantity'] != 0 ? (int)$value['quantity'] : ''; ?></td>
 		<td style="text-align: right;"><?php echo $value['act_quantity'] != 0 ? (int)$value['act_quantity'] : ''; ?></td>
 		<td style="text-align: right;"><nobr><?php echo $bal > 0 ? (int)abs($bal) : ''; ?></nobr></td>
 		<td style="text-align: right;"><nobr><?php echo $bal < 0 ? (int)abs($bal) : ''; ?></nobr></td>	
-<?php 
+		
+		<?php 
+		}else{
+		?>
+		<td style="text-align: right;"><?php echo ''; ?></td>
+		<td style="text-align: right;"><?php echo ''; ?></td>
+		<td style="text-align: right;"><nobr><?php echo ''; ?></nobr></td>
+		<td style="text-align: right;"><nobr><?php echo ''; ?></nobr></td>	
+		<?php
+		}
 	}
 	?>
 </tr>
