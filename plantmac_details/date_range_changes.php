@@ -54,8 +54,8 @@ var output = d.getFullYear() + '-' +
 			<table width="100%" border="0" class="listing form">
                 <tr>
                     <td><b>Recevied Date - From : </b></td> 
-					<td><input name="receivedDate_from" id="receivedDate_from" class="date" value="<?php echo $receivedDate_from; ?>" required/></td>
-					<td><input name="receivedDate_to" id="receivedDate_to" class="date" value="<?php echo $receivedDate_to; ?>" required/></td>
+					<td><input name="receivedDate_from" id="receivedDate_from" class="date" value="<?php echo $receivedDate_from ?? ''; ?>" required/></td>
+					<td><input name="receivedDate_to" id="receivedDate_to" class="date" value="<?php echo $receivedDate_to ?? ''; ?>" required/></td>
 				</tr>
 				<tr>
                     <td></td> 

@@ -3668,48 +3668,31 @@ switch ($action) {
 			}
         break;
    case 'date_range_changes':
-		 if (isset($_POST['receivedDate_from'])) {
+
+		$with_units = $_POST['with_units'] ?? 0;
+        $full_details = $_POST['full_details'] ?? 0;
+        $display_type = 0;
+        $title2 = "";
+        $title_dis = "";
+        $slidebartype = 0;
+        $exps = array();
+        $exps_dis = array();
+        if (isset($_POST['receivedDate_from']) && isset($_POST['receivedDate_to'])) {
             $receivedDate_from = $_POST['receivedDate_from'];
-        } else {
-            $receivedDate_from = "";
-        }
-		 if (isset($_POST['receivedDate_to'])) {
             $receivedDate_to = $_POST['receivedDate_to'];
-        } else {
-            $receivedDate_to = "";
+            $title2 = 'New Items - From ' . $receivedDate_from . ' To ' . $receivedDate_to;
+            $title_dis = 'Dispisal Items - From ' . $receivedDate_from . ' To ' . $receivedDate_to;
+            if ($with_units == 0 && $full_details == 0){
+                $display_type = 0;
+            } elseif ($with_units == 1 && $full_details == 0) {
+                $display_type = 1;
+            } elseif ($full_details == 1){
+                $display_type = 2;
+            }
+            $exps = PlantMacDB::date_range_changes($receivedDate_from, $receivedDate_to, $display_type);
+            $exps_dis = PlantMacDB::date_range_changes_dis($receivedDate_from, $receivedDate_to, $display_type);
         }
-		
-		if (isset($_POST['with_units'])) {
-            $with_units = $_POST['with_units'];
-        } else {
-			$with_units = 0;
-		}
-		
-		if (isset($_POST['full_details'])) {
-            $full_details = $_POST['full_details'];
-        } else {
-			$full_details = 0;
-		}
-		
-		$slidebartype = 0;
-		$title2 = 'New Items - From ' . $receivedDate_from . ' To ' . $receivedDate_to;
-		$title_dis = 'Dispisal Items - From ' . $receivedDate_from . ' To ' . $receivedDate_to;
-		if ($with_units == 0 && $full_details == 0){
-			$display_type = 0;
-			$exps = PlantMacDB::date_range_changes($receivedDate_from, $receivedDate_to, $display_type);
-			$exps_dis = PlantMacDB::date_range_changes_dis($receivedDate_from, $receivedDate_to, $display_type);
-			include('date_range_changes.php');
-		} elseif ($with_units == 1 && $full_details == 0) {
-			$display_type = 1;
-			$exps = PlantMacDB::date_range_changes($receivedDate_from, $receivedDate_to, $display_type);
-			$exps_dis = PlantMacDB::date_range_changes_dis($receivedDate_from, $receivedDate_to, $display_type);
-			include('date_range_changes.php');
-		} elseif ($full_details == 1){
-			$display_type = 2;
-			$exps = PlantMacDB::date_range_changes($receivedDate_from, $receivedDate_to, $display_type);
-			$exps_dis = PlantMacDB::date_range_changes_dis($receivedDate_from, $receivedDate_to, $display_type);
-			include('date_range_changes.php');			
-		}
+		include('date_range_changes.php');
         break;
     case 'disposal_inquiry_tree':
         $slidebartype = 0;

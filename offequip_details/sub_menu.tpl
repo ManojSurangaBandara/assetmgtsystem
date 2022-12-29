@@ -40,7 +40,7 @@ case '1':
 		<li><a href="index.php?action=record_status" class="sm4">Record Status</a></li>
 		<li><a href="index.php?action=monthly_changes" class="sm4">Monthly Changes</a></li>
 		<li><a href="index.php?action=year_changes" class="sm4">Year Changes</a></li>
-		<li><a href="index.php?action=date_range_changes" class="sm4">Date Dange Changes</a></li>
+		<li><a href="index.php?action=date_range_changes" class="sm4">Date Range Changes</a></li>
 		<li><a href="index.php?action=disband_selected_items" class="sm4">Delete Disband Items</a></li>
 		<li><a href="index.php?action=donated_item" class="sm4">Donated Items</a></li>
 		<li><a href="index.php?action=board_report_start" class="sm4 blink_text">Board Reports<img src="../pic/new.png" style="width:40px;height:20px;"></a></li>
@@ -62,7 +62,7 @@ case '2':
 		<li hidden><a href="index.php?action=List_summary_tree" class="sm4">Summary List - Tree</a></li>
 		<li><a href="index.php?action=List_summary_tree_2" class="sm4">Summary List - Tree</a></li>
 		<li><a href="index.php?action=monthly_changes" class="sm4">Monthly Changes</a></li>
-		<li><a href="index.php?action=date_range_changes" class="sm4">Date Dange Changes</a></li>
+		<li><a href="index.php?action=date_range_changes" class="sm4">Date Range Changes</a></li>
 		<li hidden><a href="index.php?action=donated_item" class="sm4">Donated Items</a></li>
     </ul>
 </div>
@@ -92,7 +92,7 @@ case '3':
 		<li><a href="index.php?action=List_summary_tree_2" class="sm4">Summary List - Tree</a></li>
 		<li><a href="index.php?action=check_notconfirm" class="sm4">Check Not Confirm</a></li>
 		<li><a href="index.php?action=monthly_changes" class="sm4">Monthly Changes</a></li>
-		<li><a href="index.php?action=date_range_changes" class="sm4">Date Dange Changes</a></li>
+		<li><a href="index.php?action=date_range_changes" class="sm4">Date Range Changes</a></li>
 		<li><a href="index.php?action=donated_item" class="sm4">Donated Items</a></li>
     </ul>
 </div>
@@ -122,7 +122,7 @@ case '4':
 		<li><a href="index.php?action=List_summary_tree_2" class="sm4">Summary List - Tree</a></li>
 		<li><a href="index.php?action=check_notconfirm" class="sm4">Check Not Confirm</a></li>
 		<li><a href="index.php?action=monthly_changes" class="sm4">Monthly Changes</a></li>
-		<li><a href="index.php?action=date_range_changes" class="sm4">Date Dange Changes</a></li>
+		<li><a href="index.php?action=date_range_changes" class="sm4">Date Range Changes</a></li>
 		<li><a href="index.php?action=donated_item" class="sm4">Donated Items</a></li>
 	</ul>
 </div>
@@ -149,7 +149,7 @@ case '5':
 		<li><a href="index.php?action=List_summary_tree_2" class="sm4">Summary List - Tree</a></li>
 		<li><a href="index.php?action=check_notconfirm" class="sm4">Check Not Confirm</a></li>
 		<li><a href="index.php?action=monthly_changes" class="sm4">Monthly Changes</a></li>
-		<li><a href="index.php?action=date_range_changes" class="sm4">Date Dange Changes</a></li>
+		<li><a href="index.php?action=date_range_changes" class="sm4">Date Range Changes</a></li>
 		<li><a href="index.php?action=donated_item" class="sm4">Donated Items</a></li>
 	</ul>
 </div>
@@ -170,7 +170,7 @@ case '6':
 		<!-- <li><a href="index.php?action=Full_List" class="sm4"><?php echo $subMenu[7][$lang]?></a></li> -->
 		<li><a href="index.php?action=List_summary" class="sm4">Summary List</a></li>
 		<li><a href="index.php?action=monthly_changes" class="sm4">Monthly Changes</a></li>
-		<li><a href="index.php?action=date_range_changes" class="sm4">Date Dange Changes</a></li>
+		<li><a href="index.php?action=date_range_changes" class="sm4">Date Range Changes</a></li>
 		<li><a href="index.php?action=donated_item" class="sm4">Donated Items</a></li>
     </ul>
 </div>
@@ -195,7 +195,7 @@ case '7':
 		<li><a href="index.php?action=Delete_Not_Confirm" class="sm4">Delete Data-Not Confirm</a></li>
 		<li><a href="index.php?action=add_serial_nos_ajax" class="sm4">Modify Details</a></li>
 		<li><a href="index.php?action=monthly_changes" class="sm4">Monthly Changes</a></li>
-		<li><a href="index.php?action=date_range_changes" class="sm4">Date Dange Changes</a></li>
+		<li><a href="index.php?action=date_range_changes" class="sm4">Date Range Changes</a></li>
 		<li><a href="index.php?action=donated_item" class="sm4">Donated Items</a></li>
 		<li><a href="index.php?action=board_report_start" class="sm4 blink_text">Board Reports<img src="../pic/new.png" style="width:40px;height:20px;"></a></li>
     </ul>
@@ -220,7 +220,7 @@ case '8':
 		<li><a href="index.php?action=ledgerformat" class="sm4">Print Ledger Format</a></li>
 		<li><a href="index.php?action=add_serial_nos_ajax" class="sm4">Modify Details</a></li>
 		<li><a href="index.php?action=monthly_changes" class="sm4">Monthly Changes</a></li>
-		<li><a href="index.php?action=date_range_changes" class="sm4">Date Dange Changes</a></li>
+		<li><a href="index.php?action=date_range_changes" class="sm4">Date Range Changes</a></li>
 		<li><a href="index.php?action=donated_item" class="sm4">Donated Items</a></li>
     </ul>
 </div>
@@ -241,7 +241,7 @@ case '25':
 		<li hidden><a href="index.php?action=List_summary_tree" class="sm4">Summary List - Tree</a></li>
 		<li><a href="index.php?action=List_summary_tree_2" class="sm4">Summary List - Tree</a></li>
 		<li><a href="index.php?action=monthly_changes" class="sm4">Monthly Changes</a></li>
-		<li><a href="index.php?action=date_range_changes" class="sm4">Date Dange Changes</a></li>
+		<li><a href="index.php?action=date_range_changes" class="sm4">Date Range Changes</a></li>
 		<li><a href="index.php?action=donated_item" class="sm4">Donated Items</a></li>
     </ul>
 </div>

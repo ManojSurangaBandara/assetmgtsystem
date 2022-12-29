@@ -97,7 +97,7 @@
 		<a href="index.php?action=List_summary_tree_2">Summary List - Tree </a>-->
 		<a href="index.php?action=List_summary_tree_3">Summary List - Tree (With Unit)</a>
 		<a href="index.php?action=monthly_changes">Monthly Changes</a>
-		<a href="index.php?action=date_range_changes">Date Dange Changes</a>
+		<a href="index.php?action=date_range_changes">Date Range Changes</a>
   </div>
 </div>
 <div class="dropdown">
