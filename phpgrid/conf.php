@@ -1,9 +1,18 @@
 <?php
-define('PHPGRID_DB_HOSTNAME','localhost'); 
-define('PHPGRID_DB_USERNAME', 'root');    
-define('PHPGRID_DB_PASSWORD', ''); 
+/////////////////  LOCALHOST   ///////////////////////
+// define('PHPGRID_DB_HOSTNAME','localhost'); 
+// define('PHPGRID_DB_USERNAME', 'root');    
+// define('PHPGRID_DB_PASSWORD', ''); 
+// define('PHPGRID_DB_NAME', 'assetmgtsystem');
+// define('PHPGRID_DB_TYPE', 'mysql'); 
+// define('PHPGRID_DB_CHARSET','utf8mb4');
+
+/////////////////  SERVER   ///////////////////////
+define('PHPGRID_DB_HOSTNAME','172.16.60.29'); 
+define('PHPGRID_DB_USERNAME', 'assetmgtsystem');    
+define('PHPGRID_DB_PASSWORD', 'Asset@#567'); 
 define('PHPGRID_DB_NAME', 'assetmgtsystem');
-define('PHPGRID_DB_TYPE', 'mysqli'); 
+define('PHPGRID_DB_TYPE', 'mysql'); 
 define('PHPGRID_DB_CHARSET','utf8mb4');
 
 
