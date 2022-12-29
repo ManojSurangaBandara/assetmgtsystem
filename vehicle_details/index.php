@@ -1,4 +1,6 @@
 <?php
+ini_set('max_execution_time', 1000);
+ini_set('memory_limit', '2G');
 require_once('../php-login/auth.php');
 require('../model/database.php');
 require('../model/assetscenter_db.php');
