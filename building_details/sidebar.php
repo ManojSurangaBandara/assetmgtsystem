@@ -51,6 +51,13 @@
                             <span class="title_wrapper_right"></span>
                             <?php
                             break;
+                        case 32:
+                            ?>
+                            <h2>Upload Valuation Report</h2>
+                            <span class="title_wrapper_left"></span>
+                            <span class="title_wrapper_right"></span>
+                            <?php
+                            break;
 						default:
 							?>
 							<h2><?php echo $slideBar[0][$lang]?></h2>
@@ -127,7 +134,7 @@
                                                         <li><a href="?index.php&action=list_receipt_supplier&suppler=<?php echo $supplier['unitsource']; ?>"><?php echo $supplier['unitsource']; ?> </a></li>            
         <?php endforeach; ?>
                 <?php break;
-                case 8: //For Inquiry Records
+                                                    case 8: //For Inquiry Records
                                                     if (empty($items)) {
                                                         ?>
                                                         <img src="<?php echo $logo; ?>" alt="A description of the picture" width="230" height="230" /> 
@@ -140,7 +147,7 @@
                                                         <?php
                                                     }
                                                     break;
-					case 25:
+					                                case 25:
                                                     foreach ($Items as $Item) :
                                                         ?>
 														<li><a href="?index.php&action=ModificationList&id=<?php echo $Item['id']; ?>" title="<?php echo $Item['identificationno']; ?>"><?php echo $Item['identificationno']; ?></a></li>           
@@ -165,7 +172,20 @@
 														<li <?php if ($_SESSION['SESS_LEVEL'] > 5){ echo 'hidden' ;}?>><a href="?index.php&action=List_summary6">Group By Building Category To Date (Ignore Units)</a></li> 
 														 <?php                                                     
                                                     break;
-            default:
+                                                    case 32: //For Update Records
+                                                        if (empty($Items)) {
+                                                            ?>
+                                                            <img src="<?php echo $logo; ?>" alt="A description of the picture" width="230" height="230" /> 
+                                                            <?php
+                                                        } else {
+                                                            foreach ($Items as $Item) :
+                                                                ?>
+                                                                <li><a href="?index.php&action=upload_vreport&id=<?php echo $Item['id']; ?>&identificationno=<?php echo $Item['identificationno']; ?>" title="<?php echo $Item['identificationno']; ?>"><?php echo $Item['identificationno']; ?> </a></li>            
+                                                            <?php endforeach; ?>
+                                                            <?php
+                                                        }
+                                                        break;	
+                                                    default:
                 ?>
                                                     <img src="<?php echo $logo; ?>" alt="A description of the picture" width="230" height="230" /> 
 <?php } ?>
