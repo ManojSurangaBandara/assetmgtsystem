@@ -926,7 +926,7 @@ case 'Add_DS_Divitions':
 case 'findDistrictByProvince':
 	$province = $_REQUEST['province'];
 	$districts = DistrictDB::getDistrictsByProvince($province);
-	include('../view/findDistrictByProvince.php');
+	include('../view/finddistrictbyprovince.php');
 	break;
 case 'findDSByDistrict':
 	$district = $_REQUEST['district'];
