@@ -64,7 +64,7 @@ class Building {
         $this->additionsValue = $additionsValue;
         $this->alterationValue = $alterationValue;
         $this->acquisitiondate = $acquisitiondate;
-        $this->capitalCost = $capitalCost;
+        // $this->capitalCost = $capitalCost;
         $this->remarks = $remarks;
         $this->counterId = $counterId;
         $this->acquisitionInstitute = $acquisitionInstitute;

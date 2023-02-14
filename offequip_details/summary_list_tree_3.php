@@ -152,25 +152,29 @@ echo "<a href='index.php?action=List_summary_tree_3&id=1&page1=1' class='paging'
 for ($j=1; $j<=$total_pages; $j++) {
 	echo "<a href='index.php?action=List_summary_tree_3&id=1&page1=$j' class='paging'>$j</a>";
 };
-echo "<a href='index.php?action=List_summary_tree_3&id=1&page1=$total_pages'  class='paging'>Last Page</a>";	
+$last_page_no = $total_pages ? $total_pages : 1;
+echo "<a href='index.php?action=List_summary_tree_3&id=1&page1=$last_page_no'  class='paging'>Last Page</a>";	
 } else if ($id == 2) {
 echo "<a href='index.php?action=List_summary_tree_3&id=2&itemCategory=$itemCategory&page1=1' class='paging'>First Page</a>";
 for ($j=1; $j<=$total_pages; $j++) {
 	echo "<a href='index.php?action=List_summary_tree_3&id=2&itemCategory=$itemCategory&page1=$j' class='paging'>$j</a>";
 };
-echo "<a href='index.php?action=List_summary_tree_3&id=2&itemCategory=$itemCategory&page1=$total_pages'  class='paging'>Last Page</a>";
+$last_page_no = $total_pages ? $total_pages : 1;
+echo "<a href='index.php?action=List_summary_tree_3&id=2&itemCategory=$itemCategory&page1=$last_page_no'  class='paging'>Last Page</a>";
 } else if ($id == 3) {
 echo "<a href='index.php?action=List_summary_tree_3&id=3&itemCategory=$itemCategory&page1=1' class='paging'>First Page</a>";
 for ($j=1; $j<=$total_pages; $j++) {
 	echo "<a href='index.php?action=List_summary_tree_3&id=3&itemCategory=$itemCategory&page1=$j' class='paging'>$j</a>";
 };
-echo "<a href='index.php?action=List_summary_tree_3&id=3&itemCategory=$itemCategory&page1=$total_pages'  class='paging'>Last Page</a>";
+$last_page_no = $total_pages ? $total_pages : 1;
+echo "<a href='index.php?action=List_summary_tree_3&id=3&itemCategory=$itemCategory&page1=$last_page_no'  class='paging'>Last Page</a>";
 } else if ($id == 4) {
 echo "<a href='index.php?action=List_summary_tree_3&id=4&itemCategory=$itemCategory&page1=1' class='paging'>First Page</a>";
 for ($j=1; $j<=$total_pages; $j++) {
 	echo "<a href='index.php?action=List_summary_tree_3&id=4&itemCategory=$itemCategory&page1=$j' class='paging'>$j</a>";
 };
-echo "<a href='index.php?action=List_summary_tree_3&id=4&itemCategory=$itemCategory&page1=$total_pages'  class='paging'>Last Page</a>";
+$last_page_no = $total_pages ? $total_pages : 1;
+echo "<a href='index.php?action=List_summary_tree_3&id=4&itemCategory=$itemCategory&page1=$last_page_no'  class='paging'>Last Page</a>";
 }
 ?>
         <div class="title_wrapper">

@@ -1,5 +1,5 @@
 <?php
-            require_once "../excel/ExcelExport.php";
+            require_once "../excel/excelexport.php";
             $xls = new ExcelExport();
 			$heading = "BUILDING DETAILS";
 			$row = 0;

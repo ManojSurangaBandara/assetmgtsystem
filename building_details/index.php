@@ -352,7 +352,7 @@ switch ($action) {
         $additionsValue = $_POST['additionsValue'];
         $alterationValue = $_POST['alterationValue'];
         $acquisitiondate = $_POST['acquisitiondate'];
-        $capitalCost = $_POST['capitalCost']; 
+        $capitalCost = $_POST['capitalCost'] ?? 0; 
         $refValue = $_POST['refValue']; 
         
         $identificationnoTem = $_POST['identificationnoTem'];

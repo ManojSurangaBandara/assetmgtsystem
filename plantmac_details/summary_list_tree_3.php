@@ -152,8 +152,9 @@ echo "<a href='index.php?action=List_summary_tree_3&id=$id&itemCategory=$itemCat
 for ($j=1; $j<=$total_pages; $j++) {
 	echo "<a href='index.php?action=List_summary_tree_3&id=$id&itemCategory=$itemCategory&page1=$j' class='paging'>$j</a>";
 };
-echo "<a href='index.php?action=List_summary_tree_3&id=$id&itemCategory=$itemCategory&page1=$total_pages'  class='paging'>Last Page</a>";
-} 
+$last_page_no = $total_pages ? $total_pages : 1;
+echo "<a href='index.php?action=List_summary_tree_3&id=$id&itemCategory=$itemCategory&page1=$last_page_no'  class='paging'>Last Page</a>";
+}
 ?>							
 
         <div class="title_wrapper">

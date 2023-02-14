@@ -63,8 +63,8 @@ $opn_bal = board_report_summaryDB::getOpeningBalance($_GET['cyear'] - 1, $_GET['
 <td><nobr><?php echo $i; ?></nobr></td>
 <td><nobr><?php echo $exp['catalogueno']; ?></nobr></td>
 <td><nobr><a href="index.php?action=board_report_summary_view_details&id=<?php echo $exp['id'];?>&cyear=<?php echo $_GET['cyear'];?>&assetunit=<?php echo $_GET['assetunit'];?>"><?php echo $exp['itemDescription']; ?></a></nobr></td>
-<td style="text-align:right"><nobr><?php echo number_format((float)$opn_bal['quantity'], 0, '.', ','); ?></nobr></td>
-<td style="text-align:right"><nobr><?php echo number_format((float)$opn_bal['totalcost'], 2, '.', ','); ?></nobr></td>	
+<td style="text-align:right"><nobr><?php echo number_format((float)($opn_bal['quantity'] ?? 0), 0, '.', ','); ?></nobr></td>
+<td style="text-align:right"><nobr><?php echo number_format((float)($opn_bal['totalcost'] ?? 0), 2, '.', ','); ?></nobr></td>	
 <td style="text-align:right"><nobr><?php echo number_format((float)$exp['new_quantity'], 0, '.', ','); ?></nobr></td>
 <td style="text-align:right"><nobr><?php echo number_format((float)$exp['new_totalcost'], 2, '.', ','); ?></nobr></td>	
 <td style="text-align:right"><nobr><?php echo number_format((float)$exp['dis_quantity'], 0, '.', ','); ?></nobr></td>
@@ -73,8 +73,8 @@ $opn_bal = board_report_summaryDB::getOpeningBalance($_GET['cyear'] - 1, $_GET['
 <td style="text-align:right"><nobr><?php echo number_format((float)$exp['totalcost'], 2, '.', ','); ?></nobr></td>	
 </tr> 
  <?php $i++; 
- $opn_totqty = $opn_totqty + $opn_bal['quantity'];
- $opn_totvalue = $opn_totvalue + $opn_bal['totalcost'];  
+ $opn_totqty = $opn_totqty + ($opn_bal['quantity'] ?? 0);
+ $opn_totvalue = $opn_totvalue + ($opn_bal['totalcost'] ?? 0);  
  $totqty = $totqty + $exp['quantity']; 
  $totvalue = $totvalue + $exp['totalcost']; 
  $new_totqty = $new_totqty + $exp['new_quantity']; 

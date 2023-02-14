@@ -33,7 +33,8 @@ echo "<a href='index.php?action=List_Details_photo&page1=1' class='paging'>First
 for ($j=1; $j<=$total_pages; $j++) {
 	echo "<a href='index.php?action=List_Details_photo&page1=$j' class='paging'>$j</a>";
 };
-echo "<a href='index.php?action=List_Details_photo&page1=$total_pages'  class='paging'>Last Page</a>";
+$last_page_no = $total_pages ? $total_pages : 1;
+echo "<a href='index.php?action=List_Details_photo&page1=$last_page_no'  class='paging'>Last Page</a>";
 ?>
                                     <div class="table_wrapper_inner">
                                         <table id="abc" cellpadding="1" cellspacing="0" border="1" BORDERCOLOR=skyblue style="font-size:11px;">
