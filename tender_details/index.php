@@ -631,7 +631,7 @@ switch ($action) {
 		$tplaces = TenderdetailsDB::getDetailsByTenderno($tenderno);
 		$tplace = $tplaces['place'];
 		if (isset($_POST['ExpToExcel']) && $_POST['ExpToExcel'] == '1') {
-		   include('excel_list.php');
+		   //include('excel_list.php');
         }
 		if (isset($_POST['ExpToPdf']) && $_POST['ExpToPdf'] == '1') {
 			include('print_list.php');

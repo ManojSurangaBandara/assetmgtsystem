@@ -777,7 +777,7 @@ switch ($action) {
             $boardMemberName3 = $assetunits['boardMemberName3'];
             $boardMemberRank3 = $assetunits['boardMemberRank3'];
             $boardMemberNumber3 = $assetunits['boardMemberNumber3'];
-		   include('excel_list.php');
+		   //include('excel_list.php');
         }
 		if (isset($_POST['ExpToPdf']) && $_POST['ExpToPdf'] == '1') {
             $assetunits = AssetsUnitDB::getAllDetailsUnit($assetunit);

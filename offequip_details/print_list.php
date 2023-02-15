@@ -162,6 +162,6 @@ $YY = $pdf->GetY();
         $pdf->Cell(40,10,$boardMemberNumber2);
         $pdf->SetX(340);
         $pdf->Cell(40,10,$boardMemberNumber1);
-//$pdf->Output('Office Equipments ' . '.pdf', 'D');
+// $pdf->Output('Office Equipments ' . '.pdf', 'D');
 $pdf->Output($filename_d, 'F');
 ?>      

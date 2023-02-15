@@ -105,6 +105,20 @@
                                                         </div>
                                                         </div>
                                                         </div>
+                                                        <iframe id="txtArea1" style="display:none"></iframe>
+														<button id="btnExport" onclick="fnExcelReport();">Export to Excel</button>
+															<button onclick="generate()">Export to pdf</button>
+															<script src="../jspdf/libs/jspdf.min.js"></script>
+															<script src="../jspdf/libs/jspdf.plugin.autotable.src.js"></script>
+															<script>
+																function generate() {
+																	 var doc = new jsPDF('l', 'pt', 'a1');
+																	doc.text("Plant & Machinery Details List", 30, 50);
+																	var res = doc.autoTableHtmlToJson(document.getElementById("abc"));
+																	doc.autoTable(res.columns, res.data, {startY: 60});
+																	doc.save("table.pdf");
+																}
+															</script>
                                                         <span class="scb"><span class="scb_left"></span><span class="scb_right"></span></span>						
                                                         </div>
                                                         </div>

@@ -1,5 +1,5 @@
 <?php
-            require_once "../excel/ExcelExport.php";
+            require_once "../excel/excelexport.php";
             $xls = new ExcelExport();
 			$heading = "Fixed Assets Details List";
 			$row = 0;

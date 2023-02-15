@@ -22,9 +22,9 @@ if ($members['error_display'] == 1) {
 }
 include '../view/header1.php';
 $details = unitdetailsDB::getDetailsByUnit($_SESSION['SESS_PLACE']);
-$errordisplay = $details['errordisplay'];
-$errortitle = $details['errortitle'];
-$errordetails = $details['errordetails'];
+$errordisplay = $details['errordisplay'] ?? "";
+$errortitle = $details['errortitle'] ?? "";
+$errordetails = $details['errordetails'] ?? "";
 $logo = unitdetailsDB::getCrestByUnit($assetunit);
 if (empty($logo)) {
 	$logo = "1.jpg";

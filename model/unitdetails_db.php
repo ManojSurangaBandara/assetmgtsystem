@@ -139,7 +139,7 @@ class unitdetailsDB {
         $query = "select crest from unitdetails where unit = '$assetunit'";
         $result = $db->query($query);
         $row = $result->fetch();
-        return $row['crest'];
+        return $row['crest'] ?? "";
     }
 	public static function get_email($assetunit) {
         $db = Database::getDB();

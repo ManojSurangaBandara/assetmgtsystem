@@ -333,7 +333,7 @@ switch ($action) {
 							}
 							$items = CatalogueDB::getInqDetails($column, $search);
 							if (isset($_POST['ExpToExcel']) && $_POST['ExpToExcel'] == '1') {
-								include('excel_catelog_list.php');
+								//include('excel_catelog_list.php');
 							}
 							if (isset($_POST['ExpToPdf']) && $_POST['ExpToPdf'] == '1') {
             //$assetunits = AssetsUnitDB::getAllDetailsUnit($assetunit);
@@ -386,7 +386,7 @@ switch ($action) {
 							}
 							$items = CatalogueDB::getInqDetails($column, $search);
 							if (isset($_POST['ExpToExcel']) && $_POST['ExpToExcel'] == '1') {
-								include('excel_catelog_list.php');
+								//include('excel_catelog_list.php');
 							}
 							if (isset($_POST['ExpToPdf']) && $_POST['ExpToPdf'] == '1') {
             //$assetunits = AssetsUnitDB::getAllDetailsUnit($assetunit);

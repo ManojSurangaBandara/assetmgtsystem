@@ -1033,31 +1033,31 @@ switch ($action) {
         }
 				
 				if (isset($_POST['ExpToExcel']) && $_POST['ExpToExcel'] == '1') {
-           $assetunits = AssetsUnitDB::getAllDetailsUnit($assetunit);
-            $boardMemberName1 = $assetunits['boardMemberName1'];
-            $boardMemberRank1 = $assetunits['boardMemberRank1'];
-            $boardMemberNumber1 = $assetunits['boardMemberNumber1'];
-            $boardMemberName2 = $assetunits['boardMemberName2'];
-            $boardMemberRank2 = $assetunits['boardMemberRank2'];
-            $boardMemberNumber2 = $assetunits['boardMemberNumber2'];
-            $boardMemberName3 = $assetunits['boardMemberName3'];
-            $boardMemberRank3 = $assetunits['boardMemberRank3'];
-            $boardMemberNumber3 = $assetunits['boardMemberNumber3'];
-		   include('excel_list.php');
+        //    $assetunits = AssetsUnitDB::getAllDetailsUnit($assetunit);
+        //     $boardMemberName1 = $assetunits['boardMemberName1'];
+        //     $boardMemberRank1 = $assetunits['boardMemberRank1'];
+        //     $boardMemberNumber1 = $assetunits['boardMemberNumber1'];
+        //     $boardMemberName2 = $assetunits['boardMemberName2'];
+        //     $boardMemberRank2 = $assetunits['boardMemberRank2'];
+        //     $boardMemberNumber2 = $assetunits['boardMemberNumber2'];
+        //     $boardMemberName3 = $assetunits['boardMemberName3'];
+        //     $boardMemberRank3 = $assetunits['boardMemberRank3'];
+        //     $boardMemberNumber3 = $assetunits['boardMemberNumber3'];
+		   //include('excel_list.php');
         }
 		
 		if (isset($_POST['ExpToPdf']) && $_POST['ExpToPdf'] == '1') {
-            $assetunits = AssetsUnitDB::getAllDetailsUnit($assetunit);
-            $boardMemberName1 = $assetunits['boardMemberName1'];
-            $boardMemberRank1 = $assetunits['boardMemberRank1'];
-            $boardMemberNumber1 = $assetunits['boardMemberNumber1'];
-            $boardMemberName2 = $assetunits['boardMemberName2'];
-            $boardMemberRank2 = $assetunits['boardMemberRank2'];
-            $boardMemberNumber2 = $assetunits['boardMemberNumber2'];
-            $boardMemberName3 = $assetunits['boardMemberName3'];
-            $boardMemberRank3 = $assetunits['boardMemberRank3'];
-            $boardMemberNumber3 = $assetunits['boardMemberNumber3'];
-			include('print_list.php');
+            // $assetunits = AssetsUnitDB::getAllDetailsUnit($assetunit);
+            // $boardMemberName1 = $assetunits['boardMemberName1'];
+            // $boardMemberRank1 = $assetunits['boardMemberRank1'];
+            // $boardMemberNumber1 = $assetunits['boardMemberNumber1'];
+            // $boardMemberName2 = $assetunits['boardMemberName2'];
+            // $boardMemberRank2 = $assetunits['boardMemberRank2'];
+            // $boardMemberNumber2 = $assetunits['boardMemberNumber2'];
+            // $boardMemberName3 = $assetunits['boardMemberName3'];
+            // $boardMemberRank3 = $assetunits['boardMemberRank3'];
+            // $boardMemberNumber3 = $assetunits['boardMemberNumber3'];
+			// include('print_list.php');
         }
         include('inquiry_list.php');
         break;
@@ -2868,17 +2868,17 @@ switch ($action) {
         
 				
 		if (isset($_POST['ExpToExcel']) && $_POST['ExpToExcel'] == '1') {
-           $assetunits = AssetsUnitDB::getAllDetailsUnit($assetunit);
-            $boardMemberName1 = $assetunits['boardMemberName1'];
-            $boardMemberRank1 = $assetunits['boardMemberRank1'];
-            $boardMemberNumber1 = $assetunits['boardMemberNumber1'];
-            $boardMemberName2 = $assetunits['boardMemberName2'];
-            $boardMemberRank2 = $assetunits['boardMemberRank2'];
-            $boardMemberNumber2 = $assetunits['boardMemberNumber2'];
-            $boardMemberName3 = $assetunits['boardMemberName3'];
-            $boardMemberRank3 = $assetunits['boardMemberRank3'];
-            $boardMemberNumber3 = $assetunits['boardMemberNumber3'];
-		   include('excel_list.php');
+        //    $assetunits = AssetsUnitDB::getAllDetailsUnit($assetunit);
+        //     $boardMemberName1 = $assetunits['boardMemberName1'];
+        //     $boardMemberRank1 = $assetunits['boardMemberRank1'];
+        //     $boardMemberNumber1 = $assetunits['boardMemberNumber1'];
+        //     $boardMemberName2 = $assetunits['boardMemberName2'];
+        //     $boardMemberRank2 = $assetunits['boardMemberRank2'];
+        //     $boardMemberNumber2 = $assetunits['boardMemberNumber2'];
+        //     $boardMemberName3 = $assetunits['boardMemberName3'];
+        //     $boardMemberRank3 = $assetunits['boardMemberRank3'];
+        //     $boardMemberNumber3 = $assetunits['boardMemberNumber3'];
+		   //include('excel_list.php');
         }
 		
 		if (isset($_POST['ExpToPdf']) && $_POST['ExpToPdf'] == '1') {

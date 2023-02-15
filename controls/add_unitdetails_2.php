@@ -96,13 +96,13 @@ function saveData()
                                         <input type="hidden" name="action" value="add_unitdetails_record" />
 										<input type="hidden" name="id" id="id" value="0" />
                                         <div><label for="brand" class="label">Assets Unit :</label><input type="text" class="text" name="unit"  id="unit" value ="<?php echo $assetunit; ?>" style="width:300px" readonly/></div>
-										<div><label for="model" class="label">Address :</label><input type="text" class="text" name="address"  id="address" value ="<?php echo $details['address']; ?>" style="width:400px"/></div>
-										<div><label for="details" class="label">Telephone No. :</label><input type="text" class="text" name="telephone"  id="telephone" value ="<?php echo $details['telephone']; ?>" style="width:300px"/></div>
-										<div><label for="details" class="label">E-Mail Address :</label><input type="text" class="text" name="email"  id="email" value ="<?php echo $details['email']; ?>" style="width:300px"/></div>
-										<div><label for="details" class="label">Fax No. :</label><input type="text" class="text" name="fax"  id="fax" value ="<?php echo $details['fax']; ?>" style="width:300px"/></div>
-										<div><label for="details" class="label">Facebook :</label><input type="text" class="text" name="fb"  id="fb" value ="<?php echo $details['fb']; ?>" style="width:300px"/></div>
-										<div><label for="details" class="label">Google Map Latitude :</label><input type="text" class="text" name="coX"  id="coX" value ="<?php echo $details['coX']; ?>" style="width:100px"/><a href="http://www.latlong.net"  onclick="window.open('http://www.latlong.net', 'newwindow', 'width=600, height=500'); return false;"> Find This Values</a></div>
-										<div><label for="details" class="label">Google Map Longitude :</label><input type="text" class="text" name="coY"  id="coY" value ="<?php echo $details['coY']; ?>" style="width:100px"/></div>									
+										<div><label for="model" class="label">Address :</label><input type="text" class="text" name="address"  id="address" value ="<?php echo $details['address'] ?? ""; ?>" style="width:400px"/></div>
+										<div><label for="details" class="label">Telephone No. :</label><input type="text" class="text" name="telephone"  id="telephone" value ="<?php echo $details['telephone'] ?? ""; ?>" style="width:300px"/></div>
+										<div><label for="details" class="label">E-Mail Address :</label><input type="text" class="text" name="email"  id="email" value ="<?php echo $details['email'] ?? ""; ?>" style="width:300px"/></div>
+										<div><label for="details" class="label">Fax No. :</label><input type="text" class="text" name="fax"  id="fax" value ="<?php echo $details['fax'] ?? ""; ?>" style="width:300px"/></div>
+										<div><label for="details" class="label">Facebook :</label><input type="text" class="text" name="fb"  id="fb" value ="<?php echo $details['fb'] ?? ""; ?>" style="width:300px"/></div>
+										<div><label for="details" class="label">Google Map Latitude :</label><input type="text" class="text" name="coX"  id="coX" value ="<?php echo $details['coX'] ?? ""; ?>" style="width:100px"/><a href="http://www.latlong.net"  onclick="window.open('http://www.latlong.net', 'newwindow', 'width=600, height=500'); return false;"> Find This Values</a></div>
+										<div><label for="details" class="label">Google Map Longitude :</label><input type="text" class="text" name="coY"  id="coY" value ="<?php echo $details['coY'] ?? ""; ?>" style="width:100px"/></div>									
 										<div><input type="submit" name="submit" id="submit" value="Add Details"></div>										
                                     </form> 
 						   </div>
