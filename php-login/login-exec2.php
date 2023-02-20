@@ -25,15 +25,6 @@
 	//	die("Unable to select database");
 	//}
 	
-	//Function to sanitize values received from the form. Prevents SQL injection
-	function clean($str) {
-		$str = @trim($str);
-		if(get_magic_quotes_gpc()) {
-			$str = stripslashes($str);
-		}
-		return mysql_real_escape_string($str);
-	}
-	
 	function getMacAddress() {
 ob_start();
 system('ipconfig /all');
@@ -64,8 +55,8 @@ foreach($lines as $line)
 }
 // Mac Address End
 	//Sanitize the POST values
-	$login = clean($_POST['login']);
-	$password = clean($_POST['password']);
+	$login = $_POST['login'];
+	$password = $_POST['password'];
 	$macaddress = getMacAddress();
 	//Input Validations
 	if($login == '') {
@@ -87,15 +78,24 @@ foreach($lines as $line)
 	
 	//Create query
 	$qry="SELECT * FROM members WHERE login='$login' AND passwd='".md5($_POST['password'])."'";
-	$result=mysql_query($qry);
+	$result = array();
+	try {
+		$statement = $db->prepare($qry);
+		$statement->execute();
+		$result = $statement->fetch(PDO::FETCH_ASSOC);
+		$statement->closeCursor();
+	} catch (PDOException $e) {
+		$error_message = $e->getMessage();
+		display_db_error($error_message);
+	}
 	
 	//Check whether the query was successful or not
-	if($result) {
-		if(mysql_num_rows($result) == 1) {
+	if(count($result) > 0) {
+		if(count($result) == 1) {
 			//Login Successful
 			 
 			session_regenerate_id();
-			$member = mysql_fetch_assoc($result);
+			$member = $result[0];
 			$_SESSION['SESS_MEMBER_ID'] = $member['member_id'];
 			$_SESSION['SESS_FIRST_NAME'] = $member['firstname'];
 			$_SESSION['SESS_LAST_NAME'] = $member['lastname'];

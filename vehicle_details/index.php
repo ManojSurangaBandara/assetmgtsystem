@@ -276,7 +276,7 @@ switch ($action) {
         $presentLocation = $_POST['presentLocation'];
         $receivedDate = $_POST['receivedDate'];
         $Remarks = strtoupper($_POST['Remarks']);
-        $counterId = $_COOKIE['counterId'];
+        $counterId = $_COOKIE['counterId'] ?? "";
         $identificationnoTem = $_POST['identificationnoTem'];
         $CapRepairCost = $_POST['CapRepairCost'];
         $id = $_POST['id'];

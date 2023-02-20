@@ -127,7 +127,7 @@ $(document).ready(function() {
     <th><nobr><?php echo $tList[3][$lang]?></nobr></th> 
 	<th><nobr><?php echo $tList[4][$lang]?></nobr></th> 
 	<th><nobr>Assets Number</nobr></th> 
-	<th><nobr>Classification No</nobr></th> 
+	<th><nobr>Catalogue No</nobr></th> 
 	<th><nobr>Quantity</nobr></th> 
 	<th><nobr>Value</nobr></th> 
 </tr> 

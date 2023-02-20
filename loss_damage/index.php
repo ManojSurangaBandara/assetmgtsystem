@@ -134,7 +134,7 @@ switch ($action) {
 		$fileno = $_GET['fileno'];		
 		$result = lost_damage_boardDB::addRecord($fileno, $sno, $number, $rank, $name, $unit, $post);
 		echo json_encode(array(
-			'id' => mysql_insert_id(),
+			'id' => $db->lastInsertId(),
 			'sno' => $sno,
 			'number' => $number,
 			'rank' => $rank,

@@ -759,16 +759,19 @@ class PlantMacDB {
 			$querytext = $querytext." and (purchasedDate BETWEEN '$inputField1' AND '$inputField2')"; }
 		if ($checkAllowType == 1 ) {
 			if ($allocation == 1) {
-				$querytext = $querytext." and and assetunit = presentLocation";}
+				$querytext = $querytext." and assetunit = presentLocation";
+            }
 			if ($allocation == 2) {
-				$querytext = $querytext." and and assetunit != presentLocation";}	
-			}
+				$querytext = $querytext." and assetunit != presentLocation";
+            }	
+		}
 		if ($checkAllowType == 2 ) {
 			if ($allocation == 2) {
 			$querytext = $querytext." and presentLocation = '$assetunit'";}
-			}
-			$query = "SELECT * FROM plantmacdetails WHERE".$querytext." order by protocolOrder, identificationno";
-			try {
+		}
+
+        $query = "SELECT * FROM plantmacdetails WHERE".$querytext." order by protocolOrder, identificationno";
+        try {
             $statement = $db->prepare($query);
             $statement->execute();
             $result = $statement->fetchAll();
@@ -783,104 +786,107 @@ class PlantMacDB {
     }	
     
     public static function getInqDisposalDetails($assetscenter, $assetunit, $column, $search, $inputField1, $inputField2, $checkAllowType, $allocation) {
-     $db = Database::getDB();
+        $db = Database::getDB();
+
 		if ($checkAllowType == 0 ) {
-        if ($assetunit == '') {
-		if ($inputField1 == '' || $inputField1 == '') {
-            $query = "SELECT * FROM plantmacdetails WHERE fundtype = 0 and apprived = 1 and ApprovedDisposal = 1 and assetscenter = '$assetscenter' and ".$column." LIKE '%$search%' order by protocolOrder, identificationno";
-        } else {
-                $query = "SELECT * FROM plantmacdetails WHERE (purchasedDate BETWEEN '$inputField1' AND '$inputField2') and fundtype = 0 and apprived = 1 and ApprovedDisposal = 1 and assetscenter = '$assetscenter' and " . $column . " LIKE '%$search%' order by disposedDate, protocolOrder, identificationno";
+
+            if ($assetunit == '') {
+
+                if ($inputField1 == '' || $inputField2 == '') {
+                    $query = "SELECT * FROM plantmacdetails WHERE fundtype = 0 and apprived = 1 and ApprovedDisposal = 1 and assetscenter = '$assetscenter' and ".$column." LIKE '%$search%' order by protocolOrder, identificationno";
+                } else {
+                        $query = "SELECT * FROM plantmacdetails WHERE (purchasedDate BETWEEN '$inputField1' AND '$inputField2') and fundtype = 0 and apprived = 1 and ApprovedDisposal = 1 and assetscenter = '$assetscenter' and " . $column . " LIKE '%$search%' order by disposedDate, protocolOrder, identificationno";
+                }
+            } else {
+                if ($inputField1 == '' || $inputField2 == '') {
+                    $query = "SELECT * FROM plantmacdetails WHERE fundtype = 0 and apprived = 1 and  ApprovedDisposal = 1 and assetunit = '$assetunit' and ".$column." LIKE '%$search%' order by disposedDate, protocolOrder, identificationno";
+                } else {
+                    $query = "SELECT * FROM plantmacdetails WHERE (purchasedDate BETWEEN '$inputField1' AND '$inputField2') and fundtype = 0 and apprived = 1 and ApprovedDisposal = 1 and assetunit = '$assetunit' and " . $column . " LIKE '%$search%' order by disposedDate, protocolOrder, identificationno";   
+                }
             }
-		} else {
-		if ($inputField1 == '' || $inputField1 == '') {
-            $query = "SELECT * FROM plantmacdetails WHERE fundtype = 0 and apprived = 1 and  ApprovedDisposal = 1 and assetunit = '$assetunit' and ".$column." LIKE '%$search%' order by disposedDate, protocolOrder, identificationno";
-        } else {
-             $query = "SELECT * FROM plantmacdetails WHERE (purchasedDate BETWEEN '$inputField1' AND '$inputField2') and fundtype = 0 and apprived = 1 and ApprovedDisposal = 1 and assetunit = '$assetunit' and " . $column . " LIKE '%$search%' order by disposedDate, protocolOrder, identificationno";   
+                
+        } elseif ($checkAllowType == 1 ) {
+            if ($allocation == 1) {
+                if ($assetunit == '') {
+                    if ($inputField1 == '' || $inputField2 == '') {
+                        $query = "SELECT * FROM plantmacdetails WHERE fundtype = 0 and apprived = 1 and ApprovedDisposal = 1 and assetscenter = '$assetscenter' and assetunit = presentLocation and ".$column." LIKE '%$search%' order by protocolOrder, identificationno";
+                    } else {
+                            $query = "SELECT * FROM plantmacdetails WHERE (purchasedDate BETWEEN '$inputField1' AND '$inputField2') and fundtype = 0 and apprived = 1 and ApprovedDisposal = 1 and assetscenter = '$assetscenter' and assetunit = presentLocation and " . $column . " LIKE '%$search%' order by disposedDate, protocolOrder, identificationno";
+                    }
+                } else {
+                    if ($inputField1 == '' || $inputField2 == '') {
+                        $query = "SELECT * FROM plantmacdetails WHERE fundtype = 0 and apprived = 1 and  ApprovedDisposal = 1 and assetunit = '$assetunit' and assetunit = presentLocation and ".$column." LIKE '%$search%' order by protocolOrder, identificationno";
+                    } else {
+                        $query = "SELECT * FROM plantmacdetails WHERE (purchasedDate BETWEEN '$inputField1' AND '$inputField2') and fundtype = 0 and apprived = 1 and ApprovedDisposal = 1 and assetunit = '$assetunit' and assetunit = presentLocation and " . $column . " LIKE '%$search%' order by disposedDate, protocolOrder, identificationno";   
+                    }
+                }
+            } elseif ($allocation == 2) {
+                if ($assetunit == '') {
+                    if ($inputField1 == '' || $inputField2 == '') {
+                        $query = "SELECT * FROM plantmacdetails WHERE fundtype = 0 and apprived = 1 and ApprovedDisposal = 1 and assetscenter = '$assetscenter' and assetunit != presentLocation and ".$column." LIKE '%$search%' order by protocolOrder, identificationno";
+                    } else {
+                            $query = "SELECT * FROM plantmacdetails WHERE (purchasedDate BETWEEN '$inputField1' AND '$inputField2') and fundtype = 0 and apprived = 1 and ApprovedDisposal = 0 and ApprovedLoss = 0 and assetscenter = '$assetscenter' and assetunit != presentLocation and " . $column . " LIKE '%$search%' order by disposedDate, protocolOrder, identificationno";
+                        }
+                } else {
+                    if ($inputField1 == '' || $inputField2 == '') {
+                        $query = "SELECT * FROM plantmacdetails WHERE fundtype = 0 and apprived = 1 and  ApprovedDisposal = 1 and assetunit = '$assetunit' and assetunit != presentLocation and ".$column." LIKE '%$search%' order by protocolOrder, identificationno";
+                    } else {
+                        $query = "SELECT * FROM plantmacdetails WHERE (purchasedDate BETWEEN '$inputField1' AND '$inputField2') and fundtype = 0 and apprived = 1 and ApprovedDisposal = 1 and assetunit = '$assetunit' and assetunit != presentLocation and " . $column . " LIKE '%$search%' order by disposedDate, protocolOrder, identificationno";   
+                    }
+                }
+            } elseif ($allocation == 3) {
+                if ($assetunit == '') {
+                    if ($inputField1 == '' || $inputField2 == '') {
+                        $query = "SELECT * FROM plantmacdetails WHERE fundtype = 0 and apprived = 1 and ApprovedDisposal = 1 and assetscenter = '$assetscenter' and ".$column." LIKE '%$search%' order by protocolOrder, identificationno";
+                    } else {
+                        $query = "SELECT * FROM plantmacdetails WHERE (purchasedDate BETWEEN '$inputField1' AND '$inputField2') and fundtype = 0 and apprived = 1 and ApprovedDisposal = 1 and assetscenter = '$assetscenter' and " . $column . " LIKE '%$search%' order by disposedDate, protocolOrder, identificationno";
+                    }
+                } else {
+                    if ($inputField1 == '' || $inputField2 == '') {
+                        $query = "SELECT * FROM plantmacdetails WHERE fundtype = 0 and apprived = 1 and  ApprovedDisposal = 1 and assetunit = '$assetunit' and ".$column." LIKE '%$search%' order by protocolOrder, identificationno";
+                    } else {
+                        $query = "SELECT * FROM plantmacdetails WHERE (purchasedDate BETWEEN '$inputField1' AND '$inputField2') and fundtype = 0 and apprived = 1 and ApprovedDisposal = 1 and assetunit = '$assetunit' and " . $column . " LIKE '%$search%' order by disposedDate, protocolOrder, identificationno";   
+                    }
+                }
+            
             }
-		}
-		
-		} elseif ($checkAllowType == 1 ) {
-			if ($allocation == 1) {
-		        if ($assetunit == '') {
-		if ($inputField1 == '' || $inputField1 == '') {
-            $query = "SELECT * FROM plantmacdetails WHERE fundtype = 0 and apprived = 1 and ApprovedDisposal = 1 and assetscenter = '$assetscenter' and assetunit = presentLocation and ".$column." LIKE '%$search%' order by protocolOrder, identificationno";
-        } else {
-                $query = "SELECT * FROM plantmacdetails WHERE (purchasedDate BETWEEN '$inputField1' AND '$inputField2') and fundtype = 0 and apprived = 1 and ApprovedDisposal = 1 and assetscenter = '$assetscenter' and assetunit = presentLocation and " . $column . " LIKE '%$search%' order by disposedDate, protocolOrder, identificationno";
+        } elseif ($checkAllowType == 2 ) {
+            if ($allocation == 1) {
+                if ($assetunit == '') {
+                    if ($inputField1 == '' || $inputField2 == '') {
+                        $query = "SELECT * FROM plantmacdetails WHERE fundtype = 0 and apprived = 1 and ApprovedDisposal = 1 and assetscenter = '$assetscenter' and ".$column." LIKE '%$search%' order by protocolOrder, identificationno";
+                    } else {
+                            $query = "SELECT * FROM plantmacdetails WHERE (purchasedDate BETWEEN '$inputField1' AND '$inputField2') and fundtype = 0 and apprived = 1 and ApprovedDisposal = 1 and assetscenter = '$assetscenter' and " . $column . " LIKE '%$search%' order by disposedDate, protocolOrder, identificationno";
+                    }
+                } else {
+                    if ($inputField1 == '' || $inputField2 == '') {
+                        $query = "SELECT * FROM plantmacdetails WHERE fundtype = 0 and apprived = 1 and  ApprovedDisposal = 1 and assetunit = '$assetunit' and ".$column." LIKE '%$search%' order by protocolOrder, identificationno";
+                    } else {
+                        $query = "SELECT * FROM plantmacdetails WHERE (purchasedDate BETWEEN '$inputField1' AND '$inputField2') and fundtype = 0 and apprived = 1 and ApprovedDisposal = 1 and assetunit = '$assetunit' and " . $column . " LIKE '%$search%' order by disposedDate, protocolOrder, identificationno";   
+                    }
+                }
+                
+            } elseif ($allocation == 2) {
+                if ($assetunit == '') {
+                    if ($inputField1 == '' || $inputField2 == '') {
+                        $query = "SELECT * FROM plantmacdetails WHERE fundtype = 0 and apprived = 1 and ApprovedDisposal = 1 and assetscenter = '$assetscenter' and ".$column." LIKE '%$search%' order by protocolOrder, identificationno";
+                    } else {
+                        $query = "SELECT * FROM plantmacdetails WHERE (purchasedDate BETWEEN '$inputField1' AND '$inputField2') and fundtype = 0 and apprived = 1 and ApprovedDisposal = 1 and assetscenter = '$assetscenter' and " . $column . " LIKE '%$search%' order by disposedDate, protocolOrder, identificationno";
+                    }
+                } else {
+                    if ($inputField1 == '' || $inputField2 == '') {
+                        $query = "SELECT * FROM plantmacdetails WHERE fundtype = 0 and apprived = 1 and  ApprovedDisposal = 1 and presentLocation = '$assetunit' and ".$column." LIKE '%$search%' order by protocolOrder, identificationno";
+                    } else {
+                        $query = "SELECT * FROM plantmacdetails WHERE (purchasedDate BETWEEN '$inputField1' AND '$inputField2') and fundtype = 0 and apprived = 1 and ApprovedDisposal = 1 and presentLocation = '$assetunit' and " . $column . " LIKE '%$search%' order by disposedDate, protocolOrder, identificationno";   
+                    }
+                }
+                $statement = $db->prepare($query);
+                $statement->execute();
+                $result = $statement->fetchAll();
+                $statement->closeCursor();
+                //$result = array_filter($result, "Database::filterCentre");
+                return $result;
             }
-		} else {
-		if ($inputField1 == '' || $inputField1 == '') {
-            $query = "SELECT * FROM plantmacdetails WHERE fundtype = 0 and apprived = 1 and  ApprovedDisposal = 1 and assetunit = '$assetunit' and assetunit = presentLocation and ".$column." LIKE '%$search%' order by protocolOrder, identificationno";
-        } else {
-             $query = "SELECT * FROM plantmacdetails WHERE (purchasedDate BETWEEN '$inputField1' AND '$inputField2') and fundtype = 0 and apprived = 1 and ApprovedDisposal = 1 and assetunit = '$assetunit' and assetunit = presentLocation and " . $column . " LIKE '%$search%' order by disposedDate, protocolOrder, identificationno";   
-            }
-		}
-		} elseif ($allocation == 2) {
-		        if ($assetunit == '') {
-		if ($inputField1 == '' || $inputField1 == '') {
-            $query = "SELECT * FROM plantmacdetails WHERE fundtype = 0 and apprived = 1 and ApprovedDisposal = 1 and assetscenter = '$assetscenter' and assetunit != presentLocation and ".$column." LIKE '%$search%' order by protocolOrder, identificationno";
-        } else {
-                $query = "SELECT * FROM plantmacdetails WHERE (purchasedDate BETWEEN '$inputField1' AND '$inputField2') and fundtype = 0 and apprived = 1 and ApprovedDisposal = 0 and ApprovedLoss = 0 and assetscenter = '$assetscenter' and assetunit != presentLocation and " . $column . " LIKE '%$search%' order by disposedDate, protocolOrder, identificationno";
-            }
-		} else {
-		if ($inputField1 == '' || $inputField1 == '') {
-            $query = "SELECT * FROM plantmacdetails WHERE fundtype = 0 and apprived = 1 and  ApprovedDisposal = 1 and assetunit = '$assetunit' and assetunit != presentLocation and ".$column." LIKE '%$search%' order by protocolOrder, identificationno";
-        } else {
-             $query = "SELECT * FROM plantmacdetails WHERE (purchasedDate BETWEEN '$inputField1' AND '$inputField2') and fundtype = 0 and apprived = 1 and ApprovedDisposal = 1 and assetunit = '$assetunit' and assetunit != presentLocation and " . $column . " LIKE '%$search%' order by disposedDate, protocolOrder, identificationno";   
-            }
-		}
-		} elseif ($allocation == 3) {
-		if ($assetunit == '') {
-		if ($inputField1 == '' || $inputField1 == '') {
-            $query = "SELECT * FROM plantmacdetails WHERE fundtype = 0 and apprived = 1 and ApprovedDisposal = 1 and assetscenter = '$assetscenter' and ".$column." LIKE '%$search%' order by protocolOrder, identificationno";
-        } else {
-                $query = "SELECT * FROM plantmacdetails WHERE (purchasedDate BETWEEN '$inputField1' AND '$inputField2') and fundtype = 0 and apprived = 1 and ApprovedDisposal = 1 and assetscenter = '$assetscenter' and " . $column . " LIKE '%$search%' order by disposedDate, protocolOrder, identificationno";
-            }
-		} else {
-		if ($inputField1 == '' || $inputField1 == '') {
-            $query = "SELECT * FROM plantmacdetails WHERE fundtype = 0 and apprived = 1 and  ApprovedDisposal = 1 and assetunit = '$assetunit' and ".$column." LIKE '%$search%' order by protocolOrder, identificationno";
-        } else {
-             $query = "SELECT * FROM plantmacdetails WHERE (purchasedDate BETWEEN '$inputField1' AND '$inputField2') and fundtype = 0 and apprived = 1 and ApprovedDisposal = 1 and assetunit = '$assetunit' and " . $column . " LIKE '%$search%' order by disposedDate, protocolOrder, identificationno";   
-            }
-		}
-		
-		}
-		} elseif ($checkAllowType == 2 ) {
-			if ($allocation == 1) {
-		        if ($assetunit == '') {
-		if ($inputField1 == '' || $inputField1 == '') {
-            $query = "SELECT * FROM plantmacdetails WHERE fundtype = 0 and apprived = 1 and ApprovedDisposal = 1 and assetscenter = '$assetscenter' and ".$column." LIKE '%$search%' order by protocolOrder, identificationno";
-        } else {
-                $query = "SELECT * FROM plantmacdetails WHERE (purchasedDate BETWEEN '$inputField1' AND '$inputField2') and fundtype = 0 and apprived = 1 and ApprovedDisposal = 1 and assetscenter = '$assetscenter' and " . $column . " LIKE '%$search%' order by disposedDate, protocolOrder, identificationno";
-            }
-		} else {
-		if ($inputField1 == '' || $inputField1 == '') {
-            $query = "SELECT * FROM plantmacdetails WHERE fundtype = 0 and apprived = 1 and  ApprovedDisposal = 1 and assetunit = '$assetunit' and ".$column." LIKE '%$search%' order by protocolOrder, identificationno";
-        } else {
-             $query = "SELECT * FROM plantmacdetails WHERE (purchasedDate BETWEEN '$inputField1' AND '$inputField2') and fundtype = 0 and apprived = 1 and ApprovedDisposal = 1 and assetunit = '$assetunit' and " . $column . " LIKE '%$search%' order by disposedDate, protocolOrder, identificationno";   
-            }
-		}
-		
-		} elseif ($allocation == 2) {
-		if ($assetunit == '') {
-		if ($inputField1 == '' || $inputField1 == '') {
-            $query = "SELECT * FROM plantmacdetails WHERE fundtype = 0 and apprived = 1 and ApprovedDisposal = 1 and assetscenter = '$assetscenter' and ".$column." LIKE '%$search%' order by protocolOrder, identificationno";
-        } else {
-                $query = "SELECT * FROM plantmacdetails WHERE (purchasedDate BETWEEN '$inputField1' AND '$inputField2') and fundtype = 0 and apprived = 1 and ApprovedDisposal = 1 and assetscenter = '$assetscenter' and " . $column . " LIKE '%$search%' order by disposedDate, protocolOrder, identificationno";
-            }
-		} else {
-		if ($inputField1 == '' || $inputField1 == '') {
-            $query = "SELECT * FROM plantmacdetails WHERE fundtype = 0 and apprived = 1 and  ApprovedDisposal = 1 and presentLocation = '$assetunit' and ".$column." LIKE '%$search%' order by protocolOrder, identificationno";
-        } else {
-             $query = "SELECT * FROM plantmacdetails WHERE (purchasedDate BETWEEN '$inputField1' AND '$inputField2') and fundtype = 0 and apprived = 1 and ApprovedDisposal = 1 and presentLocation = '$assetunit' and " . $column . " LIKE '%$search%' order by disposedDate, protocolOrder, identificationno";   
-            }
-		} 
-		            $statement = $db->prepare($query);
-            $statement->execute();
-            $result = $statement->fetchAll();
-            $statement->closeCursor();
-            //$result = array_filter($result, "Database::filterCentre");
-            return $result;
-		}
 		}
 		
         try {

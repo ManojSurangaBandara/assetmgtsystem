@@ -523,13 +523,13 @@ public static function notApproveDetails($id, $login, $notapprivedReason) {
              $db = Database::getDB();
 		if ($checkAllowType == 0 ) {
         if ($assetunit == '') {
-		if ($inputField1 == '' || $inputField1 == '') {
+		if ($inputField1 == '' || $inputField2 == '') {
             $query = "SELECT * FROM vehicledetails WHERE apprived = 1 and ApprovedDisposal = 1 and assetscenter = '$assetscenter' and ".$column." LIKE '%$search%' order by protocolOrder, counterId";
         } else {
                 $query = "SELECT * FROM vehicledetails WHERE (purchasedDate BETWEEN '$inputField1' AND '$inputField2') and apprived = 1 and ApprovedDisposal = 1 and assetscenter = '$assetscenter' and " . $column . " LIKE '%$search%' order by protocolOrder, counterId";
             }
 		} else {
-		if ($inputField1 == '' || $inputField1 == '') {
+		if ($inputField1 == '' || $inputField2 == '') {
             $query = "SELECT * FROM vehicledetails WHERE apprived = 1 and  ApprovedDisposal = 1 and assetunit = '$assetunit' and ".$column." LIKE '%$search%' order by protocolOrder, counterId";
         } else {
              $query = "SELECT * FROM vehicledetails WHERE (purchasedDate BETWEEN '$inputField1' AND '$inputField2') and apprived = 1 and ApprovedDisposal = 1 and assetunit = '$assetunit' and " . $column . " LIKE '%$search%' order by protocolOrder, counterId";   
@@ -539,13 +539,13 @@ public static function notApproveDetails($id, $login, $notapprivedReason) {
 		} elseif ($checkAllowType == 1 ) {
 			if ($allocation == 1) {
 		        if ($assetunit == '') {
-		if ($inputField1 == '' || $inputField1 == '') {
+		if ($inputField1 == '' || $inputField2 == '') {
             $query = "SELECT * FROM vehicledetails WHERE apprived = 1 and ApprovedDisposal = 1 and assetscenter = '$assetscenter' and assetunit = presentLocation and ".$column." LIKE '%$search%' order by protocolOrder, counterId";
         } else {
                 $query = "SELECT * FROM vehicledetails WHERE (purchasedDate BETWEEN '$inputField1' AND '$inputField2') and apprived = 1 and ApprovedDisposal = 1 and assetscenter = '$assetscenter' and assetunit = presentLocation and " . $column . " LIKE '%$search%' order by protocolOrder, counterId";
             }
 		} else {
-		if ($inputField1 == '' || $inputField1 == '') {
+		if ($inputField1 == '' || $inputField2 == '') {
             $query = "SELECT * FROM vehicledetails WHERE apprived = 1 and  ApprovedDisposal = 1 and assetunit = '$assetunit' and assetunit = presentLocation and ".$column." LIKE '%$search%' order by sorderwithcenter, counterId";
         } else {
              $query = "SELECT * FROM vehicledetails WHERE (purchasedDate BETWEEN '$inputField1' AND '$inputField2') and apprived = 1 and ApprovedDisposal = 1 and assetunit = '$assetunit' and assetunit = presentLocation and " . $column . " LIKE '%$search%' order by protocolOrder, counterId";   
@@ -553,13 +553,13 @@ public static function notApproveDetails($id, $login, $notapprivedReason) {
 		}
 		} elseif ($allocation == 2) {
 		        if ($assetunit == '') {
-		if ($inputField1 == '' || $inputField1 == '') {
+		if ($inputField1 == '' || $inputField2 == '') {
             $query = "SELECT * FROM vehicledetails WHERE apprived = 1 and ApprovedDisposal = 1 and assetscenter = '$assetscenter' and assetunit != presentLocation and ".$column." LIKE '%$search%' order by sorderwithcenter, counterId";
         } else {
                 $query = "SELECT * FROM vehicledetails WHERE (purchasedDate BETWEEN '$inputField1' AND '$inputField2') and apprived = 1 and assetscenter = '$assetscenter' and ApprovedDisposal = 1 and assetunit != presentLocation and " . $column . " LIKE '%$search%' order by protocolOrder, counterId";
             }
 		} else {
-		if ($inputField1 == '' || $inputField1 == '') {
+		if ($inputField1 == '' || $inputField2 == '') {
             $query = "SELECT * FROM vehicledetails WHERE apprived = 1 and  ApprovedDisposal = 1 and assetunit = '$assetunit' and assetunit != presentLocation and ".$column." LIKE '%$search%' order by sorderwithcenter, counterId";
         } else {
              $query = "SELECT * FROM vehicledetails WHERE (purchasedDate BETWEEN '$inputField1' AND '$inputField2') and apprived = 1 and ApprovedDisposal = 1 and assetunit = '$assetunit' and assetunit != presentLocation and " . $column . " LIKE '%$search%' order by protocolOrder, counterId";   
@@ -567,13 +567,13 @@ public static function notApproveDetails($id, $login, $notapprivedReason) {
 		}
 		} elseif ($allocation == 3) {
 		if ($assetunit == '') {
-		if ($inputField1 == '' || $inputField1 == '') {
+		if ($inputField1 == '' || $inputField2 == '') {
             $query = "SELECT * FROM vehicledetails WHERE apprived = 1 and assetscenter = '$assetscenter' and ApprovedDisposal = 1 and ".$column." LIKE '%$search%' order by sorderwithcenter, counterId";
         } else {
                 $query = "SELECT * FROM vehicledetails WHERE (purchasedDate BETWEEN '$inputField1' AND '$inputField2') and apprived = 1 and ApprovedDisposal = 1 and assetscenter = '$assetscenter' and " . $column . " LIKE '%$search%' order by protocolOrder, counterId";
             }
 		} else {
-		if ($inputField1 == '' || $inputField1 == '') {
+		if ($inputField1 == '' || $inputField2 == '') {
             $query = "SELECT * FROM vehicledetails WHERE apprived = 1 and  ApprovedDisposal = 1 and assetunit = '$assetunit' and ".$column." LIKE '%$search%' order by identificationno";
         } else {
              $query = "SELECT * FROM vehicledetails WHERE (purchasedDate BETWEEN '$inputField1' AND '$inputField2') and apprived = 1 and ApprovedDisposal = 1 and assetunit = '$assetunit' and " . $column . " LIKE '%$search%' order by protocolOrder, counterId";   
@@ -584,13 +584,13 @@ public static function notApproveDetails($id, $login, $notapprivedReason) {
 		} elseif ($checkAllowType == 2 ) {
 			if ($allocation == 1) {
 		        if ($assetunit == '') {
-		if ($inputField1 == '' || $inputField1 == '') {
+		if ($inputField1 == '' || $inputField2 == '') {
             $query = "SELECT * FROM vehicledetails WHERE apprived = 1 and ApprovedDisposal = 1 and assetscenter = '$assetscenter' and ".$column." LIKE '%$search%' order by sorderwithcenter, counterId";
         } else {
                 $query = "SELECT * FROM vehicledetails WHERE (purchasedDate BETWEEN '$inputField1' AND '$inputField2') and apprived = 1 and ApprovedDisposal = 1 and assetscenter = '$assetscenter' and " . $column . " LIKE '%$search%' order by protocolOrder, counterId";
             }
 		} else {
-		if ($inputField1 == '' || $inputField1 == '') {
+		if ($inputField1 == '' || $inputField2 == '') {
             $query = "SELECT * FROM vehicledetails WHERE apprived = 1 and  ApprovedDisposal = 1 and assetunit = '$assetunit' and ".$column." LIKE '%$search%' order by sorderwithcenter, counterId";
         } else {
              $query = "SELECT * FROM vehicledetails WHERE (purchasedDate BETWEEN '$inputField1' AND '$inputField2') and apprived = 1 and ApprovedDisposal = 1 and assetunit = '$assetunit' and " . $column . " LIKE '%$search%' order by protocolOrder, counterId";   
@@ -599,13 +599,13 @@ public static function notApproveDetails($id, $login, $notapprivedReason) {
 		
 		} elseif ($allocation == 2) {
 		if ($assetunit == '') {
-		if ($inputField1 == '' || $inputField1 == '') {
+		if ($inputField1 == '' || $inputField2 == '') {
             $query = "SELECT * FROM vehicledetails WHERE apprived = 1 and ApprovedDisposal = 1 and assetscenter = '$assetscenter' and ".$column." LIKE '%$search%' order by sorderwithcenter, counterId";
         } else {
                 $query = "SELECT * FROM vehicledetails WHERE (purchasedDate BETWEEN '$inputField1' AND '$inputField2') and apprived = 1 and ApprovedDisposal = 1 and assetscenter = '$assetscenter' and " . $column . " LIKE '%$search%' order by protocolOrder, counterId";
             }
 		} else {
-		if ($inputField1 == '' || $inputField1 == '') {
+		if ($inputField1 == '' || $inputField2 == '') {
             $query = "SELECT * FROM vehicledetails WHERE apprived = 1 and  ApprovedDisposal = 1 and presentLocation = '$assetunit' and ".$column." LIKE '%$search%' order by identificationno";
         } else {
              $query = "SELECT * FROM vehicledetails WHERE (purchasedDate BETWEEN '$inputField1' AND '$inputField2') and apprived = 1 and and ApprovedDisposal = 1 presentLocation = '$assetunit' and " . $column . " LIKE '%$search%' order by protocolOrder, counterId";   

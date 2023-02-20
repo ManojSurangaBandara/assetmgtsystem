@@ -97,15 +97,15 @@ class AssetsCenterDB {
     }
 	    public static function addRecordgrid($centreName, $Active, $sorder) {
         $db = Database::getDB();
-        $query = "INSERT INTO assetcentre (centreName, Active, sorder) VALUES ('$instName', '$Active', '$sorder')";
+        $query = "INSERT INTO assetcentre (centreName, Active, sorder) VALUES ('$centreName', '$Active', '$sorder')";
+        $row_count = 0;
         try {
 			$row_count = $db->exec($query);
-			return $row_count;
         } catch (PDOException $e) {
             $error_message = $e->getMessage();
             display_db_error($error_message);
         }
-        return $result;
+        return $row_count;
     }
     public static function updatesorder($id, $sorder) {
         $db = Database::getDB();
@@ -123,7 +123,7 @@ class AssetsCenterDB {
         $query = "SELECT * FROM `assetcentre` WHERE centreName = '$centreName'";
         $result = $db->query($query);
         $row = $result->fetch();
-        $sorder = $row['sorder'];
+        $sorder = $row['sorder'] ?? "";
         return $sorder;
     }
     public static function getFullDetails() {

@@ -1668,14 +1668,6 @@ switch ($action) {
             $inputField1 = "";
         }
 
-        if (isset($_POST['inputField1'])) {
-            $inputField1 = $_POST['inputField1'];
-        } else if (isset($_GET['inputField1'])) {
-            $inputField1 = $_GET['inputField1'];
-        } else {
-            $inputField1 = "";
-        }
-
         if (isset($_POST['inputField2'])) {
             $inputField2 = $_POST['inputField2'];
         } else if (isset($_GET['inputField2'])) {
@@ -1696,12 +1688,18 @@ switch ($action) {
         $assetsCenters = AssetsCenterDB::getAssetsCenters();
         $assetunits = AssetsUnitDB::getAssetsUnitsByCenter($assetscenter, 2);
 		$checkAllowType = PlantMacDB::getIsAllocation($assetscenter, $assetunit);
-        if ($disposal == 1) {
-            $items = PlantMacDB::getInqDisposalDetails($assetscenter, $assetscenter, $assetunit, $column, $search, $inputField1, $inputField2, $checkAllowType, $allocation);
+        
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            if ($disposal == 1) {
+                $items = PlantMacDB::getInqDisposalDetails($assetscenter, $assetunit, $column, $search, $inputField1, $inputField2, $checkAllowType, $allocation);
+            } else {
+                $items = PlantMacDB::getInqDetails($assetscenter, $assetunit, $column, $search, $inputField1, $inputField2, $checkAllowType, $allocation);
+            }
         } else {
-            $items = PlantMacDB::getInqDetails($assetscenter, $assetunit, $column, $search, $inputField1, $inputField2, $checkAllowType, $allocation);
+            $items = array();
         }
-                if (isset($_POST['ExpToExcel']) && $_POST['ExpToExcel'] == '1') {
+
+        if (isset($_POST['ExpToExcel']) && $_POST['ExpToExcel'] == '1') {
         //    $assetunits = AssetsUnitDB::getAllDetailsUnit($assetunit);
         //     $boardMemberName1 = $assetunits['boardMemberName1'];
         //     $boardMemberRank1 = $assetunits['boardMemberRank1'];

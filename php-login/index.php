@@ -82,7 +82,15 @@ switch ($action) {
             //$qry = "INSERT INTO members(firstname, lastname, login, passwd, place, level, centreName) VALUES('User1','User1','$lo','" . md5($pw) . "','$row['unitName']','$level','$row['centreName']')";
             //$qry = "DELETE FROM members WHERE level = 17";
 			$qry = "INSERT INTO members(firstname, lastname, login, passwd, place, level, centreName, pw_update) VALUES('$fname','$lname','$login','" . md5($pw) . "','$place','$level','$centreName','$pw_update')";
-            $result = @mysql_query($qry);
+            $result = false;
+            try {
+                $statement = $db->prepare($qry);
+                $result = $statement->execute();
+                $statement->closeCursor();
+            } catch (PDOException $e) {
+                $error_message = $e->getMessage();
+                display_db_error($error_message);
+            }
             //     
             //     $prov = new AssetsCenter($row['SN'], $row['unitName']);
             //     $provinces[] = $prov;

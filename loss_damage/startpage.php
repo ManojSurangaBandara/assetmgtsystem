@@ -66,13 +66,7 @@
 									<td align="center"><font size="4"><nobr><?php echo $_109_total; ?></nobr><font></td>
 									<td align="center"><font size="4"><nobr><?php echo $_1043_total + $_1044_total + $_109_total; ?></nobr><font></td>
 									<td>
-											<form action="index.php" method="post" name="edata<?php echo $i; ?>" id="edata<?php echo $i; ?>">
-											<div class="input-group">  											
-												<input name="i" type="hidden" id="i" value="<?php echo $i; ?>" />
-												<input name="action" type="hidden" id="action" value="status_report" />
-												<button type="submit" class="btn btn-success btn-xs" >Details</button>
-											</div>
-											</form>
+											
 											</td>				
 									</tr>     
 									</tbody>

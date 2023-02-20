@@ -538,7 +538,7 @@ switch ($action) {
 							break;
 						case 'Add_QuickInfo':
 							$title = $_POST['name'];
-							$details = mysql_real_escape_string($_POST['comment']);
+							$details = $_POST['comment'];
 		//$details = $_POST['comment'];
 							$id = $_POST['id'];
 							$activate = (isset($_POST['activate']) ? 1 : 0);
@@ -1472,7 +1472,7 @@ case 'save_center':
 	$sorder = $_REQUEST['sorder'];
 	$result = AssetsCenterDB::addRecordgrid($centreName, $Active, $sorder);
 	echo json_encode(array(
-		'id' => mysql_insert_id(),
+		'id' => $db->lastInsertId(),
 		'centreName' => $centreName,
 		'Active' => $Active,
 		'sorder' => $sorder
@@ -1850,7 +1850,7 @@ case 'save_unitmember':
 	$skype = $_REQUEST['skype'];
 	$result = unitmembersDB::addRecord($assetunit, $sno, $post, $number, $rank, $name, $telephone, $email, $fax, $fb, $skype);
 	echo json_encode(array(
-		'id' => mysql_insert_id(),
+		'id' => $db->lastInsertId(),
 		'sno' => $sno,
 		'post' => $post,
 		'number' => $number,
