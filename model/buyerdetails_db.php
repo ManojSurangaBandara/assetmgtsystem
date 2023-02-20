@@ -44,7 +44,7 @@ class BuyerdetailsDB {
 		
 			$sth->execute();	
 			$rows = $sth->fetchAll(PDO::FETCH_ASSOC);
-			$list="";
+			$list=array();
 			$i=0;							
 				foreach($rows as $key=>$row){					
 					self::$instance = new BuyerdetailsDB($row['id'],$row['nicno'],$row['name'],$row['address'],$row['telephone'],$row['email']);					
@@ -102,56 +102,100 @@ class BuyerdetailsDB {
           (nicno, name, address, telephone, email)
           VALUES
           ('$nicno', '$name', '$address', '$telephone', '$email')";
-        $row_count = $db->exec($query);
+        try {
+            $statement = $db->prepare($query);
+            $row_count = $statement->execute();
+            $statement->closeCursor();
+        } catch (PDOException $e) {
+            $error_message = $e->getMessage();
+            display_db_error($error_message);
+        }
        // $row_count = $db->lastInsertId();
-		return $row_count;
+		return $row_count ?? 0;
     }
     public static function editRecord($id, $nicno, $name, $address, $telephone, $email) {
         $db = Database::getDB();
         $query = "UPDATE buyerdetails SET nicno = '$nicno', name = '$name', address = '$address', telephone = '$telephone', email = '$email' WHERE id ='$id'";
 		//$query = "UPDATE buyerdetails SET nicno = '$nicno', name = '$name', address = $address WHERE id ='$id'";
-        $row_count = $db->exec($query);
-        return $row_count;
+        try {
+            $statement = $db->prepare($query);
+            $row_count = $statement->execute();
+            $statement->closeCursor();
+        } catch (PDOException $e) {
+            $error_message = $e->getMessage();
+            display_db_error($error_message);
+        }
+        return $row_count ?? 0;
     }
 	
     public static function updateRecord($nicno, $name, $address, $telephone, $email) {
         $db = Database::getDB();
         $query = "UPDATE buyerdetails SET name = '$name', address = '$address', telephone = '$telephone', email = '$email' WHERE nicno = '$nicno'";
 		//$query = "UPDATE buyerdetails SET nicno = '$nicno', name = '$name', address = $address WHERE id ='$id'";
-         try {
-			$row_count = $db->exec($query);
-			return $row_count;
+        try {
+            $statement = $db->prepare($query);
+			$row_count = $statement->execute();
+            $statement->closeCursor();
 		} catch (PDOException $e) {
             $error_message = $e->getMessage();
             display_db_error($error_message);
         }
+			return $row_count ?? 0;
     }
 	
 	public static function deleteRecordById($id) {
         $db = Database::getDB();
         $query = "DELETE FROM buyerdetails WHERE id = '$id'";
-        $db->exec($query);
+        try {
+            $statement = $db->prepare($query);
+			$statement->execute();
+            $statement->closeCursor();
+		} catch (PDOException $e) {
+            $error_message = $e->getMessage();
+            display_db_error($error_message);
+        }
     }
 
 	public static function deleteRecordByNicno($id) {
         $db = Database::getDB();
         $query = "DELETE FROM buyerdetails WHERE nicno = '$id'";
-        $row_count = $db->exec($query);
-		return $row_count;
+        try {
+            $statement = $db->prepare($query);
+			$row_count = $statement->execute();
+            $statement->closeCursor();
+		} catch (PDOException $e) {
+            $error_message = $e->getMessage();
+            display_db_error($error_message);
+        }
+		return $row_count ?? 0;
     }
 	
 	public static function getDetailsById($id) {
         $db = Database::getDB();
         $query = "select * from buyerdetails where id = '$id'";
-        $result = $db->query($query);
-        $row = $result->fetch();
+        try {
+            $statement = $db->prepare($query);
+			$statement->execute();
+            $row = $statement->fetch();
+            $statement->closeCursor();
+		} catch (PDOException $e) {
+            $error_message = $e->getMessage();
+            display_db_error($error_message);
+        }
         return $row;
     }
 	public static function getDetailsByNicno($nicno) {
         $db = Database::getDB();
         $query = "select * from buyerdetails where nicno = '$nicno'";
-        $result = $db->query($query);
-        $row = $result->fetch();
+        try {
+            $statement = $db->prepare($query);
+			$statement->execute();
+            $row = $statement->fetch();
+            $statement->closeCursor();
+		} catch (PDOException $e) {
+            $error_message = $e->getMessage();
+            display_db_error($error_message);
+        }
         $instance = new BuyerdetailsDB($row['id'],$row['nicno'],$row['name'],$row['address'],$row['telephone'],$row['email']);
 		return $instance;
     }

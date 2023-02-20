@@ -21,16 +21,16 @@
   mysql_select_db("assetmgtsystem") or die(mysql_error()); */
 
 /////////////////  LOCALHOST   ///////////////////////
-// $dsn = 'mysql:host=localhost;dbname=assetmgtsystem;charset=UTF8';
-// $username = 'root';
-// $password = '';
-// $dbhost = 'localhost';
+$dsn = 'mysql:host=localhost;dbname=assetmgtsystem;charset=UTF8';
+$username = 'root';
+$password = '';
+$dbhost = 'localhost';
 
 /////////////////   SERVER   ///////////////////////
-$dsn = 'mysql:host=172.16.60.29;dbname=assetmgtsystem;charset=UTF8';
-$username = 'assetmgtsystem';
-$password = 'Asset@#567';
-$dbhost = '172.16.60.29';
+// $dsn = 'mysql:host=172.16.60.29;dbname=assetmgtsystem;charset=UTF8';
+// $username = 'assetmgtsystem';
+// $password = 'Asset@#567';
+// $dbhost = '172.16.60.29';
 
 // try {
 //     $db = new PDO('mysql:host=localhost;dbname=assetmgtsystem', $username, $password);
@@ -68,16 +68,16 @@ class Database {
      */
 
     /////////////////  LOCALHOST   ///////////////////////
-    // private static $dsn = 'mysql:host=localhost;dbname=assetmgtsystem';
-    // private static $username = 'root';
-    // private static $password = '';
-    // private static $db;
+    private static $dsn = 'mysql:host=localhost;dbname=assetmgtsystem';
+    private static $username = 'root';
+    private static $password = '';
+    private static $db;
 
     /////////////////  SERVER   ///////////////////////
-    private static $dsn = 'mysql:host=172.16.60.29;dbname=assetmgtsystem';
-    private static $username = 'assetmgtsystem';
-    private static $password = 'Asset@#567';
-    private static $db;
+    // private static $dsn = 'mysql:host=172.16.60.29;dbname=assetmgtsystem';
+    // private static $username = 'assetmgtsystem';
+    // private static $password = 'Asset@#567';
+    // private static $db;
 
     private function __construct() {
         
@@ -103,9 +103,9 @@ class Database {
         if ($_SESSION['SESS_LEVEL'] == 6 || $_SESSION['SESS_LEVEL'] == 7 || $_SESSION['SESS_LEVEL'] == 8) {
             return ($result['assetunit'] == $_SESSION['SESS_PLACE']);
         } else if ($_SESSION['SESS_LEVEL'] == 15) {
-            return ($result['protocoltext1'] == $_SESSION['SESS_PROTOCOLT1']);
+            return (isset($result['protocoltext1']) && $result['protocoltext1'] == $_SESSION['SESS_PROTOCOLT1']);
         } else if ($_SESSION['SESS_LEVEL'] == 25) {
-            return ($result['protocoltext2'] == $_SESSION['SESS_PROTOCOLT2']);
+            return (isset($result['protocoltext2']) && $result['protocoltext2'] == $_SESSION['SESS_PROTOCOLT2']);
         } else if ($_SESSION['SESS_LEVEL'] == 5) {
             return ($result['dam_controller'] == $_SESSION['SESS_LOGIN']);
         } else {
@@ -121,9 +121,9 @@ class Database {
                 return ($result['assetunit'] == $_SESSION['SESS_PLACE']);
             }
         } else if ($_SESSION['SESS_LEVEL'] == 15) {
-            return ($result['protocoltext1'] == $_SESSION['SESS_PROTOCOLT1']);
+            return (isset($result['protocoltext1']) && $result['protocoltext1'] == $_SESSION['SESS_PROTOCOLT1']);
         } else if ($_SESSION['SESS_LEVEL'] == 25) {
-            return ($result['protocoltext2'] == $_SESSION['SESS_PROTOCOLT2']);
+            return (isset($result['protocoltext2']) && $result['protocoltext2'] == $_SESSION['SESS_PROTOCOLT2']);
         } else {
             return true;
         }

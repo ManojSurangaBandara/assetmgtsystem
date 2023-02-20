@@ -560,11 +560,18 @@ public static function getaaaDetails($assetscenter) {
 		}
     public static function getHasRecord_psos_allow() {
         $db = Database::getDB();
-        $query = "SELECT count(1) as tot FROM landdetails WHERE ".$_SESSION['SESS_LAST_NAME']." = 1";
-        $result = $db->query($query);
-        $row = $result->fetch();
-        $count = $row['tot'];
-        return $count;
+        try {
+            
+            $query = "SELECT count(1) as tot FROM landdetails WHERE ".$_SESSION['SESS_LAST_NAME']." = 1";
+            $result = $db->query($query);
+            $row = $result->fetch();
+            $count = $row['tot'];
+            return $count;
+        }  catch (PDOException $e) {
+            $error_message = $e->getMessage();
+            display_db_error($error_message);
+        }
+        
     }
     public static function getBoard_report($assetscenter, $assetunit) {
         $db = Database::getDB();
