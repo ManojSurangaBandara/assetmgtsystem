@@ -107,7 +107,7 @@ class Database {
         } else if ($_SESSION['SESS_LEVEL'] == 25) {
             return (isset($result['protocoltext2']) && $result['protocoltext2'] == $_SESSION['SESS_PROTOCOLT2']);
         } else if ($_SESSION['SESS_LEVEL'] == 5) {
-            return ($result['dam_controller'] == $_SESSION['SESS_LOGIN']);
+            return (isset($result['dam_controller']) && $result['dam_controller'] == $_SESSION['SESS_LOGIN']);
         } else {
             return true;
         }
@@ -144,7 +144,7 @@ class Database {
         } else if ($_SESSION['SESS_LEVEL'] == 10) {
             $querytext = $querytext . " and  " . $_SESSION['SESS_LAST_NAME'] . " = 1";
         } else if ($_SESSION['SESS_LEVEL'] == 5) {
-            $dam_controller = $_SESSION['SESS_LOGIN'];
+            $dam_controller = $_SESSION['SESS_LOGIN'] ?? "";
             $querytext = $querytext . " and  dam_controller = '$dam_controller'";
         }
         return $querytext;
