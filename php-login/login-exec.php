@@ -67,6 +67,7 @@ foreach($lines as $line)
 	//Sanitize the POST values
 	$login = $_POST['login'];
 	$password = $_POST['password'];
+	$csrf_token = $_POST['csrf_token'];
 	$macaddress = getMacAddress();
 	//Input Validations
 	if($login == '') {
@@ -75,6 +76,10 @@ foreach($lines as $line)
 	}
 	if($password == '') {
 		$errmsg_arr[] = 'Password missing';
+		$errflag = true;
+	}
+	if($csrf_token !== $_SESSION['csrf_token']) {
+		$errmsg_arr[] = '';
 		$errflag = true;
 	}
 	

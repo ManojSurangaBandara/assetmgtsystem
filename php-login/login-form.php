@@ -19,6 +19,7 @@
 												<p>&nbsp;</p>
 												<p>&nbsp;</p>
 												<form id="loginForm" name="loginForm" method="post" action="./php-login/login-exec.php">
+													
 													  <table width="500" border="0" align="center" cellpadding="2" cellspacing="0" class="box">
 														<tr>
 														  <td width="112"><b>Login</b></td>
@@ -43,6 +44,7 @@
 														<?php }
 														?>
 													  </table>
+													  <input type="hidden" name="csrf_token" value="<?=$csrf_token?>">
 													</form>
 												<p>&nbsp;</p>
 												<p>&nbsp;</p>

@@ -97,7 +97,7 @@ $("#decative").click(function(){
                             <div class="sct_right">
                                 <div class="sct_left">
                                     <div class="sct_right">
-                                        <form action="#">
+                                        <!-- <form action="#"> -->
                                             <fieldset>
                                                 <div class="table_wrapper">
                                                     <div class="table_wrapper_inner">
@@ -154,7 +154,7 @@ $("#decative").click(function(){
                                                     </div>
                                                 </div>
                                             </fieldset>
-                                        </form>
+                                        <!-- </form> -->
 
 
                                     </div>
