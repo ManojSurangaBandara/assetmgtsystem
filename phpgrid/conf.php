@@ -8,7 +8,7 @@ define('PHPGRID_DB_TYPE', 'mysql');
 define('PHPGRID_DB_CHARSET','utf8mb4');
 
 /////////////////  SERVER   ///////////////////////
-// define('PHPGRID_DB_HOSTNAME','172.16.60.250'); 
+// define('PHPGRID_DB_HOSTNAME','172.16.0.250'); 
 // define('PHPGRID_DB_USERNAME', 'assetmgtsystem');    
 // define('PHPGRID_DB_PASSWORD', 'Asset@#567'); 
 // define('PHPGRID_DB_NAME', 'assetmgtsystem');
