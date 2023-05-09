@@ -104,6 +104,14 @@
                                         echo "class=selected";
                                     }
                                     ?>> <span><span>Loss and Damage</span></span></a></li>
+								 <?php } ?>
+                                 
+                                 <?php if ($_SESSION['SESS_LEVEL'] == 1 || $_SESSION['SESS_LEVEL'] == 2 || $_SESSION['SESS_LEVEL'] == 3 || $_SESSION['SESS_LEVEL'] == 4 || $_SESSION['SESS_LEVEL'] == 13) { ?>
+								<li <?php echo $_SESSION['SESS_LEVEL'] == 17 ? 'hidden' : '';?>><a href="../report_dos" <?php
+                                    if ($page == 50) {
+                                        echo "class=selected";
+                                    }
+                                    ?>> <span><span>Report DOS</span></span></a></li>
 								 <?php } ?>	
                         </ul>
                     </div>
