@@ -24,16 +24,7 @@ include '../view/header1.php';
                                             <fieldset>
                                                 <div class="table_wrapper">
                                                     <div class="table_wrapper_inner">
-                                                        <table cellpadding="0" cellspacing="0" width="100%">
-                                                            <tbody>
-                                                                <tr>
-                                                                    <th>S/N</th>                                                                    
-                                                                    <th>Catologue Code</th>
-                                                                    <th>Item Name</th>
-                                                                    <th>Ordanance Stores</th>
-                                                                    <th>Current Stock</th>
-                                                                    <th>Location</th>
-                                                                </tr>
+                                                        
 
                                                                 <?php
                                                                             $url = "https://172.16.60.11/dos/api/stocks?key=62c9f89ab4ada907d069d037d0b2fee2";
@@ -46,118 +37,155 @@ include '../view/header1.php';
 
                                                                             // Fetch the data from the API
                                                                             $data = file_get_contents($url, false, stream_context_create($options));
-                                                                            $json = json_decode($data, true);
+                                                                            
+                                                                            // Convert the API data to an array
+                                                                            $data = json_decode($data, true);
 
-                                                                            // Initialize the variables for pagination
-                                                                            $items_per_page = 100;
-                                                                            $total_items = count($json);
-                                                                            $number_of_pages = ceil($total_items / $items_per_page);
-                                                                            $current_page = isset($_GET['page']) ? $_GET['page'] : 1;
 
-                                                                            // Calculate the starting and ending points for this page
-                                                                            $starting_index = ($current_page - 1) * $items_per_page;
-                                                                            $ending_index = $starting_index + $items_per_page;
+                                                                            // Set the number of items per page
+                                                                            $items_per_page = 50;
 
-                                                                            // Slice the array based on the starting and ending points for this page
-                                                                            $json_page = array_slice($json, $starting_index, $items_per_page);
+                                                                            // Get the current page number from the query string
+                                                                            $page = isset($_GET['page']) ? (int)$_GET['page'] : 1;
 
-                                                                            // If there are more pages, fetch them too
-                                                                            if ($current_page < $number_of_pages) {
-                                                                                // Initialize the variables for the next page
-                                                                                $next_page = $current_page + 1;
-                                                                                $next_starting_index = $ending_index;
-                                                                                $next_ending_index = $next_starting_index + $items_per_page;
+                                                                            // Get the filter values from the query string
+                                                                            $itemcode_filter = isset($_GET['itemcode']) ? $_GET['itemcode'] : '';
+                                                                            $description_filter = isset($_GET['description']) ? $_GET['description'] : '';
+                                                                            $stores_filter = isset($_GET['stores']) ? $_GET['stores'] : '';
+                                                                            $place_filter = isset($_GET['place']) ? $_GET['place'] : '';
 
-                                                                                // Fetch the data for the next page
-                                                                                $next_url = $url . "&start=$next_starting_index&end=$next_ending_index";
-                                                                                $next_data = file_get_contents($next_url, false, stream_context_create($options));
-                                                                                $next_json = json_decode($next_data, true);
+                                                                            // Filter the data based on the filter values
+                                                                            $filtered_data = array_filter($data, function($item) use ($place_filter, $itemcode_filter, $description_filter,$stores_filter) {
+                                                                                if ($place_filter && is_string($item['Place']) && stripos($item['Place'], $place_filter) === false) {
+                                                                                    return false;
+                                                                                }
+                                                                                if ($itemcode_filter && is_string($item['itemcode']) && stripos($item['itemcode'], $itemcode_filter) === false) {
+                                                                                    return false;
+                                                                                }
+                                                                                if ($description_filter && is_string($item['description']) && stripos($item['description'], $description_filter) === false) {
+                                                                                    return false;
+                                                                                }
+                                                                                if ($stores_filter && is_string($item['itemtype']) && stripos($item['itemtype'], $stores_filter) === false) {
+                                                                                    return false;
+                                                                                }
+                                                                                return true;
+                                                                            });
+                                                                            
 
-                                                                                // Merge the data for the next page with the current page
-                                                                                $json_page = array_merge($json_page, $next_json);
+                                                                            // Get the total number of items
+                                                                            $total_items = count($filtered_data);
+
+                                                                            // Calculate the total number of pages
+                                                                            $total_pages = ceil($total_items / $items_per_page);
+
+                                                                            // Limit the data to the current page
+                                                                            $offset = ($page - 1) * $items_per_page;
+                                                                            $limited_data = array_slice($filtered_data, $offset, $items_per_page);
+                                                                            echo '<br>';
+
+                                                                            // Display the data
+                                                                            echo '&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="itemcode" placeholder="Filter by Catalogue Code" value="'.$itemcode_filter.'">&nbsp;&nbsp;<input type="text" name="description" placeholder="Filter by Item Name" value="'.$description_filter.'">&nbsp;&nbsp;<input type="text" name="stores" placeholder="Filter by Stores" value="'.$stores_filter.'">&nbsp;&nbsp;<input type="text" name="place" placeholder="Filter by Location" value="'.$place_filter.'">&nbsp;&nbsp;<button onclick="updateFilters()">Apply Filters</button>';
+                                                                            echo '<br><br>';
+                                                                            echo '<table>';
+                                                                            echo '<tr><th>S/N</th><th>Catalogue Code</th><th>Item Name</th><th>Stores</th><th>Stock</th><th>Location</th></tr>';
+                                                                            foreach ($limited_data as $index => $item) {
+                                                                                echo '<tr>';
+                                                                                echo '<td>' . ($index + 1) . '</td>';
+                                                                                echo '<td>' . $item['itemcode'] . '</td>';
+                                                                                echo '<td>' . $item['description'] . '</td>';
+                                                                                echo '<td>' . $item['itemtype'] . '</td>';
+                                                                                echo '<td>' . $item['actualStock'] . '</td>';
+                                                                                echo '<td>' . $item['Place'] . '</td>';
+                                                                                echo '</tr>';
                                                                             }
+                                                                            echo '</table>';
+                                                                            
 
-                                                                            // Use the $json_page array for your display logic
+                                                                             // Display the pagination links
+                                                                            // echo '<div>';
+                                                                            // if ($total_pages > 1) {
+                                                                            //     for ($i = 1; $i <= $total_pages; $i++) {
+                                                                            //         echo '<a href="?action=report_stock&page='.$i.'&place='.$place_filter.'&itemcode='.$itemcode_filter.'&description='.$description_filter.'">'.$i.'</a>';
+                                                                            //     }
+                                                                            // }
+                                                                            // echo '</div>';                                                                           
+
                                                                             ?>
 
+                                                                            <?php if ($total_pages > 1): ?>
+                                                                                <div class="pagination">
+                                                                                    <?php if ($page > 1): ?>
+                                                                                        <a href="?action=report_stock&page=<?php echo $page-1; ?>"><i class="fa fa-angle-left"></i></a>
+                                                                                    <?php endif ?>
 
+                                                                                    <?php if ($total_pages <= 30): ?>
+                                                                                        <?php for ($i=1; $i<=$total_pages; $i++): ?>
+                                                                                            <?php if ($i == $page): ?>
+                                                                                                <button class="active"><?php echo $i ?></button>
+                                                                                            <?php else: ?>
+                                                                                                <a href="?action=report_stock&page=<?php echo $i; ?>"><button><?php echo $i ?></button></a>
+                                                                                            <?php endif ?>
+                                                                                        <?php endfor ?>
+                                                                                    <?php else: ?>
+                                                                                        <?php if ($page <= 15): ?>
+                                                                                            <?php for ($i=1; $i<=30; $i++): ?>
+                                                                                                <?php if ($i == $page): ?>
+                                                                                                    <button class="active"><?php echo $i ?></button>
+                                                                                                <?php else: ?>
+                                                                                                    <a href="?action=report_stock&page=<?php echo $i; ?>"><button><?php echo $i ?></button></a>
+                                                                                                <?php endif ?>
+                                                                                            <?php endfor ?>
+                                                                                            <span>...</span>
+                                                                                            <a href="?action=report_stock&page=<?php echo $total_pages; ?>"><button><?php echo $total_pages ?></button></a>
+                                                                                        <?php elseif ($page >= $total_pages - 14): ?>
+                                                                                            <a href="?action=report_stock&page=1"><button>1</button></a>
+                                                                                            <span>...</span>
+                                                                                            <?php for ($i=$total_pages - 29; $i<=$total_pages; $i++): ?>
+                                                                                                <?php if ($i == $page): ?>
+                                                                                                    <button class="active"><?php echo $i ?></button>
+                                                                                                <?php else: ?>
+                                                                                                    <a href="?action=report_stock&page=<?php echo $i; ?>"><button><?php echo $i ?></button></a>
+                                                                                                <?php endif ?>
+                                                                                            <?php endfor ?>
+                                                                                        <?php else: ?>
+                                                                                            <a href="?action=report_stock&page=1"><button>1</button></a>
+                                                                                            <span>...</span>
+                                                                                            <?php for ($i=$page-14; $i<=$page+15; $i++): ?>
+                                                                                                <?php if ($i == $page): ?>
+                                                                                                    <button class="active"><?php echo $i ?></button>
+                                                                                                <?php else: ?>
+                                                                                                    <a href="?action=report_stock&page=<?php echo $i; ?>"><button><?php echo $i ?></button></a>
+                                                                                                <?php endif ?>
+                                                                                            <?php endfor ?>
+                                                                                            <span>...</span>
+                                                                                            <a href="?action=report_stock&page=<?php echo $total_pages; ?>"><button><?php echo $total_pages ?></button></a>
+                                                                                        <?php endif ?>
+                                                                                    <?php endif ?>
 
-                                                                <?php foreach ($json as $index => $item): ?>
-                                                                    <?php if ($index < $starting_index || $index >= $starting_index + $items_per_page) continue; ?>
-                                                                    <tr>
-                                                                        <td><?php echo ($index + 1) ?></td>
-                                                                        <td><?php echo $item['itemcode'] ?></td>
-                                                                        <td><?php echo $item['description'] ?></td>
-                                                                        <td><?php echo $item['itemtype'] ?></td>
-                                                                        <td><?php echo $item['actualStock'] ?></td>
-                                                                        <td><?php echo $item['Place'] ?></td>
-                                                                    </tr>
-                                                                <?php endforeach ?>
+                                                                                    <?php if ($page < $total_pages): ?>
+                                                                                        <a href="?action=report_stock&page=<?php echo $page+1; ?>"><i class="fa fa-angle-right"></i></a>
+                                                                                    <?php endif ?>
+                                                                                </div>
+                                                                            <?php endif ?>
+                                                                            
 
+                                                                            <script>
+                                                                                function updateFilters() {
+                                                                                // Get the filter input values
+                                                                                var place_filter = document.getElementsByName("place")[0].value;
+                                                                                var itemcode_filter = document.getElementsByName("itemcode")[0].value;
+                                                                                var description_filter = document.getElementsByName("description")[0].value;
+                                                                                var stores_filter = document.getElementsByName("stores")[0].value;
 
-                                                            </tbody>
-                                                        </table>
+                                                                                // Redirect to the filtered page with the updated filter values
+                                                                                var url = window.location.pathname + '?action=report_stock&page=1' + '&place=' + encodeURIComponent(place_filter) + '&itemcode=' + encodeURIComponent(itemcode_filter) + '&description=' + encodeURIComponent(description_filter) + '&stores=' + encodeURIComponent(stores_filter);
+                                                                                window.location.href = url;
+                                                                                }
+                                                                            </script>                                                            
                                                     </div>
                                                 </div>
                                             </fieldset>
                                         <!-- </form> -->
-
-                                        <?php if ($number_of_pages > 1): ?>
-                                        <div class="pagination">
-                                            <?php if ($current_page > 1): ?>
-                                            <a href="<?php echo "?action=report_stock&page=".($current_page-1); ?>"><i class="fa fa-angle-left"></i></a>
-                                            <?php endif ?>
-
-                                            <?php if ($number_of_pages <= 30): ?>
-                                            <?php for ($i=1; $i<=$number_of_pages; $i++): ?>
-                                                <?php if ($i == $current_page): ?>
-                                                <button class="active"><?php echo $i ?></button>
-                                                <?php else: ?>
-                                                <a href="<?php echo "?action=report_stock&page=".$i; ?>"><button><?php echo $i ?></button></a>
-                                                <?php endif ?>
-                                            <?php endfor ?>
-                                            <?php else: ?>
-                                            <?php if ($current_page <= 15): ?>
-                                                <?php for ($i=1; $i<=30; $i++): ?>
-                                                <?php if ($i == $current_page): ?>
-                                                    <button class="active"><?php echo $i ?></button>
-                                                <?php else: ?>
-                                                    <a href="<?php echo "?action=report_stock&page=".$i; ?>"><button><?php echo $i ?></button></a>
-                                                <?php endif ?>
-                                                <?php endfor ?>
-                                                <span>...</span>
-                                                <a href="<?php echo "?action=report_stock&page=".$number_of_pages; ?>"><button><?php echo $number_of_pages ?></button></a>
-                                            <?php elseif ($current_page >= $number_of_pages - 14): ?>
-                                                <a href="<?php echo "?action=report_stock&page=1"; ?>"><button>1</button></a>
-                                                <span>...</span>
-                                                <?php for ($i=$number_of_pages - 29; $i<=$number_of_pages; $i++): ?>
-                                                <?php if ($i == $current_page): ?>
-                                                    <button class="active"><?php echo $i ?></button>
-                                                <?php else: ?>
-                                                    <a href="<?php echo "?action=report_stock&page=".$i; ?>"><button><?php echo $i ?></button></a>
-                                                <?php endif ?>
-                                                <?php endfor ?>
-                                            <?php else: ?>
-                                                <a href="<?php echo "?action=report_stock&page=1"; ?>"><button>1</button></a>
-                                                <span>...</span>
-                                                <?php for ($i=$current_page-14; $i<=$current_page+15; $i++): ?>
-                                                <?php if ($i == $current_page): ?>
-                                                    <button class="active"><?php echo $i ?></button>
-                                                <?php else: ?>
-                                                    <a href="<?php echo "?action=report_stock&page=".$i; ?>"><button><?php echo $i ?></button></a>
-                                                <?php endif ?>
-                                                <?php endfor ?>
-                                                <span>...</span>
-                                                <a href="<?php echo "?action=report_stock&page=".$number_of_pages; ?>"><button><?php echo $number_of_pages ?></button></a>
-                                            <?php endif ?>
-                                            <?php endif ?>
-
-                                            <?php if ($current_page < $number_of_pages): ?>
-                                            <a href="<?php echo "?action=report_stock&page=".($current_page+1); ?>"><i class="fa fa-angle-right"></i></a>
-                                            <?php endif ?>
-                                        </div>
-                                        <?php endif ?>
-
 
                                     </div>
                                 </div>
