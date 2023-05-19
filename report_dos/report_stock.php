@@ -55,7 +55,7 @@ include '../view/header1.php';
                                                                             $place_filter = isset($_GET['place']) ? $_GET['place'] : '';
 
                                                                             // Filter the data based on the filter values
-                                                                            $filtered_data = array_filter($data, function($item) use ($place_filter, $itemcode_filter, $description_filter,$stores_filter) {
+                                                                            $filtered_data = array_filter($data, function($item) use ($place_filter, $itemcode_filter, $description_filter, $stores_filter) {
                                                                                 if ($place_filter && is_string($item['Place']) && stripos($item['Place'], $place_filter) === false) {
                                                                                     return false;
                                                                                 }
@@ -70,7 +70,6 @@ include '../view/header1.php';
                                                                                 }
                                                                                 return true;
                                                                             });
-                                                                            
 
                                                                             // Get the total number of items
                                                                             $total_items = count($filtered_data);
@@ -99,89 +98,120 @@ include '../view/header1.php';
                                                                                 echo '</tr>';
                                                                             }
                                                                             echo '</table>';
-                                                                            
 
-                                                                             // Display the pagination links
-                                                                            // echo '<div>';
-                                                                            // if ($total_pages > 1) {
-                                                                            //     for ($i = 1; $i <= $total_pages; $i++) {
-                                                                            //         echo '<a href="?action=report_stock&page='.$i.'&place='.$place_filter.'&itemcode='.$itemcode_filter.'&description='.$description_filter.'">'.$i.'</a>';
-                                                                            //     }
-                                                                            // }
-                                                                            // echo '</div>';                                                                           
+                                                                            if ($total_pages > 1) {
+                                                                                echo '<div class="pagination">';
+                                                                                
+                                                                                if ($page > 1) {
+                                                                                    // Generate the previous page link with filter parameters
+                                                                                    $prev_page = $page - 1;
+                                                                                    $prev_url = buildPaginationURL($prev_page, $itemcode_filter, $description_filter, $stores_filter, $place_filter);
+                                                                                    echo '<a href="'.$prev_url.'"><i class="fa fa-angle-left"></i></a>';
+                                                                                }
+
+                                                                                if ($total_pages <= 30) {
+                                                                                    // Generate links for all pages if the total pages are less than or equal to 30
+                                                                                    for ($i = 1; $i <= $total_pages; $i++) {
+                                                                                        $url = buildPaginationURL($i, $itemcode_filter, $description_filter, $stores_filter, $place_filter);
+                                                                                        if ($i == $page) {
+                                                                                            echo '<button class="active">'.$i.'</button>';
+                                                                                        } else {
+                                                                                            echo '<a href="'.$url.'"><button>'.$i.'</button></a>';
+                                                                                        }
+                                                                                    }
+                                                                                } else {
+                                                                                    if ($page <= 15) {
+                                                                                        // Generate links for the first 30 pages if the current page is within the first 15 pages
+                                                                                        for ($i = 1; $i <= 30; $i++) {
+                                                                                            $url = buildPaginationURL($i, $itemcode_filter, $description_filter, $stores_filter, $place_filter);
+                                                                                            if ($i == $page) {
+                                                                                                echo '<button class="active">'.$i.'</button>';
+                                                                                            } else {
+                                                                                                echo '<a href="'.$url.'"><button>'.$i.'</button></a>';
+                                                                                            }
+                                                                                        }
+                                                                                        echo '<span>...</span>';
+                                                                                        // Generate the last page link with filter parameters
+                                                                                        $last_url = buildPaginationURL($total_pages, $itemcode_filter, $description_filter, $stores_filter, $place_filter);
+                                                                                        echo '<a href="'.$last_url.'"><button>'.$total_pages.'</button></a>';
+                                                                                    } elseif ($page >= $total_pages - 14) {
+                                                                                        // Generate the first page link with filter parameters
+                                                                                        $first_url = buildPaginationURL(1, $itemcode_filter, $description_filter, $stores_filter, $place_filter);
+                                                                                        echo '<a href="'.$first_url.'"><button>1</button></a>';
+                                                                                        echo '<span>...</span>';
+                                                                                        // Generate links for the last 30 pages if the current page is within the last 15 pages
+                                                                                        for ($i = $total_pages - 29; $i <= $total_pages; $i++) {
+                                                                                            $url = buildPaginationURL($i, $itemcode_filter, $description_filter, $stores_filter, $place_filter);
+                                                                                            if ($i == $page) {
+                                                                                                echo '<button class="active">'.$i.'</button>';
+                                                                                            } else {
+                                                                                                echo '<a href="'.$url.'"><button>'.$i.'</button></a>';
+                                                                                            }
+                                                                                        }
+                                                                                    } else {
+                                                                                        // Generate the first page link with filter parameters
+                                                                                        $first_url = buildPaginationURL(1, $itemcode_filter, $description_filter, $stores_filter, $place_filter);
+                                                                                        echo '<a href="'.$first_url.'"><button>1</button></a>';
+                                                                                        echo '<span>...</span>';
+                                                                                        // Generate links for the current page with surrounding 15 pages
+                                                                                        for ($i = $page - 14; $i <= $page + 15; $i++) {
+                                                                                            $url = buildPaginationURL($i, $itemcode_filter, $description_filter, $stores_filter, $place_filter);
+                                                                                            if ($i == $page) {
+                                                                                                echo '<button class="active">'.$i.'</button>';
+                                                                                            } else {
+                                                                                                echo '<a href="'.$url.'"><button>'.$i.'</button></a>';
+                                                                                            }
+                                                                                        }
+                                                                                        echo '<span>...</span>';
+                                                                                        // Generate the last page link with filter parameters
+                                                                                        $last_url = buildPaginationURL($total_pages, $itemcode_filter, $description_filter, $stores_filter, $place_filter);
+                                                                                        echo '<a href="'.$last_url.'"><button>'.$total_pages.'</button></a>';
+                                                                                    }
+                                                                                }
+
+                                                                                if ($page < $total_pages) {
+                                                                                    // Generate the next page link with filter parameters
+                                                                                    $next_page = $page + 1;
+                                                                                    $next_url = buildPaginationURL($next_page, $itemcode_filter, $description_filter, $stores_filter, $place_filter);
+                                                                                    echo '<a href="'.$next_url.'"><i class="fa fa-angle-right"></i></a>';
+                                                                                }
+
+                                                                                echo '</div>';
+                                                                            }
+
+                                                                            function buildPaginationURL($page, $itemcode_filter, $description_filter, $stores_filter, $place_filter) {
+                                                                                $url = '?action=report_stock&page=' . $page;
+                                                                                if (!empty($itemcode_filter)) {
+                                                                                    $url .= '&itemcode=' . urlencode($itemcode_filter);
+                                                                                }
+                                                                                if (!empty($description_filter)) {
+                                                                                    $url .= '&description=' . urlencode($description_filter);
+                                                                                }
+                                                                                if (!empty($stores_filter)) {
+                                                                                    $url .= '&stores=' . urlencode($stores_filter);
+                                                                                }
+                                                                                if (!empty($place_filter)) {
+                                                                                    $url .= '&place=' . urlencode($place_filter);
+                                                                                }
+                                                                                return $url;
+                                                                            }
 
                                                                             ?>
 
-                                                                            <?php if ($total_pages > 1): ?>
-                                                                                <div class="pagination">
-                                                                                    <?php if ($page > 1): ?>
-                                                                                        <a href="?action=report_stock&page=<?php echo $page-1; ?>"><i class="fa fa-angle-left"></i></a>
-                                                                                    <?php endif ?>
-
-                                                                                    <?php if ($total_pages <= 30): ?>
-                                                                                        <?php for ($i=1; $i<=$total_pages; $i++): ?>
-                                                                                            <?php if ($i == $page): ?>
-                                                                                                <button class="active"><?php echo $i ?></button>
-                                                                                            <?php else: ?>
-                                                                                                <a href="?action=report_stock&page=<?php echo $i; ?>"><button><?php echo $i ?></button></a>
-                                                                                            <?php endif ?>
-                                                                                        <?php endfor ?>
-                                                                                    <?php else: ?>
-                                                                                        <?php if ($page <= 15): ?>
-                                                                                            <?php for ($i=1; $i<=30; $i++): ?>
-                                                                                                <?php if ($i == $page): ?>
-                                                                                                    <button class="active"><?php echo $i ?></button>
-                                                                                                <?php else: ?>
-                                                                                                    <a href="?action=report_stock&page=<?php echo $i; ?>"><button><?php echo $i ?></button></a>
-                                                                                                <?php endif ?>
-                                                                                            <?php endfor ?>
-                                                                                            <span>...</span>
-                                                                                            <a href="?action=report_stock&page=<?php echo $total_pages; ?>"><button><?php echo $total_pages ?></button></a>
-                                                                                        <?php elseif ($page >= $total_pages - 14): ?>
-                                                                                            <a href="?action=report_stock&page=1"><button>1</button></a>
-                                                                                            <span>...</span>
-                                                                                            <?php for ($i=$total_pages - 29; $i<=$total_pages; $i++): ?>
-                                                                                                <?php if ($i == $page): ?>
-                                                                                                    <button class="active"><?php echo $i ?></button>
-                                                                                                <?php else: ?>
-                                                                                                    <a href="?action=report_stock&page=<?php echo $i; ?>"><button><?php echo $i ?></button></a>
-                                                                                                <?php endif ?>
-                                                                                            <?php endfor ?>
-                                                                                        <?php else: ?>
-                                                                                            <a href="?action=report_stock&page=1"><button>1</button></a>
-                                                                                            <span>...</span>
-                                                                                            <?php for ($i=$page-14; $i<=$page+15; $i++): ?>
-                                                                                                <?php if ($i == $page): ?>
-                                                                                                    <button class="active"><?php echo $i ?></button>
-                                                                                                <?php else: ?>
-                                                                                                    <a href="?action=report_stock&page=<?php echo $i; ?>"><button><?php echo $i ?></button></a>
-                                                                                                <?php endif ?>
-                                                                                            <?php endfor ?>
-                                                                                            <span>...</span>
-                                                                                            <a href="?action=report_stock&page=<?php echo $total_pages; ?>"><button><?php echo $total_pages ?></button></a>
-                                                                                        <?php endif ?>
-                                                                                    <?php endif ?>
-
-                                                                                    <?php if ($page < $total_pages): ?>
-                                                                                        <a href="?action=report_stock&page=<?php echo $page+1; ?>"><i class="fa fa-angle-right"></i></a>
-                                                                                    <?php endif ?>
-                                                                                </div>
-                                                                            <?php endif ?>
-                                                                            
-
                                                                             <script>
                                                                                 function updateFilters() {
-                                                                                // Get the filter input values
-                                                                                var place_filter = document.getElementsByName("place")[0].value;
-                                                                                var itemcode_filter = document.getElementsByName("itemcode")[0].value;
-                                                                                var description_filter = document.getElementsByName("description")[0].value;
-                                                                                var stores_filter = document.getElementsByName("stores")[0].value;
+                                                                                    // Get the filter input values
+                                                                                    var place_filter = document.getElementsByName("place")[0].value;
+                                                                                    var itemcode_filter = document.getElementsByName("itemcode")[0].value;
+                                                                                    var description_filter = document.getElementsByName("description")[0].value;
+                                                                                    var stores_filter = document.getElementsByName("stores")[0].value;
 
-                                                                                // Redirect to the filtered page with the updated filter values
-                                                                                var url = window.location.pathname + '?action=report_stock&page=1' + '&place=' + encodeURIComponent(place_filter) + '&itemcode=' + encodeURIComponent(itemcode_filter) + '&description=' + encodeURIComponent(description_filter) + '&stores=' + encodeURIComponent(stores_filter);
-                                                                                window.location.href = url;
+                                                                                    // Redirect to the filtered page with the updated filter values
+                                                                                    var url = window.location.pathname + '?action=report_stock&page=1' + '&place=' + encodeURIComponent(place_filter) + '&itemcode=' + encodeURIComponent(itemcode_filter) + '&description=' + encodeURIComponent(description_filter) + '&stores=' + encodeURIComponent(stores_filter);
+                                                                                    window.location.href = url;
                                                                                 }
-                                                                            </script>                                                            
+                                                                            </script>
+                                                            
                                                     </div>
                                                 </div>
                                             </fieldset>
