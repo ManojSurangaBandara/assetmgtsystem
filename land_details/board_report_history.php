@@ -39,8 +39,8 @@
 					<td><?php if ($exp['land_path'] <> "") { ?>
 						<button><a href="<?php echo $exp['land_path']; ?>#toolbar=0" target="_blank">View Board Report</a></button>
 					<?php } ?></td>
-					<td><?php echo $exp['land_date']; ?></td>
-					<td><?php echo $exp['received_date']; ?></td>
+					<td><?php echo $exp['land_date']='1000-01-01 00:00:00' ? '' : $exp['land_date']; ?></td>
+					<td><?php echo $exp['received_date']='1000-01-01' ? '' : $exp['received_date']; ?></td>
 					<td><button><a href="index.php?action=board_report_ob_view&cyear=<?php echo $exp['cyear'];?>&assetunit=<?php echo $exp['assetunit'];?>&itemtype=land"><font color="DarkBlue">View</a></button></td>
 				</tr>
 				<?php $i++; ?>
