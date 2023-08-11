@@ -27,10 +27,10 @@ $password = '';
 $dbhost = 'localhost';
 
 /////////////////   SERVER   ///////////////////////
-// $dsn = 'mysql:host=172.16.0.250;dbname=assetmgtsystem;charset=UTF8';
-// $username = 'assetmgtsystem';
-// $password = 'Asset@#567';
-// $dbhost = '172.16.0.250';
+// $dsn = 'mysql:host=172.16.0.19;dbname=assetmgtsystem;charset=UTF8';
+// $username = 'dbuser_assetmgt';
+// $password = 'K@=3Ljdd47TYk';
+// $dbhost = '172.16.0.19';
 
 // try {
 //     $db = new PDO('mysql:host=localhost;dbname=assetmgtsystem', $username, $password);
@@ -54,6 +54,8 @@ $dbhost = 'localhost';
 
 try {
     $db = new PDO($dsn, $username, $password);
+    $sql = "SET SESSION sql_mode = 'NO_ZERO_IN_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION'";
+    $db->exec($sql);
 } catch (PDOException $e) {
     $error_message = $e->getMessage();
     include('../errors/database_error.php');
@@ -74,9 +76,9 @@ class Database {
     private static $db;
 
     /////////////////  SERVER   ///////////////////////
-    // private static $dsn = 'mysql:host=172.16.0.250;dbname=assetmgtsystem';
-    // private static $username = 'assetmgtsystem';
-    // private static $password = 'Asset@#567';
+    // private static $dsn = 'mysql:host=172.16.0.19;dbname=assetmgtsystem';
+    // private static $username = 'dbuser_assetmgt';
+    // private static $password = 'K@=3Ljdd47TYk';
     // private static $db;
 
     private function __construct() {
@@ -89,6 +91,8 @@ class Database {
                 self::$db = new PDO(self::$dsn,
                         self::$username,
                         self::$password);
+                $sql = "SET SESSION sql_mode = 'NO_ZERO_IN_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION'";
+                self::$db->exec($sql);
             } catch (PDOException $e) {
                 $error_message = $e->getMessage();
                 include '../errors/db_error.php';
