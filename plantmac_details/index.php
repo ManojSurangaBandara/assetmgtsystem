@@ -369,7 +369,7 @@ switch ($action) {
         $id = $_POST['id'];
 		$sorderwithcenter = AssetsUnitDB::getsorderwithcenter($assetunit);
 		$proto = AssetsUnitDB::getprotocol($assetunit);
-        $identificationnoTem = $_POST['identificationnoTem'];
+        $identificationnoTem = $_POST['identificationnoTem'] ?? ""; 
         $groupId = $_POST['groupId'];
         $presentLocation = $_POST['presentLocation'];
         $acquisitionInstitute = $_POST['acquisitionInstitute'];
@@ -4331,8 +4331,8 @@ switch ($action) {
 		}
         $assetsCenters = AssetsCenterDB::getAssetsCenters();
         $assetunits = AssetsUnitDB::getAssetsUnitsByCenter($assetscenter, 2);
-		$items = PlantMacDB::getFullDetails_unit($assetunit);
-		include('add_repair_details.php'); 
+		//$items = PlantMacDB::getFullDetails_unit($assetunit);
+		//include('add_repair_details.php'); 
         break;
 case 'add_repair_record':
 	$error = 0;
