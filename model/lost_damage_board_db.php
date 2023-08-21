@@ -21,7 +21,7 @@ class lost_damage_boardDB {
     public static function addRecord($fileno, $sno, $number, $rank, $name, $unit, $post) {
         $db = Database::getDB();
         $query = "INSERT INTO lost_damage_board
-          (fileno, sno, number, rank, name, unit, post)
+          (`fileno`, `sno`, `number`, `rank`, `name`, `unit`, `post`)
           VALUES
           ('$fileno', '$sno', '$number', '$rank', '$name', '$unit', '$post')";
         try {
@@ -36,7 +36,7 @@ class lost_damage_boardDB {
 
     public static function updateRecord($id, $sno, $number, $rank, $name, $unit, $post) {
         $db = Database::getDB();
-        $query = "UPDATE lost_damage_board SET sno = '$sno', post = '$post', number = '$number', rank = '$rank', name = '$name', unit = '$unit' WHERE id ='$id'";
+        $query = "UPDATE lost_damage_board SET sno = '$sno', post = '$post', number = '$number', `rank` = '$rank', name = '$name', unit = '$unit' WHERE id ='$id'";
         $count = $db->exec($query);
         return $count;
     }

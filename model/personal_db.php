@@ -41,7 +41,7 @@ function get_All_Persons_SVC_only() {
 }
 function get_All_Persons_SVC_only_rank($rank) {
     global $db;
-  $query = "SELECT * FROM personal where dtype = '1' and rank = '$rank' ORDER BY tabl";
+  $query = "SELECT * FROM personal where dtype = '1' and `rank` = '$rank' ORDER BY tabl";
 	try {
         $statement = $db->prepare($query);
         $statement->execute();
@@ -69,7 +69,7 @@ function get_All_Persons_SVC_only_regi($regi) {
 }
 function get_All_Persons_SVC_only_regi_rank($regi,$rank) {
     global $db;
-  $query = "SELECT * FROM personal where dtype = '1' and regi = '$regi' and rank = '$rank' ORDER BY tabl";
+  $query = "SELECT * FROM personal where dtype = '1' and regi = '$regi' and `rank` = '$rank' ORDER BY tabl";
 	try {
         $statement = $db->prepare($query);
         $statement->execute();
@@ -123,7 +123,7 @@ function get_All_Persons_Civil_only() {
 }
 function get_All_Persons_Retd_only_rank($rank) {
     global $db;
-  $query = "SELECT * FROM personal where dtype = '4' and rank = '$rank' ORDER BY tabl";
+  $query = "SELECT * FROM personal where dtype = '4' and `rank` = '$rank' ORDER BY tabl";
 	try {
         $statement = $db->prepare($query);
         $statement->execute();
@@ -151,7 +151,7 @@ function get_All_Persons_Retd_only_regi($regi) {
 }
 function get_All_Persons_Retd_only_regi_rank($regi,$rank) {
     global $db;
-  $query = "SELECT * FROM personal where dtype = '4' and regi = '$regi' and rank = '$rank' ORDER BY tabl";
+  $query = "SELECT * FROM personal where dtype = '4' and regi = '$regi' and `rank` = '$rank' ORDER BY tabl";
 	try {
         $statement = $db->prepare($query);
         $statement->execute();
@@ -424,7 +424,7 @@ function get_gift_org() {
 }
 function get_gift_rank() {
     global $db;
-	$query = "SELECT rank, count(*) as cnt, sum(lgift) as lg, sum(ggift) as gg FROM personal where dtype = '1' GROUP BY rank order by rank";
+	$query = "SELECT `rank`, count(*) as cnt, sum(lgift) as lg, sum(ggift) as gg FROM personal where dtype = '1' GROUP BY `rank` order by `rank`";
 	try {
         $statement = $db->prepare($query);
         $statement->execute();

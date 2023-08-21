@@ -36,7 +36,7 @@ class unitmembersDB {
 
     public static function updateRecord($id, $sno, $post, $number, $rank, $name, $telephone, $email, $fax, $fb, $skype) {
         $db = Database::getDB();
-        $query = "UPDATE unitmembers SET sno = '$sno', post = '$post', number = '$number', rank = '$rank', name = '$name', telephone = '$telephone', email = '$email', fax = '$fax', fb = '$fb', skype = '$skype' WHERE id ='$id'";
+        $query = "UPDATE unitmembers SET `sno` = '$sno', `post` = '$post', `number` = '$number', `rank` = '$rank', `name` = '$name', `telephone` = '$telephone', `email` = '$email', `fax` = '$fax', `fb` = '$fb', `skype` = '$skype' WHERE `id` ='$id'";   
         $count = $db->exec($query);
         return $count;
     }
