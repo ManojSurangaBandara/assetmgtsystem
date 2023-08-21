@@ -91,7 +91,7 @@ $("#sendbttn").click(function(){
                         <td><a href="index.php?action=add_unit_error&unit=<?php echo $exp['unitName']; ?>"><?php echo empty($exp['errortitle']) ? "Add Errors" : substr($exp['errortitle'], 0, 40); ?></a></td>
                         <td><?php echo $exp['email']; ?></td>
                         <td>
-                        <a href="mailto:<?php echo $exp['email']; ?>?subject=වකඅම - ජාලගත පරිගණක වැඩසටහන - හඳුනාගත් වැරදි පිළිබඳව දැනුවත් කිරීම.&body=ඔබ ඒකකය විසින් ස්ථාවර වත්කම් ජාලගත පරිගණක වැඩසටහන වෙත ඇතුලත් කර ඇති විස්තර වැරදි/අසම්පූර්ණ බවට හදුනාගෙන ඇත. එහෙයින් http://armynet.army.lk/assetmgtsystem/ වෙත ගොස් හැකි ඉක්මණින් නිවැරදි කර වකඅම වෙත දැනුම් දෙන්න.(This is an automatically generated E-Mail by AMS)"><button type="button">Send E-Mail</button></a>
+                        <a href="mailto:<?php echo $exp['email']; ?>?subject=වකඅම - ජාලගත පරිගණක වැඩසටහන - හඳුනාගත් වැරදි පිළිබඳව දැනුවත් කිරීම.&body=ඔබ ඒකකය විසින් ස්ථාවර වත්කම් ජාලගත පරිගණක වැඩසටහන වෙත ඇතුලත් කර ඇති විස්තර වැරදි/අසම්පූර්ණ බවට හදුනාගෙන ඇත. එහෙයින් https://armyapps.army.lk/assetmgtsystem/ වෙත ගොස් හැකි ඉක්මණින් නිවැරදි කර වකඅම වෙත දැනුම් දෙන්න.(This is an automatically generated E-Mail by AMS)"><button type="button">Send E-Mail</button></a>
 					</td>
 				</tr>
 				<?php 

@@ -56,7 +56,7 @@ function saveData()
 										<div><label for="errortitle" class="label">Error Title :</label><input type="text" class="text" name="errortitle"  id="errortitle" value ="<?php echo $errortitle; ?>" style="width:300px"/></div>
                                         <div><label for="errordetails" class="label">Error Details :</label><textarea rows="15" cols="80" name="errordetails"  id="errordetails"><?php echo $errordetails; ?></textarea></div>
 										<div><input type="submit" name="submit" id="submit" value="Add Error Details"></div>
-                                        <a href="mailto:<?php echo $email; ?>?subject=වකඅම - ජාලගත පරිගණක වැඩසටහන - හඳුනාගත් වැරදි පිළිබඳව දැනුවත් කිරීම.&body=ඔබ ඒකකය විසින් ස්ථාවර වත්කම් ජාලගත පරිගණක වැඩසටහන වෙත ඇතුලත් කර ඇති විස්තර වැරදි/අසම්පූර්ණ බවට හදුනාගෙන ඇත. එහෙයින් http://armynet.army.lk/assetmgtsystem/ වෙත ගොස් හැකි ඉක්මණින් නිවැරදි කර වකඅම වෙත දැනුම් දෙන්න. (This is an automatically generated E-Mail by AMS)"><button type="button">Send E-Mail</button></a>
+                                        <a href="mailto:<?php echo $email; ?>?subject=වකඅම - ජාලගත පරිගණක වැඩසටහන - හඳුනාගත් වැරදි පිළිබඳව දැනුවත් කිරීම.&body=ඔබ ඒකකය විසින් ස්ථාවර වත්කම් ජාලගත පරිගණක වැඩසටහන වෙත ඇතුලත් කර ඇති විස්තර වැරදි/අසම්පූර්ණ බවට හදුනාගෙන ඇත. එහෙයින් https://armyapps.army.lk/assetmgtsystem/ වෙත ගොස් හැකි ඉක්මණින් නිවැරදි කර වකඅම වෙත දැනුම් දෙන්න. (This is an automatically generated E-Mail by AMS)"><button type="button">Send E-Mail</button></a>
                                     </form> 
 						   </div>
                         </div>
