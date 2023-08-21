@@ -47,8 +47,8 @@ $(document).ready(function () {
 					<button><a href="<?php echo $exp['building_path']; ?>#toolbar=0" target="_blank">View Board Report</a></button>
 					<?php } ?>
 					</td>
-					<td><?php echo $exp['building_date']; ?></td>
-					<td><?php echo $exp['received_date']; ?></td>
+					<td><?php echo $exp['building_date'] == '0000-00-00 00:00:00' ? '' : $exp['building_date']; ?></td>
+					<td><?php echo $exp['received_date'] == '0000-00-00' ? '' : $exp['received_date']; ?></td>
 					<td><button><a href="index.php?action=board_report_ob_view&cyear=<?php echo $exp['cyear'];?>&assetunit=<?php echo $exp['assetunit'];?>&itemtype=building"><font color="DarkBlue">View</a></button></td>
 				</tr>
 				<?php $i++; ?>
