@@ -1888,7 +1888,7 @@ case 'update_unitmember':
 		'email' => $email,
 		'fax' => $fax,
 		'fb' => $fb,
-		'skype' => $skypee
+		'skype' => $skype
 	));
 	break;
 case 'destroy_unitmember':
