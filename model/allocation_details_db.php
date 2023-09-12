@@ -178,7 +178,7 @@ class allocation_detailsDB {
 		$query = "select ".$scale_assetunit." as qty from scale_catalogue where catalogueno = '$catalogueno'";
         $result = $db->query($query);
         $row = $result->fetch();
-        return $row['qty'];
+        return $row['qty'] ?? 0;
     }
 	
 	public static function getDetailsView() {

@@ -414,7 +414,7 @@ $("#copy_btn").click( function() {
 						<td><input type="checkbox" name="DGAHS_<?php echo $exp['id']; ?>" id="lDGAHS_<?php echo $exp['id']; ?>" value="<?php echo $exp['DGAHS']; ?>" <?php if($exp['DGAHS']==1) echo "checked=checked"; ?>></td>
 						<td><input type="checkbox" name="DAMS_<?php echo $exp['id']; ?>" id="lDAMS_<?php echo $exp['id']; ?>" value="<?php echo $exp['DAMS']; ?>" <?php if($exp['DAMS']==1) echo "checked=checked"; ?>></td>
 						<td><input type="checkbox" name="DADS_<?php echo $exp['id']; ?>" id="lDADS_<?php echo $exp['id']; ?>" value="<?php echo $exp['DADS']; ?>" <?php if($exp['DADS']==1) echo "checked=checked"; ?>></td>
-						<td><input type="checkbox" name="DAMPS_<?php echo $exp['id']; ?>" id="lDAMPS_<?php echo $exp['id']; ?>" value="<?php echo $exp['DAMPS']; ?>" <?php if($exp['DAMPS']==1) echo "checked=checked"; ?>></td>
+						<td><input type="checkbox" name="DAMPS_<?php echo $exp['id']; ?>" id="lDAMPS_<?php echo $exp['id']; ?>" value="<?php //echo $exp['DAMPS']; ?>" <?php //if($exp['DAMPS']==1) echo "checked=checked"; ?>></td>
 						<td><input type="checkbox" name="DAMM_<?php echo $exp['id']; ?>" id="lDAMM_<?php echo $exp['id']; ?>" value="<?php echo $exp['DAMM']; ?>" <?php if($exp['DAMM']==1) echo "checked=checked"; ?>></td>
 						<td><input type="checkbox" name="QMG_<?php echo $exp['id']; ?>" id="lQMG_<?php echo $exp['id']; ?>" value="<?php echo $exp['QMG']; ?>" <?php if($exp['QMG']==1) echo "checked=checked"; ?>></td>
 						<td><input type="checkbox" name="DAQ_<?php echo $exp['id']; ?>" id="lDAQ_<?php echo $exp['id']; ?>" value="<?php echo $exp['DAQ']; ?>" <?php if($exp['DAQ']==1) echo "checked=checked"; ?>></td>
@@ -521,7 +521,7 @@ $("#copy_btn").click( function() {
 						<td><input type="checkbox" name="DGAHS_<?php echo $exp['id']; ?>" id="bDGAHS_<?php echo $exp['id']; ?>" value="<?php echo $exp['DGAHS']; ?>" <?php if($exp['DGAHS']==1) echo "checked=checked"; ?>></td>
 						<td><input type="checkbox" name="DAMS_<?php echo $exp['id']; ?>" id="bDAMS_<?php echo $exp['id']; ?>" value="<?php echo $exp['DAMS']; ?>" <?php if($exp['DAMS']==1) echo "checked=checked"; ?>></td>
 						<td><input type="checkbox" name="DADS_<?php echo $exp['id']; ?>" id="bDADS_<?php echo $exp['id']; ?>" value="<?php echo $exp['DADS']; ?>" <?php if($exp['DADS']==1) echo "checked=checked"; ?>></td>
-						<td><input type="checkbox" name="DAMPS_<?php echo $exp['id']; ?>" id="bDAMPS_<?php echo $exp['id']; ?>" value="<?php echo $exp['DAMPS']; ?>" <?php if($exp['DAMPS']==1) echo "checked=checked"; ?>></td>
+						<td><input type="checkbox" name="DAMPS_<?php echo $exp['id']; ?>" id="bDAMPS_<?php echo $exp['id']; ?>" value="<?php //echo $exp['DAMPS']; ?>" <?php //if($exp['DAMPS']==1) echo "checked=checked"; ?>></td>
 						<td><input type="checkbox" name="DAMM_<?php echo $exp['id']; ?>" id="bDAMM_<?php echo $exp['id']; ?>" value="<?php echo $exp['DAMM']; ?>" <?php if($exp['DAMM']==1) echo "checked=checked"; ?>></td>
 						<td><input type="checkbox" name="QMG_<?php echo $exp['id']; ?>" id="bQMG_<?php echo $exp['id']; ?>" value="<?php echo $exp['QMG']; ?>" <?php if($exp['QMG']==1) echo "checked=checked"; ?>></td>
 						<td><input type="checkbox" name="DAQ_<?php echo $exp['id']; ?>" id="bDAQ_<?php echo $exp['id']; ?>" value="<?php echo $exp['DAQ']; ?>" <?php if($exp['DAQ']==1) echo "checked=checked"; ?>></td>

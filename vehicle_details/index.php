@@ -447,8 +447,8 @@ switch ($action) {
     case 'search_Disposal':
         $id = $_GET['id'];
         // $catalogueno = $_COOKIE['catalogueno'];
-        $searchby = $_COOKIE['searchby'];
-        $search = $_COOKIE['search'];
+        $searchby = $_COOKIE['searchby'] ?? "";
+        $search = $_COOKIE['search'] ?? "";
         $Vehicle = VehicleDB::getDetailsById($id);
 
         include('dbtovariable.php');
@@ -2899,7 +2899,7 @@ switch ($action) {
     case 'add_details_new':
         $slidebartype = 3;
 		$fundtype = $_GET['fundtype'];
-		include('add_details_new.php');
+		//include('add_details_new.php');
         break;	
     case 'getmainCategory':
 		$exps = ClassificationListDB::getmainCategory1($_GET['type']);
