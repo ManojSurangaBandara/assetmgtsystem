@@ -403,8 +403,9 @@ public static function getaaaDetails($assetscenter) {
         if 	($search) {
 			$querytext = $querytext." and ". $column ." LIKE '%$search%'"; }
 		if (($inputField1) && ($inputField1)){
-			$querytext = $querytext." and (purchasedDate BETWEEN '$inputField1' AND '$inputField2')"; }		
+			$querytext = $querytext." and (acquisitiondate BETWEEN '$inputField1' AND '$inputField2')"; }		
 		$query = "SELECT * FROM landdetails WHERE".$querytext." order by protocolOrder, identificationno";		
+        //echo $query;exit;
         try {
             $statement = $db->prepare($query);
             $statement->execute();
