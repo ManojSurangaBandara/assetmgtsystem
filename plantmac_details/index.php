@@ -271,7 +271,7 @@ switch ($action) {
         include('../view/findcategorybymaincategory.php');
         break;
     case 'findDescriptionByCategory':
-        $mainCategory = $_COOKIE["mainCategory"];
+        $mainCategory = $_COOKIE["mainCategory"] ?? "";
         //$mainCategory = $_REQUEST['mainCategory'];
         $itemCategory = $_GET['itemCategory'];
         setcookie('itemCategory', $itemCategory, time() + 3600);
@@ -280,7 +280,7 @@ switch ($action) {
         include('../view/finddescriptionbycategory.php');
         break;
     case 'findCataloguenoByDescription':
-        $mainCategory = $_COOKIE["mainCategory"];
+        $mainCategory = $_COOKIE["mainCategory"] ?? "";
         $itemCategory = $_COOKIE["itemCategory"];
         // $mainCategory = $_REQUEST['mainCategory'];
         // $itemCategory = $_REQUEST['itemCategory'];

@@ -92,7 +92,7 @@ switch ($action) {
                 display_db_error($error_message);
             }
             //     
-            //     $prov = new AssetsCenter($row['SN'], $row['unitName']);
+            //     $prov = new AssetsCenter($row['SN'] ?? "", $row['unitName'] ?? "");
             //     $provinces[] = $prov;
         }
         // $exps = get_users();
@@ -151,7 +151,7 @@ switch ($action) {
             $qry = "INSERT INTO members(firstname, lastname, login, passwd, place, level, centreName) VALUES('$fname','$lname','$login','" . md5($pw) . "','$place','$level','$centreName')";
             $result = @mysql_query($qry);
             //     
-            //     $prov = new AssetsCenter($row['SN'], $row['unitName']);
+            //     $prov = new AssetsCenter($row['SN'] ?? "", $row['unitName'] ?? "");
             //     $provinces[] = $prov;
         }
         // $exps = get_users();

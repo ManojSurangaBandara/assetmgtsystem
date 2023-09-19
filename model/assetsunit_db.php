@@ -8,7 +8,7 @@ class AssetsUnitDB {
         $result = $db->query($query);
         $provinces = array();
         foreach ($result as $row) {
-            $prov = new AssetsCenter($row['SN'], $row['unitName']);
+            $prov = new AssetsCenter($row['SN'] ?? "", $row['unitName'] ?? "");
             $provinces[] = $prov;
         }
         return $provinces;
@@ -33,7 +33,7 @@ class AssetsUnitDB {
 		$result = $db->query($query);
         $provinces = array();
         foreach ($result as $row) {
-            $prov = new AssetsCenter($row['SN'], $row['unitName']);
+            $prov = new AssetsCenter($row['SN'] ?? "", $row['unitName'] ?? "");
             if ($_SESSION['SESS_LEVEL'] == 6 || $_SESSION['SESS_LEVEL'] == 7 || $_SESSION['SESS_LEVEL'] == 8) {
                 if ($_SESSION['SESS_PLACE'] == $row['unitName']) {
                     $provinces[] = $prov;
@@ -55,7 +55,7 @@ class AssetsUnitDB {
         $result = $db->query($query);
         $provinces = array();
         foreach ($result as $row) {
-            $prov = new AssetsCenter($row['SN'], $row['unitName']);
+            $prov = new AssetsCenter($row['SN'] ?? "", $row['unitName'] ?? "");
                 $provinces[] = $prov;
         }
         return $provinces;
@@ -68,7 +68,7 @@ class AssetsUnitDB {
         $result = $db->query($query);
         $provinces = array();
         foreach ($result as $row) {
-            $prov = new AssetsCenter($row['SN'], $row['unitName']);
+            $prov = new AssetsCenter($row['SN'] ?? "", $row['unitName'] ?? "");
             $provinces[] = $prov;
         }
         return $provinces;
@@ -79,7 +79,7 @@ class AssetsUnitDB {
         $query = "SELECT * FROM `assetunit` WHERE unit_type = 0 and unitName = '$assetsUnit' order by sorder";
         $statement = $db->query($query);
         $row = $statement->fetch();
-        $centreID = new AssetsCenter($row['SN'], $row['centreID']);
+        $centreID = new AssetsCenter($row['SN'] ?? "", $row['centreID'] ?? "");
         return $centreID;
     }
 
@@ -88,7 +88,7 @@ class AssetsUnitDB {
         $query = "SELECT centreID FROM `assetunit` WHERE unit_type = 0 and unitName = '$assetsUnit' order by sorder";
         $statement = $db->query($query);
         $row = $statement->fetch();
-        //$centreID = new AssetsCenter($row['SN'], $row['centreID']);
+        //$centreID = new AssetsCenter($row['SN'] ?? "", $row['centreID'] ?? "");
         return $row['centreID'];
     }	
 	public static function getAllDetailsUnit($assetunit) {

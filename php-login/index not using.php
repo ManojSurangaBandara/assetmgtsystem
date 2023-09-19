@@ -61,7 +61,7 @@ switch ($action) {
             display_db_error($error_message);
         }
 	   //     
-       //     $prov = new AssetsCenter($row['SN'], $row['unitName']);
+       //     $prov = new AssetsCenter($row['SN'] ?? "", $row['unitName'] ?? "");
        //     $provinces[] = $prov;
         }
 	   // $exps = get_users();

@@ -8,7 +8,7 @@ class BoardOfSurvey_UnitDB {
         $result = $db->query($query);
         $provinces = array();
         foreach ($result as $row) {
-            $prov = new AssetsCenter($row['SN'], $row['unitName']);
+            $prov = new AssetsCenter($row['SN'] ?? "", $row['unitName'] ?? "");
             $provinces[] = $prov;
         }
         return $provinces;
@@ -30,7 +30,7 @@ class BoardOfSurvey_UnitDB {
 		$result = $db->query($query);
         $provinces = array();
         foreach ($result as $row) {
-            $prov = new AssetsCenter($row['SN'], $row['unitName']);
+            $prov = new AssetsCenter($row['SN'] ?? "", $row['unitName'] ?? "");
             if ($_SESSION['SESS_LEVEL'] == 6 || $_SESSION['SESS_LEVEL'] == 7 || $_SESSION['SESS_LEVEL'] == 8) {
                 if ($_SESSION['SESS_PLACE'] == $row['unitName']) {
                     $provinces[] = $prov;
@@ -52,7 +52,7 @@ class BoardOfSurvey_UnitDB {
         $result = $db->query($query);
         $provinces = array();
         foreach ($result as $row) {
-            $prov = new AssetsCenter($row['SN'], $row['unitName']);
+            $prov = new AssetsCenter($row['SN'] ?? "", $row['unitName'] ?? "");
                 $provinces[] = $prov;
         }
         return $provinces;
@@ -65,7 +65,7 @@ class BoardOfSurvey_UnitDB {
         $result = $db->query($query);
         $provinces = array();
         foreach ($result as $row) {
-            $prov = new AssetsCenter($row['SN'], $row['unitName']);
+            $prov = new AssetsCenter($row['SN'] ?? "", $row['unitName'] ?? "");
             $provinces[] = $prov;
         }
         return $provinces;
@@ -76,7 +76,7 @@ class BoardOfSurvey_UnitDB {
         $query = "SELECT * FROM `boardofsurvey_unit` WHERE unitName = '$assetsUnit' order by sorder";
         $statement = $db->query($query);
         $row = $statement->fetch();
-        $centreID = new AssetsCenter($row['SN'], $row['centreID']);
+        $centreID = new AssetsCenter($row['SN'] ?? "", $row['centreID'] ?? "");
         return $centreID;
     }
 	

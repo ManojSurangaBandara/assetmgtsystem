@@ -141,7 +141,7 @@ class TempDB {
         $result = $db->query($query);
         $provinces = array();
         foreach ($result as $row) {
-            $prov = new AssetsCenter($row['SN'], $row['unitName']);
+            $prov = new AssetsCenter($row['SN'] ?? "", $row['unitName'] ?? "");
             $provinces[] = $prov;
         }
         return $provinces;
@@ -154,7 +154,7 @@ class TempDB {
         $result = $db->query($query);
         $provinces = array();
         foreach ($result as $row) {
-            $prov = new AssetsCenter($row['SN'], $row['unitName']);
+            $prov = new AssetsCenter($row['SN'] ?? "", $row['unitName'] ?? "");
             $provinces[] = $prov;
         }
         return $provinces;
@@ -165,7 +165,7 @@ class TempDB {
         $query = "SELECT * FROM `assetunit` WHERE unitName = '$assetsUnit'";
         $statement = $db->query($query);
         $row = $statement->fetch();
-        $centreID = new AssetsCenter($row['SN'], $row['centreID']);
+        $centreID = new AssetsCenter($row['SN'] ?? "", $row['centreID'] ?? "");
         return $centreID;
     }
 	public static function getAssetsUnitsByCenterNew($assetscenter) {

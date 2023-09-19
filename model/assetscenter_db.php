@@ -13,20 +13,20 @@ class AssetsCenterDB {
 			foreach ($result as $row) {
 					 if ($row['protocollevel1'] == 25) {
 					 if ($tem <> $row['protocoltext2']) { 
-						$prov = new AssetsCenter($row['SN'], $row['protocoltext2']); 
+						$prov = new AssetsCenter($row['SN'] ?? "", $row['protocoltext2'] ?? ""); 
 					     $tem = $row['protocoltext2'];
 						 $provinces[] = $prov;
 					   } 
 					 } else {
 					 if ($tem <> $row['protocoltext1']) {	
-						$prov = new AssetsCenter($row['SN'], $row['protocoltext1']);  
+						$prov = new AssetsCenter($row['SN'] ?? "", $row['protocoltext1'] ?? "");  
 					   $tem = $row['protocoltext1'];
 					   $provinces[] = $prov;
 					} }
         }
 		
 		} else if ($_SESSION['SESS_LEVEL'] == 25) {
-			$prov = new AssetsCenter(1, $_SESSION['SESS_PROTOCOLT2']);
+			$prov = new AssetsCenter(1, $_SESSION['SESS_PROTOCOLT2'] ?? "");
 			$provinces[] = $prov;
 		} else if ($_SESSION['SESS_LEVEL'] == 5) {
 			$db = Database::getDB();
@@ -38,7 +38,7 @@ class AssetsCenterDB {
 			$cn = "";
 			foreach ($result as $row) { 
 				if ($row['centreName'] <> $cn) {
-					$prov = new AssetsCenter($row['id'], $row['centreName']); 
+					$prov = new AssetsCenter($row['id'] ?? "", $row['centreName'] ?? ""); 
 					$provinces[] = $prov;
 					$cn = $row['centreName'];
 				}
@@ -49,7 +49,7 @@ class AssetsCenterDB {
         $result = $db->query($query);
         $provinces = array();
         foreach ($result as $row) {
-            $prov = new AssetsCenter($row['id'], $row['centreName']);
+            $prov = new AssetsCenter($row['id'] ?? "", $row['centreName'] ?? "");
             if ($_SESSION['SESS_LEVEL'] == 6 || $_SESSION['SESS_LEVEL'] == 7 || $_SESSION['SESS_LEVEL'] == 8 || $_SESSION['SESS_LEVEL'] == 15 ) {
                 if ($_SESSION['SESS_CENTRE'] == $row['centreName']) {
                     $provinces[] = $prov;

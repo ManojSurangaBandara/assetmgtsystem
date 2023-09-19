@@ -8,7 +8,7 @@ class ClassificationListDB {
         $result = $db->query($query);
         $mainCategory = array();
         foreach ($result as $row) {
-            $prov = new AssetsCenter(1, $row['mainCategory']);
+            $prov = new AssetsCenter(1, $row['mainCategory'] ?? "");
             $mainCategory[] = $prov;
         }
         return $mainCategory;
@@ -36,7 +36,7 @@ class ClassificationListDB {
         $result = $db->query($query);
         $itemCategory = array();
         foreach ($result as $row) {
-            $prov = new AssetsCenter(1, $row['itemCategory']);
+            $prov = new AssetsCenter(1, $row['itemCategory'] ?? "");
             $itemCategory[] = $prov;
         }
         return $itemCategory;
@@ -73,7 +73,7 @@ class ClassificationListDB {
 		$result = $db->query($query);
         $mainCategory = array();
         foreach ($result as $row) {
-            $prov = new AssetsCenter(1, $row['itemDescription']);
+            $prov = new AssetsCenter(1, $row['itemDescription'] ?? "");
             $mainCategory[] = $prov;
         }
         return $mainCategory;
@@ -100,7 +100,7 @@ class ClassificationListDB {
         $result = $db->query($query);
         $catalogueno = array();
         foreach ($result as $row) {
-            $prov = new AssetsCenter(1, $row['catalogueno']);
+            $prov = new AssetsCenter(1, $row['catalogueno'] ?? "");
             $catalogueno[] = $prov;
         }
         return $catalogueno;
@@ -145,7 +145,7 @@ class ClassificationListDB {
         $result = $db->query($query);
         $make = array();
         foreach ($result as $row) {
-            $prov = new AssetsCenter(1, $row['make']);
+            $prov = new AssetsCenter(1, $row['make'] ?? "");
             $make[] = $prov;
         }
         return $make;
@@ -157,7 +157,7 @@ class ClassificationListDB {
         $result = $db->query($query);
         $modle = array();
         foreach ($result as $row) {
-            $prov = new AssetsCenter(1, $row['modle']);
+            $prov = new AssetsCenter(1, $row['modle'] ?? "");
             $modle[] = $prov;
         }
         return $modle;
@@ -169,7 +169,7 @@ class ClassificationListDB {
         $result = $db->query($query);
         $mainCategory = array();
         foreach ($result as $row) {
-            $prov = new AssetsCenter(1, $row['mainCategory']);
+            $prov = new AssetsCenter(1, $row['mainCategory'] ?? "");
             $mainCategory[] = $prov;
         }
         return $mainCategory;
@@ -181,7 +181,7 @@ class ClassificationListDB {
         $result = $db->query($query);
         $itemCategory = array();
         foreach ($result as $row) {
-            $prov = new AssetsCenter(1, $row['itemCategory']);
+            $prov = new AssetsCenter(1, $row['itemCategory'] ?? "");
             $itemCategory[] = $prov;
         }
         return $itemCategory;
@@ -194,7 +194,7 @@ class ClassificationListDB {
         $result = $db->query($query);
         $mainCategory = array();
         foreach ($result as $row) {
-            $prov = new AssetsCenter(1, $row['itemDescription']);
+            $prov = new AssetsCenter(1, $row['itemDescription'] ?? "");
             $mainCategory[] = $prov;
         }
         return $mainCategory;
@@ -206,7 +206,7 @@ class ClassificationListDB {
         $result = $db->query($query);
         $catalogueno = array();
         foreach ($result as $row) {
-            $prov = new AssetsCenter(1, $row['catalogueno']);
+            $prov = new AssetsCenter(1, $row['catalogueno'] ?? "");
             $catalogueno[] = $prov;
         }
         return $catalogueno;
