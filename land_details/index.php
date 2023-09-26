@@ -241,7 +241,7 @@ switch ($action) {
         $category = $_GET['category'];
         //assetsno = "";
         $assetsnos = LandCategoryDB::getAssetsnoByCategory($category);
-        setcookie('assetsno', $assetsnos->getId());
+        setcookie('assetsno', $assetsnos->getId() ?? "");
         include('../view/findassetsnobycategory.php');
         break;
 	case 'findAssetsnoByCategory_Ajax':

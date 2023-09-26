@@ -18,8 +18,8 @@ class LandCategoryDB {
         $query = "SELECT assetno, classification  FROM landclasification WHERE categoryName = '$category' and isdelete='0' ORDER BY categoryName";
        $statement = $db->query($query);
         $row = $statement->fetch();
-        $assetnos = new LandCategory($row['assetno'],
-                                     $row['classification']);
+        $assetnos = new LandCategory($row['assetno'] ?? "",
+                                     $row['classification'] ?? "");
         return $assetnos;
     }
 	
