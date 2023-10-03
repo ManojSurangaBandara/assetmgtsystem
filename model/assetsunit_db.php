@@ -159,7 +159,7 @@ class AssetsUnitDB {
         $query = "SELECT sorderwithcenter FROM assetunit WHERE unitName = '$unitName'";
         $result = $db->query($query);
         $row = $result->fetch();
-        $sorderwithcenter = $row['sorderwithcenter'];
+        $sorderwithcenter = $row['sorderwithcenter'] ?? "";
         return $sorderwithcenter;
     }
 	public static function centerupdatesorder($id, $abc) {

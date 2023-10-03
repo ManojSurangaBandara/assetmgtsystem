@@ -133,6 +133,7 @@ switch ($action) {
         setcookie('id', 0);
         $assetscenter = $_SESSION['SESS_CENTRE'];
         $assetunit = $_SESSION['SESS_PLACE'];
+        setcookie('assetsUnit', $assetunit);
         $mainCategory = "";
         $itemCategory = "";
         $itemDescription = "";
@@ -187,6 +188,7 @@ switch ($action) {
     case 'findAssetsUnitsByCenter':
         $assetscenter = $_GET['center'];
         $assetunit = "";
+        setcookie('assetsUnit', "");
         $assetunits = AssetsUnitDB::getAssetsUnitsByCenter($assetscenter, 1);
         include('../view/findassetsunitsbycenter.php');
         break;

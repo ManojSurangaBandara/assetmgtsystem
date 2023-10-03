@@ -193,6 +193,7 @@ switch ($action) {
         $error = 0;
         $assetscenter = $_SESSION['SESS_CENTRE'];
         $assetunit = $_SESSION['SESS_PLACE'];
+        setcookie('assetsUnit', $assetunit);
         $mainCategory = "";
         $itemCategory = "";
         $itemDescription = "";
@@ -247,6 +248,7 @@ switch ($action) {
         }
         setcookie('assetscenter', $assetscenter, time() + 3600);
         $assetunit = "";
+        setcookie('assetsUnit', "");
         $transferToUnit = "";
         if ($transfer == 1) {
             $assetunits = AssetsUnitDB::getAssetsUnitsByCenterAll($assetscenter);
@@ -319,7 +321,7 @@ switch ($action) {
         setcookie('assetsUnit', $_GET['unit']);
         break;
     case 'generateCodeList':
-        $centreID = AssetsUnitDB::getCentreIDByAssetsUnit($_COOKIE["assetsUnit"]);
+        $centreID = AssetsUnitDB::getCentreIDByAssetsUnit($_COOKIE["assetsUnit"] ?? "");
 		if ($_COOKIE["groupId"] == 0) {
             $counterIdD = PlantMacDB::getCounterId($_COOKIE["assetsUnit"], $_COOKIE["catalogueno"]);
         } else {

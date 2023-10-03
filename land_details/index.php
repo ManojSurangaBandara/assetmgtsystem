@@ -166,6 +166,9 @@ switch ($action) {
         $id = 0;
         $identificationnoTem = "";
         setcookie('id', 0);
+        $assetscenter = $_SESSION['SESS_CENTRE'];
+        $assetunit = $_SESSION['SESS_PLACE'];
+        setcookie('assetsUnit', $assetunit);
         include('add_land_details.php');
         break;
     case 'Add_Land_Details_Ajax':
@@ -234,6 +237,7 @@ switch ($action) {
     case 'findAssetsUnitsByCenter':
         $assetscenter = $_GET['center'];
         $assetunit = "";
+        setcookie('assetsUnit', "");
         $assetunits = AssetsUnitDB::getAssetsUnitsByCenter($assetscenter, 1);
         include('../view/findassetsunitsbycenter.php');
         break;
@@ -416,11 +420,13 @@ switch ($action) {
         $gsdivisions = GsDivisionDB::getDivisionsByDS($dsDivision);
         $landcategorys = LandCategoryDB::getLandCategorys();
 		$count = LandDB::Savesorderwithcenter($sorderwithcenter, $identificationno);
-		if ($proto['protocollevel1'] == 25) {
-				$count = LandDB::Savesprotocol($proto['protocoltext2'], $proto['protocoltext2'], $proto['protocollevel5'], $identificationno);	
-		} else {
-				$count = LandDB::Savesprotocol($proto['protocoltext1'], $proto['protocoltext2'], $proto['protocollevel5'], $identificationno);
-		}
+		if ($_COOKIE["assetsUnit"] ?? "") {
+            if ($proto['protocollevel1'] == 25) {
+                    $count = LandDB::Savesprotocol($proto['protocoltext2'], $proto['protocoltext2'], $proto['protocollevel5'], $identificationno);	
+            } else {
+                    $count = LandDB::Savesprotocol($proto['protocoltext1'], $proto['protocoltext2'], $proto['protocollevel5'], $identificationno);
+            }
+        }
 		$title = array("ADD - Land Details","ඉඩම් විස්තර ඇතුලත් කිරීම","காணியின் நுழைய");
         include('add_land_details.php');
         break;

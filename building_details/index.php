@@ -121,6 +121,7 @@ switch ($action) {
         setcookie('id', 0);
         $assetscenter = $_SESSION['SESS_CENTRE'];
         $assetunit = $_SESSION['SESS_PLACE'];
+        setcookie('assetsUnit', $assetunit);
         $province = "";
         $district = "";
         $dsDivision = "";
@@ -257,6 +258,7 @@ switch ($action) {
     case 'findAssetsUnitsByCenter':
         $assetscenter = $_GET['center'];
         $assetunit = "";
+        setcookie('assetsUnit', "");
         $assetunits = AssetsUnitDB::getAssetsUnitsByCenter($assetscenter, 1);
         include('../view/findassetsunitsbycenter.php');
         break;
@@ -382,7 +384,7 @@ switch ($action) {
         $validate->text('buildingType', $buildingType);
         //$validate->text('rentAndRate', $rentAndRate);
         $validate->text('natureOwnership', $natureOwnership);
-        //$validate->text('ownership', $ownership);
+        $validate->text('ownership', $ownership);
         //$validate->text('regOwnerName', $regOwnerName);
         $validate->text('classificationno', $classificationno);
         $validate->text('identificationno', $identificationno);
@@ -440,11 +442,14 @@ switch ($action) {
         $Items = BuildingDB::getBuildingNotApproved();
         $Items_Sub = BuildingDB::getBuildingApproveRejected();
 		$count = BuildingDB::Savesorderwithcenter($sorderwithcenter, $identificationno);
-		if ($proto['protocollevel1'] == 25) {
+		if ($_COOKIE["assetsUnit"] ?? "") {
+            if ($proto['protocollevel1'] == 25) {
 				$count = BuildingDB::Savesprotocol($proto['protocoltext2'], $proto['protocoltext2'], $proto['protocollevel5'], $identificationno);
-		} else {
+		    } else {
 				$count = BuildingDB::Savesprotocol($proto['protocoltext1'], $proto['protocoltext2'], $proto['protocollevel5'], $identificationno);
-		}
+		    }
+        }
+        
         include('add_building_details.php');
         break;
     case 'List_Approved':

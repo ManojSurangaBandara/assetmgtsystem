@@ -194,6 +194,7 @@ switch ($action) {
         $error = 0;
         $assetscenter = $_SESSION['SESS_CENTRE'];
         $assetunit = $_SESSION['SESS_PLACE'];
+        setcookie('assetsUnit', $assetunit);
         $mainCategory = "";
         $itemCategory = "";
         $itemDescription = "";
@@ -251,6 +252,7 @@ switch ($action) {
         }
         setcookie('assetscenter', $assetscenter, time() + 3600);
 		$assetunit = "";
+        setcookie('assetsUnit', "");
 		$transferToUnit = "";
         if ($transfer == 1) {
             $assetunits = AssetsUnitDB::getAssetsUnitsByCenterAll($assetscenter);
