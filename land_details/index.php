@@ -276,6 +276,7 @@ switch ($action) {
 		//if (isset($_COOKIE["ownership"])) {
 		//if (isset($_COOKIE["counterID"])) {
 		//if (isset($_COOKIE["assetsno"])) {
+        $_COOKIE["assetsUnit"] = $_COOKIE["assetsUnit"] ?? "";
 		$centreID = AssetsUnitDB::getCentreIDByAssetsUnit($_COOKIE["assetsUnit"]);
         $catalohuenos = DistrictDB::getCatlognoByDistrict(4, $_COOKIE["district"]);
         $catalohueno = ($_COOKIE["ownership"] == 'ARMY LAND' ? $catalohuenos->getId() : $catalohuenos->getName());

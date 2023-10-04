@@ -296,6 +296,7 @@ switch ($action) {
         setcookie('assetsUnit', $_GET['unit']);
         break;
     case 'generateCode':
+        $_COOKIE["assetsUnit"] = $_COOKIE["assetsUnit"] ?? "";  
         $centreID = AssetsUnitDB::getCentreIDByAssetsUnit($_COOKIE["assetsUnit"]);
         $catalohuenos = DistrictDB::getCatlognoByDistrict(5, $_COOKIE["district"]);
         $catalohueno = ($_COOKIE["ownership"] == 'ARMY BUILDING' ? $catalohuenos->getId() : $catalohuenos->getName());

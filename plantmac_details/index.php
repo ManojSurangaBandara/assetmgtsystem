@@ -321,6 +321,7 @@ switch ($action) {
         setcookie('assetsUnit', $_GET['unit']);
         break;
     case 'generateCodeList':
+        $_COOKIE["assetsUnit"] = $_COOKIE["assetsUnit"] ?? "";
         $centreID = AssetsUnitDB::getCentreIDByAssetsUnit($_COOKIE["assetsUnit"] ?? "");
 		if ($_COOKIE["groupId"] == 0) {
             $counterIdD = PlantMacDB::getCounterId($_COOKIE["assetsUnit"], $_COOKIE["catalogueno"]);

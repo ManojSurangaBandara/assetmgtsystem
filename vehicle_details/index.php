@@ -237,6 +237,7 @@ switch ($action) {
         break;
 
     case 'generateCode':
+        $_COOKIE["assetsUnit"] = $_COOKIE["assetsUnit"] ?? "";
         $centreID = AssetsUnitDB::getCentreIDByAssetsUnit($_COOKIE["assetsUnit"]);
         if ($_COOKIE["id"] == 0) {
             $counterIdD = VehicleDB::getCounterId($_COOKIE["assetsUnit"]);
