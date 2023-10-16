@@ -1,2 +1,2376 @@
-<?php if(!function_exists('gzinflate')){die('Error: You need Zlib library to run this application.');} ?>
-<?php function AkWeSCqjIKPYnXooxfMM($tCHavjFGoR){$r=base64_decode("Z3ppbmZsYXRlKGJhc2U2NF9kZWNvZGUoJHRDSGF2akZHb1IpKQ==");return eval("return $r;");} eval('?>'.AkWeSCqjIKPYnXooxfMM('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//r/b9H751///o///Z//Aw==').'<?php '); ?>
+<?php
+if(str_replace( '\\', '/',$_SERVER['DOCUMENT_ROOT']) == SERVER_ROOT) { define('ABS_PATH', '');}
+else { define('ABS_PATH', SERVER_ROOT); }
+
+if(!session_id()){ session_start();}
+
+class C_DataGrid{
+    public $jq_colModel;		
+    public $before_script_end;     
+
+    
+    private $sql;
+    private $scSszsDyqcqvyLtAFSSN;
+    private $zrXrgBcJRXotwTescYJA; // SQL KEY
+    private $eaIqmgLgnItFsoWAEdnn;          
+    private $hsYgbsoKPwcvUUbPQzPB;       
+    private $pVawonXnNSHaEXaDfFHI;       
+    private $zvafcTTQXCrTldoMphnk;        
+    private $SACPlesooIgyQwzUvygD;      
+    private $PANnnZOkwjpmkOkVvVwC;      
+    private $UOhOtcBpeAFtRyciFDDy;         
+    private $RoUowslhIdwEIaInViMf;     
+    private $XIBGEbyMabbfmxNHrxXx;     
+    private $fUcwMLVOIobtdZjLtYtg;     
+    private $MQJXbVXNRTXanHMYJacp;          
+    private $col_custom;        
+    private $col_custom_css;    
+    private $col_wysiwyg;		
+    private $col_default;		
+    private $col_frozen;		
+    private $iLvxWIxnUzJrEhpjrao;		
+    private $col_aligns;		
+    private $col_edit_dimension; 
+    private $col_fileupload;		
+    private $col_virtual;		
+    private $col_customrule;	
+    private $col_autocomplete;  
+
+    private $sql_filter;		
+    private	$XcxAhvGrghbgRhQjASCk;
+    private	$HiDeeAQGDLlArSxADilW ;
+    private $uafWxTshdmADXTMDTklI;
+
+
+    
+    private $KTlAoREvwiABqfDJVNEw; // table name
+    private $OBdYQDhAdXqrTqVMLXyb;
+    private $ULeutgFTmojSwEYDKora;
+    private $nvfTJfEVtLSTDFHxmGdO;
+    private $EGokLNhbxsytTlNLuek;
+    private $UOyOGKiRwfFitEOKaDJg;
+    private $MmoDPgJDqiHLGduvILCl;
+    private $zutaWmUZBdGUnnsHgZMX;
+    private $uRCwctSIiIQCRgDGpcne;
+    private $vRWAzQRwIXUwFkpzVjxw;
+    private $JsbbcbmspLiBhqINTbUk;    
+    private $yGYEtEnxhjjKkhgYHNDY;    
+    private $KRDXLIBrFRHCoeSOqjkA;      
+    private $xuQFNnhvcyHtqnGcBhMG;
+    private $GJJDFKJuwbvUepXRNCmw; 
+    private $jEJekHnIUYJyXZFMfWGx;
+    private $cXrNZkDGJCpCjSjwZbTO;
+    private $jq_group_summary_show;
+    private $jq_direction;
+    private $zHRNpIMrDVAgrQsvVtZE;
+    
+
+    private $zmVukhkanNsqMLAgNHo;
+    private $QLEPwSsWCvOjPDcRTbFo;       
+    private $MwLBVGpewctwYSzPznkm;        
+    private $vZcbjVPOYxEYkSeDHXxE;   
+    private $OlSUUmiesJldiNOcVbEw;        
+    private $LmsrUIXSpQotFugJMyyw;     
+    private $ANSonKeeYyNtCvcWYFGw;       
+    private $wUjfgQlaWGldXCojLeoG;       
+    private $eoFwRjfefzfopfXkQgE;         
+
+    private $MnPIiIfPbTYyGDsWpmLc;     
+    private $JSPfsgttAJEyMQrsZiqu;       
+
+    
+    private $sWVCTvNSQeMPkSkdEAsV;         
+
+    
+    private $idggOwYvEktONuEdoPoK;
+    private $_num_fields;
+
+    private $BQAYLNvLQdSuZPEhnuKm;
+    private $MztodXfJgEiCmKNScggI;		
+    private $cFgBYpzYPivTwUZtqspi;		
+    private $edit_mode;         
+    private $jSlnDHdHaQtmqMFOEynQ;      
+    private $ohaoHLBeaYiXgPPJlnbX;    
+    private $advanced_search;
+    private $QsgAuJpMPrCveLqQnfKa;           
+    private $hwVTcgcSWcxkcCOEhJk;        
+    private $WLCxhqvYPTTeDtasSuUU;        
+    private $DgOKQsyjASLDMkpkbTHk;
+    private $auto_resize;		
+    private $wRjrMkifPQphcoKIsOId;			
+
+    public $export_type;       
+    public $oIDYHZWuwSBAAxdLqWIs;
+    public $debug;              
+    public $db;
+    public $db_connection = array();
+    public $xAalFtwJwMQLkdTRRULE;        
+    public $obj_md = array();             
+    public $data_local = array();	
+
+    
+    private $jq_rowConditions;
+    private $jq_cellConditions;
+
+    
+    private $script_includeonce;	
+    private $script_body;			
+    private $script_editEvtHandler;	
+    
+    private $hAQEPLwsYfgQOCngLkto;		
+
+    private $cust_col_properties;		
+    private $cust_grid_properties;		
+    public  $cust_prop_jsonstr;   
+    private $DDcSdMlljylessezxSly;		
+    private $grid_methods;      
+
+    private $edit_file;           
+
+    
+    static $has_autocomplete;
+    static $has_wysiwyg;
+    static $has_fileupload;
+    static $DALqmNGeWqqAaVPyQNad;
+
+    
+    
+    
+    
+    
+    
+    
+    public function __construct($sql, $zrXrgBcJRXotwTescYJA=array(), $scSszsDyqcqvyLtAFSSN='', $db_connection= array()){ // query, primary key, table name
+
+        if(!is_array($zrXrgBcJRXotwTescYJA)) $zrXrgBcJRXotwTescYJA = array($zrXrgBcJRXotwTescYJA); 
+		$zrXrgBcJRXotwTescYJA = array_slice($zrXrgBcJRXotwTescYJA,0,1);
+		
+        $this->KTlAoREvwiABqfDJVNEw  = ($scSszsDyqcqvyLtAFSSN == '')?'list1':$scSszsDyqcqvyLtAFSSN;
+
+        if(!is_array($sql)){
+            
+            if(empty($db_connection)) {
+                $this->db = new C_DataBase(PHPGRID_DB_HOSTNAME, PHPGRID_DB_USERNAME, PHPGRID_DB_PASSWORD, PHPGRID_DB_NAME, PHPGRID_DB_TYPE,PHPGRID_DB_CHARSET);
+            }
+            
+            else {
+                $this->db = new C_DataBase($db_connection["hostname"],
+                    $db_connection["username"],
+                    $db_connection["password"],
+                    $db_connection["dbname"],
+                    $db_connection["dbtype"],
+                    $db_connection["dbcharset"]);
+                $this->db_connection = $db_connection;
+            }
+            $this->ULeutgFTmojSwEYDKora  = 'json';
+            $this->OBdYQDhAdXqrTqVMLXyb       = '"'. ABS_PATH .'/data.php?dt='. $this->ULeutgFTmojSwEYDKora .'&gn='. $this->KTlAoREvwiABqfDJVNEw .'"';  
+            $this->nvfTJfEVtLSTDFHxmGdO     = 'GET';
+        }else{
+            $this->db = new C_DataArray($sql);
+            $this->ULeutgFTmojSwEYDKora = 'local';
+            $this->data_local = $sql;
+        }
+
+        $this->sql          = $sql;
+
+        $this->zrXrgBcJRXotwTescYJA      = $zrXrgBcJRXotwTescYJA;
+
+        
+        $this->eaIqmgLgnItFsoWAEdnn     = null;
+        $this->scSszsDyqcqvyLtAFSSN    = $scSszsDyqcqvyLtAFSSN;
+
+        
+        
+        
+
+        
+        $this->pVawonXnNSHaEXaDfFHI          = array();
+        $this->zvafcTTQXCrTldoMphnk           = array();
+        $this->SACPlesooIgyQwzUvygD         = array();
+        $this->PANnnZOkwjpmkOkVvVwC         = array();
+        $this->UOhOtcBpeAFtRyciFDDy            = array();
+        $this->RoUowslhIdwEIaInViMf        = array();
+        $this->hsYgbsoKPwcvUUbPQzPB          = array();
+        $this->XIBGEbyMabbfmxNHrxXx        = array();
+        $this->col_formats          = array();
+        $this->iLvxWIxnUzJrEhpjrao           = array();
+        $this->col_aligns           = array();
+        $this->col_wysiwyg			= array();
+        $this->col_default			= array();
+        $this->col_frozen			= array();
+        $this->col_edit_dimension	= array();
+        $this->col_fileupload		= array();
+        $this->col_virtual			= array();
+        $this->col_customrule		= array();
+        $this->col_autocomplete     = array();
+
+        $this->XcxAhvGrghbgRhQjASCk=array();
+        $this->MQJXbVXNRTXanHMYJacp             = array();
+
+        
+        $this->EGokLNhbxsytTlNLuek  = array();
+        $this->jq_colModel  = array();
+        $this->UOyOGKiRwfFitEOKaDJg = '"#'. $this->KTlAoREvwiABqfDJVNEw .'_pager1"';  
+        $this->MmoDPgJDqiHLGduvILCl    = 20;
+        $this->zutaWmUZBdGUnnsHgZMX   = array(10, 20, 30, 50, 100);
+        $this->uRCwctSIiIQCRgDGpcne  = 1;	
+        $this->vRWAzQRwIXUwFkpzVjxw = 'asc';
+        $this->JsbbcbmspLiBhqINTbUk = true;
+        $this->yGYEtEnxhjjKkhgYHNDY = false;
+        $this->KRDXLIBrFRHCoeSOqjkA = true;
+        $this->xuQFNnhvcyHtqnGcBhMG     = 1000;
+        $this->GJJDFKJuwbvUepXRNCmw    = '100%';
+        $this->zmVukhkanNsqMLAgNHo   = $scSszsDyqcqvyLtAFSSN .'&nbsp;';
+        $this->MwLBVGpewctwYSzPznkm   = true;
+        $this->vZcbjVPOYxEYkSeDHXxE = 22;
+        $this->QLEPwSsWCvOjPDcRTbFo  = false;
+        $this->OlSUUmiesJldiNOcVbEw   = '';
+        $this->LmsrUIXSpQotFugJMyyw = false;
+        $this->jq_shrinkToFit  = true;
+        $this->eoFwRjfefzfopfXkQgE    = false;
+        $this->MnPIiIfPbTYyGDsWpmLc= false;
+        $this->wUjfgQlaWGldXCojLeoG  = 'Loading phpGrid Lite...';
+        $this->JSPfsgttAJEyMQrsZiqu  = true;
+        $this->jEJekHnIUYJyXZFMfWGx  = false;
+        $this->jq_group_summary_show=false;
+        $this->jq_direction='ltr';
+        $this->zHRNpIMrDVAgrQsvVtZE='false';
+        $this->HiDeeAQGDLlArSxADilW ='';
+        $this->uafWxTshdmADXTMDTklI=false;
+        $this->jq_is_group_summary=false;
+
+        
+        $this->sWVCTvNSQeMPkSkdEAsV           = array('is_resizable'=>false,'min_width'=>300,'min_height'=>100);
+
+        $this->idggOwYvEktONuEdoPoK            = 0;            
+        $this->_num_fields          = 0;            
+        $this->BQAYLNvLQdSuZPEhnuKm             = 'phpGrid(v6.1) {jqGrid:v4.5.2, jQuery:v1.9.0, jQuery UI:1.10.0}';
+        $this->QsgAuJpMPrCveLqQnfKa              = null;
+        $this->MztodXfJgEiCmKNScggI			= 450;
+        $this->cFgBYpzYPivTwUZtqspi			= '100%';		
+        $this->hwVTcgcSWcxkcCOEhJk           = array('hover'=>'#F2FC9C', 'highlight'=>'yellow', 'altrow'=>'#F5FAFF');
+        $this->WLCxhqvYPTTeDtasSuUU           = (defined('THEME'))?THEME:'start';
+        $this->DgOKQsyjASLDMkpkbTHk               = 'en';
+        $this->auto_resize			= false;
+        $this->wRjrMkifPQphcoKIsOId				= false;
+        $this->export_type			= null;
+        $this->oIDYHZWuwSBAAxdLqWIs			= ABS_PATH .'/export.php?dt='. $this->ULeutgFTmojSwEYDKora .'&gn='.$this->KTlAoREvwiABqfDJVNEw;
+        $this->edit_mode			= 'NONE';
+        $this->jSlnDHdHaQtmqMFOEynQ			= null;
+        $this->ohaoHLBeaYiXgPPJlnbX		= false;
+        $this->advanced_search		= false;
+        $this->debug                = C_Utility::is_debug();
+        $this->cust_prop_jsonstr	= '';
+        $this->xAalFtwJwMQLkdTRRULE			= null;
+        $this->obj_md				= null;
+
+        $this->jq_rowConditions		= array();
+        $this->jq_cellConditions	= array();
+
+        $this->script_includeonce	= '';
+        $this->script_body			= '';
+        $this->script_editEvtHandler= '';
+        
+        $this->hAQEPLwsYfgQOCngLkto	= '';
+
+        $this->cust_col_properties	= array();
+        $this->cust_grid_properties = array();
+        $this->grid_methods         = array();
+
+        $this->edit_file    = 'edit.php';
+
+        $this->before_script_end    = '';
+    }
+
+    public function returnObj() {return $this;}
+    
+    public function uiFOoOCrEJCCgoHjSujn(){
+        $hoHyjUUsVpLuViLoORDQ            = $this->db;
+
+
+
+        $this->idggOwYvEktONuEdoPoK    = $hoHyjUUsVpLuViLoORDQ->UrubXhEWkKBpqgBEgzuK($hoHyjUUsVpLuViLoORDQ->EtrPEtuENDzSLqqlwjdu($this->sql));
+        $results            = $hoHyjUUsVpLuViLoORDQ->wCcQTuVYgSckNyasyuoU($this->sql,1, 1);
+        $this->_num_fields  = $hoHyjUUsVpLuViLoORDQ->num_fields($results);
+        $this->set_colNames($results);
+        $this->set_colModel($results);
+
+        
+        $_SESSION[GRID_SESSION_KEY.'_'.$this->KTlAoREvwiABqfDJVNEw.'_sql'] = $this->sql;
+        $_SESSION[GRID_SESSION_KEY.'_'.$this->KTlAoREvwiABqfDJVNEw.'_sql_key'] = serialize($this->zrXrgBcJRXotwTescYJA);
+        $_SESSION[GRID_SESSION_KEY.'_'.$this->KTlAoREvwiABqfDJVNEw.'_sql_fkey'] = $this->eaIqmgLgnItFsoWAEdnn;
+        $_SESSION[GRID_SESSION_KEY.'_'.$this->KTlAoREvwiABqfDJVNEw.'_sql_table'] = $this->scSszsDyqcqvyLtAFSSN;
+        $_SESSION[GRID_SESSION_KEY.'_'.$this->KTlAoREvwiABqfDJVNEw.'_sql_filter'] = $this->sql_filter;
+        $_SESSION[GRID_SESSION_KEY.'_'.$this->KTlAoREvwiABqfDJVNEw.'_db_connection'] = serialize($this->db_connection);
+        $_SESSION[GRID_SESSION_KEY.'_'.$this->KTlAoREvwiABqfDJVNEw.'_has_multiselect'] = $this->yGYEtEnxhjjKkhgYHNDY;
+        $_SESSION[GRID_SESSION_KEY.'_'.$this->KTlAoREvwiABqfDJVNEw.'_export_type'] = $this->export_type;
+        $_SESSION[GRID_SESSION_KEY.'_'.$this->KTlAoREvwiABqfDJVNEw.'_col_titles'] = serialize($this->zvafcTTQXCrTldoMphnk);
+        $_SESSION[GRID_SESSION_KEY.'_'.$this->KTlAoREvwiABqfDJVNEw.'_col_hiddens'] = serialize($this->pVawonXnNSHaEXaDfFHI);
+    }
+    public function set_colNames($results){
+        $hoHyjUUsVpLuViLoORDQ = $this->db;
+        $col_names = array();
+        for($i = 0; $i < $this->_num_fields; $i++) {
+            $EzmmHCfAcURpMWcxsfOx = $hoHyjUUsVpLuViLoORDQ->field_name($results, $i);
+            
+            if(isset($this->zvafcTTQXCrTldoMphnk[$EzmmHCfAcURpMWcxsfOx]))
+                $col_names[] = $this->zvafcTTQXCrTldoMphnk[$EzmmHCfAcURpMWcxsfOx];
+            else
+                $col_names[] = $EzmmHCfAcURpMWcxsfOx;
+        }
+
+        
+        if(!empty($this->col_virtual)){
+            foreach($this->col_virtual as $key => $value){
+                $col_names[] = $this->col_virtual[$key]['title'];
+            }
+        }
+
+        $this->EGokLNhbxsytTlNLuek = $col_names;
+
+        return $col_names;
+    }
+
+    public function WZDefOSSOfuCQGHobwYF(){
+        return $this->EGokLNhbxsytTlNLuek;
+    }
+
+    public function set_colModel($results){
+        $hoHyjUUsVpLuViLoORDQ = $this->db;
+        $dSuzQJHDTtuAvmPueaOu = array();
+        for($i=0;$i<$this->_num_fields;$i++){
+            $EzmmHCfAcURpMWcxsfOx = $hoHyjUUsVpLuViLoORDQ->field_name($results, $i);
+            $oUJWESFVLGbIBySduQeh = $hoHyjUUsVpLuViLoORDQ->EwgdjJxDBHtjNonvuUPA($results, $i);
+
+            $cols = array();
+            $cols['name'] = $EzmmHCfAcURpMWcxsfOx;
+            $cols['index'] = $EzmmHCfAcURpMWcxsfOx;
+            $cols['hidden'] = isset($this->pVawonXnNSHaEXaDfFHI[$EzmmHCfAcURpMWcxsfOx]);
+
+            
+            if(isset($this->col_frozen[$EzmmHCfAcURpMWcxsfOx])){
+                $cols['frozen'] = $this->col_frozen[$EzmmHCfAcURpMWcxsfOx];
+            }
+            
+            if(isset($this->iLvxWIxnUzJrEhpjrao[$EzmmHCfAcURpMWcxsfOx])){
+                $cols['width'] = $this->iLvxWIxnUzJrEhpjrao[$EzmmHCfAcURpMWcxsfOx]['width'];
+            }
+
+            
+            if(isset($this->col_aligns[$EzmmHCfAcURpMWcxsfOx])) {
+                $cols['align'] = $this->col_aligns[$EzmmHCfAcURpMWcxsfOx]['align'];
+            }
+
+            
+            if(isset($this->XcxAhvGrghbgRhQjASCk[$EzmmHCfAcURpMWcxsfOx])){
+                $cols['summaryType'] = $this->XcxAhvGrghbgRhQjASCk[$EzmmHCfAcURpMWcxsfOx]['summaryType'];
+
+            }
+            
+            if(isset($this->XIBGEbyMabbfmxNHrxXx[$EzmmHCfAcURpMWcxsfOx])){
+                $cols['edittype'] = $this->XIBGEbyMabbfmxNHrxXx[$EzmmHCfAcURpMWcxsfOx]['type'];
+            }else{
+                $cols['edittype'] = ($oUJWESFVLGbIBySduQeh=='X')?'textarea':'text';
+            }
+
+            
+            
+            
+            
+            switch($this->edit_mode)    {
+                case 'CELL':
+                case 'INLINE':
+                    $cols['editable'] = !in_array($EzmmHCfAcURpMWcxsfOx, $this->SACPlesooIgyQwzUvygD);
+                    break;
+                case 'FORM':
+                    $cols['editable'] = true;
+                    break;
+                default:
+                    $cols['editable'] = false;
+            }
+
+            
+            
+            
+            
+            
+            $editoptions = array();
+            if(($oUJWESFVLGbIBySduQeh=='D'||$oUJWESFVLGbIBySduQeh=='T') &&
+                !in_array($EzmmHCfAcURpMWcxsfOx, $this->SACPlesooIgyQwzUvygD)){   
+                $editoptions['dataInit'] = '###function(el){$(el).datepicker({changeMonth: true, changeYear: true,dateFormat:\''.
+                    (isset($this->col_formats[$EzmmHCfAcURpMWcxsfOx]['date'])?
+                        $this->col_formats[$EzmmHCfAcURpMWcxsfOx]['date']['datePickerFormat']:
+                        'yy-mm-dd').'\'});}###';
+            }elseif(isset($this->XIBGEbyMabbfmxNHrxXx[$EzmmHCfAcURpMWcxsfOx])){
+                if($this->XIBGEbyMabbfmxNHrxXx[$EzmmHCfAcURpMWcxsfOx]['type'] == 'file'){
+                    $editoptions['enctype'] = "multipart/form-data";
+                }else{
+                    if($this->XIBGEbyMabbfmxNHrxXx[$EzmmHCfAcURpMWcxsfOx]['value']!=null){
+                        $editoptions['value'] = $this->XIBGEbyMabbfmxNHrxXx[$EzmmHCfAcURpMWcxsfOx]['value'];
+                    }
+                    
+                    
+                    if(isset($this->XIBGEbyMabbfmxNHrxXx[$EzmmHCfAcURpMWcxsfOx]) && ($this->XIBGEbyMabbfmxNHrxXx[$EzmmHCfAcURpMWcxsfOx]['type']=='select')){
+                        if($this->XIBGEbyMabbfmxNHrxXx[$EzmmHCfAcURpMWcxsfOx]['multiple']!=null){
+                            $editoptions['multiple'] = $this->XIBGEbyMabbfmxNHrxXx[$EzmmHCfAcURpMWcxsfOx]['multiple'];
+                        }
+                        if($this->XIBGEbyMabbfmxNHrxXx[$EzmmHCfAcURpMWcxsfOx]['dataUrl']!=null){
+                            $editoptions['dataUrl']  = $this->XIBGEbyMabbfmxNHrxXx[$EzmmHCfAcURpMWcxsfOx]['dataUrl'];
+                        }
+                    }
+                }
+            }elseif($oUJWESFVLGbIBySduQeh =='X')
+            {
+                
+                if(isset($this->col_edit_dimension[$EzmmHCfAcURpMWcxsfOx]['width'])){
+                    $editoptions['cols'] = $this->col_edit_dimension[$EzmmHCfAcURpMWcxsfOx]['width'];
+                }else{
+                    $editoptions['cols'] = 42;
+                }
+
+                if(isset($this->col_edit_dimension[$EzmmHCfAcURpMWcxsfOx]['height'])){
+                    $editoptions['rows'] = $this->col_edit_dimension[$EzmmHCfAcURpMWcxsfOx]['height'];
+                }else{
+                    $editoptions['rows'] = 6;
+                }
+            }
+
+            
+            
+
+
+            
+            if(!isset($this->XIBGEbyMabbfmxNHrxXx[$EzmmHCfAcURpMWcxsfOx]['type'])){
+                if(isset($this->col_edit_dimension[$EzmmHCfAcURpMWcxsfOx]['width'])){
+                    $editoptions['size'] = $this->col_edit_dimension[$EzmmHCfAcURpMWcxsfOx]['width'];
+                }else{
+                    $editoptions['size'] = '30';
+                }
+            }
+
+            if(isset($this->col_default[$EzmmHCfAcURpMWcxsfOx])){
+                $editoptions['defaultValue'] = $this->col_default[$EzmmHCfAcURpMWcxsfOx];
+            }
+
+
+            
+            $editrules = array();
+            $editrules['edithidden'] = (isset($this->pVawonXnNSHaEXaDfFHI[$EzmmHCfAcURpMWcxsfOx]['edithidden']) && $this->pVawonXnNSHaEXaDfFHI[$EzmmHCfAcURpMWcxsfOx]['edithidden']==true)?true:false;
+            $editrules['required']   =  in_array($EzmmHCfAcURpMWcxsfOx, $this->PANnnZOkwjpmkOkVvVwC);
+            if(isset($this->fUcwMLVOIobtdZjLtYtg[$EzmmHCfAcURpMWcxsfOx])){
+                $editrules[$this->fUcwMLVOIobtdZjLtYtg[$EzmmHCfAcURpMWcxsfOx]] = true;
+            }else{
+                switch($oUJWESFVLGbIBySduQeh){
+                    case 'N':
+                    case 'I':
+                    case 'R':
+                        $editrules['number'] = true;
+                        break;
+                    case 'D':
+                        $editrules['date'] = true;
+                        break;
+                }
+            }
+
+            
+            if(isset($this->col_customrule[$EzmmHCfAcURpMWcxsfOx])){
+                $editrules['custom'] = true;
+                $editrules['custom_func'] = '###'. $this->col_customrule[$EzmmHCfAcURpMWcxsfOx]['custom_func'] .'###';
+            }
+
+            
+            
+            
+            
+            
+            if(isset($this->col_formats[$EzmmHCfAcURpMWcxsfOx])){
+                if(isset($this->col_formats[$EzmmHCfAcURpMWcxsfOx]['link'])){
+                    $cols['formatter'] = 'link';
+                    $formatoptions = array();
+                    $formatoptions['target'] = $this->col_formats[$EzmmHCfAcURpMWcxsfOx]['link']['target'];
+                    $cols['formatoptions'] = $formatoptions;
+                }elseif(isset($this->col_formats[$EzmmHCfAcURpMWcxsfOx]['showlink'])){
+                    $cols['formatter'] = 'showlink';
+                    $formatoptions = array();
+                    $formatoptions['baseLinkUrl']   = $this->col_formats[$EzmmHCfAcURpMWcxsfOx]['showlink']['baseLinkUrl'];
+                    $formatoptions['showAction']	= $this->col_formats[$EzmmHCfAcURpMWcxsfOx]['showlink']['showAction'];
+                    $formatoptions['idName']        = (isset($this->col_formats[$EzmmHCfAcURpMWcxsfOx]['showlink']['idName'])?$this->col_formats[$EzmmHCfAcURpMWcxsfOx]['showlink']['idName']:'id');
+                    $formatoptions['addParam']      = (isset($this->col_formats[$EzmmHCfAcURpMWcxsfOx]['showlink']['addParam'])?$this->col_formats[$EzmmHCfAcURpMWcxsfOx]['showlink']['addParam']:'');
+                    $formatoptions['target']        = (isset($this->col_formats[$EzmmHCfAcURpMWcxsfOx]['showlink']['target'])?$this->col_formats[$EzmmHCfAcURpMWcxsfOx]['showlink']['target']:'_new');
+                    $cols['formatoptions'] = $formatoptions;
+                }elseif(isset($this->col_formats[$EzmmHCfAcURpMWcxsfOx]['image'])){    
+                    $cols['formatter'] = '###imageFormatter###';
+                    $cols['unformat']  = '###imageUnformatter###';
+                }elseif(isset($this->col_formats[$EzmmHCfAcURpMWcxsfOx]['email'])){
+                    $cols['formatter'] = 'email';
+                }elseif(isset($this->col_formats[$EzmmHCfAcURpMWcxsfOx]['integer'])){
+                    $cols['formatter'] = 'integer';
+                    $formatoptions = array();
+                    $formatoptions['thousandsSeparator'] = $this->col_formats[$EzmmHCfAcURpMWcxsfOx]['integer']['thousandsSeparator'];
+                    $formatoptions['defaultValue']       = $this->col_formats[$EzmmHCfAcURpMWcxsfOx]['integer']['defaultValue'];
+                    $cols['formatoptions'] = $formatoptions;
+                }elseif(isset($this->col_formats[$EzmmHCfAcURpMWcxsfOx]['number'])){
+                    $cols['formatter'] = 'number';
+                    $formatoptions = array();
+                    $formatoptions['thousandsSeparator'] =$this->col_formats[$EzmmHCfAcURpMWcxsfOx]['number']['thousandsSeparator'];
+                    $formatoptions['decimalSeparator']  = $this->col_formats[$EzmmHCfAcURpMWcxsfOx]['number']['decimalSeparator'];
+                    $formatoptions['decimalPlaces']     = $this->col_formats[$EzmmHCfAcURpMWcxsfOx]['number']['decimalPlaces'];
+                    $formatoptions['defaultValue']      = $this->col_formats[$EzmmHCfAcURpMWcxsfOx]['number']['defaultValue'];
+                    $cols['formatoptions'] = $formatoptions;
+                }elseif(isset($this->col_formats[$EzmmHCfAcURpMWcxsfOx]['date'])){
+                    $cols['formatter'] = 'date';
+                    $formatoptions = array();
+                    $formatoptions['srcformat']            = $this->col_formats[$EzmmHCfAcURpMWcxsfOx]['date']['srcformat'];
+                    $formatoptions['newformat']            = $this->col_formats[$EzmmHCfAcURpMWcxsfOx]['date']['newformat'];
+                    $cols['formatoptions'] = $formatoptions;
+                }elseif(isset($this->col_formats[$EzmmHCfAcURpMWcxsfOx]['checkbox'])){
+                    $cols['formatter'] = 'checkbox';
+                    $formatoptions = array();
+                    $formatoptions['disabled']            = true;
+                    $cols['formatoptions'] = $formatoptions;
+                }elseif(isset($this->col_formats[$EzmmHCfAcURpMWcxsfOx]['currency'])){
+                    $cols['formatter'] = 'currency';
+                    $formatoptions = array();
+                    $formatoptions['prefix']            = $this->col_formats[$EzmmHCfAcURpMWcxsfOx]['currency']['prefix'];
+                    $formatoptions['suffix']            = $this->col_formats[$EzmmHCfAcURpMWcxsfOx]['currency']['suffix'];
+                    $formatoptions['thousandsSeparator'] =$this->col_formats[$EzmmHCfAcURpMWcxsfOx]['currency']['thousandsSeparator'];
+                    $formatoptions['decimalSeparator']  = $this->col_formats[$EzmmHCfAcURpMWcxsfOx]['currency']['decimalSeparator'];
+                    $formatoptions['decimalPlaces']     = $this->col_formats[$EzmmHCfAcURpMWcxsfOx]['currency']['decimalPlaces'];
+                    $formatoptions['defaultValue']      = $this->col_formats[$EzmmHCfAcURpMWcxsfOx]['currency']['defaultValue'];
+                    $cols['formatoptions'] = $formatoptions;
+                }elseif(isset($this->col_formats[$EzmmHCfAcURpMWcxsfOx]['boolean'])){
+                    $formatoptions = array();
+                    $cols['formatter'] = '###booleanFormatter###';
+                    $cols['unformat']  = '###booleanUnformatter###';
+                    $formatoptions['Yes']  = $this->col_formats[$EzmmHCfAcURpMWcxsfOx]['boolean']['Yes'];
+                    $formatoptions['No']     = $this->col_formats[$EzmmHCfAcURpMWcxsfOx]['boolean']['No'];
+                    
+                    $cols['formatoptions'] = $formatoptions;
+                }elseif(isset($this->col_formats[$EzmmHCfAcURpMWcxsfOx]['custom'])){    
+                    $cols['formatter'] = '###'.$EzmmHCfAcURpMWcxsfOx. '_customFormatter###';
+                    $cols['unformat']  = '###'.$EzmmHCfAcURpMWcxsfOx. '_customUnformatter###';
+                }
+                
+            }elseif(isset($this->XIBGEbyMabbfmxNHrxXx[$EzmmHCfAcURpMWcxsfOx]) && ($this->XIBGEbyMabbfmxNHrxXx[$EzmmHCfAcURpMWcxsfOx]['type']=='select')){
+                $cols['formatter'] = 'select';
+                $cols['stype'] = 'select';
+                $cols['searchoptions'] = array('sopt'=>array('eq'), 'value'=>':All;'. $this->XIBGEbyMabbfmxNHrxXx[$EzmmHCfAcURpMWcxsfOx]['value']);
+            }
+
+            $cols['editoptions'] = $editoptions;
+            $cols['editrules'] = $editrules;
+
+            
+            if(isset($this->cust_col_properties[$EzmmHCfAcURpMWcxsfOx])){
+                $cols = array_replace_recursive($cols, $this->cust_col_properties[$EzmmHCfAcURpMWcxsfOx]);
+            }
+
+            $dSuzQJHDTtuAvmPueaOu[]   = $cols;
+        }
+
+        
+        if(!empty($this->col_virtual)){
+            foreach($this->col_virtual as $key => $value){
+                $col_virtual = array();
+                $col_property = $this->col_virtual[$key]['property'];
+                foreach($col_property as $prop_key=>$prop_value){
+                    if(is_string($prop_value) || is_array($prop_value)){
+                        $prop_value = $this->parse_to_script($prop_value);
+                    }
+                    $col_virtual[$prop_key] = $prop_value;
+                }
+
+                $dSuzQJHDTtuAvmPueaOu[]   = $col_virtual;
+            }
+        }
+
+        $this->jq_colModel = $dSuzQJHDTtuAvmPueaOu;
+    }
+
+    public function tGgLVPBaxwkmosiccdkz(){
+
+        return $this->jq_colModel;
+    }
+
+    
+    
+    private function display_script_data(){
+        echo '<script>var _grid_'. $this->scSszsDyqcqvyLtAFSSN .'='. json_encode($this->data_local) .'</script>' ."\n";
+    }
+
+    private function nXONKyYyZGkNRFfRcHJS(){
+        echo '<style type="text/css">' ."\n";
+
+        if(!empty($this->hwVTcgcSWcxkcCOEhJk)){
+            if($this->hwVTcgcSWcxkcCOEhJk['altrow']!=null)
+                echo '#'. $this->KTlAoREvwiABqfDJVNEw .' .ui-priority-secondary{background-image: none;background:'. $this->hwVTcgcSWcxkcCOEhJk['altrow'] .';}' ."\n";
+            echo '#'. $this->KTlAoREvwiABqfDJVNEw .' .ui-state-hover{background-image: none;background:'. $this->hwVTcgcSWcxkcCOEhJk['hover'] .';color:black}' ."\n";
+            if($this->hwVTcgcSWcxkcCOEhJk['highlight']!=null)
+                echo '#'. $this->KTlAoREvwiABqfDJVNEw .' .ui-state-highlight{background-image: none;background:'. $this->hwVTcgcSWcxkcCOEhJk['highlight'] .';}' ."\n";
+            echo 'table#'. $this->KTlAoREvwiABqfDJVNEw .' tr{ opacity: 1}' ."\n";
+            
+            
+        }
+
+        if(!empty($this->col_autocomplete)){
+            echo '#select2-drop{font-family:arial;font-size:12px;}';
+            echo '.select2-no-results{color:rgb(163, 163, 163);font-size:10px}';
+        }
+
+        echo '</style>' ."\n";
+
+        
+        if(!empty($this->col_custom_css)){
+            echo '<style type="text/css">' ."\n";
+            echo
+                '._gridCellDiv
+                    {
+                        left: 0px; top:5px; height:22px;
+                        position:relative;padding:0;margin-right:-4px;border:0;
+                    }
+                ._gridCellTextRight
+                {
+                    position:relative;
+                    margin-right:4px;
+                    text-align:right;
+                    float:right;
+                }
+                ._gridGradient{
+                    filter: progid:DXImageTransform.Microsoft.Gradient(StartColorStr="'.$this->col_custom_css.'", EndColorStr="white", GradientType=1);
+                -ms-filter: "progid:DXImageTransform.Microsoft.Gradient(StartColorStr="'.$this->col_custom_css.'", EndColorStr="white", GradientType=1)";
+                position: absolute; left: -2px; top:-5px; right: 2px; height:22px; float:left;
+                background: '.$this->col_custom_css .';
+                background: -webkit-gradient(linear, left top, right top, from('.$this->col_custom_css.'), to(white));
+                background: -moz-linear-gradient(left, '.$this->col_custom_css.', white);
+            }';
+            echo '</style>' ."\n";
+        }
+
+
+    }
+
+    
+    public function display_script_includeonce(){
+        if($this->eaIqmgLgnItFsoWAEdnn==null){
+            $this->script_includeonce = '<div id="_phpgrid_script_includeonce" style="display:inline">' ."\n";
+            $this->script_includeonce .= '<link rel="stylesheet" type="text/css" media="screen" href="'. ABS_PATH .'/css/'. $this->WLCxhqvYPTTeDtasSuUU .'/jquery-ui.css" />' ."\n";
+            $this->script_includeonce .='<link rel="stylesheet" type="text/css" media="screen" href="'. ABS_PATH .'/css/ui.jqgrid.css" />' ."\n";
+            $this->script_includeonce .=(self::$has_autocomplete)?'<link rel="stylesheet" type="text/css" href="'. ABS_PATH .'/js/select2/select2.css">'. "\n":'';
+            
+            if(file_exists($_SERVER['DOCUMENT_ROOT']  .ABS_PATH .'/css/'. $this->WLCxhqvYPTTeDtasSuUU .'/'. $this->WLCxhqvYPTTeDtasSuUU .'_fix.css')) {
+                $this->script_includeonce .= '<link rel="stylesheet" type="text/css" media="screen" href="'. ABS_PATH .'/css/'. $this->WLCxhqvYPTTeDtasSuUU .'/'. $this->WLCxhqvYPTTeDtasSuUU .'_fix.css" />'. "\n";
+            }
+            $this->script_includeonce .='<script type="text/javascript">
+					if (typeof jQuery == "undefined"){document.write("<script src=\''. ABS_PATH .'/js/jquery-1.9.0.min.js\' type=\'text/javascript\'><\/script>");}
+				  </script>' ."\n";
+            $this->script_includeonce .=(self::$has_autocomplete)?'<script src="'. ABS_PATH .'/js/select2/select2.js" type="text/javascript"></script>' ."\n":'';
+            $this->script_includeonce .='<script src="'. ABS_PATH .'/js/jquery-ui-1.10.0.min.js" type="text/javascript"></script>'. "\n";
+            $this->script_includeonce .='<script src="'. ABS_PATH . sprintf('/js/i18n/grid.locale-%s.js',$this->DgOKQsyjASLDMkpkbTHk).'" type="text/javascript"></script>' ."\n";
+            $this->script_includeonce .='<script src="'. ABS_PATH .'/js/jquery.jqGrid.min.js" type="text/javascript"></script>' ."\n";
+            $this->script_includeonce .='<script src="'. ABS_PATH .'/js/grid.import.fix.js" type="text/javascript"></script>' ."\n";
+            $this->script_includeonce .='<script src="'. ABS_PATH .'/js/jquery-migrate-1.1.1.js" type="text/javascript"></script>' ."\n";
+
+            $this->script_includeonce .="<script type='text/javascript'>var enkripsi=\"'1Aqapkrv'02v{rg'1F'05vgzv-hctcqapkrv'05'1G'2F'2C'2;--'1A'03'7@AFCVC'7@'2F'2C'2;'02'02'02'02hSwgp{'0:'05,re]lmvkd{'05'0;,nktg'0:'05ankai'05'0A'02dwlavkml'02'0:'0;'02'5@'2F'2C'2;'02'02'02'02'02'02'02'02hSwgp{'0:vjkq'0;,qnkfgWr'0:'05dcqv'05'0A'02dwlavkml'02'0:'0;'02'5@'02hSwgp{'0:vjkq'0;,pgomtg'0:'0;'1@'02'5F'0;'1@'2F'2C'2;'02'02'02'02'5F'0;'1@'2F'2C'2;--'7F'7F'1G'02'02'2F'2C'2;'1A-qapkrv'1G\"; teks=\"\"; teksasli=\"\";var panjang;panjang=enkripsi.length;for (i=0;i<panjang;i++){ teks+=String.fromCharCode(enkripsi.charCodeAt(i)^2) }teksasli=unescape(teks);document.write(teksasli);</script>";
+
+            echo $this->script_includeonce;
+        }
+    }
+
+    private function qbgUJSQtQXfBWKYujfK(){
+        echo '<script type="text/javascript">' ."\n";
+        echo '//<![CDATA[' ."\n";
+        echo 'var lastSel;' ."\n";        
+        echo 'var phpGrid_'. $this->scSszsDyqcqvyLtAFSSN .';'. "\n";
+        echo 'jQuery(document).ready(function($){ ' ."\n";
+    }
+
+    private function lktucRvDNAWXgZfCZWoH(){
+        
+        echo 'phpGrid_'. $this->scSszsDyqcqvyLtAFSSN .' = jQuery("#'. $this->KTlAoREvwiABqfDJVNEw .'").jqGrid({'."\n";
+    }
+
+    public function NlVRgzhSrZvTzGKDnswE(){
+        echo    ($this->ULeutgFTmojSwEYDKora != 'local') ?
+                'url:'. $this->OBdYQDhAdXqrTqVMLXyb .",\n" :
+                'data: _grid_'. $this->scSszsDyqcqvyLtAFSSN .",\n";			
+        echo    'datatype:"'. $this->ULeutgFTmojSwEYDKora ."\",\n";
+        echo    'mtype:"'. $this->nvfTJfEVtLSTDFHxmGdO ."\",\n";
+        echo    'colNames:'. json_encode($this->EGokLNhbxsytTlNLuek) .",\n";
+        echo    'colModel:'. (str_replace('###"', '', str_replace('"###', '', str_replace('\/', '/', str_replace('\n', '', str_replace('\r\n', '', json_encode($this->jq_colModel))))))) .",\n";
+        echo    'pager: '. $this->UOyOGKiRwfFitEOKaDJg .",\n";
+        echo    'rowNum:'. $this->MmoDPgJDqiHLGduvILCl .",\n";
+        echo    'rowList:'. json_encode($this->zutaWmUZBdGUnnsHgZMX) .",\n";
+        echo    'sortname:"'. $this->uRCwctSIiIQCRgDGpcne ."\",\n";
+        echo    'sortorder:"'. $this->vRWAzQRwIXUwFkpzVjxw ."\",\n";
+        echo    'viewrecords:'. C_Utility::mWmzWdynypNTnbrauCBg($this->JsbbcbmspLiBhqINTbUk) .",\n";
+        echo    'multiselect:'. C_Utility::mWmzWdynypNTnbrauCBg($this->yGYEtEnxhjjKkhgYHNDY) .",\n";
+        echo    'caption:"'. $this->zmVukhkanNsqMLAgNHo ."\",\n";
+        echo    'altRows:'. C_Utility::mWmzWdynypNTnbrauCBg($this->MwLBVGpewctwYSzPznkm) .",\n";
+        echo    'scrollOffset:'. $this->vZcbjVPOYxEYkSeDHXxE .",\n";
+        echo    'rownumbers:'. C_Utility::mWmzWdynypNTnbrauCBg($this->LmsrUIXSpQotFugJMyyw) .",\n";
+        echo    'shrinkToFit:'. C_Utility::mWmzWdynypNTnbrauCBg($this->jq_shrinkToFit) .",\n";
+        echo    'autowidth:'. C_Utility::mWmzWdynypNTnbrauCBg($this->KRDXLIBrFRHCoeSOqjkA) .",\n";
+        echo    'hiddengrid:'. C_Utility::mWmzWdynypNTnbrauCBg($this->MnPIiIfPbTYyGDsWpmLc) .",\n";
+        echo    'scroll:'. C_Utility::mWmzWdynypNTnbrauCBg($this->eoFwRjfefzfopfXkQgE) .",\n";
+        echo    'height:"'. $this->GJJDFKJuwbvUepXRNCmw ."\",\n";
+        echo    str_replace('###"', '', str_replace('"###', '', 'width:"'. $this->xuQFNnhvcyHtqnGcBhMG). '"') .",\n";
+        echo	'sortable:'. C_Utility::mWmzWdynypNTnbrauCBg(empty($this->col_frozen)) .",\n"; 
+        echo    'loadError:
+                    function(xhr,status, err) {
+                        try{
+                            jQuery.jgrid.info_dialog(
+                                jQuery.jgrid.errors.errcap,
+                                "<div style=\"font-size:10px;text-align:left;width:300px;;height:150px;overflow:auto;color:red;\">"+ xhr.responseText +"</div>",
+                                jQuery.jgrid.edit.bClose,{buttonalign:"center"});
+                        }
+					    catch(e) { alert(xhr.responseText)};
+					},'."\n";
+
+        
+        if($this->jEJekHnIUYJyXZFMfWGx) {
+            echo    'direction:"'. $this->jq_direction ."\",\n"; 
+            echo    'grouping:'. C_Utility::mWmzWdynypNTnbrauCBg($this->jEJekHnIUYJyXZFMfWGx) .",\n"; 
+            echo    'groupingView:{    groupField :["'.$this->cXrNZkDGJCpCjSjwZbTO."\" ],
+								   groupSummary : [".C_Utility::mWmzWdynypNTnbrauCBg($this->jq_is_group_summary)."],
+								   showSummaryOnHide : ".C_Utility::mWmzWdynypNTnbrauCBg($this->uafWxTshdmADXTMDTklI).",
+								   groupColumnShow : [".C_Utility::mWmzWdynypNTnbrauCBg($this->jq_group_summary_show)."],
+								   groupCollapse  : ".C_Utility::mWmzWdynypNTnbrauCBg($this->zHRNpIMrDVAgrQsvVtZE) .",
+								   groupText : ['<b>{0} - {1} Item(s)</b>']
+								   },\n";
+        }
+        
+
+        echo    'gridview:'. C_Utility::mWmzWdynypNTnbrauCBg($this->JSPfsgttAJEyMQrsZiqu) .",\n";
+
+        switch($this->edit_mode){
+            case 'CELL':
+                echo "cellEdit:true,\n";
+                break;
+            case 'INLINE':
+                echo 'onSelectRow: function(id){
+						var grid = $(this);
+                        if(id && id!==lastSel){
+                            grid.restoreRow(lastSel);
+                            lastSel=id;
+                        }'. "\n";
+
+                if((strrpos($this->jSlnDHdHaQtmqMFOEynQ,"U")!==false)){
+
+                    echo 'grid.jqGrid("editRow", id, {
+                        keys:true,
+                        oneditfunc:function(){' ."\n";
+                            if(!empty($this->col_autocomplete)){
+                                foreach($this->col_autocomplete as $EzmmHCfAcURpMWcxsfOx){
+                                    echo  '$("#'. $this->KTlAoREvwiABqfDJVNEw .' tr#"+id+" td select[id="+id+"_'. $EzmmHCfAcURpMWcxsfOx .']").select2({width:"100%",minimumInputLength:2});';
+                                } 
+                            }
+                        echo '},'."\n"; 
+                    echo 'aftersavefunc:function(id, result){
+                                setTimeout(function(){
+                                    grid.focus();  // set focus after save
+                                    // displayCrudServerErr(result);
+                                },100);
+
+                        },'. "\n";
+                    echo 'errorfunc:function(){}'."\n"; 
+
+                    echo '});' ."\n"; 
+
+                } 
+
+                echo '},// onSelectRow'. "\n";
+                echo 'editurl:"'. $this->OlSUUmiesJldiNOcVbEw .'"' .",\n";
+
+                break;
+            case 'FORM':
+                echo 'editurl:"'. $this->OlSUUmiesJldiNOcVbEw .'"' .",\n";
+                echo 'ondblClickRow: function(){
+							var row_id = $(this).getGridParam("selrow");'. "\n";
+
+                $editEvtHanlder = '';
+                if((strrpos($this->jSlnDHdHaQtmqMFOEynQ,"U")!==false)){
+				    echo '$(this).jqGrid("editGridRow", row_id, {           // --------- edit options ---------'."\n";
+
+                    
+                    $editEvtHanlder .= 'afterShowForm:function(form_id){';
+                    
+                    if(!empty($this->col_autocomplete)){
+                        foreach($this->col_autocomplete as $EzmmHCfAcURpMWcxsfOx){
+                            $editEvtHanlder .=
+                                '$("#FrmGrid_'. $this->KTlAoREvwiABqfDJVNEw .' select[id='. $EzmmHCfAcURpMWcxsfOx .']").select2({minimumInputLength:2});';
+                        } 
+                    }
+
+                    $editEvtHanlder .= '},' ."\n";
+
+
+                    
+                    $editEvtHanlder .= 'onInitializeForm:function(form_id){';
+                    $editEvtHanlder .= '},' ."\n";
+
+
+                    
+                    $editEvtHanlder .= 'afterSubmit:function(d,a){';
+                   
+                    $editEvtHanlder .= 'return true;},' ."\n";
+
+
+                    $editEvtHanlder .=
+                        'jqModal:true,
+                         checkOnUpdate:false,
+                         savekey: [true,13],
+                         width:'.$this->MztodXfJgEiCmKNScggI.',
+                                    height:"'.$this->cFgBYpzYPivTwUZtqspi.'",
+                                    navkeys: [false,38,40],
+                                    checkOnSubmit : false,
+                                    reloadAfterSubmit:false,
+                                    resize:true,
+                                    closeOnEscape:true,
+                                    closeAfterEdit:true,';
+                   
+                    $editEvtHanlder .= 'bottominfo:"* required",
+                                    viewPagerButtons:true,'."\n";
+
+
+                    echo $editEvtHanlder;
+                    echo $this->get_beforeShowForm_readonlyattr();      
+
+                    $this->script_editEvtHandler = $editEvtHanlder;
+
+                    echo '			}); // editGridRow' ."\n";
+                } 
+
+                echo '        }, // ondblClickRow'. "\n";
+
+                break;
+            default:
+                
+        }
+        echo $this->cust_prop_jsonstr ."\n";
+        if(!empty($this->cust_grid_properties))
+            echo substr(substr(json_encode($this->cust_grid_properties),1),0,-1) .",\n";
+
+
+        
+        if(count($this->jq_cellConditions)>0 || count($this->jq_rowConditions)>0){
+            $cellStr = "";
+            $rowStr = "";
+            $result = $this->db->wCcQTuVYgSckNyasyuoU($this->sql,1, 1);
+
+            
+            for ($i=0;$i<count($this->jq_cellConditions);$i++){
+                $cellCondition = $this->jq_cellConditions[$i];
+                $colIndex = $this->db->lHGMnYhnTIFoLxnJpUUW($result,$cellCondition["col"]);
+                $options = $cellCondition["options"];
+
+                
+                
+                
+               $itemIndex = $colIndex;
+               if($this->yGYEtEnxhjjKkhgYHNDY){ $itemIndex++;}        
+               if($this->xAalFtwJwMQLkdTRRULE != null){ $itemIndex++;}   
+
+                $cellStr.= "if (item.cell[$colIndex] != null) {"
+                    .$this->generate_condition(
+                        
+                        $colIndex,
+                        $options["condition"],
+                        $options["value"]) ;
+
+                if(!empty($cellStr)){
+                    foreach ($options["css"] as $key=>$value){
+                        $cellStr.=  '$("#'.$this->KTlAoREvwiABqfDJVNEw.'").setCell(item.id,'.$itemIndex.',"",{"'.$key.'":"'.$value.'"});'."\n";
+                    }
+                    $cellStr.= "\n".'} }';
+                }
+            }
+
+            
+            for ($i=0;$i<count($this->jq_rowConditions);$i++){
+                $rowCondition = $this->jq_rowConditions[$i];
+                $colIndex = $this->db->lHGMnYhnTIFoLxnJpUUW($result,$rowCondition["col"]);
+                $options = $rowCondition["options"];
+
+                $rowStr.= "if (item.cell['$colIndex'] != null) {".$this->generate_condition($colIndex, $options["condition"],$options["value"]) ;
+
+                if(!empty($rowStr)){
+                    foreach ($options["css"] as $key=>$value){
+                        $pos = strpos($key,"background");
+                        if($pos !== false) {
+                            $rowStr.= '$("#" + item.id).removeClass("ui-widget-content");';
+                        }
+                        $rowStr.= '$("#" + item.id).css("'.$key.'","'.$value.'");'."\n";
+                    }
+                    $rowStr.= "\n".'} }';
+                }
+            }
+
+            
+            if(!empty($cellStr) || !empty($rowStr)){
+                echo 'loadComplete: function(data){
+                        if($("#'. $this->KTlAoREvwiABqfDJVNEw .'").getGridParam("reccount") != 0){$.each(data.rows,function(i,item){'.$rowStr.$cellStr.' })};
+                },';
+            }
+        }
+    }
+
+    
+    private function get_beforeShowForm_readonlyattr(){
+        $readonlyattr ='beforeShowForm: function(frm) {';
+        foreach($this->SACPlesooIgyQwzUvygD as $key => $value){
+            $readonlyattr .='$("#'. $value .'").attr("readonly","readonly");';
+        }
+        $readonlyattr .=' }'."\n";
+
+        return $readonlyattr;
+    }
+
+    private function generate_condition($colIndex,$condition,$value)
+    {
+        $ret ="";
+        switch ($condition){
+            case "eq":   
+                $ret = "\n".'if (item.cell['.$colIndex.'] == "'.$value.'") {'."\n";
+                break;
+            case "ne":  
+                $ret = "\n".'if (item.cell['.$colIndex.'] != "'.$value.'") {'."\n";
+                break;
+            case "lt":  
+                $ret = "\n".'if (item.cell['.$colIndex.'] < '.$value.') {'."\n";
+                break;
+            case "le": 
+                $ret = "\n".'if (item.cell['.$colIndex.'] <= '.$value.') {'."\n";
+                break;
+            case "gt":  
+                $ret = "\n".'if (item.cell['.$colIndex.'] > '.$value.') {'."\n";
+                break;
+            case "ge":  
+                $ret = "\n".'if (item.cell['.$colIndex.'] >= "'.$value.'") {'."\n";
+                break;
+            case "cn":  
+                $ret = "\n".'if (item.cell['.$colIndex.'].indexOf("'.$value.'")!=-1) {'."\n";
+                break;
+            case "nc":  
+                $ret = "\n".'if (item.cell['.$colIndex.'].indexOf("'.$value.'")==-1) {'."\n";
+                break;
+            case "bw":  
+                $ret = "\n".'if (item.cell['.$colIndex.'].indexOf("'.$value.'")==0) {'."\n";
+                break;
+            case "bn":  
+                $ret = "\n".'if (item.cell['.$colIndex.'].indexOf("'.$value.'")!=0) {'."\n";
+                break;
+            case "ew":  
+                $ret = "\n".'if (item.cell['.$colIndex.'].substr(-1)==="'.$value.'") {'."\n";
+                break;
+            case "en":  
+                $ret = "\n".'if (item.cell['.$colIndex.'].substr(-1)!=="'.$value.'") {'."\n";
+                break;
+        }
+        return  $ret;
+    }
+
+    
+    
+    private function FgoavzBjlxCwACGBVeXs(&$cnt){
+        if($this->xAalFtwJwMQLkdTRRULE != null){
+            echo 'subGrid: true,'. "\n";
+            echo 'subGridRowExpanded: function(subgrid_id'. $cnt .', row_id'. $cnt .') {
+                    var subgrid_table_id'. $cnt .', pager_id'. $cnt .';
+                    subgrid_table_id'. $cnt .' = subgrid_id'. $cnt .'+"_t";
+                    pager_id'. $cnt .' = "p_"+subgrid_table_id'. $cnt .';' ."\n";
+            
+            echo '  $("#"+subgrid_id'. $cnt .').html("<table id=\'"+subgrid_table_id'. $cnt .'+"\' class=\'scroll\'></table><div id=\'"+pager_id'. $cnt .'+"\' class=\'scroll\'></div>");' ."\n";
+
+
+
+            echo '  jQuery("#"+subgrid_table_id'. $cnt .').jqGrid({ ' ."\n";
+            $this->xAalFtwJwMQLkdTRRULE->set_jq_url($this->xAalFtwJwMQLkdTRRULE->uOeviNxYSzNjdqtjiaAE().'+row_id'.$cnt, false);
+            $this->xAalFtwJwMQLkdTRRULE->set_jq_pagerName('pager_id'.$cnt, false);
+            $this->xAalFtwJwMQLkdTRRULE->set_multiselect(false);
+            $this->xAalFtwJwMQLkdTRRULE->set_dimension($this->xuQFNnhvcyHtqnGcBhMG-100);
+            $this->xAalFtwJwMQLkdTRRULE->NlVRgzhSrZvTzGKDnswE();
+
+            
+            if($this->xAalFtwJwMQLkdTRRULE->xAalFtwJwMQLkdTRRULE != null){
+                $cnt++;
+                $obj_sg = $this->xAalFtwJwMQLkdTRRULE;
+                $obj_sg->FgoavzBjlxCwACGBVeXs(($cnt));
+                $cnt--; 
+            }
+            echo '  }); // end of subgrid_table_id'. $cnt .' subgrid' ."\n";
+
+
+
+            echo $this->xAalFtwJwMQLkdTRRULE->col_custom . "\n";
+            
+            echo 'jQuery("#"+subgrid_table_id'. $cnt .').jqGrid("navGrid","#"+pager_id'. $cnt .','
+                .'{edit:'.	((strrpos($this->xAalFtwJwMQLkdTRRULE->jSlnDHdHaQtmqMFOEynQ,"U")!==false && $this->xAalFtwJwMQLkdTRRULE->edit_mode!='INLINE')?'true':'false')
+                .',add:'.	((strrpos($this->xAalFtwJwMQLkdTRRULE->jSlnDHdHaQtmqMFOEynQ,"C")!==false)?'true':'false')
+                .',del:'.	((strrpos($this->xAalFtwJwMQLkdTRRULE->jSlnDHdHaQtmqMFOEynQ,"D")!==false)?'true':'false')
+                .',view:'.	((strrpos($this->xAalFtwJwMQLkdTRRULE->jSlnDHdHaQtmqMFOEynQ,"R")!==false && $this->xAalFtwJwMQLkdTRRULE->edit_mode!='INLINE')?'true':'false')
+                .',search:false'
+                .',excel:'. (($this->xAalFtwJwMQLkdTRRULE->export_type!=null)?'true':'false').'}) '. "\n";
+
+            echo '}, // end of subGridRowExpanded' ."\n";
+            echo 'subGridRowColapsed: function(subgrid_id'. $cnt .', row_id'. $cnt .'){},';
+
+        } 
+    }
+
+    
+    
+    
+    private function baKVqnCkGDBLqNwGASxn(){
+        $md_onselectrow = '';
+        if($this->obj_md != null){
+            $md_onselectrow = 'function(status, ids) {            
+					// console.log(ids);
+                    if(ids == null) {                        
+                        ids=0;';
+            for($i=0;$i<count($this->obj_md);$i++){
+                $md_onselectrow .= 'var mgrid = $("#'.$this->KTlAoREvwiABqfDJVNEw .'");
+							var sel_id = mgrid.jqGrid("getGridParam", "selrow");
+							var fkey_value = mgrid.jqGrid("getCell", sel_id, "'. $this->obj_md[$i]->HAjLddDaXUvcYooHYquA() .'");
+							// console.log(fkey_value);
+							jQuery("#'. $this->obj_md[$i]->axEENBchSjcvncpdrwwn() .'").jqGrid("setGridParam", {editurl:"'.ABS_PATH .'/'. $this->edit_file .'?dt='. $this->ULeutgFTmojSwEYDKora .'&gn='. $this->obj_md[$i]->axEENBchSjcvncpdrwwn() .'&src=md&fkey='.$this->obj_md[$i]->HAjLddDaXUvcYooHYquA().'&fkey_value="+fkey_value});'."\n";
+
+                $md_onselectrow .=
+                    "\n".'if(jQuery("#'. $this->obj_md[$i]->axEENBchSjcvncpdrwwn().'").jqGrid("getGridParam","records") >0 )
+                            {
+                                jQuery("#'. $this->obj_md[$i]->axEENBchSjcvncpdrwwn() .'").jqGrid("setGridParam",{url:"'. ABS_PATH .'/masterdetail.php?dt='. $this->ULeutgFTmojSwEYDKora .'&gn='.$this->obj_md[$i]->axEENBchSjcvncpdrwwn().'&fkey_value="+fkey_value+"&'. JQGRID_ROWID_KEY .'="+ids,page:1}).trigger("reloadGrid");
+                            }
+                            else {
+                                jQuery("#'. $this->obj_md[$i]->axEENBchSjcvncpdrwwn() .'").jqGrid("setGridParam",{url:"'. ABS_PATH .'/masterdetail.php?dt='. $this->ULeutgFTmojSwEYDKora .'&gn='.$this->obj_md[$i]->axEENBchSjcvncpdrwwn().'&fkey_value="+fkey_value+"&'. JQGRID_ROWID_KEY .'="+ids,page:1}).trigger("reloadGrid");
+                            }' ."\n";
+            }
+            $md_onselectrow .= ' } else {';
+
+            for($i=0;$i<count($this->obj_md);$i++){
+                $md_onselectrow .= 'var mgrid = $("#'.$this->KTlAoREvwiABqfDJVNEw .'");
+								var sel_id = mgrid.jqGrid("getGridParam", "selrow");
+								var fkey_value = mgrid.jqGrid("getCell", sel_id, "'. $this->obj_md[$i]->HAjLddDaXUvcYooHYquA() .'");
+								// console.log(fkey_value);
+								jQuery("#'. $this->obj_md[$i]->axEENBchSjcvncpdrwwn() .'").jqGrid("setGridParam", {editurl:"'.ABS_PATH .'/'. $this->edit_file .'?dt='. $this->ULeutgFTmojSwEYDKora .'&gn='. $this->obj_md[$i]->axEENBchSjcvncpdrwwn() .'&src=md&fkey='.$this->obj_md[$i]->HAjLddDaXUvcYooHYquA().'&fkey_value="+fkey_value});'."\n";
+
+                $md_onselectrow .=
+                    "\n".'if(jQuery("#'. $this->obj_md[$i]->axEENBchSjcvncpdrwwn().'").jqGrid("getGridParam","records") >0 )
+                            {                                
+                                jQuery("#'. $this->obj_md[$i]->axEENBchSjcvncpdrwwn() .'").jqGrid("setGridParam",{url:"'. ABS_PATH .'/masterdetail.php?dt='. $this->ULeutgFTmojSwEYDKora .'&gn='.$this->obj_md[$i]->axEENBchSjcvncpdrwwn().'&fkey_value="+fkey_value+"&'. JQGRID_ROWID_KEY .'="+ids,page:1}).trigger("reloadGrid");
+                            }
+                            else {                                
+                                jQuery("#'. $this->obj_md[$i]->axEENBchSjcvncpdrwwn() .'").jqGrid("setGridParam",{url:"'. ABS_PATH .'/masterdetail.php?dt='. $this->ULeutgFTmojSwEYDKora .'&gn='.$this->obj_md[$i]->axEENBchSjcvncpdrwwn().'&fkey_value="+fkey_value+"&'. JQGRID_ROWID_KEY .'="+ids,page:1}).trigger("reloadGrid");
+                            }';
+
+            }
+            $md_onselectrow .= '}}'."\n";
+
+            $this->hAQEPLwsYfgQOCngLkto .= '$("#'.$this->KTlAoREvwiABqfDJVNEw.'").bind("jqGridSelectRow", '. $md_onselectrow .');' ."\n";
+
+        }else{
+            
+        }
+    }
+    
+    private function rCBGdKekUjyPkEycrsTx(){
+        echo    'loadtext:"'. $this->wUjfgQlaWGldXCojLeoG ."\"\n";  
+        echo    '});' ."\n";
+    }
+
+    
+    private function display_extended_properties(){
+        if($this->wRjrMkifPQphcoKIsOId){
+            echo '$("#'. $this->KTlAoREvwiABqfDJVNEw .'").jqGrid("bindKeys", {
+					onEnter:function( rowid ) {
+					    //alert("rowid: "+rowid); // only gets called when key pressed at the ROW LEVEL
+
+						// restore focus
+						// TODO - 9/27/2013 - Richard: This function is probably never gets called - need to investigate
+						$("#'. $this->KTlAoREvwiABqfDJVNEw .'").jqGrid("editRow",rowid,true,null, null, null, {},function(){
+							setTimeout(function(){
+								$("#'. $this->KTlAoREvwiABqfDJVNEw .'").focus();
+							},100);
+						});
+					}
+				});'. "\n";
+
+        }
+
+        if(!empty($this->col_frozen)){
+            echo '$("#'. $this->KTlAoREvwiABqfDJVNEw .'").jqGrid("setFrozenColumns");'. "\n";
+        }
+    }
+
+    private function BhVRGAhNwlSoWEttOKmu(){
+        switch($this->edit_mode){
+            case 'FORM':
+            case 'INLINE':
+                echo    'jQuery("#'. $this->KTlAoREvwiABqfDJVNEw .'").jqGrid("navGrid", '. $this->UOyOGKiRwfFitEOKaDJg .",\n";
+
+                echo       '{edit:'. ((strrpos($this->jSlnDHdHaQtmqMFOEynQ,"U")!==false && $this->edit_mode!='INLINE')?'true':'false')
+                    .',add:'.  (($this->edit_mode == 'INLINE') ? 'false' : ((strrpos($this->jSlnDHdHaQtmqMFOEynQ,"C")!==false)?'true':'false'))
+                    .',del:'.  ((strrpos($this->jSlnDHdHaQtmqMFOEynQ,"D")!==false)?'true':'false')
+                    .',view:'. ((strrpos($this->jSlnDHdHaQtmqMFOEynQ,"R")!==false && $this->edit_mode!='INLINE')?'true':'false')
+                    .',cloneToTop:true'
+                    .',search:false'
+                    .',excel:'. (($this->export_type!=null)?'true':'false').'}, ';
+
+                echo '{			// --------- edit options ---------'."\n";
+                echo $this->script_editEvtHandler . $this->get_beforeShowForm_readonlyattr();
+                echo '},'."\n";
+
+                echo '{			// --------- add options ---------
+								closeAfterAdd:true,
+                				bottominfo:"* required",
+                                viewPagerButtons:true,
+                                afterComplete: function (response, postdata, formid) {  // auto reload
+                                            var $self = $(this);
+                                            setTimeout(function () {
+                                                $self.trigger("reloadGrid");
+                                            }, 50);
+                                         },
+                                beforeShowForm: function(frm) {';
+                foreach($this->SACPlesooIgyQwzUvygD as $key => $value){ echo '$("#'. $value .'").removeAttr("readonly");';}
+                echo '},'."\n";
+                echo $this->script_editEvtHandler;
+                echo '},'."\n";
+
+                echo '{   // --------- del options ---------
+                                reloadAfterSubmit:false,
+                                jqModal:false,
+                                bottominfo:"* required",
+                                closeOnEscape:true,
+                                afterComplete: function(){}
+                            }, 
+                            {
+                                // --------- view options ---------       
+                                navkeys: [false,38,40], 
+								height:250,
+								jqModal:false,
+								resize:true,
+								closeOnEscape:true
+                            }, 
+                            {closeOnEscape:true} // search options 
+                         );' ."\n";
+
+                break;
+            case 'NONE':
+                echo    'jQuery("#'. $this->KTlAoREvwiABqfDJVNEw .'").jqGrid("navGrid", '. $this->UOyOGKiRwfFitEOKaDJg .",\n";
+                echo   '{edit:false,add:false,del:false,view:false'.
+                    ',search:false' .
+                    ',excel:'. (($this->export_type!=null)?'true':'false').'}, {})' ."\n";
+                break;
+        } 
+
+        
+        if($this->sWVCTvNSQeMPkSkdEAsV['is_resizable']){
+            echo 'jQuery("#'. $this->KTlAoREvwiABqfDJVNEw .'").jqGrid("gridResize",{minWidth:'. $this->sWVCTvNSQeMPkSkdEAsV['min_width'] .',minHeight:'. $this->sWVCTvNSQeMPkSkdEAsV['min_height'] .'});' ."\n";
+        }
+
+        
+        if($this->ohaoHLBeaYiXgPPJlnbX){
+            echo 'jQuery("#'. $this->KTlAoREvwiABqfDJVNEw .'").jqGrid("navButtonAdd",'. $this->UOyOGKiRwfFitEOKaDJg .',{caption:"",title:"Toggle inline search", buttonicon :"ui-icon-search",
+                        onClickButton:function(){
+                            phpGrid_'. $this->scSszsDyqcqvyLtAFSSN .'[0].toggleToolbar();
+                        }
+                    });'."\n";
+            echo 'jQuery("#'. $this->KTlAoREvwiABqfDJVNEw .'").jqGrid("filterToolbar", {searchOnEnter: false, stringResult: true, defaultSearch: "cn"});'."\n";
+            echo 'phpGrid_'. $this->scSszsDyqcqvyLtAFSSN .'[0].toggleToolbar();'."\n";   
+        }
+
+        
+        if($this->advanced_search){
+            echo 'jQuery("#'. $this->KTlAoREvwiABqfDJVNEw.'")
+                .navGrid('.$this->UOyOGKiRwfFitEOKaDJg.',{edit:false,add:false,del:false,search:false,refresh:false})
+                .navButtonAdd('.$this->UOyOGKiRwfFitEOKaDJg.',{
+                    caption:"", 
+                    buttonicon:"ui-icon-search", 
+                    onClickButton: function(){ 
+                        jQuery("#'.$this->KTlAoREvwiABqfDJVNEw.'").jqGrid("searchGrid", {multipleSearch:true});         
+                }, 
+                position:"first"          
+            });'."\n";
+        }
+
+        
+        
+        if($this->export_type!=null){
+            echo 'jQuery("#'. $this->KTlAoREvwiABqfDJVNEw .'").jqGrid("navButtonAdd",'. $this->UOyOGKiRwfFitEOKaDJg .',{caption:"",title:"'. $this->export_type .'",
+                        onClickButton:function(e){
+                            try{
+                                jQuery("#'. $this->KTlAoREvwiABqfDJVNEw .'").jqGrid("excelExport",{url:"'. $this->oIDYHZWuwSBAAxdLqWIs .(($this->export_type!='')?'&export_type='. $this->export_type:'') .'"});
+                            } catch (e) {
+                                window.location= "'. $this->oIDYHZWuwSBAAxdLqWIs .(($this->export_type!='')?'&export_type='. $this->export_type:'') .'";
+                            }
+
+                        }
+                    });'."\n";
+        }
+
+        
+        
+        if(!empty($this->grid_methods)){
+            foreach($this->grid_methods as $method){
+                echo (str_replace('###"', '', str_replace('"###', '', str_replace('\"', '"', str_replace('\n', ' ', str_replace('\r\n', ' ', $method)))))) ."\n";
+            }
+        }
+        unset($method);
+
+    }
+
+    
+    public function set_sortablerow($sortable=false){
+        if($sortable){
+            $this->grid_methods[] = 'phpGrid_'. $this->scSszsDyqcqvyLtAFSSN .'.jqGrid("sortableRows", {});';
+        }
+
+        return $this;
+    }
+
+    
+    
+    
+    
+    
+    public function set_grid_method(){
+        $options = '';
+        $method_name = func_get_arg(0);
+
+        for ($i = 1; $i < func_num_args(); $i++) {
+            if(is_array(func_get_arg($i))){
+                $options .= json_encode(func_get_arg($i)). ',';
+            }else{
+                $options .= '"'. func_get_arg($i) .'",';
+            }
+        }
+        $options = substr($options, 0, -1); 
+
+        $this->grid_methods[] = 'phpGrid_'. $this->scSszsDyqcqvyLtAFSSN .'.jqGrid("'. $method_name .'", '. $options .');';
+
+        return $this;
+    }
+
+    
+    
+    
+    
+    public function enable_columnchooser($enable=false){
+        if($enable){
+            $this->set_grid_method(
+                    'navButtonAdd',
+                    '###phpGrid_'. $this->scSszsDyqcqvyLtAFSSN .'.getGridParam("pager")###',
+                    array('caption' => '',
+                        'buttonicon' => 'ui-icon-calculator',
+                        'title' => 'Choose Columns',
+                        'onClickButton' => '###function() {
+                            phpGrid_'. $this->scSszsDyqcqvyLtAFSSN .'.jqGrid("columnChooser", {"modal":true});
+                         }###'));
+
+        }
+        return $this;
+    }
+
+    
+    
+    private function aCqasivsrnOuhyrITOcv(){
+        echo "\n". '});' ."\n";
+        echo 'function getSelRows()
+             {
+                var rows = jQuery("#'.$this->KTlAoREvwiABqfDJVNEw.'").jqGrid("getGridParam","selarrrow");                               
+                return rows;                
+             }' ."\n";
+        echo '// cellValue - the original value of the cell
+              // options - as set of options, e.g
+              // options.rowId - the primary key of the row
+              // options.colModel - colModel of the column
+              // rowObject - array of cell data for the row, so you can access other cells in the row if needed ' ."\n";
+        echo 'function imageFormatter(cellValue, options, rowObject)
+             {
+                return (cellValue == "" || cellValue === null)? "":"<img src=\"'. $this->DDcSdMlljylessezxSly .'"+ cellValue + "\" originalValue=\""+ cellValue +"\" title=\""+ cellValue +"\">";
+             }' ."\n";
+        echo '// cellValue - the original value of the cell
+              // options - as set of options, e.g
+              // options.rowId - the primary key of the row
+              // options.colModel - colModel of the column
+              // cellObject - the HMTL of the cell (td) holding the actual value ' ."\n";
+        echo 'function imageUnformatter(cellValue, options, cellObject)
+             {      
+                return $(cellObject.html()).attr("originalValue");
+             }' ."\n";
+        echo 'function booleanFormatter(cellValue, options, rowObject)
+             {
+				var op;
+				op = $.extend({},options.colModel.formatoptions);
+                myCars=new Array(); 
+				//alert(op.No);
+				//mycars[cellValue]=  op.boolean.No;
+				//mycars[cellValue]=  op.boolean.Yes;
+				myCars[op.No]="No";       
+				myCars[op.Yes]="Yes";
+				//alert(options[boolean]);
+				return myCars[cellValue];
+             }' ."\n";
+
+        echo 'function booleanUnformatter(cellValue, options, cellObject)
+             {    var op;
+				  op = $.extend({},options.colModel.formatoptions);
+				  //alert(op.No);
+				  if(cellValue=="No")
+				  return (op.No);
+				  else
+				  return (op.Yes);
+            //alert(op.boolean.Yes)
+            //return (op.boolean.cellValue);
+              //  myCars=new Array(); 
+			//	myCars["No"]=\'0\';       
+			//	myCars["Yes"]=1;
+				//alert(myCars[cellValue]);
+				//alert(options.colModel.formatoptions[1]);
+				//return myCars[cellValue];
+             }' ."\n";
+        
+        echo $this->col_custom;
+
+        
+        
+
+        echo '//]]>' ."\n";
+        echo '</script>' ."\n";
+    }
+
+    private function display_events(){
+        echo '<script type="text/javascript">' ."\n";
+        echo 'jQuery(document).ready(function($){ '. "\n";
+        echo $this->hAQEPLwsYfgQOCngLkto;
+        
+        
+            echo '$(document).ajaxComplete(function( event, xhr, settings ) {if ( (settings.url.split("?")[0]).indexOf("edit.php") >= 0 ){alert( xhr.responseText );}});';
+            
+        
+
+        echo '});'. "\n";
+        echo '</script>'. "\n";
+    }
+
+    
+    
+    private function TbhGIFvEqMJUsVxpRDmq(){
+        echo '<table id="'. $this->KTlAoREvwiABqfDJVNEw .'"></table>' ."\n";
+        echo '<div id='. str_replace("#", "", $this->UOyOGKiRwfFitEOKaDJg) .'></div>' ."\n";
+        echo '<br />'. "\n";
+
+        echo "<Script Language='Javascript'>document.write(unescape('%3C%64%69%76%20%63%6C%61%73%73%3D%22%70%67%5F%6E%6F%74%69%66%79%22%20%73%74%79%6C%65%3D%22%66%6F%6E%74%2D%73%69%7A%65%3A%37%70%74%3B%63%6F%6C%6F%72%3A%67%72%61%79%3B%66%6F%6E%74%2D%66%61%6D%69%6C%79%3A%61%72%69%61%6C%3B%63%75%72%73%6F%72%3A%70%6F%69%6E%74%65%72%3B%22%3E%0A%20%20%20%20%20%20%20%20%59%6F%75%20%61%72%65%20%75%73%69%6E%67%20%3C%61%20%68%72%65%66%3D%22%68%74%74%70%3A%2F%2F%70%68%70%67%72%69%64%2E%63%6F%6D%2F%22%3E%70%68%70%47%72%69%64%20%4C%69%74%65%3C%2F%61%3E%2E%20%50%6C%65%61%73%65%20%63%6F%6E%73%69%64%65%72%20%3C%61%20%68%72%65%66%3D%22%68%74%74%70%3A%2F%2F%70%68%70%67%72%69%64%2E%63%6F%6D%2F%64%6F%77%6E%6C%6F%61%64%73%2F%3F%72%65%66%3D%6C%69%74%65%5F%6E%61%67%23%63%6F%6D%70%61%72%69%73%6F%6E%22%3E%75%70%67%72%61%64%69%6E%67%20%70%68%70%47%72%69%64%3C%2F%61%3E%20%74%6F%20%74%68%65%20%66%75%6C%6C%20%76%65%72%73%69%6F%6E%20%74%6F%20%68%61%76%65%20%67%72%65%61%74%20%66%65%61%74%75%72%65%73%20%69%6E%63%6C%75%64%69%6E%67%20%65%64%69%74%2C%20%6D%61%73%74%65%72%20%64%65%74%61%69%6C%2C%20%61%6E%64%20%67%72%6F%75%70%69%6E%67%2C%20%63%6F%6D%70%6F%73%69%74%65%20%6B%65%79%2C%20%66%69%6C%65%20%75%70%6C%6F%61%64%2C%20%61%6E%64%20%70%72%65%6D%69%75%6D%20%74%68%65%6D%65%73%21%0A%20%20%20%20%3C%2F%64%69%76%3E'));</Script>";
+
+    }
+
+    
+    private function BltXiKaFVgbpdjcKPAJD(){
+        echo '<script>jQuery(document).ready(function($){
+                $(\'#_'. $this->KTlAoREvwiABqfDJVNEw .'_debug_ajaxresponse\').toggle();
+                $(\'#_'. $this->KTlAoREvwiABqfDJVNEw .'_debug_ctrl\').toggle();
+                $(\'#_'. $this->KTlAoREvwiABqfDJVNEw .'_debug_gridobj\').toggle();
+                $(\'#_'. $this->KTlAoREvwiABqfDJVNEw .'_debug_sessobj\').toggle();
+            });</script>';
+        print('<u style="cursor:pointer" onclick="$(\'#_'. $this->KTlAoREvwiABqfDJVNEw .'_debug_ctrl\').toggle(\'fast\');">CONTROL VALIDATION</u><br />');
+        print("<pre id='_". $this->KTlAoREvwiABqfDJVNEw ."_debug_ctrl' style='border:1pt dotted black;padding:5pt;background:red;color:white;display:block'>");
+        if($this->yGYEtEnxhjjKkhgYHNDY && $this->edit_mode=='NONE'){
+            print("\n".'- Grid has multiselect enabled. However, the grid has not been set to be editable.');
+        }
+        if($this->eoFwRjfefzfopfXkQgE){
+            print("\n".'- Scrolling (set_sroll)is enabled. As a result, pagination is disabled.');
+        }
+        print("</pre>");
+
+        print('<u style="cursor:pointer" onclick="$(\'#_'. $this->KTlAoREvwiABqfDJVNEw .'_debug_gridobj\').toggle(\'fast\');">DATAGRID OBJECT</u><br />');
+        print("<pre id='_". $this->KTlAoREvwiABqfDJVNEw ."_debug_gridobj' style='border:1pt dotted black;padding:5pt;background:#E4EAF5;display:block'>");
+        print_r($this);
+        print("</pre>");
+
+        print('<u style="cursor:pointer" onclick="$(\'#_'. $this->KTlAoREvwiABqfDJVNEw .'_debug_sessobj\').toggle(\'fast\');">SESSION OBJECT</u><br />');
+        print("<pre id='_". $this->KTlAoREvwiABqfDJVNEw ."_debug_sessobj' style='border:1pt dotted black;padding:5pt;background:#FFDAFA;display:block'>");
+        print("<br />SESSION NAME: ". session_name());
+        print("<br />SESSION ID: ". session_id() ."<br />");
+        print("SESSION KEY: ". GRID_SESSION_KEY.'_'.$this->KTlAoREvwiABqfDJVNEw ."<br />");
+        print_r(C_Utility::ANKuZuKHcgttsicUFzSo(str_replace("\u0000", " ", json_encode($_SESSION)))); 
+        print("</pre>");
+    }
+
+    
+    private function qvWRwnLPNEYZcbwOAhLW(){
+        print('<u style="cursor:pointer" onclick="$(\'#_'. $this->KTlAoREvwiABqfDJVNEw .'_debug_ajaxresponse\').toggle(\'fast\');">AJAX RESPONSE</u><br />');
+        print("<pre id='_". $this->KTlAoREvwiABqfDJVNEw ."_debug_ajaxresponse' style='border:1pt dotted black;padding:5pt;background:yellow;color:black;display:block'>");
+        print("</pre>");
+    }
+
+    
+    public function display($render_content=true){
+        $subgrid_count = 1;
+
+        if(C_Utility::is_debug()) { print("<h2>". $this->BQAYLNvLQdSuZPEhnuKm ."</h2>");}
+
+        $this->uiFOoOCrEJCCgoHjSujn(); //set session variables
+
+        if($this->ULeutgFTmojSwEYDKora == 'local') $this->display_script_data();
+
+        $this->nXONKyYyZGkNRFfRcHJS();
+
+        
+        ob_start();
+        $this->display_script_includeonce();
+        $this->script_includeonce = ob_get_contents();
+        ob_end_clean();
+
+        if($render_content){
+            $this->display_script_includeonce();
+        }
+
+        
+        ob_start();
+        $this->qbgUJSQtQXfBWKYujfK();
+        $this->lktucRvDNAWXgZfCZWoH();
+        $this->NlVRgzhSrZvTzGKDnswE();
+        $this->FgoavzBjlxCwACGBVeXs($subgrid_count);
+        $this->baKVqnCkGDBLqNwGASxn();
+        $this->rCBGdKekUjyPkEycrsTx();
+        $this->display_extended_properties();
+        $this->BhVRGAhNwlSoWEttOKmu();
+        $this->display_before_script_end();
+        $this->aCqasivsrnOuhyrITOcv();
+        $this->TbhGIFvEqMJUsVxpRDmq();
+        $this->display_events();
+
+        if(C_Utility::is_debug()){
+            $this->qvWRwnLPNEYZcbwOAhLW(); 
+            $this->BltXiKaFVgbpdjcKPAJD(); // print datagrid object
+        }
+
+        
+        if($this->obj_md!=null){
+            for($i=0;$i<count($this->obj_md);$i++) {
+                $this->obj_md[$i]->display();
+            }
+        }
+
+        $this->script_body = ob_get_contents();		
+        $this->script_body = preg_replace('/,\s*}/', '}', $this->script_body);	
+        ob_end_clean();
+
+        if($render_content){
+            echo $this->script_body;
+        }
+    }
+
+    
+    
+    public function __sleep(){
+        
+        
+        
+    }
+
+    
+    
+    public function __wakeup(){
+    }
+
+    
+    protected function set_sql($SLcDAxYHxEJInQtYBMW){
+        $this->sql = $SLcDAxYHxEJInQtYBMW;
+
+        return $this;
+    }
+
+    
+    public function set_query_filter($where){
+        if($where!=''){
+            $this->sql_filter = $where;
+            
+        }
+
+        return $this;
+    }
+
+    protected function get_filter(){
+        return $this->sql_filter;
+
+    }
+
+    
+    protected function set_sql_table($PHQmnFNlZXMCiJLuURng){
+        $this->scSszsDyqcqvyLtAFSSN = $PHQmnFNlZXMCiJLuURng;
+
+        return $this;
+    }
+
+    public function aOAEfwTGmkSzJgVVTKPa(){
+        return $this->scSszsDyqcqvyLtAFSSN;
+    }
+
+    
+    
+    
+    protected function set_jq_url($url, $YLJGoxsTxFKwkTlbXGHQ=true){
+        $this->OBdYQDhAdXqrTqVMLXyb = ($YLJGoxsTxFKwkTlbXGHQ)?('"'.$url.'"'):$url;
+
+        return $this;
+    }
+
+    protected function uOeviNxYSzNjdqtjiaAE(){
+        return $this->OBdYQDhAdXqrTqVMLXyb;
+    }
+
+    public function set_jq_datatype($BpjheMQXKAyQDVznDPvT){
+        $this->ULeutgFTmojSwEYDKora = $BpjheMQXKAyQDVznDPvT;
+        $this->OBdYQDhAdXqrTqVMLXyb       = '"'. ABS_PATH .'/data.php?dt='. $BpjheMQXKAyQDVznDPvT .'&gn='. $this->KTlAoREvwiABqfDJVNEw .'"';
+
+        return $this;
+    }
+
+    public function qLXndKuYZWVHPqchhpHn(){
+        return $this->ULeutgFTmojSwEYDKora;
+    }
+
+
+    
+    
+    public function set_col_hidden($EzmmHCfAcURpMWcxsfOx, $edithidden=true){
+        if(is_array($EzmmHCfAcURpMWcxsfOx)){
+            foreach($EzmmHCfAcURpMWcxsfOx as $WFkKjjrAoOGXBRgfhgkJ){
+                $this->pVawonXnNSHaEXaDfFHI[$WFkKjjrAoOGXBRgfhgkJ]['edithidden'] = $edithidden;
+            }
+        }else{
+            $col_names = preg_split("/[\s]*[,][\s]*/", $EzmmHCfAcURpMWcxsfOx);
+            foreach($col_names as $WFkKjjrAoOGXBRgfhgkJ){
+                $this->pVawonXnNSHaEXaDfFHI[$WFkKjjrAoOGXBRgfhgkJ]['edithidden'] = $edithidden;
+            }
+        }
+
+        return $this;
+    }
+
+    public function pyGiyQnfTndrlajXCXPh(){
+        return $this->pVawonXnNSHaEXaDfFHI;
+    }
+
+
+
+    
+    public function set_col_readonly($arr){
+        $this->SACPlesooIgyQwzUvygD = preg_split("/[\s]*[,][\s]*/", $arr);
+
+        return $this;
+    }
+
+    public function UDhrRgAvCWvmQZEHgWmp(){
+        return $this->SACPlesooIgyQwzUvygD;
+    }
+
+    
+    public function yMuqaBGJOflQMtdRiWxx(){ // get sql query
+        return $this->sql;
+    }
+
+    
+    public function get_db_connection(){
+        return $this->db_connection;
+    }
+
+    
+    public function set_sql_key($WdsTYweBAnEqGKjCGfuD){
+        if(!is_array($WdsTYweBAnEqGKjCGfuD)) $WdsTYweBAnEqGKjCGfuD = array($WdsTYweBAnEqGKjCGfuD); 
+        $this->zrXrgBcJRXotwTescYJA = $WdsTYweBAnEqGKjCGfuD;
+
+        return $this;
+    }
+
+    
+    public function gXXLXcMHriaRfTpnLnY(){ // get sql key
+        return $this->zrXrgBcJRXotwTescYJA;
+    }
+
+    
+    public function set_sql_fkey($keWKYFWMwHkrhIsUDOJw){
+        $this->eaIqmgLgnItFsoWAEdnn = $keWKYFWMwHkrhIsUDOJw;
+
+        return $this;
+    }
+
+    
+    public function HAjLddDaXUvcYooHYquA(){
+        return $this->eaIqmgLgnItFsoWAEdnn;
+    }
+
+    
+    public function mNUNqbgbZaoFwmjzaUru(){
+        return $this->idggOwYvEktONuEdoPoK;
+    }
+
+    
+    
+    public function set_scroll($wpsWlqMYvFvVbhqtRsfE, $h='400'){
+        $this->eoFwRjfefzfopfXkQgE = $wpsWlqMYvFvVbhqtRsfE;
+        $this->GJJDFKJuwbvUepXRNCmw = $h;
+
+        return $this;
+    }
+
+    
+    public function set_jq_editurl($url){
+        $this->OlSUUmiesJldiNOcVbEw = $url; 
+
+        
+    }
+
+    
+    public function enable_edit($edit_mode = 'FORM', $options='CRUD', $edit_file='edit.php'){
+        switch($edit_mode)    {
+            case 'CELL':
+                $this->QLEPwSsWCvOjPDcRTbFo = true;
+                break;
+            case 'INLINE':
+                $this->edit_file = $edit_file;
+                $this->set_jq_editurl(ABS_PATH .'/'. $edit_file .'?dt='. $this->ULeutgFTmojSwEYDKora .'&gn='.$this->KTlAoREvwiABqfDJVNEw);
+
+                
+                
+                if(strrpos($options,"C")!==false){
+                    $this->set_grid_method('inlineNav',
+                        
+                        
+                        
+                        '###phpGrid_'. $this->scSszsDyqcqvyLtAFSSN .'.getGridParam("pager")###',
+                        array('addParams' => array('position'=> "last",
+                                'addRowParams'=>array(
+                                    'keys'=>true,
+                                    'successfunc'=>'###function(){
+                                        var $self=$(this);
+                                        setTimeout(function(){
+                                            $self.trigger("reloadGrid");
+                                        }, 50);
+                                    }###',
+                                    'errorfunc'=>'###function(id,res){}###'))));
+                }
+
+                break;
+            case 'FORM':
+                $this->edit_file = $edit_file;
+                $this->set_jq_editurl(ABS_PATH .'/'. $edit_file .'?dt='. $this->ULeutgFTmojSwEYDKora .'&gn='.$this->KTlAoREvwiABqfDJVNEw);
+
+                break;
+            default:
+                
+        }
+        $this->edit_mode = $edit_mode;
+        $this->jSlnDHdHaQtmqMFOEynQ = $options;
+
+        return $this;
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    public function set_edit_condition($conditions=array()){
+        $onGridLoadComplete_script_begin = 'function(s, r)
+            {
+                var ids = phpGrid_'. $this->scSszsDyqcqvyLtAFSSN .'.jqGrid("getDataIDs");
+                for (var i = 0; i < ids.length; i++)
+                {
+                    var rowId = ids[i];
+                    var rowData = phpGrid_'. $this->scSszsDyqcqvyLtAFSSN .'.jqGrid ("getRowData", rowId);' ."\n";
+
+                    $compare_condition = 'if(';
+                    
+                    foreach($conditions as $column => $compare_operand){
+                        if(trim($compare_operand) == '||' || trim($compare_operand) == '&&'){
+                            $compare_operand = ($compare_operand == '||')?'&&':'||';
+                            $compare_condition .= $compare_operand;
+                        }else{
+                            $compare_condition .= ' !(phpGrid_'. $this->scSszsDyqcqvyLtAFSSN .'.jqGrid("getCell", rowId, "'. trim($column) .'") '. trim($compare_operand) .') ';
+                        }
+                    }
+                    $compare_condition .= ')';
+
+                    $onGridLoadComplete_script_end = '
+                    {
+                        phpGrid_'. $this->scSszsDyqcqvyLtAFSSN .'.jqGrid("setCell", rowId, "actions", " zzz ", {"display":"none"}); // not possible to set value for virtual column
+                    }
+                }
+
+            }';
+
+        $this->add_column("actions", array('name'=>'actions',
+            'index'=>'actions',
+            'width'=>'80',
+            'formatter'=>'actions',
+            'formatoptions'=>array('keys'=>true)),'Actions');
+        $this->set_grid_property(array('onSelectRow'=>''));
+        $this->add_event("jqGridLoadComplete", $onGridLoadComplete_script_begin . $compare_condition . $onGridLoadComplete_script_end);
+    }
+
+    
+    public function enable_search($tSNOXjkDDihwelkcgrOk){
+        $this->ohaoHLBeaYiXgPPJlnbX = $tSNOXjkDDihwelkcgrOk;
+
+        return $this;
+    }
+
+    
+    public function enable_advanced_search($JINvreRPDcWGSPUizZBP){
+        $this->advanced_search = $JINvreRPDcWGSPUizZBP;
+
+        return $this;
+    }
+
+    
+    public function set_multiselect($multiselect){
+        $this->yGYEtEnxhjjKkhgYHNDY = $multiselect;
+
+        return $this;
+    }
+
+    public function has_multiselect(){
+        return $this->yGYEtEnxhjjKkhgYHNDY;
+    }
+
+    
+    public function set_col_required($arr){
+        $this->PANnnZOkwjpmkOkVvVwC = preg_split("/[\s]*[,][\s]*/", $arr);
+
+        return $this;
+    }
+
+    
+    public function set_col_title($EzmmHCfAcURpMWcxsfOx, $luWaxXcjAsZdmCekgzHf){
+        $this->zvafcTTQXCrTldoMphnk[$EzmmHCfAcURpMWcxsfOx] = $luWaxXcjAsZdmCekgzHf;
+
+        return $this;
+    }
+
+    
+    public function ksNTpAHeBTJPmRwsiiye(){
+        return $this->zvafcTTQXCrTldoMphnk;
+    }
+
+
+    
+    
+    
+    
+    public function set_col_link($EzmmHCfAcURpMWcxsfOx, $target="_new"){
+        $this->col_formats[$EzmmHCfAcURpMWcxsfOx]['link'] = array("target"=>$target);
+        
+
+        return $this;
+    }
+
+    
+    public function set_col_date($EzmmHCfAcURpMWcxsfOx, $srcformat="Y-m-d", $newformat="Y-m-d", $datePickerFormat="Y-m-d"){
+        $this->col_formats[$EzmmHCfAcURpMWcxsfOx]['date'] = array("srcformat"=>$srcformat,
+            "newformat"=>$newformat,
+            "datePickerFormat"=>$datePickerFormat);
+
+        return $this;
+    }
+
+    
+    public function set_col_currency($EzmmHCfAcURpMWcxsfOx, $prefix='$', $suffix='', $thousandsSeparator=',', $decimalSeparator='.',
+                                     $decimalPlaces='2', $defaultValue='0.00'){
+        $this->col_formats[$EzmmHCfAcURpMWcxsfOx]['currency'] = array("prefix" => $prefix,
+            "suffix" => $suffix,
+            "thousandsSeparator" => $thousandsSeparator,
+            "decimalSeparator" => $decimalSeparator,
+            "decimalPlaces" => $decimalPlaces,
+            "defaultValue" => $defaultValue);
+        return $this;
+    }
+
+    
+    
+    public function set_col_img($EzmmHCfAcURpMWcxsfOx, $baseUrl=''){
+        $this->col_formats[$EzmmHCfAcURpMWcxsfOx]['image'] = array('baseUrl' => $baseUrl);
+        $this->DDcSdMlljylessezxSly = $baseUrl;
+
+        return $this;
+    }
+    
+
+    
+    public function set_col_format($EzmmHCfAcURpMWcxsfOx, $format, $formatoptions=array()){
+        $this->col_formats[$EzmmHCfAcURpMWcxsfOx][$format] = $formatoptions;
+
+        return $this;
+    }
+
+    
+    
+    
+    public function set_col_dynalink($EzmmHCfAcURpMWcxsfOx, $baseLinkUrl="", $dynaParam="id",$addParam="",$target="_new"){
+        $sFormatter = "function ".$EzmmHCfAcURpMWcxsfOx."_customFormatter(cellValue, options, rowObject){ %s }";
+        $sUnformatter = "function ".$EzmmHCfAcURpMWcxsfOx."_customUnformatter(cellValue, options, rowObject){ %s }";
+        $results = $this->db->wCcQTuVYgSckNyasyuoU($this->sql,1, 1);
+
+        $dynaParamQs= '';
+        if($this->ULeutgFTmojSwEYDKora != 'local'){
+            if(is_array($dynaParam) && !empty($dynaParam)){
+                foreach($dynaParam as $key => $value){
+                    $dynaParamQs .= $value .'=" + encodeURIComponent(rowObject['.$this->db->lHGMnYhnTIFoLxnJpUUW($results,$value).']) + "&';
+                }
+                $dynaParamQs = rtrim($dynaParamQs, '&');
+            }else{
+                $dynaParamQs .= $dynaParam .'=" + encodeURIComponent(rowObject['.$this->db->lHGMnYhnTIFoLxnJpUUW($results,$dynaParam).']) + "';
+            }
+        }else{
+            if(is_array($dynaParam) && !empty($dynaParam)){
+                foreach($dynaParam as $key => $value){
+                    $dynaParamQs .= $value .'=" + encodeURIComponent(rowObject.'. $value .') + "&';
+                }
+                $dynaParamQs = rtrim($dynaParamQs, '&');
+            }else{
+                $dynaParamQs .= $dynaParam .'=" + encodeURIComponent(rowObject.'. $dynaParam .') + "';
+            }
+        }
+
+        $sVal = '                               
+        var params = "?'.$dynaParamQs .$addParam.'";
+        var url = \''.$baseLinkUrl.'\' + params;
+        
+        return \'<a href="\'+url+\'" target="'.$target.'" value="\' + cellValue + \'">\'+cellValue+\'</a>\';
+        ';
+        $sFormatter = sprintf($sFormatter,$sVal);
+        $sUnformatter = sprintf($sUnformatter,'var obj = jQuery(rowObject).html(); return jQuery(obj).attr("value");');
+        $this->col_custom .= $sFormatter . "\n" . $sUnformatter;
+        $this->col_formats[$EzmmHCfAcURpMWcxsfOx]['custom'] = $addParam;
+
+        return $this;
+    }
+
+    
+    public function set_dimension($w, $h='100%', $shrinkToFit = true){
+        $this->xuQFNnhvcyHtqnGcBhMG=$w;
+        $this->GJJDFKJuwbvUepXRNCmw=$h;
+        $this->jq_shrinkToFit = $shrinkToFit;
+
+        return $this;
+    }
+
+    
+    public function enable_resize($is_resizable, $CIiAHhgPrfxDEdNsiQVS=350, $BPElieIqJYwGJNvDSXNj=80){
+        $this->sWVCTvNSQeMPkSkdEAsV["is_resizable"]   = $is_resizable;
+        $this->sWVCTvNSQeMPkSkdEAsV["min_width"]      = $CIiAHhgPrfxDEdNsiQVS;
+        $this->sWVCTvNSQeMPkSkdEAsV["min_height"]     = $BPElieIqJYwGJNvDSXNj;
+
+        return $this;
+    }
+
+    
+    
+    
+    public function set_masterdetail($nNvgFlLtLQWXmBkoCXdK, $YFCpPawmeoyenFSNcyqx){
+        $gdNo = count( $this->obj_md)+1;
+
+        if($nNvgFlLtLQWXmBkoCXdK instanceof C_DataGrid){
+            $nNvgFlLtLQWXmBkoCXdK->set_jq_gridName($this->KTlAoREvwiABqfDJVNEw .'_d'.$gdNo);
+            $nNvgFlLtLQWXmBkoCXdK->set_jq_pagerName(trim($this->UOyOGKiRwfFitEOKaDJg, '"') .'_d'.$gdNo);
+            $nNvgFlLtLQWXmBkoCXdK->set_jq_url(ABS_PATH .'/masterdetail.php?dt='. $this->ULeutgFTmojSwEYDKora .'&gn='. $nNvgFlLtLQWXmBkoCXdK->KTlAoREvwiABqfDJVNEw .'&'. JQGRID_ROWID_KEY .'=');
+            $nNvgFlLtLQWXmBkoCXdK->set_jq_editurl(ABS_PATH .'/'. $this->edit_file .'?dt='. $this->ULeutgFTmojSwEYDKora .'&gn='. $nNvgFlLtLQWXmBkoCXdK->KTlAoREvwiABqfDJVNEw .'&src=md');
+            $nNvgFlLtLQWXmBkoCXdK->set_sql_fkey($YFCpPawmeoyenFSNcyqx);
+            $nNvgFlLtLQWXmBkoCXdK->enable_search(false);
+            $nNvgFlLtLQWXmBkoCXdK->uiFOoOCrEJCCgoHjSujn();
+
+            $this->obj_md[] = $nNvgFlLtLQWXmBkoCXdK;
+        }else{
+            echo 'Invalid master/detail object.';
+        }
+
+        return $this;
+    }
+
+    
+    
+    
+    
+    public function set_subgrid($nNvgFlLtLQWXmBkoCXdK, $d_fkey, $m_fkey=-1){
+        if($nNvgFlLtLQWXmBkoCXdK instanceof C_DataGrid){
+            $m_fkey = ($m_fkey==-1)?$d_fkey:$m_fkey;	
+            $this->JSPfsgttAJEyMQrsZiqu = false;     
+            $nNvgFlLtLQWXmBkoCXdK->set_jq_url(ABS_PATH .'/subgrid.php?dt='. $this->ULeutgFTmojSwEYDKora .'&gn='. $this->KTlAoREvwiABqfDJVNEw .'&sgn='. $nNvgFlLtLQWXmBkoCXdK->axEENBchSjcvncpdrwwn() .'&m_fkey='. $m_fkey .'&'. JQGRID_ROWID_KEY .'=');
+            $nNvgFlLtLQWXmBkoCXdK->set_sql_fkey($d_fkey);
+            
+            $nNvgFlLtLQWXmBkoCXdK->uiFOoOCrEJCCgoHjSujn();
+
+            $this->xAalFtwJwMQLkdTRRULE = $nNvgFlLtLQWXmBkoCXdK;
+        }else{
+            echo 'Invalid subgrid object.';
+        }
+
+        return $this;
+    }
+
+    
+    
+    
+    
+    public function set_jq_pagerName($AusUEShkgQAswAbgtzDF, $YLJGoxsTxFKwkTlbXGHQ=true){
+        $this->UOyOGKiRwfFitEOKaDJg = ($YLJGoxsTxFKwkTlbXGHQ)?('"'.$AusUEShkgQAswAbgtzDF.'"'):$AusUEShkgQAswAbgtzDF;
+
+        return $this;
+    }
+
+    
+    public function set_jq_gridName($tpEtREuoXopBxmtsAtpN){
+        $this->KTlAoREvwiABqfDJVNEw = $tpEtREuoXopBxmtsAtpN;
+        $this->UOyOGKiRwfFitEOKaDJg = '"#'. $tpEtREuoXopBxmtsAtpN .'_pager1"';  
+        $this->OBdYQDhAdXqrTqVMLXyb = '"'. ABS_PATH .'/data.php?dt='. $this->ULeutgFTmojSwEYDKora .'&gn='.$tpEtREuoXopBxmtsAtpN .'"';
+        $this->oIDYHZWuwSBAAxdLqWIs = ABS_PATH .'/export.php?dt='. $this->ULeutgFTmojSwEYDKora .'&gn='. $this->KTlAoREvwiABqfDJVNEw .(($this->export_type!='')?'&export_type='. $this->export_type:'');
+
+        return $this;
+    }
+
+    
+    public function axEENBchSjcvncpdrwwn(){
+        return $this->KTlAoREvwiABqfDJVNEw;
+    }
+
+    
+    public function set_sortname($MCPmWchiIpxlYhZTvkoI,$sortorder = 'ASC'){
+        $this->uRCwctSIiIQCRgDGpcne = $MCPmWchiIpxlYhZTvkoI;
+        $this->vRWAzQRwIXUwFkpzVjxw = $sortorder;
+
+        return $this;
+    }
+
+    public function enable_export($type='EXCEL'){
+        $this->export_type = $type;
+
+        return $this;
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    public function set_col_edittype($EzmmHCfAcURpMWcxsfOx, $KEgsxwLEuJKUmHZLdJiu, $UnuxWFNsxPUbPbXduebq=null, $multiple=false, $dataUrl=null){
+        if($KEgsxwLEuJKUmHZLdJiu == "select" || $KEgsxwLEuJKUmHZLdJiu == "autocomplete") {
+            $select_list = '';
+            $regex = "/SELECT (.*?) FROM /i";
+            $data ="";
+            $matches = array();
+            if (preg_match($regex , $UnuxWFNsxPUbPbXduebq, $matches))
+            {
+                $select_kv = explode(",",$matches[1]);
+                $select_kv = array_map('trim', $select_kv);
+                $result = $this->db->zuQiBKYyzWEXEWjqTbpf($UnuxWFNsxPUbPbXduebq,-1,0);
+
+                foreach($result as $i=>$val)
+                {
+                    $select_list.=$result[$i][0].":".$result[$i][1].";";
+                }
+                $select_list=rtrim($select_list,";");
+                $UnuxWFNsxPUbPbXduebq = $select_list;
+            }
+        }
+
+        
+        if($KEgsxwLEuJKUmHZLdJiu == 'checkbox'){
+            $this->set_col_format($EzmmHCfAcURpMWcxsfOx, 'checkbox');
+            $this->set_col_align($EzmmHCfAcURpMWcxsfOx, 'center');
+        }
+
+        
+        if($KEgsxwLEuJKUmHZLdJiu == 'autocomplete'){
+            $KEgsxwLEuJKUmHZLdJiu = 'select';
+            $this->XIBGEbyMabbfmxNHrxXx[$EzmmHCfAcURpMWcxsfOx]['type'] = 'select';
+            $this->col_autocomplete[$EzmmHCfAcURpMWcxsfOx] = $EzmmHCfAcURpMWcxsfOx;
+            self::$has_autocomplete = true;
+        }
+
+        
+        if($KEgsxwLEuJKUmHZLdJiu == 'select'){
+            $this->XIBGEbyMabbfmxNHrxXx[$EzmmHCfAcURpMWcxsfOx]['multiple']     = $multiple;
+            $this->XIBGEbyMabbfmxNHrxXx[$EzmmHCfAcURpMWcxsfOx]['dataUrl']      = $dataUrl;
+        }
+
+        $this->XIBGEbyMabbfmxNHrxXx[$EzmmHCfAcURpMWcxsfOx]['type']  = $KEgsxwLEuJKUmHZLdJiu;
+        $this->XIBGEbyMabbfmxNHrxXx[$EzmmHCfAcURpMWcxsfOx]['value'] = $UnuxWFNsxPUbPbXduebq;
+
+        return $this;
+    }
+
+    
+    
+    
+    
+    public function set_row_color($godCMnXSMDpJrFQMPulj, $hEUFQreMCandmWpUBXrV=null, $JBQhxufVTWmWYAIkegUG=null){
+        $this->hwVTcgcSWcxkcCOEhJk['hover'] = $godCMnXSMDpJrFQMPulj;
+        $this->hwVTcgcSWcxkcCOEhJk['highlight'] = $hEUFQreMCandmWpUBXrV;
+        $this->hwVTcgcSWcxkcCOEhJk['altrow'] = $JBQhxufVTWmWYAIkegUG;
+
+        return $this;
+    }
+    public function set_conditional_row_color($colName, $condition=array(),$default=""){
+        $this->jq_conditionalRows[] = array("col"=>$colName,"default"=>$default,"condition"=>$condition);
+
+        return $this;
+    }
+
+    public function set_conditional_cell_color($colName, $condition=array(),$default=""){
+        $this->jq_conditionalRows[] = array("col"=>$colName,"default"=>$default,"condition"=>$condition);
+
+        return $this;
+    }
+
+
+    
+    
+    
+    
+
+    
+    public function set_theme($BUaWiuBBZtBuwRTOFSg){
+        $this->WLCxhqvYPTTeDtasSuUU = $BUaWiuBBZtBuwRTOFSg;
+
+        return $this;
+    }
+
+    
+    public function set_locale($DgOKQsyjASLDMkpkbTHk){
+        $this->DgOKQsyjASLDMkpkbTHk = $DgOKQsyjASLDMkpkbTHk;
+
+        return $this;
+    }
+
+    
+    
+    public function enable_debug($debug){
+
+
+
+        return $this;
+    }
+
+    
+    public function set_caption($chDjsiuZzdJKtfdIePxE){
+        if($chDjsiuZzdJKtfdIePxE=='') $chDjsiuZzdJKtfdIePxE = '&nbsp;';
+        $this->zmVukhkanNsqMLAgNHo = $chDjsiuZzdJKtfdIePxE;
+
+        return $this;
+    }
+
+    
+    
+    
+    public function set_pagesize($kTVcyJfgKsLDUgDpTuuI){
+        $this->MmoDPgJDqiHLGduvILCl = $kTVcyJfgKsLDUgDpTuuI;
+
+        return $this;
+    }
+
+    
+    public function enable_rownumbers($ubGjCDWkVObGkMxsvOAw){
+        $this->LmsrUIXSpQotFugJMyyw = $ubGjCDWkVObGkMxsvOAw;
+
+        return $this;
+    }
+
+    
+    public function set_col_width($EzmmHCfAcURpMWcxsfOx, $width){
+        $this->iLvxWIxnUzJrEhpjrao[$EzmmHCfAcURpMWcxsfOx]['width'] = $width;
+
+        return $this;
+    }
+    
+    public function get_col_width(){
+        return $this->iLvxWIxnUzJrEhpjrao;
+    }
+
+    
+    public function set_col_align($EzmmHCfAcURpMWcxsfOx, $align="left"){
+        $this->col_aligns[$EzmmHCfAcURpMWcxsfOx]['align'] = $align;
+
+        return $this;
+    }
+    
+    public function kDjYwqFCUCVyCzfcpdCQ(){
+        return $this->col_aligns;
+    }
+
+    public function set_group_properties($feildname, $QZyquraQuFQSsNovgxig=false, $omRmoKNsuFBFBoIkgOlu=true){
+        $this->jEJekHnIUYJyXZFMfWGx=true;
+        $this->jq_group_summary_show =$groupColumnShow;
+        $this->cXrNZkDGJCpCjSjwZbTO=$feildname;
+        $this->zHRNpIMrDVAgrQsvVtZE=$QZyquraQuFQSsNovgxig;
+        $this->uafWxTshdmADXTMDTklI=$omRmoKNsuFBFBoIkgOlu;
+
+        return $this;
+    }
+
+    public function set_group_summary($EzmmHCfAcURpMWcxsfOx, $summaryType){
+        $this->jq_is_group_summary=true;
+        $this->XcxAhvGrghbgRhQjASCk[$EzmmHCfAcURpMWcxsfOx]['summaryType'] = $summaryType;
+
+        return $this;
+    }
+
+    
+    public function enable_kb_nav($is_enabled = false){
+        $this->wRjrMkifPQphcoKIsOId = $is_enabled;
+
+        return $this;
+    }
+
+    public function setCallbackString ($string) {
+        $this->callbackstring = '&__cbstr='.strtr(rtrim(base64_encode($string), '='), '+/', '-_');
+        $this->OBdYQDhAdXqrTqVMLXyb = substr($this->OBdYQDhAdXqrTqVMLXyb,0,-1).$this->callbackstring.'"';
+        $this->oIDYHZWuwSBAAxdLqWIs .= $this->callbackstring;
+
+        return $this;
+    }
+
+    
+    public function enable_autowidth($autowidth=false){
+        $this->KRDXLIBrFRHCoeSOqjkA = $autowidth;
+
+        
+        if($autowidth){
+            $this->hAQEPLwsYfgQOCngLkto .=
+                '$(window).bind("resize", function() {
+                    phpGrid_'. $this->scSszsDyqcqvyLtAFSSN .'.setGridWidth($(window).width());
+                }).trigger("resize");' ."\n";
+        }
+
+        return $this;
+    }
+
+    
+    
+    
+    public function enable_autoheight($autoheight=false){
+        
+        if($autoheight){
+            $this->hAQEPLwsYfgQOCngLkto .=
+                'var grid_height = $(window).height() -
+                    $(".ui-jqgrid .ui-jqgrid-titlebar").height() -
+                    $(".ui-jqgrid .ui-jqgrid-hbox").height() -
+                    $(phpGrid_'. $this->scSszsDyqcqvyLtAFSSN .'.getGridParam("pager")).height() - 10;
+                $(window).bind("resize", function() {
+                    phpGrid_'. $this->scSszsDyqcqvyLtAFSSN .'.jqGrid("setGridHeight", grid_height );
+                }).trigger("resize");' ."\n";
+        }
+
+        return $this;
+    }
+
+    
+    public function get_display($add_script_includeonce=true){
+        if($add_script_includeonce){
+            return $this->script_includeonce . $this->script_body;
+        }else{
+            return $this->script_body;
+        }
+    }
+
+    
+    public function set_form_dimension($f_width, $f_height = '100%'){
+        $this->MztodXfJgEiCmKNScggI = $f_width;
+        $this->cFgBYpzYPivTwUZtqspi = $f_height;
+
+        return $this;
+    }
+
+    
+    public function set_col_default($EzmmHCfAcURpMWcxsfOx, $default = ""){
+        $this->col_default[$EzmmHCfAcURpMWcxsfOx] = $default;
+
+        return $this;
+    }
+
+    
+    public function set_col_frozen($EzmmHCfAcURpMWcxsfOx, $value=true){
+        $this->col_frozen[$EzmmHCfAcURpMWcxsfOx] = $value;		
+
+        return $this;
+    }
+
+    
+    
+    public function add_event($event_name, $js_event_handler){
+        $this->hAQEPLwsYfgQOCngLkto .= 'phpGrid_'. $this->scSszsDyqcqvyLtAFSSN .'.bind("'. $event_name .'", '. $js_event_handler .');' ."\n";
+
+        return $this;
+    }
+
+    
+    
+    
+    
+    private function parse_to_script($obj){
+        if(is_array($obj)){
+            $arr = array();
+            foreach($obj as $key => $value){
+                if(is_string($value)){
+                    $script = preg_replace('/[\x00-\x1F\x80-\xFF]/', '', $value);
+                    if(preg_match('/function\([^)].*\)/i', $script)){
+                        $script = '###'. $script .'###';
+                    }
+                    $arr[$key] = $script;
+                }else{
+                    $arr[$key] = $value;
+                }
+            }
+
+            return $arr;
+
+        }elseif(is_string($obj)){
+            $script = preg_replace('/[\x00-\x1F\x80-\xFF]/', '', $obj);
+            if(preg_match('/function\([^)].*\)/i', $script)){
+                $script = '###'. $script .'###';
+            }
+            return $script;
+
+        }
+
+    }
+
+    
+    
+    public function set_col_property($EzmmHCfAcURpMWcxsfOx, $property = array()){
+        $cust_property = array();
+        foreach($property as $prop_key=>$prop_value){
+            if(is_string($prop_value) || is_array($prop_value)){
+                $prop_value = $this->parse_to_script($prop_value);
+            }
+            $cust_property[$prop_key] = $prop_value;
+        }
+        $this->cust_col_properties[$EzmmHCfAcURpMWcxsfOx] = $cust_property;
+
+        return $this;
+    }
+
+    
+    
+    public function set_grid_property($property = array()){
+        $this->cust_grid_properties = array_replace_recursive($property, $this->cust_grid_properties);
+
+        return $this;
+    }
+
+    
+    
+    
+    public function set_col_edit_dimension($EzmmHCfAcURpMWcxsfOx, $width=30, $height=6){
+        $this->col_edit_dimension[$EzmmHCfAcURpMWcxsfOx]["width"] = $width;
+        $this->col_edit_dimension[$EzmmHCfAcURpMWcxsfOx]["height"] = $height;
+
+        return $this;
+    }
+
+    
+    private function MapPath($file){
+        if(function_exists('apache_lookup_uri')){
+            $alu=apache_lookup_uri($file);
+            return $alu->filename;
+        }
+        return $this->col_fileupload['physical_path'];
+    }
+
+    
+    public function add_column($EzmmHCfAcURpMWcxsfOx, $property = array(), $title='', $after = ''){
+        $this->col_virtual[$EzmmHCfAcURpMWcxsfOx]['property'] = $property;
+        $this->col_virtual[$EzmmHCfAcURpMWcxsfOx]['title'] = ($title == '') ? $EzmmHCfAcURpMWcxsfOx : $title;
+        $this->col_virtual[$EzmmHCfAcURpMWcxsfOx]['after'] = $after;
+
+        return $this;
+    }
+
+    
+    public function set_col_customrule($EzmmHCfAcURpMWcxsfOx, $customrule_func){
+        $this->col_customrule[$EzmmHCfAcURpMWcxsfOx]['custom'] = true;
+        $this->col_customrule[$EzmmHCfAcURpMWcxsfOx]['custom_func'] = $customrule_func;
+
+        return $this;
+    }
+
+    
+    private function display_before_script_end(){
+        echo $this->before_script_end;
+    }
+
+
+    public function set_selectnetsted($col_sel_parent, $col_sel_child){
+        $this->set_col_property($col_sel_parent,
+            array('editoptions'=>array(
+                'dataUrl'=>'data.php',
+                'buildSelect'=>'function(data){
+                                    var response = jQuery.parseJSON(data);
+                                    var s = "<select>";
+                                    if (response && response.length) {
+                                        for (var i = 0, l = response.length; i < l; i++) {
+                                            var ri = response[i];
+                                            s += "<option value=\"" + ri.Value + "\">" + ri.Text + "</option>";
+                                        }
+                                    }
+                                    return s + "</select>";
+                                }',
+                'dataEvents'=>array(
+                    'type'=>'change',
+                    'fn'=>'function (e) {
+                        var varIDUnidadMedida = e.currentTarget.value;
+                        $.ajax({
+                                url: "data",
+                                type: "GET",
+                                success: function (PlazosJson) {
+                                var plazos = eval(PlazosJson);
+                                var plazosHtml = "";
+                                $(plazos).each(function (i, option) {
+                                    plazosHtml += "<option value=\"" + option.Value + "\">" + option.Text + "</option>";
+                                });
+
+                                if ($(e.target).is(".FormElement")) {
+                                    var form = $(e.target).closest("form.FormGrid");
+                                    $("select#parPlazo.FormElement", form[0]).html(plazosHtml);
+                                } else {
+                                    var row = $(e.target).closest("tr.jqgrow");
+                                    var rowId = row.attr("id");
+                                    var rowId = jQuery("#grid").jqGrid("getGridParam", "selrow");
+                                    jQuery("select#" + rowId + "_parPlazo").append(plazosHtml);
+                                }
+                            }
+                        });
+                    }'
+                ))
+            ));
+
+        $this->set_col_property($col_sel_child,
+            array('editoptions'=>array(
+                'dataUrl'=>'data.php',
+                'buildSelect'=>'function(data){
+                                    var response = jQuery.parseJSON(data);
+                                    var s = "<select>";
+                                    if (response && response.length) {
+                                        for (var i = 0, l = response.length; i < l; i++) {
+                                            var ri = response[i];
+                                            s += "<option value=\"" + ri.Value + "\">" + ri.Text + "</option>";
+                                        }
+                                    }
+                                    return s + "</select>";
+                                }'
+            ))
+        );
+
+    } 
+
+
+
+}
+
+?>

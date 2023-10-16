@@ -27,6 +27,14 @@ switch ($action) {
 		$dg->enable_autowidth(false);
 		$dg -> enable_export('EXCEL');
 		$dg -> enable_search(true);
+		$dg -> enable_edit('INLINE', 'CRU');
+
+		$_SESSION['selected_table'] = 'landdetails';
+		$_SESSION['selected_table_primary_key'] = 'id';
+		$_SESSION['selected_table_caption'] = 'Land Grid';
+		$_SESSION['selected_table_width'] = 2000;
+		$_SESSION['selected_table_height'] = 400;
+
         include('land.php');
         break;
     case 'building':
@@ -40,6 +48,14 @@ switch ($action) {
 		$dg->enable_autowidth(false);
 		$dg -> enable_export('EXCEL');
 		$dg -> enable_search(true);
+		$dg -> enable_edit('INLINE', 'CRU');
+
+		$_SESSION['selected_table'] = 'buildingdetails';
+		$_SESSION['selected_table_primary_key'] = 'id';
+		$_SESSION['selected_table_caption'] = 'Building Grid';
+		$_SESSION['selected_table_width'] = 2000;
+		$_SESSION['selected_table_height'] = 400;
+
         include('land.php');
         break;
     case 'plantmacdetails':
@@ -53,6 +69,14 @@ switch ($action) {
 		$dg->enable_autowidth(false);
 		$dg -> enable_export('EXCEL');
 		$dg -> enable_search(true);
+		$dg -> enable_edit('INLINE', 'CRU');
+
+		$_SESSION['selected_table'] = 'plantmacdetails';
+		$_SESSION['selected_table_primary_key'] = 'id';
+		$_SESSION['selected_table_caption'] = 'Plant & Machinery Grid';
+		$_SESSION['selected_table_width'] = 3000;
+		$_SESSION['selected_table_height'] = 400;
+
         include('land.php');
         break;
     case 'officeequdetails':
@@ -66,6 +90,14 @@ switch ($action) {
 		$dg->enable_autowidth(false);
 		$dg -> enable_export('EXCEL');
 		$dg -> enable_search(true);
+		$dg -> enable_edit('INLINE', 'CRU');
+
+		$_SESSION['selected_table'] = 'officeequdetails';
+		$_SESSION['selected_table_primary_key'] = 'id';
+		$_SESSION['selected_table_caption'] = 'Office Equipments Grid';
+		$_SESSION['selected_table_width'] = 3000;
+		$_SESSION['selected_table_height'] = 400;
+
         include('land.php');
         break;
     case 'vehicledetails':
@@ -79,6 +111,14 @@ switch ($action) {
 		$dg->enable_autowidth(false);
 		$dg -> enable_export('EXCEL');
 		$dg -> enable_search(true);
+		$dg -> enable_edit('INLINE', 'CRU');
+
+		$_SESSION['selected_table'] = 'vehicledetails';
+		$_SESSION['selected_table_primary_key'] = 'id';
+		$_SESSION['selected_table_caption'] = 'Vehicle Details Grid';
+		$_SESSION['selected_table_width'] = 2000;
+		$_SESSION['selected_table_height'] = 400;
+
         include('land.php');
         break;
     case 'itemcategory':
@@ -88,6 +128,14 @@ switch ($action) {
 		$dg->enable_autowidth(false);
 		$dg -> enable_export('EXCEL');
 		$dg -> enable_search(true);
+		$dg -> enable_edit('INLINE', 'CRU');
+
+		$_SESSION['selected_table'] = 'itemcategory';
+		$_SESSION['selected_table_primary_key'] = 'id';
+		$_SESSION['selected_table_caption'] = 'Item Category Grid';
+		$_SESSION['selected_table_width'] = 1000;
+		$_SESSION['selected_table_height'] = 400;
+
         include('land.php');
         break;
     case 'Catalogue_Numbers':
@@ -97,6 +145,14 @@ switch ($action) {
 		$dg->enable_autowidth(false);
 		$dg -> enable_export('EXCEL');
 		$dg -> enable_search(true);
+		$dg -> enable_edit('INLINE', 'CRU');
+
+		$_SESSION['selected_table'] = 'classificationlist';
+		$_SESSION['selected_table_primary_key'] = 'id';
+		$_SESSION['selected_table_caption'] = 'Catalogue Numbers Grid';
+		$_SESSION['selected_table_width'] = 1350;
+		$_SESSION['selected_table_height'] = 400;
+
         include('land.php');
         break;
     case 'assetcentre':
@@ -106,19 +162,35 @@ switch ($action) {
 		$dg->enable_autowidth(false);
 		$dg -> enable_export('EXCEL');
 		$dg -> enable_search(true);
-        include('land.php');
+		$dg -> enable_edit('INLINE', 'CRU');
+		
+		$_SESSION['selected_table'] = 'assetcentre';
+		$_SESSION['selected_table_primary_key'] = 'id';
+		$_SESSION['selected_table_caption'] = 'Centres Grid';
+		$_SESSION['selected_table_width'] = 1000;
+		$_SESSION['selected_table_height'] = 400;
+
+		include('land.php');
         break;
     case 'assetunit':
 		if ($_SESSION['SESS_LEVEL'] == 1) {
 			$dg = new C_DataGrid("SELECT * FROM assetunit", "SN", "assetunit");
 		} elseif ($_SESSION['SESS_LEVEL'] == 5) {
-			$dg = new C_DataGrid("SELECT * FROM assetunit WHERE dam_controller = '$login'", "id", "assetunit");
+			$dg = new C_DataGrid("SELECT * FROM assetunit WHERE dam_controller = '$login'", "SN", "assetunit");
 		}
 		$dg->set_caption("Units Grid"); 
 		$dg -> set_dimension(2000, 400); 
 		$dg->enable_autowidth(false);
 		$dg -> enable_export('EXCEL');
 		$dg -> enable_search(true);
+		$dg -> enable_edit('INLINE', 'CRU');
+
+		$_SESSION['selected_table'] = 'assetunit';
+		$_SESSION['selected_table_primary_key'] = 'SN';
+		$_SESSION['selected_table_caption'] = 'Units Grid';
+		$_SESSION['selected_table_width'] = 2000;
+		$_SESSION['selected_table_height'] = 400;
+
         include('land.php');
         break;
     case 'mas_ds_divisions':
@@ -128,6 +200,14 @@ switch ($action) {
 		$dg->enable_autowidth(false);
 		$dg -> enable_export('EXCEL');
 		$dg -> enable_search(true);
+		$dg -> enable_edit('INLINE', 'CRU');
+
+		$_SESSION['selected_table'] = 'mas_ds_divisions';
+		$_SESSION['selected_table_primary_key'] = 'SN';
+		$_SESSION['selected_table_caption'] = 'IDS Divisions Grid';
+		$_SESSION['selected_table_width'] = 1000;
+		$_SESSION['selected_table_height'] = 400;
+
         include('land.php');
         break;
     case 'mas_gs_divisions':
@@ -137,6 +217,14 @@ switch ($action) {
 		$dg->enable_autowidth(false);
 		$dg -> enable_export('EXCEL');
 		$dg -> enable_search(true);
+		$dg -> enable_edit('INLINE', 'CRU');
+
+		$_SESSION['selected_table'] = 'mas_gs_divisions';
+		$_SESSION['selected_table_primary_key'] = 'SN';
+		$_SESSION['selected_table_caption'] = 'GS Divisions Grid';
+		$_SESSION['selected_table_width'] = 1000;
+		$_SESSION['selected_table_height'] = 400;
+
         include('land.php');
         break;
     case 'members':
@@ -146,6 +234,14 @@ switch ($action) {
 		$dg->enable_autowidth(false);
 		$dg -> enable_export('EXCEL');
 		$dg -> enable_search(true);
+		$dg -> enable_edit('INLINE', 'CRU');
+
+		$_SESSION['selected_table'] = 'members';
+		$_SESSION['selected_table_primary_key'] = 'member_id';
+		$_SESSION['selected_table_caption'] = 'Users Grid';
+		$_SESSION['selected_table_width'] = 1350;
+		$_SESSION['selected_table_height'] = 400;
+
         include('land.php');
         break;
 	case 'languagechange':
@@ -160,6 +256,14 @@ switch ($action) {
 		$dg->enable_autowidth(false);
 		$dg -> enable_export('EXCEL');
 		$dg -> enable_search(true);
+		$dg -> enable_edit('INLINE', 'CRU');
+
+		$_SESSION['selected_table'] = 'members';
+		$_SESSION['selected_table_primary_key'] = 'member_id';
+		$_SESSION['selected_table_caption'] = 'Comments';
+		$_SESSION['selected_table_width'] = 1350;
+		$_SESSION['selected_table_height'] = 400;
+
         include('land.php');
         break;
     case 'board_of_survey':
@@ -169,6 +273,14 @@ switch ($action) {
 		$dg->enable_autowidth(false);
 		$dg -> enable_export('EXCEL');
 		$dg -> enable_search(true);
+		$dg -> enable_edit('INLINE', 'CRU');
+
+		$_SESSION['selected_table'] = 'boardofsurvey';
+		$_SESSION['selected_table_primary_key'] = 'id';
+		$_SESSION['selected_table_caption'] = 'Board of Survey';
+		$_SESSION['selected_table_width'] = 1350;
+		$_SESSION['selected_table_height'] = 400;
+
         include('land.php');
     case 'loss_damage':
 		$dg = new C_DataGrid("SELECT * FROM loss_damage", "id", "loss_damage");
@@ -177,6 +289,14 @@ switch ($action) {
 		$dg->enable_autowidth(false);
 		$dg -> enable_export('EXCEL');
 		$dg -> enable_search(true);
+		$dg -> enable_edit('INLINE', 'CRU');
+
+		$_SESSION['selected_table'] = 'loss_damage';
+		$_SESSION['selected_table_primary_key'] = 'id';
+		$_SESSION['selected_table_caption'] = 'Loss and Damage';
+		$_SESSION['selected_table_width'] = 1350;
+		$_SESSION['selected_table_height'] = 400;
+
         include('land.php');
     case 'loss_damage_details':
 		$dg = new C_DataGrid("SELECT * FROM loss_damage_details", "id", "loss_damage_details");
@@ -185,6 +305,14 @@ switch ($action) {
 		$dg->enable_autowidth(false);
 		$dg -> enable_export('EXCEL');
 		$dg -> enable_search(true);
+		$dg -> enable_edit('INLINE', 'CRU');
+
+		$_SESSION['selected_table'] = 'loss_damage_details';
+		$_SESSION['selected_table_primary_key'] = 'id';
+		$_SESSION['selected_table_caption'] = 'Loss and Damage Details';
+		$_SESSION['selected_table_width'] = 1350;
+		$_SESSION['selected_table_height'] = 400;
+
         include('land.php');
         break;
     case 'loss_damage_board':
@@ -194,6 +322,14 @@ switch ($action) {
 		$dg->enable_autowidth(false);
 		$dg -> enable_export('EXCEL');
 		$dg -> enable_search(true);
+		$dg -> enable_edit('INLINE', 'CRU');
+
+		$_SESSION['selected_table'] = 'lost_damage_board';
+		$_SESSION['selected_table_primary_key'] = 'id';
+		$_SESSION['selected_table_caption'] = 'Loss and Damage Board';
+		$_SESSION['selected_table_width'] = 1350;
+		$_SESSION['selected_table_height'] = 400;
+
         include('land.php');
         break;
     case 'errorcode':
@@ -203,6 +339,14 @@ switch ($action) {
 		$dg->enable_autowidth(false);
 		$dg -> enable_export('EXCEL');
 		$dg -> enable_search(true);
+		$dg -> enable_edit('INLINE', 'CRU');
+
+		$_SESSION['selected_table'] = 'errorcode';
+		$_SESSION['selected_table_primary_key'] = 'id';
+		$_SESSION['selected_table_caption'] = 'Error Code';
+		$_SESSION['selected_table_width'] = 1350;
+		$_SESSION['selected_table_height'] = 400;
+
         include('land.php');
         break;
     case 'provinces':
@@ -212,6 +356,14 @@ switch ($action) {
 		$dg->enable_autowidth(false);
 		$dg -> enable_export('EXCEL');
 		$dg -> enable_search(true);
+		$dg -> enable_edit('INLINE', 'CRU');
+
+		$_SESSION['selected_table'] = 'provinces';
+		$_SESSION['selected_table_primary_key'] = 'province_id';
+		$_SESSION['selected_table_caption'] = 'provinces';
+		$_SESSION['selected_table_width'] = 1350;
+		$_SESSION['selected_table_height'] = 400;
+
         include('land.php');
         break;
     case 'board_report':
@@ -221,6 +373,14 @@ switch ($action) {
 		$dg->enable_autowidth(false);
 		$dg -> enable_export('EXCEL');
 		$dg -> enable_search(true);
+		$dg -> enable_edit('INLINE', 'CRU');
+
+		$_SESSION['selected_table'] = 'board_report';
+		$_SESSION['selected_table_primary_key'] = 'id';
+		$_SESSION['selected_table_caption'] = 'Board Report';
+		$_SESSION['selected_table_width'] = 1350;
+		$_SESSION['selected_table_height'] = 400;
+
         include('land.php');
         break;
     case 'board_report_summary':
@@ -230,6 +390,14 @@ switch ($action) {
 		$dg->enable_autowidth(false);
 		$dg -> enable_export('EXCEL');
 		$dg -> enable_search(true);
+		$dg -> enable_edit('INLINE', 'CRU');
+
+		$_SESSION['selected_table'] = 'board_report_summary';
+		$_SESSION['selected_table_primary_key'] = 'id';
+		$_SESSION['selected_table_caption'] = 'Board Report Summary';
+		$_SESSION['selected_table_width'] = 1350;
+		$_SESSION['selected_table_height'] = 400;
+
         include('land.php');
         break;
     case 'board_report_observations':
@@ -239,6 +407,14 @@ switch ($action) {
 		$dg->enable_autowidth(false);
 		$dg -> enable_export('EXCEL');
 		$dg -> enable_search(true);
+		$dg -> enable_edit('INLINE', 'CRU');
+
+		$_SESSION['selected_table'] = 'board_report_observations';
+		$_SESSION['selected_table_primary_key'] = 'id';
+		$_SESSION['selected_table_caption'] = 'Board Report Observations';
+		$_SESSION['selected_table_width'] = 1350;
+		$_SESSION['selected_table_height'] = 400;
+
         include('land.php');
         break;
     case 'vehicle_tender_details':
@@ -248,6 +424,14 @@ switch ($action) {
 		$dg->enable_autowidth(false);
 		$dg -> enable_export('EXCEL');
 		$dg -> enable_search(true);
+		$dg -> enable_edit('INLINE', 'CRU');
+
+		$_SESSION['selected_table'] = 'tender_vehicledetails';
+		$_SESSION['selected_table_primary_key'] = 'id';
+		$_SESSION['selected_table_caption'] = 'Vehicle Tender Details';
+		$_SESSION['selected_table_width'] = 1350;
+		$_SESSION['selected_table_height'] = 400;
+
         include('land.php');
         break;
     case 'change_unit_name_history':
@@ -257,6 +441,14 @@ switch ($action) {
 		$dg->enable_autowidth(false);
 		$dg -> enable_export('EXCEL');
 		$dg -> enable_search(true);
+		$dg -> enable_edit('INLINE', 'CRU');
+
+		$_SESSION['selected_table'] = 'change_unit_name_history';
+		$_SESSION['selected_table_primary_key'] = 'id';
+		$_SESSION['selected_table_caption'] = 'Unit Name Change History';
+		$_SESSION['selected_table_width'] = 1350;
+		$_SESSION['selected_table_height'] = 400;
+
         include('land.php');
         break;
     case 'user_account_change_history':
@@ -266,6 +458,14 @@ switch ($action) {
 		$dg->enable_autowidth(false);
 		$dg -> enable_export('EXCEL');
 		$dg -> enable_search(true);
+		$dg -> enable_edit('INLINE', 'CRU');
+
+		$_SESSION['selected_table'] = 'user_account_change_history';
+		$_SESSION['selected_table_primary_key'] = 'id';
+		$_SESSION['selected_table_caption'] = 'User Account Change History';
+		$_SESSION['selected_table_width'] = 1350;
+		$_SESSION['selected_table_height'] = 400;
+
         include('land.php');
         break;
     case 'allocation_details':
@@ -275,6 +475,14 @@ switch ($action) {
 		$dg->enable_autowidth(false);
 		$dg -> enable_export('EXCEL');
 		$dg -> enable_search(true);
+		$dg -> enable_edit('INLINE', 'CRU');
+
+		$_SESSION['selected_table'] = 'allocation_details';
+		$_SESSION['selected_table_primary_key'] = 'id';
+		$_SESSION['selected_table_caption'] = 'Allocation Details';
+		$_SESSION['selected_table_width'] = 1350;
+		$_SESSION['selected_table_height'] = 400;
+
         include('land.php');
         break;
     case 'scale_catalogue':
@@ -284,6 +492,14 @@ switch ($action) {
 		$dg->enable_autowidth(false);
 		$dg -> enable_export('EXCEL');
 		$dg -> enable_search(true);
+		$dg -> enable_edit('INLINE', 'CRU');
+
+		$_SESSION['selected_table'] = 'scale_catalogue';
+		$_SESSION['selected_table_primary_key'] = 'id';
+		$_SESSION['selected_table_caption'] = 'Allocation Detail';
+		$_SESSION['selected_table_width'] = 1350;
+		$_SESSION['selected_table_height'] = 400;
+
         include('land.php');
         break;
     case 'dos_material_master':
@@ -293,6 +509,14 @@ switch ($action) {
 		$dg->enable_autowidth(false);
 		$dg -> enable_export('EXCEL');
 		$dg -> enable_search(true);
+		$dg -> enable_edit('INLINE', 'CRU');
+
+		$_SESSION['selected_table'] = 'dos_materialmaster';
+		$_SESSION['selected_table_primary_key'] = 'id';
+		$_SESSION['selected_table_caption'] = 'DOS Material Master';
+		$_SESSION['selected_table_width'] = 1350;
+		$_SESSION['selected_table_height'] = 400;
+
         include('land.php');
         break;
     case 'bos_openingbalance':
@@ -302,6 +526,14 @@ switch ($action) {
 		$dg->enable_autowidth(false);
 		$dg -> enable_export('EXCEL');
 		$dg -> enable_search(true);
+		$dg -> enable_edit('INLINE', 'CRU');
+
+		$_SESSION['selected_table'] = 'bos_openingbalance';
+		$_SESSION['selected_table_primary_key'] = 'id';
+		$_SESSION['selected_table_caption'] = 'Opening Balance';
+		$_SESSION['selected_table_width'] = 1350;
+		$_SESSION['selected_table_height'] = 400;
+
         include('land.php');
         break;
 	}

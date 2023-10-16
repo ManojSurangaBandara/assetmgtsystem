@@ -1,2 +1,312 @@
-<?php if(!function_exists('gzinflate')){die('Error: You need Zlib library to run this application.');} ?>
-<?php function wkvrodvooNlScIrbifmE($cAamznidZk){$r=base64_decode("Z3ppbmZsYXRlKGJhc2U2NF9kZWNvZGUoJGNBYW16bmlkWmspKQ==");return eval("return $r;");} eval('?>'.wkvrodvooNlScIrbifmE('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').'<?php '); ?>
+<?php
+if(!session_id()){ session_start();} 
+
+class C_Database{
+	public $zyKIxGFCDaGuObCtPLcH; // db host
+	public $LYZymBHAGWBWWOZHXICM; // db username
+	public $password;
+	public $databaseName;
+	public $tableName;
+	public $link;
+	public $dbType;
+	public $charset;
+    public $db; 
+    public $result;
+	
+	//constructor
+	public function __construct($host, $user, $pass, $dbName, $db_type = "mysql", $charset=""){
+		$this -> zyKIxGFCDaGuObCtPLcH = $host;
+		$this -> LYZymBHAGWBWWOZHXICM = $user;
+		$this -> password = $pass;
+		$this -> databaseName = $dbName;
+		$this -> dbType  = $db_type;
+        $this -> charset = $charset;
+		
+		$this -> zrmCNBMkuIKUyvcMIcsd();	
+	}
+
+	//create database connection
+	public function zrmCNBMkuIKUyvcMIcsd(){
+		switch($this->dbType){
+			case "access":
+				$this->db = ADONewConnection($this->dbType);
+				$dsn = "Driver={Microsoft Access Driver (*.mdb)};Dbq=".$this->databaseName.";Uid=".$this->LYZymBHAGWBWWOZHXICM.";Pwd=".$this->password.";";
+				$this->db->Connect($dsn);
+				break;
+			case "odbc_mssql_native":
+				$this->db = ADONewConnection('odbc_mssql');
+                
+				$dsn = "Driver={SQL Server};Server=".$this->zyKIxGFCDaGuObCtPLcH.";Database=".$this->databaseName.";";
+                $this->db->Connect($dsn, $this->LYZymBHAGWBWWOZHXICM, $this->password);
+                break;
+            case "odbc_mssql":
+                $this->db = ADONewConnection($this->dbType);
+                
+                $this->db->Connect($this->zyKIxGFCDaGuObCtPLcH, $this->LYZymBHAGWBWWOZHXICM, $this->password);
+                break;
+			case "postgres":
+				$this->db = ADONewConnection($this->dbType);
+				$this->db->Connect($this->zyKIxGFCDaGuObCtPLcH, $this->LYZymBHAGWBWWOZHXICM, $this->password, $this->databaseName) or die("Error: Could not connect to the database");
+				if(!empty($this->charset)) {
+                    $this->db->Execute("SET NAMES '$this->charset'");
+                }
+                break;
+			case "db2":
+				$this->db = ADONewConnection($this->dbType);
+				$dsn = "driver={IBM db2 odbc DRIVER};Database=".$this->databaseName.";hostname=".$this->zyKIxGFCDaGuObCtPLcH.";port=50000;protocol=TCPIP;uid=".$this->LYZymBHAGWBWWOZHXICM."; pwd=".$this->password;
+				$this->db->Connect($dsn);
+				break;
+            case 'db2-dsnless':
+                $this->db = ADONewConnection('db2');
+                $this->db->Connect($this->zyKIxGFCDaGuObCtPLcH,$this->LYZymBHAGWBWWOZHXICM,$this->password, $this->databaseName);
+                break;
+			case "ibase":
+				$this->db = ADONewConnection($this->dbType); 
+				$this->db->Connect($this->zyKIxGFCDaGuObCtPLcH . $this->databaseName, $this->LYZymBHAGWBWWOZHXICM, $this->password);
+				break;
+			case "oci805":
+                
+				$this->db = ADONewConnection($this->dbType);		
+				$ret = $this->db->Connect($this->zyKIxGFCDaGuObCtPLcH, $this->LYZymBHAGWBWWOZHXICM, $this->password, $this->databaseName);         
+	            if(!$ret){
+                    
+                    
+                    $this->db->Connect($this->zyKIxGFCDaGuObCtPLcH, $this->LYZymBHAGWBWWOZHXICM, $this->password, $this->databaseName);                                                                     
+                }             
+				
+				
+				
+				
+				break;
+			case "sqlite":
+				$this->db = ADONewConnection('sqlite');
+				$this->db->Connect($this->zyKIxGFCDaGuObCtPLcH); 
+				break;
+			case "informix":
+				$this->db = ADONewConnection('informix');		
+				$this->db->Connect($this->zyKIxGFCDaGuObCtPLcH, $this->LYZymBHAGWBWWOZHXICM, $this->password, $this->databaseName) or die("Error: Could not connect to the database");
+			    break;
+            case "informix72":
+				$this->db = ADONewConnection('informix72');		
+				$this->db->Connect($this->zyKIxGFCDaGuObCtPLcH, $this->LYZymBHAGWBWWOZHXICM, $this->password, $this->databaseName) or die("Error: Could not connect to the database");
+			    break;
+            
+            case "odbc":
+                $this->db = ADONewConnection($this->dbType);
+                $dsn = "DSN=".$this->zyKIxGFCDaGuObCtPLcH.";uid=".$this->LYZymBHAGWBWWOZHXICM."; pwd=".$this->password;
+                $this->db->Connect($dsn);
+                break;
+            
+			default:	
+				$this->db = ADONewConnection('mysqli'); 
+				$this->db->Connect($this->zyKIxGFCDaGuObCtPLcH, $this->LYZymBHAGWBWWOZHXICM, $this->password, $this->databaseName) or die("Error: Could not connect to the database");
+				if(!empty($this->charset)) {
+					$this->db->Execute("SET NAMES '$this->charset'");
+				}
+		}			
+	}
+	       
+	//return all results from executing query
+	public function EtrPEtuENDzSLqqlwjdu($jliXqQXpmVaoqoBsHAOA){
+		$this->db->SetFetchMode(ADODB_FETCH_BOTH);
+		$result = $this->db->Execute($jliXqQXpmVaoqoBsHAOA) or die(
+            (C_Utility::is_debug())?
+                "\n". 'PHPGRID_DEBUG: C_Database->db_query() - '. $this->db->ErrorMsg() ."\n":
+                "\n". 'PHPGRID_ERROR: Could not execute query. Error 101.' ."\n");
+
+		$this->result = $result;        
+        return $result;
+	}
+	
+	//return limited result from executing query
+	public function wCcQTuVYgSckNyasyuoU($sql, $size, $offset){
+		$this->db->SetFetchMode(ADODB_FETCH_BOTH);
+		$result = $this->db->SelectLimit($sql, $size, $offset) or die(
+            (C_Utility::is_debug())?
+                "\n". 'PHPGRID_DEBUG: C_Database->select_limit() - '. $this->db->ErrorMsg() ."\n":
+                "\n". 'PHPGRID_ERROR: Could not execute query. Error 102' ."\n");
+
+        $this->result = $result;        
+		return $result;
+	}
+	
+	//return all results from executing query as an array
+	public function zuQiBKYyzWEXEWjqTbpf($jliXqQXpmVaoqoBsHAOA, $size, $QYzFABgdMqNPITbDJjIk){
+		$result = $this->wCcQTuVYgSckNyasyuoU($jliXqQXpmVaoqoBsHAOA, $size, $QYzFABgdMqNPITbDJjIk);
+		$FxPcSMgrnGkrrUqTLNOR = $result->GetArray();
+
+        $this->result = $FxPcSMgrnGkrrUqTLNOR;
+		return $FxPcSMgrnGkrrUqTLNOR;
+	}
+    	
+	public function PlITTecRUaKgjwfphKQU(&$result){
+		$ADODB_FETCH_MODE = ADODB_FETCH_NUM;
+		if(!$result->EOF){
+		 	$rs = $result->fields;
+		 	$result->MoveNext();        
+		 	return $rs;
+		}
+	}
+	
+	public function nQYSxKFVQQFOYRZcWfRT(&$result){
+		$ADODB_FETCH_MODE = ADODB_FETCH_BOTH;
+		if(!$result->EOF){
+		 	$rs = $result->fields;
+		 	$result->MoveNext();   
+		 	return $rs;
+		}  
+	}
+	
+	public function bBJkbvWCrHXMxILnqSyw(&$result){
+		$ADODB_FETCH_MODE = ADODB_FETCH_ASSOC;
+		if(!$result->EOF){
+		 	$rs = $result->fields;
+		 	$result->MoveNext();  
+		 	return $rs;
+		}
+	}	
+		
+	public function UrubXhEWkKBpqgBEgzuK($result){
+        return $result->RecordCount();
+        
+	} 
+	
+	//run query and fetch first re
+	public function query_then_fetch_array_first($jliXqQXpmVaoqoBsHAOA){
+		$ADODB_FETCH_MODE = ADODB_FETCH_BOTH;
+		$result = $this->db->Execute($jliXqQXpmVaoqoBsHAOA) or die('PHPGRID_ERROR: query_then_fetch_array_first() - '. $this->db->ErrorMsg());
+		
+		if(!$result->EOF){
+			$rs = $result->fields;
+			$result->MoveNext();     
+			return $rs;
+		}
+	}
+	
+	//returns number of fields in a record set
+	public function num_fields($result){
+		return $result->FieldCount();
+	}
+	
+	//return field name of index in a record set
+	public function field_name($result, $index){
+		$exfxgafGrjtOlCNYoiPv = new ADOFieldObject();
+		$exfxgafGrjtOlCNYoiPv = $result->FetchField($index);
+		return isset($exfxgafGrjtOlCNYoiPv->name) ? $exfxgafGrjtOlCNYoiPv->name : "";
+	}
+       
+    //return the field type of a given field in a record set
+    public function VMQORsBKIuzwBqjXIXyl($result, $index){
+        $exfxgafGrjtOlCNYoiPv = new ADOFieldObject();
+        $exfxgafGrjtOlCNYoiPv = $result->FetchField($index);
+        return isset($exfxgafGrjtOlCNYoiPv->type) ? $exfxgafGrjtOlCNYoiPv->type : "";
+    }
+    
+    //returns meta type of the index field in a record set
+    public function EwgdjJxDBHtjNonvuUPA($result, $index){
+        $exfxgafGrjtOlCNYoiPv = new ADOFieldObject();
+        $exfxgafGrjtOlCNYoiPv = $result->FetchField($index);
+	
+
+        $type = $result->MetaType($exfxgafGrjtOlCNYoiPv->type, $exfxgafGrjtOlCNYoiPv->max_length);   
+                
+        return $type;              
+    }
+    
+    //return field name of a table if that field exsit in that table
+    public function hPAWyuoeKGSrMikDjtxa($table, $EzmmHCfAcURpMWcxsfOx){
+        $arr = array();   
+        $arr =  $this->db->MetaColumns($table);
+
+        $exfxgafGrjtOlCNYoiPv = new ADOFieldObject();
+        if(isset($arr[strtoupper($EzmmHCfAcURpMWcxsfOx)])){
+            $exfxgafGrjtOlCNYoiPv = $arr[strtoupper($EzmmHCfAcURpMWcxsfOx)];
+    
+    
+    
+            return $exfxgafGrjtOlCNYoiPv;                                        
+        }else{
+            return false;
+        }
+
+    }
+    
+    //returns the index of "$field_name" key in a result
+    public function lHGMnYhnTIFoLxnJpUUW($result, $field_name){
+        $KETiETsYqXZQXZrNR = $this->num_fields($result);
+        $i=0;
+        for($i=0;$i<$KETiETsYqXZQXZrNR;$i++){
+            if($field_name == $this->field_name($result, $i))
+                return $i;        
+        }    
+        return -1;
+    }
+	
+	//return the max length of index field in a db execute result
+	public function cnjyfICcQBfmEDftkTRn($result, $index){
+		$exfxgafGrjtOlCNYoiPv = new ADOFieldObject();
+		$exfxgafGrjtOlCNYoiPv = $result->FetchField($index);
+		return isset($exfxgafGrjtOlCNYoiPv->max_length) ? $exfxgafGrjtOlCNYoiPv->max_length : "";
+	}
+
+	// returns sql query part for WHERE clause
+	function quote_field($sql, $fieldname, $fieldvalue){
+		$rs         = $this->wCcQTuVYgSckNyasyuoU($sql, 1, 1);
+        $meta_type    = $this->EwgdjJxDBHtjNonvuUPA($rs, $this->lHGMnYhnTIFoLxnJpUUW($rs, $fieldname));
+		switch ($meta_type) {
+			case 'I':
+			case 'N':
+			case 'R':
+			case 'L':
+				$qstr = $fieldname ."=". $fieldvalue;  
+				break;
+			default:
+				$qstr = $fieldname ."='". $fieldvalue ."'";    
+				break;
+		}
+		
+		return $qstr;
+	}
+
+    function quote_fields(&$rs, $zrXrgBcJRXotwTescYJA=array(), $key_value=array()){
+        $pk_val_new = array();
+
+        $fm_types = array();
+        for($t=0; $t<count($zrXrgBcJRXotwTescYJA); $t++){
+            $meta_type   = $this->EwgdjJxDBHtjNonvuUPA($rs, $this->lHGMnYhnTIFoLxnJpUUW($rs, $zrXrgBcJRXotwTescYJA[$t]));
+            $fm_types[] = $meta_type;
+        }
+
+        for($i =0; $i < count($key_value); $i++){
+            $pk_val_fields = explode(PK_DELIMITER, $key_value[$i]);
+
+            for($j=0; $j < count($zrXrgBcJRXotwTescYJA); $j++){
+                $meta_type = $fm_types[$j];
+                if($meta_type != 'I' && $meta_type != 'N' && $meta_type != 'R'){
+                    $pk_val_fld = "'" . $pk_val_fields[$j] ."'";
+                }else{
+                    $pk_val_fld = $pk_val_fields[$j];
+                }
+                $pk_val_fields[$j] = $pk_val_fld;
+            }
+
+            $pk_val_new[] = '('. implode(',', $pk_val_fields) .')';
+        }
+
+        return $pk_val_new;
+    }
+
+	//returns field names array
+	public function HVeMWDfzyAyqvmBnmI($result){
+		$hsYgbsoKPwcvUUbPQzPB = array();
+		$num_fields = $result->FieldCount();
+		for($i = 0; $i < $num_fields; $i++) {
+			$cTfzUGydhwEfzsysbOmo = $this->field_name($result, $i);             
+			$hsYgbsoKPwcvUUbPQzPB[] = $cTfzUGydhwEfzsysbOmo;        
+		}          
+		
+		return $hsYgbsoKPwcvUUbPQzPB;
+	} 
+	
+}
+?>

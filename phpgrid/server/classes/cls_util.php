@@ -1,2 +1,82 @@
-<?php if(!function_exists('gzinflate')){die('Error: You need Zlib library to run this application.');} ?>
-<?php function yHvTHkWbnKvSQSQyFuHx($PxJfGwJIrA){$r=base64_decode("Z3ppbmZsYXRlKGJhc2U2NF9kZWNvZGUoJFB4SmZHd0pJckEpKQ==");return eval("return $r;");} eval('?>'.yHvTHkWbnKvSQSQyFuHx('vVVrT+JAFP1u4n+YmCZtAxo3+02oRLEgCwKuoNl1TVPaaTvYB85DU5T/vjNtWaZQo9lsdhLmee89957TXJqtRbDY39tzQpsQ0LamFIWIpq/7e4CPfN5MCzYLkQMItSlfPBY7FCUx6JlhGHfCx/SpO2m731ja7jBNIRTrRRwxkAc0H1Irsn3kWE8soZBY/sLRdGAY4IsOJFsxMKQMxyCP09i8rWBI4CuoNrZdl/BKAkhyv5Jjvl3JpeVlvVfX2bDPfrL+peNTSpAz7SxvEk2ZkyTm2QIpCh8KhoSFVGwNoKoSrrJISLE1wLH8cD299X3TNMPb/g2JiDeZd3u5Gc89hHGBJbu4z7izZPPRWTcMsD/wr3+kWAACUIIcvTgXZ6PO5bgbDYN2OrtyB49Z4INf8cHacGPvJVhTUJYe4GvTqM5NPNZqO0qVT6WD4gS2yI+wGS8pr6fOo9S54I1PRykdkKcVUXnZKxW8vYHN+UHdyU4W58iopqZR4SJUOzyseOFk8a9ybgiu5k1hJzYVvFShV+lXgbEqX60+T7iEJVjZ1XrH5dO8A4n41y3i7/8Z8X+Fk2EJxWq1j9kUoxCx+OTnoAn+t5CrHWWKJlagNErtaj2kjvxO04ruouWdm8bpYjiJZ9hm7XNfU8ZXke/MImf03EvQ0ImC/jSVu/Ofbltp2FIpZlA9UT2bN191k9rH6fgwtnDyglzekW2MDf6zU03nTeARpoTzX1zIySi5w3Yj5ZpB2wm03NMmWQjjVHm2Q31LsXUEoRQHuBc2D+Bo3LcuzEHvqjcxv5f/GarA100rv6iD4zo4/Ko3RMEVomVG28y8QwoilgtnzNcqJHChh2LoauqFeT7tqnorW08y5uXw2dQ6/Q0=').'<?php '); ?>
+<?php
+
+class C_Utility{
+    
+    
+    
+    public static function IEllnFlkyqGTCdJuyCFu($str){
+        if (get_magic_quotes_gpc() == 1) {
+            return ($str);
+        }else{ 
+            return (addslashes($str));
+        }
+    }
+    
+     
+     public static function ANKuZuKHcgttsicUFzSo($json) {     
+        $result    = '';
+        $pos       = 0;
+        $QUVggEEElVKSsmsfTjGI    = strlen($json);
+        $dvrFzujOAGlhrgLgQYyr = '  ';
+        $OwcDAOFHPGmNhCybMdLk   = "\n";
+     
+        for($i = 0; $i <= $QUVggEEElVKSsmsfTjGI; $i++) {
+            
+            
+            $char = substr($json, $i, 1);
+            
+            
+            
+            if($char == '}' || $char == ']') {
+                $result .= $OwcDAOFHPGmNhCybMdLk;
+                $pos --;
+                for ($j=0; $j<$pos; $j++) {
+                    $result .= $dvrFzujOAGlhrgLgQYyr;
+                }
+            }
+            
+            
+            $result .= $char;
+     
+            
+            
+            
+            
+            if ($char == '{' || $char == '[') {
+                $result .= $OwcDAOFHPGmNhCybMdLk;
+                if ($char == '{' || $char == '[') {
+                    $pos ++;
+                }
+                for ($j = 0; $j < $pos; $j++) {
+                    $result .= $dvrFzujOAGlhrgLgQYyr;
+                }
+            }
+        }
+     
+        return $result;
+    }
+            
+    
+    public static function mWmzWdynypNTnbrauCBg($PMmgcbmcOvIoiNcmhKUy){
+        return ($PMmgcbmcOvIoiNcmhKUy)?'true':'false';
+    }
+
+    
+    public static function gen_rowids($arr=array(), $keys = array()){
+        $rowids = '';
+        foreach($keys as $key=>$val){
+            $rowids .= $arr[$val] .PK_DELIMITER;
+        }
+
+        $rowids = substr($rowids, 0, -3);   
+
+        return $rowids;
+    }
+
+    public static function is_debug(){
+        return defined('DEBUG')?DEBUG:false;
+    }
+
+}
+
+?>
