@@ -116,11 +116,11 @@
 <div class="dropdown">
   <button class="dropbtn">Transfer Details</button>
   <div class="dropdown-content">
-		<a href="index.php?action=List_Disposal&transfer=1"><?php echo $subMenu[4][$lang]?></a>
+		<!-- <a href="index.php?action=List_Disposal&transfer=1"><?php //echo $subMenu[4][$lang]?></a> -->
 		<a href="?index.php&action=transfer_selet_quick">Select Transfer - Quick</a>
-		<a href="?index.php&action=Select_Items_For_Disposal&transfer=1"><?php echo $slideBar[18][$lang]?></a>
-		<a href="?index.php&action=Selected_Items_For_Disposal&transfer=1"><?php echo $slideBar[19][$lang]?></a>
-		<a href="?index.php&action=Confirm_Items_For_Disposal&transfer=1"><?php echo $slideBar[20][$lang]?></a>
+		<!-- <a href="?index.php&action=Select_Items_For_Disposal&transfer=1"><?php //echo $slideBar[18][$lang]?></a> -->
+		<!-- <a href="?index.php&action=Selected_Items_For_Disposal&transfer=1"><?php //echo $slideBar[19][$lang]?></a> -->
+		<!-- <a href="?index.php&action=Confirm_Items_For_Disposal&transfer=1"><?php //echo $slideBar[20][$lang]?></a> -->
 		<!--<a href="?index.php&action=Disband_List">Disband List</a>-->
 
   </div>
