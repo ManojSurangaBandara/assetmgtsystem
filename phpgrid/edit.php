@@ -92,9 +92,15 @@ if ($oper != '')
 			 $JQGRID_ROWID_KEY;
 			break;
 		case 'del':
-			preg_match("/FROM\s+" . ADODB_TABLE_REGEX . "/is", 
-			$dg->_821853BAB96B76F492924C9554DBDB09(), $tableName);
-			$tableName = $tableName[1];
+			// echo $tableName;exit;
+			// preg_match("/FROM\s+" . ADODB_TABLE_REGEX . "/is", 
+			// $dg->_821853BAB96B76F492924C9554DBDB09(), $tableName);
+			// $tableName = $tableName[1];
+			// $tableName = $dg->$KTlAoREvwiABqfDJVNEw;
+			// echo $tableName;exit;
+			
+			$tableName = $_SESSION['selected_table'];
+
 			if ($dg->has_multiselect())
 			{
 				$_907AFA1F0B32542AC409662FBE610773 = 'DELETE FROM ' . $tableName .

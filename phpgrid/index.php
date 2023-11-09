@@ -27,7 +27,13 @@ switch ($action) {
 		$dg->enable_autowidth(false);
 		$dg -> enable_export('EXCEL');
 		$dg -> enable_search(true);
-		$dg -> enable_edit('INLINE', 'CRU');
+		$dg -> enable_edit('INLINE', 'CRUD');
+		$dg->add_column("actions", array('name'=>'actions',
+    		'index'=>'actions',
+    		'width'=>'70',
+    		'formatter'=>'actions',
+    		'formatoptions'=>array('keys'=>true, 'editbutton'=>true, 'delbutton'=>true)),'Actions');
+		//$dg -> set_multiselect(true, true);
 
 		$_SESSION['selected_table'] = 'landdetails';
 		$_SESSION['selected_table_primary_key'] = 'id';
@@ -48,7 +54,13 @@ switch ($action) {
 		$dg->enable_autowidth(false);
 		$dg -> enable_export('EXCEL');
 		$dg -> enable_search(true);
-		$dg -> enable_edit('INLINE', 'CRU');
+		$dg -> enable_edit('INLINE', 'CRUD');
+		//$dg -> set_multiselect(true, true);
+		$dg->add_column("actions", array('name'=>'actions',
+    		'index'=>'actions',
+    		'width'=>'70',
+    		'formatter'=>'actions',
+    		'formatoptions'=>array('keys'=>true, 'editbutton'=>true, 'delbutton'=>true)),'Actions');
 
 		$_SESSION['selected_table'] = 'buildingdetails';
 		$_SESSION['selected_table_primary_key'] = 'id';
@@ -69,7 +81,13 @@ switch ($action) {
 		$dg->enable_autowidth(false);
 		$dg -> enable_export('EXCEL');
 		$dg -> enable_search(true);
-		$dg -> enable_edit('INLINE', 'CRU');
+		$dg -> enable_edit('INLINE', 'CRUD');
+		//$dg -> set_multiselect(true, true);
+		$dg->add_column("actions", array('name'=>'actions',
+    		'index'=>'actions',
+    		'width'=>'70',
+    		'formatter'=>'actions',
+    		'formatoptions'=>array('keys'=>true, 'editbutton'=>true, 'delbutton'=>true)),'Actions');
 
 		$_SESSION['selected_table'] = 'plantmacdetails';
 		$_SESSION['selected_table_primary_key'] = 'id';
@@ -90,7 +108,13 @@ switch ($action) {
 		$dg->enable_autowidth(false);
 		$dg -> enable_export('EXCEL');
 		$dg -> enable_search(true);
-		$dg -> enable_edit('INLINE', 'CRU');
+		$dg -> enable_edit('INLINE', 'CRUD');
+		//$dg -> set_multiselect(true, true);
+		$dg->add_column("actions", array('name'=>'actions',
+    		'index'=>'actions',
+    		'width'=>'70',
+    		'formatter'=>'actions',
+    		'formatoptions'=>array('keys'=>true, 'editbutton'=>true, 'delbutton'=>true)),'Actions');
 
 		$_SESSION['selected_table'] = 'officeequdetails';
 		$_SESSION['selected_table_primary_key'] = 'id';
@@ -111,7 +135,13 @@ switch ($action) {
 		$dg->enable_autowidth(false);
 		$dg -> enable_export('EXCEL');
 		$dg -> enable_search(true);
-		$dg -> enable_edit('INLINE', 'CRU');
+		$dg -> enable_edit('INLINE', 'CRUD');
+		//$dg -> set_multiselect(true, true);
+		$dg->add_column("actions", array('name'=>'actions',
+    		'index'=>'actions',
+    		'width'=>'70',
+    		'formatter'=>'actions',
+    		'formatoptions'=>array('keys'=>true, 'editbutton'=>true, 'delbutton'=>true)),'Actions');
 
 		$_SESSION['selected_table'] = 'vehicledetails';
 		$_SESSION['selected_table_primary_key'] = 'id';
@@ -128,7 +158,13 @@ switch ($action) {
 		$dg->enable_autowidth(false);
 		$dg -> enable_export('EXCEL');
 		$dg -> enable_search(true);
-		$dg -> enable_edit('INLINE', 'CRU');
+		$dg -> enable_edit('INLINE', 'CRUD');
+		//$dg -> set_multiselect(true, true);
+		$dg->add_column("actions", array('name'=>'actions',
+    		'index'=>'actions',
+    		'width'=>'70',
+    		'formatter'=>'actions',
+    		'formatoptions'=>array('keys'=>true, 'editbutton'=>true, 'delbutton'=>true)),'Actions');
 
 		$_SESSION['selected_table'] = 'itemcategory';
 		$_SESSION['selected_table_primary_key'] = 'id';
@@ -145,7 +181,13 @@ switch ($action) {
 		$dg->enable_autowidth(false);
 		$dg -> enable_export('EXCEL');
 		$dg -> enable_search(true);
-		$dg -> enable_edit('INLINE', 'CRU');
+		$dg -> enable_edit('INLINE', 'CRUD');
+		//$dg -> set_multiselect(true, true);
+		$dg->add_column("actions", array('name'=>'actions',
+    		'index'=>'actions',
+    		'width'=>'70',
+    		'formatter'=>'actions',
+    		'formatoptions'=>array('keys'=>true, 'editbutton'=>true, 'delbutton'=>true)),'Actions');
 
 		$_SESSION['selected_table'] = 'classificationlist';
 		$_SESSION['selected_table_primary_key'] = 'id';
@@ -162,7 +204,13 @@ switch ($action) {
 		$dg->enable_autowidth(false);
 		$dg -> enable_export('EXCEL');
 		$dg -> enable_search(true);
-		$dg -> enable_edit('INLINE', 'CRU');
+		$dg -> enable_edit('INLINE', 'CRUD');
+		//$dg -> set_multiselect(true, true);
+		$dg->add_column("actions", array('name'=>'actions',
+    		'index'=>'actions',
+    		'width'=>'70',
+    		'formatter'=>'actions',
+    		'formatoptions'=>array('keys'=>true, 'editbutton'=>true, 'delbutton'=>true)),'Actions');
 		
 		$_SESSION['selected_table'] = 'assetcentre';
 		$_SESSION['selected_table_primary_key'] = 'id';
@@ -183,7 +231,13 @@ switch ($action) {
 		$dg->enable_autowidth(false);
 		$dg -> enable_export('EXCEL');
 		$dg -> enable_search(true);
-		$dg -> enable_edit('INLINE', 'CRU');
+		$dg -> enable_edit('INLINE', 'CRUD');
+		//$dg -> set_multiselect(true, true);
+		$dg->add_column("actions", array('name'=>'actions',
+    		'index'=>'actions',
+    		'width'=>'70',
+    		'formatter'=>'actions',
+    		'formatoptions'=>array('keys'=>true, 'editbutton'=>true, 'delbutton'=>true)),'Actions');
 
 		$_SESSION['selected_table'] = 'assetunit';
 		$_SESSION['selected_table_primary_key'] = 'SN';
@@ -200,7 +254,13 @@ switch ($action) {
 		$dg->enable_autowidth(false);
 		$dg -> enable_export('EXCEL');
 		$dg -> enable_search(true);
-		$dg -> enable_edit('INLINE', 'CRU');
+		$dg -> enable_edit('INLINE', 'CRUD');
+		//$dg -> set_multiselect(true, true);
+		$dg->add_column("actions", array('name'=>'actions',
+    		'index'=>'actions',
+    		'width'=>'70',
+    		'formatter'=>'actions',
+    		'formatoptions'=>array('keys'=>true, 'editbutton'=>true, 'delbutton'=>true)),'Actions');
 
 		$_SESSION['selected_table'] = 'mas_ds_divisions';
 		$_SESSION['selected_table_primary_key'] = 'SN';
@@ -217,7 +277,13 @@ switch ($action) {
 		$dg->enable_autowidth(false);
 		$dg -> enable_export('EXCEL');
 		$dg -> enable_search(true);
-		$dg -> enable_edit('INLINE', 'CRU');
+		$dg -> enable_edit('INLINE', 'CRUD');
+		//$dg -> set_multiselect(true, true);
+		$dg->add_column("actions", array('name'=>'actions',
+    		'index'=>'actions',
+    		'width'=>'70',
+    		'formatter'=>'actions',
+    		'formatoptions'=>array('keys'=>true, 'editbutton'=>true, 'delbutton'=>true)),'Actions');
 
 		$_SESSION['selected_table'] = 'mas_gs_divisions';
 		$_SESSION['selected_table_primary_key'] = 'SN';
@@ -234,7 +300,13 @@ switch ($action) {
 		$dg->enable_autowidth(false);
 		$dg -> enable_export('EXCEL');
 		$dg -> enable_search(true);
-		$dg -> enable_edit('INLINE', 'CRU');
+		$dg -> enable_edit('INLINE', 'CRUD');
+		//$dg -> set_multiselect(true, true);
+		$dg->add_column("actions", array('name'=>'actions',
+    		'index'=>'actions',
+    		'width'=>'70',
+    		'formatter'=>'actions',
+    		'formatoptions'=>array('keys'=>true, 'editbutton'=>true, 'delbutton'=>true)),'Actions');
 
 		$_SESSION['selected_table'] = 'members';
 		$_SESSION['selected_table_primary_key'] = 'member_id';
@@ -256,7 +328,13 @@ switch ($action) {
 		$dg->enable_autowidth(false);
 		$dg -> enable_export('EXCEL');
 		$dg -> enable_search(true);
-		$dg -> enable_edit('INLINE', 'CRU');
+		$dg -> enable_edit('INLINE', 'CRUD');
+		//$dg -> set_multiselect(true, true);
+		$dg->add_column("actions", array('name'=>'actions',
+    		'index'=>'actions',
+    		'width'=>'70',
+    		'formatter'=>'actions',
+    		'formatoptions'=>array('keys'=>true, 'editbutton'=>true, 'delbutton'=>true)),'Actions');
 
 		$_SESSION['selected_table'] = 'members';
 		$_SESSION['selected_table_primary_key'] = 'member_id';
@@ -273,7 +351,13 @@ switch ($action) {
 		$dg->enable_autowidth(false);
 		$dg -> enable_export('EXCEL');
 		$dg -> enable_search(true);
-		$dg -> enable_edit('INLINE', 'CRU');
+		$dg -> enable_edit('INLINE', 'CRUD');
+		//$dg -> set_multiselect(true, true);
+		$dg->add_column("actions", array('name'=>'actions',
+    		'index'=>'actions',
+    		'width'=>'70',
+    		'formatter'=>'actions',
+    		'formatoptions'=>array('keys'=>true, 'editbutton'=>true, 'delbutton'=>true)),'Actions');
 
 		$_SESSION['selected_table'] = 'boardofsurvey';
 		$_SESSION['selected_table_primary_key'] = 'id';
@@ -289,7 +373,13 @@ switch ($action) {
 		$dg->enable_autowidth(false);
 		$dg -> enable_export('EXCEL');
 		$dg -> enable_search(true);
-		$dg -> enable_edit('INLINE', 'CRU');
+		$dg -> enable_edit('INLINE', 'CRUD');
+		//$dg -> set_multiselect(true, true);
+		$dg->add_column("actions", array('name'=>'actions',
+    		'index'=>'actions',
+    		'width'=>'70',
+    		'formatter'=>'actions',
+    		'formatoptions'=>array('keys'=>true, 'editbutton'=>true, 'delbutton'=>true)),'Actions');
 
 		$_SESSION['selected_table'] = 'loss_damage';
 		$_SESSION['selected_table_primary_key'] = 'id';
@@ -305,7 +395,13 @@ switch ($action) {
 		$dg->enable_autowidth(false);
 		$dg -> enable_export('EXCEL');
 		$dg -> enable_search(true);
-		$dg -> enable_edit('INLINE', 'CRU');
+		$dg -> enable_edit('INLINE', 'CRUD');
+		//$dg -> set_multiselect(true, true);
+		$dg->add_column("actions", array('name'=>'actions',
+    		'index'=>'actions',
+    		'width'=>'70',
+    		'formatter'=>'actions',
+    		'formatoptions'=>array('keys'=>true, 'editbutton'=>true, 'delbutton'=>true)),'Actions');
 
 		$_SESSION['selected_table'] = 'loss_damage_details';
 		$_SESSION['selected_table_primary_key'] = 'id';
@@ -322,7 +418,13 @@ switch ($action) {
 		$dg->enable_autowidth(false);
 		$dg -> enable_export('EXCEL');
 		$dg -> enable_search(true);
-		$dg -> enable_edit('INLINE', 'CRU');
+		$dg -> enable_edit('INLINE', 'CRUD');
+		//$dg -> set_multiselect(true, true);
+		$dg->add_column("actions", array('name'=>'actions',
+    		'index'=>'actions',
+    		'width'=>'70',
+    		'formatter'=>'actions',
+    		'formatoptions'=>array('keys'=>true, 'editbutton'=>true, 'delbutton'=>true)),'Actions');
 
 		$_SESSION['selected_table'] = 'lost_damage_board';
 		$_SESSION['selected_table_primary_key'] = 'id';
@@ -339,7 +441,13 @@ switch ($action) {
 		$dg->enable_autowidth(false);
 		$dg -> enable_export('EXCEL');
 		$dg -> enable_search(true);
-		$dg -> enable_edit('INLINE', 'CRU');
+		$dg -> enable_edit('INLINE', 'CRUD');
+		//$dg -> set_multiselect(true, true);
+		$dg->add_column("actions", array('name'=>'actions',
+    		'index'=>'actions',
+    		'width'=>'70',
+    		'formatter'=>'actions',
+    		'formatoptions'=>array('keys'=>true, 'editbutton'=>true, 'delbutton'=>true)),'Actions');
 
 		$_SESSION['selected_table'] = 'errorcode';
 		$_SESSION['selected_table_primary_key'] = 'id';
@@ -356,7 +464,13 @@ switch ($action) {
 		$dg->enable_autowidth(false);
 		$dg -> enable_export('EXCEL');
 		$dg -> enable_search(true);
-		$dg -> enable_edit('INLINE', 'CRU');
+		$dg -> enable_edit('INLINE', 'CRUD');
+		//$dg -> set_multiselect(true, true);
+		$dg->add_column("actions", array('name'=>'actions',
+    		'index'=>'actions',
+    		'width'=>'70',
+    		'formatter'=>'actions',
+    		'formatoptions'=>array('keys'=>true, 'editbutton'=>true, 'delbutton'=>true)),'Actions');
 
 		$_SESSION['selected_table'] = 'provinces';
 		$_SESSION['selected_table_primary_key'] = 'province_id';
@@ -373,7 +487,13 @@ switch ($action) {
 		$dg->enable_autowidth(false);
 		$dg -> enable_export('EXCEL');
 		$dg -> enable_search(true);
-		$dg -> enable_edit('INLINE', 'CRU');
+		$dg -> enable_edit('INLINE', 'CRUD');
+		//$dg -> set_multiselect(true, true);
+		$dg->add_column("actions", array('name'=>'actions',
+    		'index'=>'actions',
+    		'width'=>'70',
+    		'formatter'=>'actions',
+    		'formatoptions'=>array('keys'=>true, 'editbutton'=>true, 'delbutton'=>true)),'Actions');
 
 		$_SESSION['selected_table'] = 'board_report';
 		$_SESSION['selected_table_primary_key'] = 'id';
@@ -390,7 +510,13 @@ switch ($action) {
 		$dg->enable_autowidth(false);
 		$dg -> enable_export('EXCEL');
 		$dg -> enable_search(true);
-		$dg -> enable_edit('INLINE', 'CRU');
+		$dg -> enable_edit('INLINE', 'CRUD');
+		//$dg -> set_multiselect(true, true);
+		$dg->add_column("actions", array('name'=>'actions',
+    		'index'=>'actions',
+    		'width'=>'70',
+    		'formatter'=>'actions',
+    		'formatoptions'=>array('keys'=>true, 'editbutton'=>true, 'delbutton'=>true)),'Actions');
 
 		$_SESSION['selected_table'] = 'board_report_summary';
 		$_SESSION['selected_table_primary_key'] = 'id';
@@ -407,7 +533,13 @@ switch ($action) {
 		$dg->enable_autowidth(false);
 		$dg -> enable_export('EXCEL');
 		$dg -> enable_search(true);
-		$dg -> enable_edit('INLINE', 'CRU');
+		$dg -> enable_edit('INLINE', 'CRUD');
+		//$dg -> set_multiselect(true, true);
+		$dg->add_column("actions", array('name'=>'actions',
+    		'index'=>'actions',
+    		'width'=>'70',
+    		'formatter'=>'actions',
+    		'formatoptions'=>array('keys'=>true, 'editbutton'=>true, 'delbutton'=>true)),'Actions');
 
 		$_SESSION['selected_table'] = 'board_report_observations';
 		$_SESSION['selected_table_primary_key'] = 'id';
@@ -424,7 +556,13 @@ switch ($action) {
 		$dg->enable_autowidth(false);
 		$dg -> enable_export('EXCEL');
 		$dg -> enable_search(true);
-		$dg -> enable_edit('INLINE', 'CRU');
+		$dg -> enable_edit('INLINE', 'CRUD');
+		//$dg -> set_multiselect(true, true);
+		$dg->add_column("actions", array('name'=>'actions',
+    		'index'=>'actions',
+    		'width'=>'70',
+    		'formatter'=>'actions',
+    		'formatoptions'=>array('keys'=>true, 'editbutton'=>true, 'delbutton'=>true)),'Actions');
 
 		$_SESSION['selected_table'] = 'tender_vehicledetails';
 		$_SESSION['selected_table_primary_key'] = 'id';
@@ -441,7 +579,13 @@ switch ($action) {
 		$dg->enable_autowidth(false);
 		$dg -> enable_export('EXCEL');
 		$dg -> enable_search(true);
-		$dg -> enable_edit('INLINE', 'CRU');
+		$dg -> enable_edit('INLINE', 'CRUD');
+		//$dg -> set_multiselect(true, true);
+		$dg->add_column("actions", array('name'=>'actions',
+    		'index'=>'actions',
+    		'width'=>'70',
+    		'formatter'=>'actions',
+    		'formatoptions'=>array('keys'=>true, 'editbutton'=>true, 'delbutton'=>true)),'Actions');
 
 		$_SESSION['selected_table'] = 'change_unit_name_history';
 		$_SESSION['selected_table_primary_key'] = 'id';
@@ -458,7 +602,13 @@ switch ($action) {
 		$dg->enable_autowidth(false);
 		$dg -> enable_export('EXCEL');
 		$dg -> enable_search(true);
-		$dg -> enable_edit('INLINE', 'CRU');
+		$dg -> enable_edit('INLINE', 'CRUD');
+		//$dg -> set_multiselect(true, true);
+		$dg->add_column("actions", array('name'=>'actions',
+    		'index'=>'actions',
+    		'width'=>'70',
+    		'formatter'=>'actions',
+    		'formatoptions'=>array('keys'=>true, 'editbutton'=>true, 'delbutton'=>true)),'Actions');
 
 		$_SESSION['selected_table'] = 'user_account_change_history';
 		$_SESSION['selected_table_primary_key'] = 'id';
@@ -475,7 +625,13 @@ switch ($action) {
 		$dg->enable_autowidth(false);
 		$dg -> enable_export('EXCEL');
 		$dg -> enable_search(true);
-		$dg -> enable_edit('INLINE', 'CRU');
+		$dg -> enable_edit('INLINE', 'CRUD');
+		//$dg -> set_multiselect(true, true);
+		$dg->add_column("actions", array('name'=>'actions',
+    		'index'=>'actions',
+    		'width'=>'70',
+    		'formatter'=>'actions',
+    		'formatoptions'=>array('keys'=>true, 'editbutton'=>true, 'delbutton'=>true)),'Actions');
 
 		$_SESSION['selected_table'] = 'allocation_details';
 		$_SESSION['selected_table_primary_key'] = 'id';
@@ -492,7 +648,13 @@ switch ($action) {
 		$dg->enable_autowidth(false);
 		$dg -> enable_export('EXCEL');
 		$dg -> enable_search(true);
-		$dg -> enable_edit('INLINE', 'CRU');
+		$dg -> enable_edit('INLINE', 'CRUD');
+		//$dg -> set_multiselect(true, true);
+		$dg->add_column("actions", array('name'=>'actions',
+    		'index'=>'actions',
+    		'width'=>'70',
+    		'formatter'=>'actions',
+    		'formatoptions'=>array('keys'=>true, 'editbutton'=>true, 'delbutton'=>true)),'Actions');
 
 		$_SESSION['selected_table'] = 'scale_catalogue';
 		$_SESSION['selected_table_primary_key'] = 'id';
@@ -509,7 +671,13 @@ switch ($action) {
 		$dg->enable_autowidth(false);
 		$dg -> enable_export('EXCEL');
 		$dg -> enable_search(true);
-		$dg -> enable_edit('INLINE', 'CRU');
+		$dg -> enable_edit('INLINE', 'CRUD');
+		//$dg -> set_multiselect(true, true);
+		$dg->add_column("actions", array('name'=>'actions',
+    		'index'=>'actions',
+    		'width'=>'70',
+    		'formatter'=>'actions',
+    		'formatoptions'=>array('keys'=>true, 'editbutton'=>true, 'delbutton'=>true)),'Actions');
 
 		$_SESSION['selected_table'] = 'dos_materialmaster';
 		$_SESSION['selected_table_primary_key'] = 'id';
@@ -526,7 +694,13 @@ switch ($action) {
 		$dg->enable_autowidth(false);
 		$dg -> enable_export('EXCEL');
 		$dg -> enable_search(true);
-		$dg -> enable_edit('INLINE', 'CRU');
+		$dg -> enable_edit('INLINE', 'CRUD');
+		//$dg -> set_multiselect(true, true);
+		$dg->add_column("actions", array('name'=>'actions',
+    		'index'=>'actions',
+    		'width'=>'70',
+    		'formatter'=>'actions',
+    		'formatoptions'=>array('keys'=>true, 'editbutton'=>true, 'delbutton'=>true)),'Actions');
 
 		$_SESSION['selected_table'] = 'bos_openingbalance';
 		$_SESSION['selected_table_primary_key'] = 'id';
