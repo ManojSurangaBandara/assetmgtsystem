@@ -20,12 +20,12 @@
                 <div id="menus_wrapper">
                     <div id="main_menu">
                         <ul>
-                            <li <?php echo ($_SESSION['SESS_LEVEL'] == 17 || $_SESSION['SESS_LEVEL'] == 12)  ? 'hidden' : '';?>><a href="../land_details" <?php
+                            <li <?php echo ($_SESSION['SESS_LEVEL'] == 17 || $_SESSION['SESS_LEVEL'] == 12 || $_SESSION['SESS_LEVEL'] == 10)  ? 'hidden' : '';?>><a href="../land_details" <?php
                                 if ($page == 1) {
                                     echo "class=selected";
                                 }
                                 ?>><span><span><?php echo $mainMenu[0][$lang] ?></span></span></a></li>
-                            <li <?php echo ($_SESSION['SESS_LEVEL'] == 17 || $_SESSION['SESS_LEVEL'] == 12) ? 'hidden' : '';?>><a href="../building_details" <?php
+                            <li <?php echo ($_SESSION['SESS_LEVEL'] == 17 || $_SESSION['SESS_LEVEL'] == 12 || $_SESSION['SESS_LEVEL'] == 10) ? 'hidden' : '';?>><a href="../building_details" <?php
                                 if ($page == 2) {
                                     echo "class=selected";
                                 }
